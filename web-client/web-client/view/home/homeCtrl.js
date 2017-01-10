@@ -225,6 +225,10 @@
                 var tabName = tab.name;
                 $scope.homeShow = false;
                 var url ='view/marketing/marketing-template/marketing.html';
+            }else if(tab.name == 'Edit Templates'){
+                var tabName = tab.name;
+                $scope.homeShow = false;
+                var url ='view/marketing/marketing-template/edit_create_marketing_template.html';
             }else if(tab.name == 'Create Marketing Templates'){
                 var tabName = tab.name;
                 $scope.homeShow = false;
