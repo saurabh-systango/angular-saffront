@@ -16,6 +16,16 @@
 
     function marketingTemplatesCtrl($scope,$uibModal, $timeout,uiGridConstants, marketingDataService, $rootScope, $state) {
 
+        $scope.targetColor1 = '#761B08';
+        $scope.targetColor2 = '#08760A';
+        $scope.targetColor3 = '#087176';
+        $scope.targetColor4 = '#082E76';
+
+        $scope.sliderConfig = {
+            min: 600,
+            max: 900,
+            step: 100
+        }
 
 		$scope.copyPage_Marketing = function (id) {
                 $rootScope.rowChangedValue = id;
