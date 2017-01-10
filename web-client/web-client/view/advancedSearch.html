@@ -1,0 +1,45 @@
+
+<div class="container-fluid sf-container ng-scope" style="padding: 20px 40px;">
+     
+      <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email">
+         <div class="col-md-12">
+            <button type="button" id="btnSave" name="btnSave" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnSave()">Run</button>
+            <button type="button" id="btnCancel" name="btnCancel" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnCancel()">Clear</button>
+         <button type="button" id="btnCancel" name="btnCancel" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnCancel()">customize</button>
+         </div>
+         <div class="advance-saerch-detaisl">
+			<ul>
+				<li>
+				<div class="form-group edit-form">		
+					<label class="edit-lable text-right">Company</label>				
+					<input class="form-control edit-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="editData.company" type="text">
+				</div>
+				</li>				
+				<li>
+				<div class="form-group edit-form">		
+					<label class="edit-lable text-right">First name</label>				
+					<input class="form-control edit-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="data.first_name" type="text">
+				</div>
+				</li>
+				<li>
+				<div class="form-group edit-form">		
+					<label class="edit-lable text-right">Last name</label>				
+					<input class="form-control edit-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="data.last_name" type="text">
+				</div>
+				</li>
+				<li>
+				<div class="form-group edit-form">		
+					<label class="edit-lable text-right">Email </label>				
+					<input id="QBE_3" class="form-control edit-input textbox-adv" ng-model="data.email" type="text">
+				</div>
+				</li>
+				<li>
+				<div class="form-group edit-form">		
+					<label class="edit-lable text-right">Email </label>				
+					<input id="QBE_4" class="form-control edit-input textbox-adv" ng-model="data.phone" type="text">
+				</div>
+				</li>
+			</ul>
+		 </div>
+   </form>
+</div>

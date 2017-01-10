@@ -1,0 +1,88 @@
+<div ng-app="webform" ng-controller="webformCtrl">
+   <div class="sub-menu" >
+      <div class="container-large">
+       
+       <!-- Split button -->
+       <div class="btn-group" uib-dropdown>
+         <span class="title dropdown-img" uib-dropdown-toggle title="All" ng-init="groupSort= {label:'Table Name',name:'tableName'}" style="margin-top:auto">
+               {{groupSort.label}}  
+                <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img" >
+         </span>
+        
+         <img src="images/submenu_arrow.png" class="arrow" style="float: right;">
+         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+           <li role="menuitem" ng-repeat="group in salesData.data.fields"  ng-show="group.is_group_by">
+            <a href="javascript:void(0)" ng-click="groupSelected(group)">
+                  {{group.label}}
+            </a>
+           </li>
+           
+           
+         </ul>
+       </div>
+
+       <div  class="btn-group" uib-dropdown data-ng-repeat="group in salesData.data.group_by | orderBy:'$index':true">
+       
+          <!-- todo call the function filterByFieldName    -->
+            <div style="color: white;" class="btn btn-link bnt-title" uib-dropdown-toggle ng-click="filterByFieldName(groupSort.name,group.label)">
+             {{group.label=='' ? 'Empty' : group.label}}
+             ({{group.record_count}}) 
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-large">
+      <div class="recordHeader">
+         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 recordHeader-left pull-left">
+            <span class="add-icon" ng-click="addTab({name: 'Create Web Forms'} )">
+            <img src="images/icon_add.png" />Add
+            </span>
+            <span class="refresh-icon" ng-click="refresh();">
+            <img src="images/icon_refresh_g.png" />Refresh
+            </span>
+
+            <div class="h-search" ng-init="columnSort= {label:'Name'}" style="margin-left:43px !important;">
+               <div class="header-search">
+                  <span class="search-title">{{columnSort.label}}</span>
+                  <div class="input-group" id="adv-search">
+                     <div class="dropdown  dropdown-lg">
+                        <div class="btn-group" uib-dropdown>
+                           <img src="images/img_down_arrow.png" class="dropIcon" align="absmiddle" uib-dropdown-toggle />
+                           <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                              <li ng-repeat="colname in searchMenuData" ng-show="true">
+                                 <a href="javascript:void(0)" ng-click="colnameSelected(colname)">{{colname.label}}</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+
+
+                      <input type="text" class="form-control" ng-model="searchByInputField" placeholder="Type a keyword and press enter" />
+                     <div class="input-group-btn" ng-click="searchInList();">
+                        <div class="btn-group" role="group">
+                           <button type="button">
+                           <img src="images/icon_magnifying.png">
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div style="clear: both;padding: 20px 0;">
+           <div class="side-icon-pop">
+                    <ul ng-show="singleSelect">
+                        <li><a><img src="images/icon_unpublish.png" alt="Unpublish" title="Unpublish"/></a></li>
+                        <li><a><img src="images/icon_generate.png" title="Generate" alt="Generate"/></a></li>
+                        <li><a><img src="images/icon_preview.png" title="Preview" alt="Preview"/></a></li>
+                        <li ><a><img src="images/icon_copy.png" title="Copy" alt="Copy" ng-click="copyWebForm()"/></a></li>
+                        <li><a><img src="images/icon_delete.png" title="Delete" alt="Delete" ng-click ="deleteWebForms();"/></a></li>
+                    </ul>
+                    </div>
+
+               
+         <div ui-if="gridOptions1.data.length>0"  ui-grid="gridOptions1" class="grid grid1" ui-grid-pagination ui-grid-selection  ui-grid-resize-columns ui-grid-move-columns ui-grid-auto-resize ng-style="getTableHeight()"></div>
+      </div>
+   </div>
+</div>

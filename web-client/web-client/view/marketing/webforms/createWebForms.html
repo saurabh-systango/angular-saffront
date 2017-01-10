@@ -1,0 +1,368 @@
+<body ng-app="webform" ng-controller="webformCtrl">
+
+<!--Start on 6 December-->
+<div id="parentView"> </div>
+<div ng-app="webform" ng-controller="webformCtrl">
+<div id="spreadsheet">
+  <div id="inside_page_content2" >
+    <div align="left" class="top_btn_area" style="position:relative; top:-9px; float: left; width: 70%; margin-left: 28px;">
+      <div  style="float: left; margin-right: 10px;">
+        <input type="button" name="save" value="Save" class="btn_bg1">
+      </div>
+      <div class="" style="float: left; margin-right: 10px;">
+        <input type="button" name="save" value="Close" class="btn_bg1" ng-click="closeInnerTemplate('Copy webform')">
+      </div>
+    </div>
+  </div>
+  <div id="videoDiv" align="right" style="position:relative;top:24px; right:78px; float: right; display: block;"> <span ><img alt="Video" src="http://test.snapshotcrm.com/theme/blue/images/NewDesign/video_icon.png" ng-click="addTab({name: 'Geeting Started'} )"> </div>
+</div>
+<div id="inside_page_content">
+  <div class="table_area">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td width="30%" valign="top" align="left" class="red"><strong>Table</strong>&nbsp; </td>
+          <td width="40%" valign="top" align="left" id="tdWebformNameLabel" colspan="2" class="red"><strong>Name</strong></td>
+          <td valign="top" align="left" id="tdGroupLabel" class="red"><strong>Group</strong>
+            <div class="help" data-hasqtip="0" oldtitle="Group Info" title="">
+              <div style="display: none" class="info-box"> Created record through this Web Form will be added to the selected groups. </div>
+              <a title="Click to know more" class="help-button" href="javascript:void(0);"> <img border="0" src="images/icon_info.png"> </a> </div>
+            <div style="float: right;"> <a id="button_addGroup" style="font-weight: normal; float: left; margin-right: 6px;" href="javascript:addNewGroup();"> Add a new Group </a> </div></td>
+        </tr>
+        <tr>
+          <td width="30%" valign="top" align="left"><select style="width: 100%;" onchange="loadWebFormFields();" class="listmenu1" id="tableList" name="tableList">
+              <option value="10">Accounts</option>
+              <option value="13">Cases</option>
+              <option value="9">Contacts</option>
+            </select></td>
+          <td width="40%" valign="top" align="left" id="tdWebformName" colspan="2"><input type="text" maxlength="128" value="Opt-in form" style="width: 99%" class="textbox9" name="fName" id="fName"></td>
+          <td valign="top" align="left" id="tdGroupList"><!-- onchange="javascript:addAGroup(this.value);" -->
+            
+            <select style="width: 100%; display: none;" multiple="multiple" class="listmenu1" id="fGroup" name="fGroup">
+              <option value="8902" groupid="8902">kkkk</option>
+            </select>
+            <div class="dropdown-box" style="width: 367px;" onclick="showdiv()">
+              <div tabindex="0" class="dropdown-header-webform dropbox" title="">
+                <div class="drop-menu-title" style="width: 359px;"></div>
+              </div>
+              <div class="drop-menu-box-webform" style="display: none;">
+                <div class="menu-items" style="width: 359px;">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                      <tr class="drop-menu-item item" tabindex="0" title="kkkk" id="groupId_8902" groupid="8902">
+                        <td width="2%" valign="middle" align="left"><input type="checkbox" value="8902" id="l_ch_8902" name="l_ch" tabindex="-1"></td>
+                        <td width="98%" align="left"><div class="item" style="width: 337px;">kkkk</div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div style="width: 367px; display: none;" id="newSubscriptionDiv">
+              <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td width="80%" style="padding-top: 0px;"><input type="text" tabindex="1" style="width: 100%; height: 19px;" class="textbox9" name="newSubscriptionText" id="newSubscriptionText" maxlength="128"></td>
+                    <td width="10%" style="padding-top: 0px;"><div id="newSubscriptionDivSave" tabindex="2" onclick="javascript:saveNewSubscription();" style="margin-left: 10px;" class="small_btn">Save</div></td>
+                    <td width="10%" style="padding-top: 0px;"><div id="newSubscriptionDivCancel" tabindex="3" onclick="javascript:cancel();" style="margin-left: 5px;" class="small_btn">Cancel</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div></td>
+        </tr>
+        <tr>
+          <td width="30%" valign="top" align="left"><strong>Return URL </strong>
+            <div class="help" data-hasqtip="1" oldtitle="Return URL Info" title="">
+              <div style="display: none" class="info-box">Enter the URL where the form will redirect the submitter after successful post of the Web Form.</div>
+              <a title="Click to know more" class="help-button" href="javascript:void(0);"> <img border="0" src="http://test.snapshotcrm.com:80/theme/blue/images/icon_info.png"> </a> </div></td>
+          <td width="20%" valign="top" align="left" id="tdAutoResponseLabel"><strong>Auto Response </strong>
+            <div class="help" data-hasqtip="2" oldtitle="Auto Response Info" title="">
+              <div style="display: none" class="info-box"> The selected email template will be used to send an auto response when the record is submitted and has an email address.</div>
+              <a title="Click to know more" class="help-button" href="javascript:void(0);"> <img border="0" src="http://test.snapshotcrm.com:80/theme/blue/images/icon_info.png"> </a> </div>
+            <div style="float: right;"> <a id="button_autoResponse" style="font-weight: normal; float: left; display: none; margin-right: 25px;" href="javascript:editTemplate();">Edit Template</a> </div></td>
+          <td width="20%" valign="top" align="left" id="tdAssignToLabel" class="red"><strong>Assign To</strong>
+            <div class="help" data-hasqtip="3" oldtitle="Assign To Info" title="">
+              <div style="display: none" class="info-box"> Select user(s) from the drop down list to whom you want to assign the created records. Round Robin Assignment will take place if multiple users have been chosen.</div>
+              <a title="Click to know more" class="help-button" href="javascript:void(0);"> <img border="0" src="http://test.snapshotcrm.com:80/theme/blue/images/icon_info.png"> </a> </div></td>
+          <td valign="top" align="left"><table width="100%" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td width="49%" valign="top" align="left" style="display:none; padding-top: 0px;" id="tdWorkflowLabel" class="red"><strong>Workflow</strong></td>
+                  <td width="49%" valign="top" align="left" id="tdSourceLabel" style="padding-top: 0px;" class="red"><strong>Source</strong></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr>
+        <tr>
+          <td width="30%" valign="top" align="left"><input type="text" value="" style="width: 99%" class="textbox9" id="fReturnUrl" name="fReturnUrl"></td>
+          <td width="20%" valign="top" align="left" id="tdAutoResponseList" style="padding: 0px;"><table width="100%">
+              <tbody>
+                <tr>
+                  <td width="94%" align="left" style="padding-top: 0px;"><select style="width: 100%" ng-model="select" class="listmenu1" id="fAutoResponse" name="fAutoResponse" ng-change="addTab({name:'Create Marketing Templates'});">
+                      <option value="0" selected="selected"></option>
+                      <option value="-1">---Create a new template---</option>
+                    </select></td>
+                  <td style="padding-top: 0px;"><img width="12px" height="12px" border="0" title="Refresh" alt="refresh" onclick="javascript:getAutoResponseEmailTemplates();" src="http://test.snapshotcrm.com:80/theme/blue/images/NewDesign/icon_refresh_g.png"></td>
+                </tr>
+              </tbody>
+            </table></td>
+          <td width="20%" valign="top" align="left" id="tdAssignToList"><select style="width: 100%; display: none;" multiple="" class="listmenu1" id="fAssignTo" name="fAssignTo">
+              <option value="4833" groupid="4833">Ravi Teja</option>
+            </select>
+            <div class="dropdown-box" style="width: 243px;">
+              <div tabindex="0" class="dropdown-header-webform dropbox" title="">
+                <div class="drop-menu-title" style="width: 235px;"></div>
+              </div>
+              <div class="drop-menu-box-webform" style="display: none;">
+                <div class="menu-items" style="width: 235px;">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                      <tr class="drop-menu-item item" tabindex="0" title="Ravi Teja" id="groupId_4833" groupid="4833">
+                        <td width="2%" valign="middle" align="left"><input type="checkbox" value="4833" id="l_ch_4833" name="l_ch" tabindex="-1"></td>
+                        <td width="98%" align="left"><div class="item" style="width: 213px;">Ravi Teja</div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div></td>
+          <td valign="top" align="left"><table width="100%" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td width="50%" valign="top" align="left" style="display:none; padding-top: 0px;" id="tdWorkflowList"><select id="workflowList" style="width: 98%;" class="listmenu1">
+                      <option value="19527">Accounts workflow</option>
+                    </select></td>
+                  <td width="50%" valign="top" align="left" id="tdSourceList" style="padding-top: 0px;"><select style="width: 100%" class="listmenu1" id="fSource" name="fSource">
+                      <option value="Cold call"> Cold call </option>
+                      <option value="Email Campaign"> Email Campaign </option>
+                      <option value="Networking Event"> Networking Event </option>
+                      <option value="Other"> Other </option>
+                      <option value="Partner referral"> Partner referral </option>
+                      <option value="Purchased list"> Purchased list </option>
+                      <option value="Seminar"> Seminar </option>
+                      <option value="Social Event"> Social Event </option>
+                      <option value="Trade show"> Trade show </option>
+                      <option value="Web"> Web </option>
+                    </select></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div style="margin-top: 20px; margin-bottom: 10px; padding: 0;" id="inside_page_content">
+  <div class="webform-table-area">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" align="left"><div style="width: 190px; clear: both;"></div></td>
+          <td valign="top" align="left"></td>
+        </tr>
+        <tr>
+          <td width="15%" valign="top"><div id="stylePanel" style="height: auto;" class="template-tool-panel">
+              <ul class="template-ui-tabs">
+                <li class="ui-tab active"> <a href="javascript:void(0);" id="themeLink">Colors &amp; fonts</a> </li>
+              </ul>
+              <div id="themeBox" style="width: 190px;" class="template-cf-panel">
+                <div class="template-cf-wrapper">
+                  <h3 class="template-cf-header">Header</h3>
+                  <div class="template-cf-lists">
+                    <div class="template-cf-list">
+                      <div class="template-list-title font-layout-webForm">Fonts</div>
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 0px 5px 5px 5px;">
+                        <tbody>
+                          <tr>
+                            <td width="45%"><select style="width: 100%;" target="header" targetarea="editor-grid-header" property="font-family" sectionname="Header" id="headerFontFamily" class="theme_list_menu">
+                                <option value="Arial">Arial</option>
+                                <option value="ComicSansMS">Comic Sans MS</option>
+                                <option value="CourierNew">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="LucidaSansUnicode">Lucida Sans Unicode</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="TimesNewRoman">Times New Roman</option>
+                                <option value="TrebuchetMS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                              </select></td>
+                            <td width="35%"><select style="width: 100%;" target="header" targetarea="editor-grid-header" property="font-size" sectionname="Header" id="headerFontSize" class="theme_list_menu">
+                                <option value="10px">10px</option>
+                                <option value="11px">11px</option>
+                                <option value="12px">12px</option>
+                                <option value="13px" selected="selected">13px</option>
+                                <option value="14px">14px</option>
+                                <option value="15px">15px</option>
+                                <option value="16px">16px</option>
+                                <option value="17px">17px</option>
+                                <option value="18px">18px</option>
+                                <option value="19px">19px</option>
+                                <option value="20px">20px</option>
+                                <option value="21px">21px</option>
+                                <option value="22px">22px</option>
+                                <option value="23px">23px</option>
+                                <option value="24px">24px</option>
+                                <option value="25px">25px</option>
+                              </select></td>
+                            <td width="20%" align="right" valign="top" colorpicker="hex" style="background-color: rgb(0, 0, 0);"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <h3 class="template-cf-header">Normal Fields</h3>
+                  <div class="template-cf-lists">
+                    <div class="template-cf-list">
+                      <div class="template-list-title font-layout-webForm">Fonts</div>
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 0px 5px 5px 5px;">
+                        <tbody>
+                          <tr>
+                            <td width="45%"><select style="width: 100%;" target="field" targetarea="editor-grid" property="font-family" sectionname="Normal Fields" id="fieldFontFamily" class="theme_list_menu">
+                                <option value="Arial">Arial</option>
+                                <option value="ComicSansMS">Comic Sans MS</option>
+                                <option value="CourierNew">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="LucidaSansUnicode">Lucida Sans Unicode</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="TimesNewRoman">Times New Roman</option>
+                                <option value="TrebuchetMS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                              </select></td>
+                            <td width="35%"><select style="width: 100%;" target="field" targetarea="editor-grid" property="font-size" sectionname="Normal Fields" id="fieldFontSize" class="theme_list_menu">
+                                <option value="10px">10px</option>
+                                <option value="11px">11px</option>
+                                <option value="12px">12px</option>
+                                <option value="13px" selected="selected">13px</option>
+                                <option value="14px">14px</option>
+                                <option value="15px">15px</option>
+                                <option value="16px">16px</option>
+                                <option value="17px">17px</option>
+                                <option value="18px">18px</option>
+                                <option value="19px">19px</option>
+                                <option value="20px">20px</option>
+                                <option value="21px">21px</option>
+                                <option value="22px">22px</option>
+                                <option value="23px">23px</option>
+                                <option value="24px">24px</option>
+                                <option value="25px">25px</option>
+                              </select></td>
+                            <td width="20%" align="right" valign="top" colorpicker="hex" style="background-color: rgb(0, 0, 0);"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <h3 class="template-cf-header">Required Fields</h3>
+                  <div class="template-cf-lists">
+                    <div class="template-cf-list">
+                      <div class="template-list-title font-layout-webForm">Fonts</div>
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 0px 5px 5px 5px;">
+                        <tbody>
+                          <tr>
+                            <td width="45%"><select style="width: 100%;" target="required" targetarea="field-required" property="font-family" sectionname="Required Fields" id="requiredFontFamily" class="theme_list_menu">
+                                <option value="Arial">Arial</option>
+                                <option value="ComicSansMS">Comic Sans MS</option>
+                                <option value="CourierNew">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="LucidaSansUnicode">Lucida Sans Unicode</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="TimesNewRoman">Times New Roman</option>
+                                <option value="TrebuchetMS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                              </select></td>
+                            <td width="35%"><select style="width: 100%;" target="required" targetarea="field-required" property="font-size" sectionname="Required Fields" id="requiredFontSize" class="theme_list_menu">
+                                <option value="10px">10px</option>
+                                <option value="11px">11px</option>
+                                <option value="12px">12px</option>
+                                <option value="13px" selected="selected">13px</option>
+                                <option value="14px">14px</option>
+                                <option value="15px">15px</option>
+                                <option value="16px">16px</option>
+                                <option value="17px">17px</option>
+                                <option value="18px">18px</option>
+                                <option value="19px">19px</option>
+                                <option value="20px">20px</option>
+                                <option value="21px">21px</option>
+                                <option value="22px">22px</option>
+                                <option value="23px">23px</option>
+                                <option value="24px">24px</option>
+                                <option value="25px">25px</option>
+                              </select></td>
+                            <td width="20%" align="right" valign="top" colorpicker="hex" style="background-color: rgb(255, 0, 0);"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div></td>
+          <td width="85%" valign="top" align="center" class="form-editor-td"><div align="center" class="form-editor">
+              <div class="editor-pannel ui-sortable">
+                <div class="editor-grid">
+                  <div class="drag-field"></div>
+                  <div class="editor-field">
+                    <table width="100%" cellspacing="5" cellpadding="5" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="20%" valign="top"><div class="field-label" title="First name">First name</div></td>
+                          <td><div class="field-type" style="width: 75%; height: 25px;"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="editor-grid">
+                  <div class="drag-field"></div>
+                  <div class="editor-field">
+                    <table width="100%" cellspacing="5" cellpadding="5" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="20%" valign="top"><div class="field-label" title="Email">Email</div></td>
+                          <td><div class="field-type" style="width: 75%; height: 25px;"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="editor-grid">
+                  <div class="drag-field"></div>
+                  <div class="editor-field">
+                    <table width="100%" cellspacing="5" cellpadding="5" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="20%" valign="top"><div class="field-label" title="Comments">Comments</div></td>
+                          <td><div class="field-type memo-field-type" style="width: 75%;"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="editor-grid">
+                  <div class="drag-field"></div>
+                  <div class="editor-field">
+                    <table width="100%" cellspacing="5" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="20%" valign="top"></td>
+                          <td><div class="field-header">
+                              <input type="checkbox" name="subscribe" id="subscribe">
+                              <span title="Subscribe to our newsletters">Subscribe to our newsletters</span></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="clear: both;"></div>
+                </div>
+              </div>
+            </div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</body>
+

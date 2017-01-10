@@ -1,0 +1,27 @@
+﻿<div id="assign" role="dialog">
+    <div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header pop-header">
+                <button type="button" class="close" ng-click="cancel()">&times;</button>
+                <h4 class="modal-title">Confirmation Dialog</h4>
+            </div>
+            <div class="modal-body">
+                <div id="popup_content" class="confirm">
+                    <div id="popup_message" >{{modelType.count}} <span ng-if="modelType.count == 1">record </span> <span ng-if="modelType.count > 1"> records </span> will be deleted. Are you sure?</div>                                  
+                </div>
+				<div  align="center">
+                       
+				</div>
+            </div>
+			<div class="modal-footer">
+			   <div class="form-group">
+				  <div id="popup_panel" style="text-align:center;">
+						<input value="OK" ng-click="deleteRecord()" id="popup_ok" class="btn btn-sf-primary btn-sm sf-btn-gap" type="button">&nbsp;&nbsp;&nbsp;
+                        <input value="Cancel" ng-click="cancel()" id="popup_cancel" class="btn btn-sf-primary btn-sm sf-btn-gap" type="button">						
+				  </div>
+			   </div>
+			</div>
+        </div>
+    </div>
+</div>

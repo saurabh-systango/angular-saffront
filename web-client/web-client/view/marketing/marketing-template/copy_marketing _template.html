@@ -1,0 +1,608 @@
+
+<head>
+  <style type="text/css">
+  .sp-replacer{
+    padding: 0px;
+    border:none;
+  }
+  .cdbl-slider {
+    width: 154px;
+    border-radius: 4px; 
+    margin: auto;   
+  }
+  .ui-slider .ui-slider-handle{
+    height: 17px;
+    width: 19px;
+    border-radius: 4px;
+    position: absolute;
+    top: -4px;
+  }
+  </style>
+</head>
+<body >
+<div style="overflow-y: scroll;height: 500px;" ng-controller="copyMarketingTmplCtrl">
+<div id="parentView"> </div>
+
+<div id="inside_page_content1" class="inside_content1" style="position: relative;margin-top:1%; width: 90% !important;">
+  <div id="spreadsheet" style="margin-top:-30px;">
+    <div id="inside_page_content2" style="margin-top: 30px; margin-right: 1%">
+      <div align="left" class="top_btn top_btn_area" style="margin-top:43px; float: left; width: 70%;margin-left: -45px;">
+        <div  style="float: left; margin-right: 10px;">
+          <input type="button" name="save" value="Save" class="btn_input btn_bg1">
+        </div>
+        <div class="" style="float: left; margin-right: 10px;">
+          <input type="button" name="back" value="back" class="btn_input btn_bg1">
+        </div>
+      <!-- <div class="" style="float: left; margin-right: 10px;">
+          <input type="button" name="test" value="Test" class="btn_bg1" data-toggle="modal" data-target="#test1">
+        </div>
+      <div class="" style="float: left; margin-right: 10px;">
+          <input type="button" name="preview" value="Preview" class="btn_bg1">
+        </div> -->
+     
+      </div>
+    </div>
+    <div id="videoDiv" align="right" style="margin: 63px -0.2% 0px 0px; float: right; display: block;">
+        <img alt="Video" src="images/video_icon.png" title="Video" ng-class="{active:isActiveTab({ url:'view/marketing/marketing-template/getting_started_marketing_click_video.html'})}" ng-click="addTab({name: 'Getting Started'} )">
+        <!-- <img alt="Video" src="images/video_icon.png" title="Video" ng-click="marketing_video();"> -->
+    </div>
+  </div>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+      <tr>
+        <td style="padding-bottom:20px" align="left" valign="top" width="91%">
+        <input type="text" id="etName" name="etName" class="textbox9" style="width:100%;height: 21px;" placeholder="Name" ng-model="user_template.template_details[0].t_name" maxlength="64">
+        </td>
+        <td width="9%" style="padding-left:12px" valign="top">
+        <select class="listmenu1" name="status" ng-model="user_template.template_details[0].t_status" id="status" style="width: 100%;">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top" colspan="2"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+              <tr>
+                <td style="padding-bottom:20px;" align="left" valign="top" class="form_TextLebel formTextLebelNew">
+                <input type="text" id="etSubject" ng-model="user_template.template_details[0].t_subject" name="etSubject" class="textbox9" style="width:100%;height:21px;" placeholder="Subject" maxlength="255">
+                </td>
+                <td align="right" valign="top" width="103px" style="text-align: center;" id="personaliseId">
+                <div class="btn-group dropdown right-side" uib-dropdown="" style="">    <p> <strong uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false" align="absmiddle">Personalize  </strong> 
+                      <img src="images/img_down_arrow.png" class="dropIcon dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false" align="absmiddle">
+                    </p>
+                    <ul class="dropdown-menu" uib-dropdown-menu="" role="menu" aria-labelledby="split-button">
+                        <li ng-click="add_subject(subject)" class="ng-scope" ng-repeat="subject in temp_newObject" uib-dropdown-toggle="" style="    box-shadow: none;cursor: pointer;">
+                          <a  class="ng-binding">{{subject.title}}</a>
+                        </li>
+                    </ul>
+                  </div>          
+                </td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+      <tr>
+        <td align="left" valign="top"><div style="width:190px; clear: both;"></div></td>
+        <td align="left" valign="top"></td>
+      </tr>
+      <tr>
+        <td id="tdStyleBox" align="left" valign="top" style="width: 15%; display: block;"><div class="template_tool_panel template-tool-panel" id="stylePanel" style="width: 100%;">
+            <ul class="template_ui_tabs template-ui-tabs" style="padding: 10px; width: 200px;">
+              <li class="ui-tab ui-tab-gradient active" style="width: 98px;    border-top-left-radius: 4px;border-bottom-left-radius: 4px;" id="colorsAndFontsBoxTab" boxid="colorsAndFontsBox"> <a id="colorFontLink" href="javascript:void(0);" style="cursor: pointer;    border-top-left-radius: 4px;border-bottom-left-radius: 4px;    background-color: #035287;">Colors &amp; fonts</a> </li>
+              <li class="ui-tab ui-tab-gradient" style="width: 69px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;" id="blockSectionsTab" boxid="blockSections"> <a id="blockLink" href="javascript:void(0);" style="cursor: pointer;border-top-right-radius: 4px;border-bottom-right-radius: 4px;" >Blocks</a> </li>
+            </ul>
+            <div id="b1" class="template_cf_panel template-cf-panel" style="width: 200px; height: 380px; display: block;">
+              <div class="template-cf-wrapper">
+                <div class="template_cf_lists template-cf-list">
+                  <div id="OuterSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="50%" align="left" valign="top"><div title="Width" class="title_teb title1" style="width: 80px;">Width</div></td>
+                          <td align="left" valign="top">
+                            <select class="list_menuWhite1 listmenuWhite1" id="OuterSectionSliderList" ng-model="pixel" style="width: 100%;">
+                              <option value="600">600</option>
+                              <option value="700">700</option>
+                              <option value="800">800</option>
+                              <option value="900">900</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="98%" align="right" valign="top" colspan="2">
+                            <div slider config="sliderConfig" model="pixel" class="cdbl-slider"></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <h3 class="template_cf_header template-cf-header">Backgrounds</h3>
+                <div class="template_cf_lists template-cf-list">
+                  <div id="OuterSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    </table>
+                  </div>
+                  <div id="HeaderheadingSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div title="Header heading background color" class="title_teb title1">Header heading backg</div></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                           <ui-colorpicker ng-model="targetColor3"></ui-colorpicker>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="ArticleheadingSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div title="Article heading background color" class="title_teb title1">Article heading backg</div></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor1"></ui-colorpicker>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="ArticledetailSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div title="Article detail background color" class="title_teb title1">Article detail backgrou</div></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor2"></ui-colorpicker>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="FooterSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div title="Footer background color" class="title_teb title1">Footer background col</div></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor2"></ui-colorpicker>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <h3 class="template_cf_header template-cf-header">Borders</h3>
+                <div class="template_cf_lists template-cf-list">
+                  <div id="OuterSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div title="Outer border color" class="title_teb title1">Outer border color</div></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor3"></ui-colorpicker>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="ArticleheadingSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div title="Article heading border color" class="title_teb title1">Article heading border</div></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor4"></ui-colorpicker>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <h3 class="template_cf_header template-cf-header">Fonts</h3>
+                <div class="template_cf_lists template-cf-list">
+                  <div id="HeaderheadingSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="100%" align="left" valign="top" colspan="3"><div title="Header heading text" class="title_teb title1" style="width: 115px;">Header heading text</div></td>
+                        </tr>
+                        <tr>
+                          <td width="40%" align="left" valign="top"><select class="listmenu1" id="HeaderheadingSectionFontFamily" data-name="HeaderheadingSection" data-style="font-family" style="width: 100%;">
+                              <option value="Arial,Helvetica,sans-serif" selected="selected">Arial</option>
+                              <option value="Comic Sans MS,cursive">Comic Sans MS</option>
+                              <option value="Courier New,Courier,monospace">Courier New</option>
+                              <option value="Georgia,serif">Georgia</option>
+                              <option value="Lucida Sans Unicode,Lucida Grande,sans-serif">Lucida Sans Unicode</option>
+                              <option value="sans-serif">Sans Serif</option>
+                              <option value="Tahoma,Geneva,sans-serif">Tahoma</option>
+                              <option value="Times New Roman,Times,serif">Times New Roman</option>
+                              <option value="Trebuchet MS,Helvetica,sans-serif">Trebuchet MS</option>
+                              <option value="Verdana,Geneva,sans-serif">Verdana</option>
+                            </select></td>
+                          <td width="30%" align="left" valign="top"><select class="listmenu1" id="HeaderheadingSectionFontSize" data-name="HeaderheadingSection" data-style="font-size" style="width: 100%;">
+                              <option value="8px">8px</option>
+                              <option value="9px">9px</option>
+                              <option value="10px">10px</option>
+                              <option value="11px">11px</option>
+                              <option value="12px">12px</option>
+                              <option value="13px">13px</option>
+                              <option value="14px">14px</option>
+                              <option value="15px">15px</option>
+                              <option value="16px">16px</option>
+                              <option value="18px">18px</option>
+                              <option value="20px">20px</option>
+                              <option value="22px">22px</option>
+                              <option value="24px">24px</option>
+                              <option value="26px" selected="selected">26px</option>
+                              <option value="28px">28px</option>
+                              <option value="30px">30px</option>
+                              <option value="32px">32px</option>
+                              <option value="34px">34px</option>
+                              <option value="36px">36px</option>
+                              <option value="48px">48px</option>
+                              <option value="72px">72px</option>
+                            </select></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor1"></ui-colorpicker>
+                            </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="ArticleheadingSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="100%" align="left" valign="top" colspan="3"><div title="Article heading text" class="title_teb title1" style="width: 115px;">Article heading text</div></td>
+                        </tr>
+                        <tr>
+                          <td width="40%" align="left" valign="top"><select class="listmenu1" id="ArticleheadingSectionFontFamily" data-name="ArticleheadingSection" data-style="font-family" style="width: 100%;">
+                              <option value="Arial,Helvetica,sans-serif" selected="selected">Arial</option>
+                              <option value="Comic Sans MS,cursive">Comic Sans MS</option>
+                              <option value="Courier New,Courier,monospace">Courier New</option>
+                              <option value="Georgia,serif">Georgia</option>
+                              <option value="Lucida Sans Unicode,Lucida Grande,sans-serif">Lucida Sans Unicode</option>
+                              <option value="sans-serif">Sans Serif</option>
+                              <option value="Tahoma,Geneva,sans-serif">Tahoma</option>
+                              <option value="Times New Roman,Times,serif">Times New Roman</option>
+                              <option value="Trebuchet MS,Helvetica,sans-serif">Trebuchet MS</option>
+                              <option value="Verdana,Geneva,sans-serif">Verdana</option>
+                            </select></td>
+                          <td width="30%" align="left" valign="top"><select class="listmenu1" id="ArticleheadingSectionFontSize" data-name="ArticleheadingSection" data-style="font-size" style="width: 100%;">
+                              <option value="8px">8px</option>
+                              <option value="9px">9px</option>
+                              <option value="10px">10px</option>
+                              <option value="11px">11px</option>
+                              <option value="12px">12px</option>
+                              <option value="13px">13px</option>
+                              <option value="14px">14px</option>
+                              <option value="15px">15px</option>
+                              <option value="16px">16px</option>
+                              <option value="18px">18px</option>
+                              <option value="20px">20px</option>
+                              <option value="22px" selected="selected">22px</option>
+                              <option value="24px">24px</option>
+                              <option value="26px">26px</option>
+                              <option value="28px">28px</option>
+                              <option value="30px">30px</option>
+                              <option value="32px">32px</option>
+                              <option value="34px">34px</option>
+                              <option value="36px">36px</option>
+                              <option value="48px">48px</option>
+                              <option value="72px">72px</option>
+                            </select></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                            <ui-colorpicker ng-model="targetColor2"></ui-colorpicker>
+                          </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="ArticledetailSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="100%" align="left" valign="top" colspan="3"><div title="Article detail text" class="title_teb title1" style="width: 115px;">Article detail text</div></td>
+                        </tr>
+                        <tr>
+                          <td width="40%" align="left" valign="top"><select class="listmenu1" id="ArticledetailSectionFontFamily" data-name="ArticledetailSection" data-style="font-family" style="width: 100%;">
+                              <option value="Arial,Helvetica,sans-serif" selected="selected">Arial</option>
+                              <option value="Comic Sans MS,cursive">Comic Sans MS</option>
+                              <option value="Courier New,Courier,monospace">Courier New</option>
+                              <option value="Georgia,serif">Georgia</option>
+                              <option value="Lucida Sans Unicode,Lucida Grande,sans-serif">Lucida Sans Unicode</option>
+                              <option value="sans-serif">Sans Serif</option>
+                              <option value="Tahoma,Geneva,sans-serif">Tahoma</option>
+                              <option value="Times New Roman,Times,serif">Times New Roman</option>
+                              <option value="Trebuchet MS,Helvetica,sans-serif">Trebuchet MS</option>
+                              <option value="Verdana,Geneva,sans-serif">Verdana</option>
+                            </select></td>
+                          <td width="30%" align="left" valign="top"><select class="listmenu1" id="ArticledetailSectionFontSize" data-name="ArticledetailSection" data-style="font-size" style="width: 100%;">
+                              <option value="8px">8px</option>
+                              <option value="9px">9px</option>
+                              <option value="10px">10px</option>
+                              <option value="11px">11px</option>
+                              <option value="12px">12px</option>
+                              <option value="13px">13px</option>
+                              <option value="14px" selected="selected">14px</option>
+                              <option value="15px">15px</option>
+                              <option value="16px">16px</option>
+                              <option value="18px">18px</option>
+                              <option value="20px">20px</option>
+                              <option value="22px">22px</option>
+                              <option value="24px">24px</option>
+                              <option value="26px">26px</option>
+                              <option value="28px">28px</option>
+                              <option value="30px">30px</option>
+                              <option value="32px">32px</option>
+                              <option value="34px">34px</option>
+                              <option value="36px">36px</option>
+                              <option value="48px">48px</option>
+                              <option value="72px">72px</option>
+                            </select></td>
+                         <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor3"></ui-colorpicker>
+                         </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="FooterSection" class="template_cf_list template-cf-list">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="100%" align="left" valign="top" colspan="3"><div title="Footer text" class="title_teb title1" style="width: 115px;">Footer text</div></td>
+                        </tr>
+                        <tr>
+                          <td width="40%" align="left" valign="top"><select class="listmenu1" id="FooterSectionFontFamily" data-name="FooterSection" data-style="font-family" style="width: 100%;">
+                              <option value="Arial,Helvetica,sans-serif" selected="selected">Arial</option>
+                              <option value="Comic Sans MS,cursive">Comic Sans MS</option>
+                              <option value="Courier New,Courier,monospace">Courier New</option>
+                              <option value="Georgia,serif">Georgia</option>
+                              <option value="Lucida Sans Unicode,Lucida Grande,sans-serif">Lucida Sans Unicode</option>
+                              <option value="sans-serif">Sans Serif</option>
+                              <option value="Tahoma,Geneva,sans-serif">Tahoma</option>
+                              <option value="Times New Roman,Times,serif">Times New Roman</option>
+                              <option value="Trebuchet MS,Helvetica,sans-serif">Trebuchet MS</option>
+                              <option value="Verdana,Geneva,sans-serif">Verdana</option>
+                            </select></td>
+                          <td width="30%" align="left" valign="top"><select class="listmenu1" id="FooterSectionFontSize" data-name="FooterSection" data-style="font-size" style="width: 100%;">
+                              <option value="8px">8px</option>
+                              <option value="9px">9px</option>
+                              <option value="10px">10px</option>
+                              <option value="11px">11px</option>
+                              <option value="12px" selected="selected">12px</option>
+                              <option value="13px">13px</option>
+                              <option value="14px">14px</option>
+                              <option value="15px">15px</option>
+                              <option value="16px">16px</option>
+                              <option value="18px">18px</option>
+                              <option value="20px">20px</option>
+                              <option value="22px">22px</option>
+                              <option value="24px">24px</option>
+                              <option value="26px">26px</option>
+                              <option value="28px">28px</option>
+                              <option value="30px">30px</option>
+                              <option value="32px">32px</option>
+                              <option value="34px">34px</option>
+                              <option value="36px">36px</option>
+                              <option value="48px">48px</option>
+                              <option value="72px">72px</option>
+                            </select></td>
+                          <td width="20%" align="right" valign="top"><div style='text-align:center;'>
+                              <ui-colorpicker ng-model="targetColor4"></ui-colorpicker>
+                          </div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div id="c1" style="width: 207px; height: 380px; display: none;" class="template_cf_panel template-cf-panel">
+              <div class="template-cf-wrapper">
+                <div class="template_cf_lists template-cf-list">
+                  <div id="Headerheading" blockname="Header heading" class="template_cf_list template-cf-list ui-draggable" style="cursor: move;">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div class="title_teb title1" style="cursor: move;">Header heading</div></td>
+                          <td width="20%" align="right" valign="top"><div align="right" role="image" class="template-block-image" style="background: url(&quot;images/blok-file.png&quot;) right center no-repeat transparent;"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="Articleheading" blockname="Article heading" class="template_cf_list template-cf-list ui-draggable" style="cursor: move;">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div class="title_teb title1" style="cursor: move;">Article heading</div></td>
+                          <td width="20%" align="right" valign="top"><div align="right" role="image" class="template-block-image" style="background: url(&quot;images/blok-file.png&quot;) right center no-repeat transparent;"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="Articledetail" blockname="Article detail" class="template_cf_list template-cf-list ui-draggable" style="cursor: move;">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div class="title_teb title1" style="cursor: move;">Article detail</div></td>
+                          <td width="20%" align="right" valign="top"><div align="right" role="image" class="template-block-image" style="background: url(&quot;images/blok-file.png&quot;) right center no-repeat transparent;"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="Footer" blockname="Footer" class="template_cf_list template-cf-list ui-draggable" style="cursor: move;">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="80%" align="left" valign="top"><div class="title_teb title1" style="cursor: move;">Footer</div></td>
+                          <td width="20%" align="right" valign="top"><div align="right" role="image" class="template-block-image" style="background: url(&quot;images/blok-file.png&quot;) right center no-repeat transparent;"></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="et-overlay" style="width: 191px; height: 385px;"></div>
+            </div>
+          </div></td>
+        <td id="tdEditorBox" align="left" valign="top" style="width:85%;padding-left:10px">
+    <div class="template_tool_panel template-tool-panel" id="editorPanel" style="height: auto; width: 100%;border: 1px solid rgb(216, 216, 216);padding-bottom: 20px;border-top-left-radius: 6px;border-top-right-radius: 6px;">
+            <ul class="template_ui_tabs template-ui-tabs" style="padding: 10px; width: 100%;">
+              <li class="ui-tab ui-tab-gradient" style="width: 100px;    border-top-left-radius: 4px;border-bottom-left-radius: 4px;" id="editorTab" boxid="editor"> <a href="javascript:void(0);" style="cursor: pointer;background-color: #035287;border-top-left-radius: 4px;border-bottom-left-radius: 4px;">Design</a> </li>
+              <li class="ui-tab ui-tab-gradient active" style="width: 100px;    border-top-right-radius: 4px;border-bottom-right-radius: 4px;" id="sourceEditorTab" boxid="sourceEditor"> <a href="javascript:void(0);" style="cursor: pointer;    border-top-right-radius: 4px;border-bottom-right-radius: 4px;">Source</a> </li>
+            </ul>
+           
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="OuterSection" style="margin: 0px auto; padding: 0px; width: 600px; border: 1px solid rgb(204, 204, 204);">
+                <tbody>
+                  <tr style="width: 600px;">
+                    <td><table border="0" cellpadding="0" cellspacing="0" style="" width="100%">
+                        <tbody>
+                          <tr>
+                            <td><div class="HeaderheadingSection" customdictionaryids="" slang="en_US" userdictionaryname="" id="HeaderheadingSection02" inlineeditor="true" droparea="true" inlineeditorid="HeaderheadingSection02" areaname="Header heading">
+                                <table border="0" cellpadding="0" cellspacing="0" style="border-bottom:1px solid #E47200; background: rgb(223, 224, 226); color: rgb(69, 69, 69); font-family: Arial, Helvetica, sans-serif; font-size: 26px;" width="100%" inlineeditor="true" droparea="true" inlineeditorid="HeaderheadingSection02">
+                                  <tbody inlineeditor="true" droparea="true" inlineeditorid="HeaderheadingSection02">
+                                    <tr inlineeditor="true" droparea="true" inlineeditorid="HeaderheadingSection02">
+                                      <td height="80" style="color: rgb(69, 69, 69); font-family: Arial, Helvetica, sans-serif; font-size: 26px; padding-left: 20px;" inlineeditor="true" droparea="true" inlineeditorid="HeaderheadingSection02">Company Name</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div></td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 20px;"><div class="ArticleheadingSection" customdictionaryids="" slang="en_US" userdictionaryname="" id="ArticleheadingSection012" inlineeditor="true" droparea="true" inlineeditorid="ArticleheadingSection012" areaname="Article heading">
+                                <table border="0" cellpadding="0" cellspacing="0" style="color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: 22px;" width="100%" inlineeditor="true" droparea="true" inlineeditorid="ArticleheadingSection012">
+                                  <tbody inlineeditor="true" droparea="true" inlineeditorid="ArticleheadingSection012">
+                                    <tr inlineeditor="true" droparea="true" inlineeditorid="ArticleheadingSection012">
+                                      <td style="color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: 22px; padding-bottom: 10px;" inlineeditor="true" droparea="true" inlineeditorid="ArticleheadingSection012">Thank you for your time!</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div class="ArticledetailSection" customdictionaryids="" slang="en_US" userdictionaryname="" id="ArticledetailSection013" inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013" areaname="Article detail">
+                                <table border="0" cellpadding="0" cellspacing="0" style="font-family: Arial, Helvetica, sans-serif; color: rgb(69, 69, 69); font-size: 14px;" width="100%" inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                  <tbody inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                    <tr inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                      <td style="padding-bottom: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(69, 69, 69); font-size: 14px;" inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013"><b inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">Thank you for subscribing. You have successfully been added to our email list.</b><br inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                        <br inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                        <br inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                        <br inlineeditor="true" droparea="true" inlineeditorid="ArticledetailSection013">
+                                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div></td>
+                          </tr>
+                          <tr>
+                            <td align="left"><div class="FooterSection" customdictionaryids="" slang="en_US" userdictionaryname="" id="FooterSection022" inlineeditor="true" droparea="true" inlineeditorid="FooterSection022" areaname="Footer">
+                                <table border="0" cellpadding="0" cellspacing="0" style="color: rgb(69, 69, 69); font-family: Arial, Helvetica, sans-serif; font-size: 12px; background-color: rgb(221, 221, 221);" width="100%" inlineeditor="true" droparea="true" inlineeditorid="FooterSection022">
+                                  <tbody inlineeditor="true" droparea="true" inlineeditorid="FooterSection022">
+                                    <tr inlineeditor="true" droparea="true" inlineeditorid="FooterSection022">
+                                      <td style="padding: 20px; color: rgb(69, 69, 69); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: left; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; font-size-adjust: none; font-stretch: normal;" inlineeditor="true" droparea="true" inlineeditorid="FooterSection022"><img src="https://s3.amazonaws.com/soffrontsmb-production/1_1392988331961" style="border-width: 0px; border-style: solid; width: 130px; height: 26px;" inlineeditor="true" droparea="true" inlineeditorid="FooterSection022"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div></td>
+                          </tr>
+                        </tbody>
+                      </table></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+           
+              
+            </div>
+           
+            <div id="cke_sourceEditor" class="cke_1 cke cke_reset cke_chrome cke_editor_sourceEditor cke_ltr cke_browser_webkit" dir="ltr" lang="en" role="application" aria-labelledby="cke_sourceEditor_arialbl" style="width: 100%; display: none;"><span id="cke_sourceEditor_arialbl" class="cke_voice_label">Rich Text Editor, sourceEditor</span>
+              <div class="cke_inner cke_reset" role="presentation"><span id="cke_1_top" class="cke_top cke_reset_all" role="presentation" style="height: auto; user-select: none;"><span id="cke_7" class="cke_voice_label">Editor toolbars</span><span id="cke_1_toolbox" class="cke_toolbox" role="group" aria-labelledby="cke_7" onMouseDown="return false;"></span></span>
+                <div id="cke_1_contents" class="cke_contents cke_reset" role="presentation" style="height: 430px;">
+                  <textarea dir="ltr" class="cke_source cke_reset cke_enable_context_menu cke_editable cke_editable_themed cke_contents_ltr" tabindex="0" style="width: 100%; height: 100%; resize: none; outline: none; text-align: left; tab-size: 4;" role="textbox" aria-label="Rich Text Editor, sourceEditor" title="Rich Text Editor, sourceEditor" aria-describedby="cke_20"></textarea>
+                 </div>
+                <span id="cke_1_bottom" class="cke_bottom cke_reset_all" role="presentation" style="user-select: none;"><span id="cke_1_resizer" class="cke_resizer cke_resizer_horizontal cke_resizer_ltr" title="Resize" onMouseDown="CKEDITOR.tools.callFunction(0, event)">◢</span></span></div>
+            </div>
+          </div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="list_gray_box" style="padding: 0px;" id="recordList"> </div>
+
+<div align="left" class="top_btn top_btn_area" style="width: 35%;margin-top:-47px; float: left; ">
+      <div  style="float: left; margin-right: 10px;margin-left:60px;">
+        <input type="button" name="save" value="Save" class="btn_input btn_bg1">
+      </div>
+      <div class="" style="float: left; margin-right: 10px;">
+        <input type="button" name="back" value="back" class="btn_input btn_bg1">
+      </div>
+    <!-- <div class="" style="float: left; margin-right: 10px;">
+        <input type="button" name="save" value="Test" class="btn_bg1">
+      </div>
+    <div class="" style="float: left; margin-right: 10px;">
+        <input type="button" name="save" value="Preview" class="btn_bg1">
+      </div> -->
+    
+    </div>
+    
+
+    <div class="modal fade" id="test1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content content_test">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h5 class="modal-title">Test Email Template</h5>
+        </div>
+        <div class="modal-body">
+        <div id="testmsg" style="margin:10px auto;">
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+  
+  <tbody><tr><td>&nbsp;</td></tr>
+  <tr valign="middle">
+      <td>
+        
+        <span class="red"><strong>To</strong></span>
+        <input type="text" class="textboxWhite" name="email" id="email" placeholder="Email" value="" autocomplete="off" style="width: 270px;height:19px;">
+        
+        <span id="contTxt"><font class="form_TextLebel formTextLebelNew">&nbsp;(Enter email for testing)</font></span>
+      
+      <div id="datalist" style="position:absolute;width:27%;display:block;">
+      
+      </div>
+      </td> 
+  </tr>
+  <tr>
+    <td style="padding:7px 0 0 19px;"><input type="checkbox" name="spamchk" id="spamchk" value="1"><font class="form_TextLebel formTextLebelNew" style="margin-left: 5px;">Check SPAM</font>
+       <div class="help" data-hasqtip="0" oldtitle="Check spam info" title="">
+            <div class="info-box" style="display:none">Find out the probability of this email getting sent to the SPAM folder.</div>
+              <a href="javascript:void(0);" class="help-button" title="Click to know more"><img src="images/icon_info.png" border="0"></a>
+        </div>  
+    
+    </td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+    <td align="center" valign="bottom">
+     <input type="button" class="btn_input btn_bg1" value="Send Email">
+    </td>
+  </tr>
+</tbody></table>
+</div>
+          
+     </div>
+        </div>
+      </div>
+      
+    </div>  
+    </div> 
+</div>
+</body>
+

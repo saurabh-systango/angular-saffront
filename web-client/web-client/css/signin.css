@@ -1,0 +1,169 @@
+.login {
+  background-color: #f1f1f1;
+  border: 1px solid #95c2ef;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #aaaaaa;
+  margin: 5% auto 0;
+  padding: 30px 30px 50px;
+  width: 860px;
+}
+.login form {
+  width: 430px;
+}
+.form-control.login_textbox {
+  background-color: #d1d1d1;
+  border: 0 none;
+  font: 14px Arial,Helvetica,sans-serif;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 0 2px;  
+}
+.login .form-group > label {
+  color: #000000;
+  display: block;
+  font: 14px arial;
+  margin-top: 20px;
+}	
+.login .checkbox {
+  display: inline-block;
+  margin:0;
+  vertical-align: top;
+  width: 50%;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom:20px;
+  font-weight:bold;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  margin:0 0 15px 0;
+  border-radius:0;
+  background: #d1d1d1 none repeat scroll 0 0;
+  border: medium none;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.login.forget-password {
+  padding:3.5% 35px 50px;
+}
+
+.login button.btn-primary {
+  background: #058ae5 none repeat scroll 0 0;
+  border: 0 none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  display: table;
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px 20px;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+}
+.form-group.padding-left, .checkbox.padding-left {
+  padding-left: 50px;
+  width: 100%;
+}
+
+.login .checkbox label {
+    min-height: inherit;
+	color:#000;
+    padding: 0;
+}
+
+.login .checkbox input {
+    display: inline-block;
+    line-height: normal;
+    margin: 3px 0 0 8px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.login p.forgot-password {
+    margin:0;
+    padding: 0;
+}
+.login p.forgot-password a {
+    color: #000;
+}
+
+.loglink {
+  color: inherit;
+}
+label {font-weight:normal;}
+
+.forget-pass a:hover, .loglink:hover, .login .checkbox label:hover, #login_page_content .login p.forgot-password:hover, .forget-password a strong:hover {
+  text-decoration: underline;
+}
+.forget-password img {
+  margin-right: 10px;
+  margin-top: -5px;
+}
+.login .form-group > label {
+  color: #000000;
+  display: block;
+  font: 14px arial;
+  margin-top: 20px;
+}
+.login button.btn-primary {
+  background: #058ae5 none repeat scroll 0 0;
+  border: 0 none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  display: table;
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 7px 20px;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+}
+.padding-lefts input {
+  display: inline-block;
+  margin-top: 20px;
+  width: 271px;
+}
+.login.forget-password form {
+  width: 475px;
+}
+.padding-lefts label {
+  display: inline-block !important;
+  margin: 0 !important;
+  vertical-align: middle;
+  width: 40px;
+}
+.padding-left button {
+  display: inline-block !important;
+  margin:20px 0 20px 15px;
+}
+.jtrack.login {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+  box-shadow: 0 0 0 0;
+  padding-left: 150px;
+  padding-top: 10px;
+}
+.jtrack h2 {
+  color: #231f20;
+  font: bold 28px Arial,Helvetica,sans-serif;
+  height: 45px;
+}
+.login.forget-password.session {
+  padding: 60px 40px;
+}

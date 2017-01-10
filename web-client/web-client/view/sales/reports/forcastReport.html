@@ -1,0 +1,265 @@
+<div class="container-fluid " ng-controller="activityReportCtrl">
+    <div class="col-md-12" style="margin-top: 20px;">
+        <form>
+          <div class="col-md-3">
+                <select class="form-control" ng-model="parametersData.user_name" ng-options="item for item in data.user_names">
+            </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control" ng-model="parametersData.due_by">
+      				<option value="td">Today</option>
+      				<option value="yd">Yesterday</option>
+      				<option value="tw">This Week</option>
+      				<option value="tm">This Month</option>
+      				<option value="tq">This Quarter</option>
+      				<option value="ty">This Year</option>
+      				<option value="lw">Last Week</option>
+      				<option value="lm">Last Month</option>
+      				<option value="lq">Last Quarter</option>
+      				<option value="ly">Last Year</option>
+      				<option value="cust">Custom</option>
+      			</select>
+            </div>
+            <div ng-show="parametersData.due_by=='cust'">
+                <div class="col-md-2">
+                    <input type="text" class="form-control" datetime-picker="MM/dd/yyyy" ng-click="openCalendar($event, 'picker3')" ng-model="picker3.date"
+                        is-open="picker3.open" placeholder="From Date" />
+
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" datetime-picker="MM/dd/yyyy" ng-click="openCalendar($event, 'picker4')" ng-model="picker4.date"
+                        is-open="picker4.open" placeholder="To Date" />
+
+                </div>
+            </div>
+           
+			  <div class="col-md-2">
+            <img title="Refresh" ng-click="reports()" alt="Refresh" src="images/icon_refresh_g.png" action="refresh" style=" margin: 2px 10px; cursor: pointer;">
+            <img title="Print" alt="Print" src="images/icon_print.png" action="printMe" style="margin: 2px 10px; cursor: pointer;">
+        </div>
+        </form>
+
+      
+    </div>
+    
+	<div class="col-md-12" style="margin-top:50px;"> 
+      
+
+<div align="left">
+   <div style="float:left; margin-right:5px" class="contact_img_for_forcast" align="left"><img src="images/blank_profile.png" name="profileImg" style="cursor: default;" width="35px;" height="35px;"></div>
+   <div style="float:left; margin-right:5px;padding:8px;" class="forcast_heading" align="left">Ravi Teja Villa</div>
+   <div class="balance"></div>
+</div>
+<table id="resultTable" width="100%" cellspacing="0" cellpadding="0" border="0">
+   <tbody>
+      <tr class="heading1 row1">
+         <td colspan="7">
+            <table style="width:100%" cellspacing="3" cellpadding="0" border="0">
+               <tbody>
+                  <tr class="row1" id="statusTr">
+                     <td><strong>Opportunities Stages</strong></td>
+                     <td style="padding-top:4px;font-size:13px;"><strong>Close&nbsp;(100%)</strong></td>
+                     <td style="padding-top:4px;font-size:13px;"><strong>Negotiation&nbsp;(80%)</strong></td>
+                     <td style="padding-top:4px;font-size:13px;"><strong>Proposal&nbsp;(60%)</strong></td>
+                     <td style="padding-top:4px;font-size:13px;"><strong>Presentation&nbsp;(40%)</strong></td>
+                     <td style="padding-top:4px;font-size:13px;"><strong>Qualified&nbsp;(20%)</strong></td>
+                     <td style="padding-top:4px;font-size:13px;"><strong>Total</strong></td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+      <tr class="heading2 row1">
+         <td colspan="7">
+            <table style="width:100%" cellspacing="3" cellpadding="0" border="0">
+               <tbody>
+                  <tr class="row1" id="statusDataRow">
+                     <td><strong>Total: This Quarter</strong></td>
+                     <td><strong><span onclick="detailsReport(&quot;Close&quot;);" style="cursor:pointer"><u>$0.00</u></span></strong></td>
+                     <td><strong><span onclick="detailsReport(&quot;Negotiation&quot;);" style="cursor:pointer"><u>$0.00</u></span></strong></td>
+                     <td><strong><span onclick="detailsReport(&quot;Proposal&quot;);" style="cursor:pointer"><u>$30.00</u></span></strong></td>
+                     <td><strong><span onclick="detailsReport(&quot;Presentation&quot;);" style="cursor:pointer"><u>$0.00</u></span></strong></td>
+                     <td><strong><span onclick="detailsReport(&quot;Qualified&quot;);" style="cursor:pointer"><u>$328.00</u></span></strong></td>
+                     <td><strong><span onclick="detailsReport(&quot;&quot;);" style="cursor:pointer"><u>$358.00</u></span></strong></td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+      <tr class="monthHeaderRow row1">
+         <td colspan="7">
+            <table style="width:100%" cellspacing="3" cellpadding="0" border="0">
+               <tbody>
+                  <tr id="monthDataRowOct2016" class="row3">
+                     <td><strong>Oct 2016</strong></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Close&quot;,&quot;2016-10-01&quot;,&quot;2016-10-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Negotiation&quot;,&quot;2016-10-01&quot;,&quot;2016-10-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Proposal&quot;,&quot;2016-10-01&quot;,&quot;2016-10-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Presentation&quot;,&quot;2016-10-01&quot;,&quot;2016-10-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Qualified&quot;,&quot;2016-10-01&quot;,&quot;2016-10-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;undefined&quot;,&quot;2016-10-01&quot;,&quot;2016-10-31&quot;);">$0.00</u></td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+      <tr id="monthDataRowSalesRepOct2016" class="row1">
+         <td class="monthHeaderRow" id="monthDataRowSalesRepTDOct2016" colspan="7">
+            <div class="recordRow" id="monthDataRowSalesRepDivOct2016">
+               <table id="monthDataRowSalesRepTableOct2016" style="width:100%" cellspacing="3" cellpadding="0" border="0">
+                  <tbody>
+                     <tr id="monthDataRowSalesRepTableTROct2016RaviTejaVilla">
+                        <td>Ravi Teja Villa</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </td>
+      </tr>
+      <tr class="monthHeaderRow row1">
+         <td colspan="7">
+            <table style="width:100%" cellspacing="3" cellpadding="0" border="0">
+               <tbody>
+                  <tr id="monthDataRowNov2016" class="row3">
+                     <td><strong>Nov 2016</strong></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Close&quot;,&quot;2016-11-01&quot;,&quot;2016-11-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Negotiation&quot;,&quot;2016-11-01&quot;,&quot;2016-11-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Proposal&quot;,&quot;2016-11-01&quot;,&quot;2016-11-31&quot;);">$30.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Presentation&quot;,&quot;2016-11-01&quot;,&quot;2016-11-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Qualified&quot;,&quot;2016-11-01&quot;,&quot;2016-11-31&quot;);">$328.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;undefined&quot;,&quot;2016-11-01&quot;,&quot;2016-11-31&quot;);">$358.00</u></td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+      <tr id="monthDataRowSalesRepNov2016" class="row1">
+         <td class="monthHeaderRow" id="monthDataRowSalesRepTDNov2016" colspan="7">
+            <div class="recordRow" id="monthDataRowSalesRepDivNov2016">
+               <table id="monthDataRowSalesRepTableNov2016" style="width:100%" cellspacing="3" cellpadding="0" border="0">
+                  <tbody>
+                     <tr id="monthDataRowSalesRepTableTRNov2016RaviTejaVilla">
+                        <td>Ravi Teja Villa</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$30.00</td>
+                        <td>$0.00</td>
+                        <td>$328.00</td>
+                        <td>$358.00</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </td>
+      </tr>
+      <tr class="monthHeaderRow row1">
+         <td colspan="7">
+            <table style="width:100%" cellspacing="3" cellpadding="0" border="0">
+               <tbody>
+                  <tr id="monthDataRowDec2016" class="row3">
+                     <td><strong>Dec 2016</strong></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Close&quot;,&quot;2016-12-01&quot;,&quot;2016-12-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Negotiation&quot;,&quot;2016-12-01&quot;,&quot;2016-12-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Proposal&quot;,&quot;2016-12-01&quot;,&quot;2016-12-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Presentation&quot;,&quot;2016-12-01&quot;,&quot;2016-12-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;Qualified&quot;,&quot;2016-12-01&quot;,&quot;2016-12-31&quot;);">$0.00</u></td>
+                     <td><u style="cursor:pointer" onclick="detailsReport(&quot;undefined&quot;,&quot;2016-12-01&quot;,&quot;2016-12-31&quot;);">$0.00</u></td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+      <tr id="monthDataRowSalesRepDec2016" class="row1">
+         <td class="monthHeaderRow" id="monthDataRowSalesRepTDDec2016" colspan="7">
+            <div class="recordRow" id="monthDataRowSalesRepDivDec2016">
+               <table id="monthDataRowSalesRepTableDec2016" style="width:100%" cellspacing="3" cellpadding="0" border="0">
+                  <tbody>
+                     <tr id="monthDataRowSalesRepTableTRDec2016RaviTejaVilla">
+                        <td>Ravi Teja Villa</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </td>
+      </tr>
+   </tbody>   
+</table>
+
+
+    </div>
+</div>
+
+<style>
+
+.row1 td{
+	padding:0px;
+	font:12px Arial, Helvetica, sans-serif;
+	width:15%;
+	text-align:right;
+}
+.row1{
+	/*background:url(./images/NewDesign/row_bg.jpg) repeat-x left top #DFDFDF;*/
+	color:#ffffff;
+	height:24px;
+	font-size: 13px;
+}
+.row1 td:first-child{
+	height:24px;
+	font-size: 13px;
+	text-align:left;
+}
+.row3 td:last-child{
+	font-weight: bold;
+}
+.row1 td:last-child{
+	font-weight: bold;
+}
+.forcast_heading{
+	font:bold 16px Arial, Helvetica, sans-serif;
+	color:#000000;
+	padding:0 0 4px 4px;
+}
+.contact_img_for_forcast{
+	padding:0 0 2px 0px;
+}
+
+.heading1{	
+	background-color:#058AE5;
+	}
+
+.heading2{
+	background-color:#95c2ef;	
+}
+
+.heading2 td{
+	padding:0px;
+	font:12px Arial, Helvetica, sans-serif;
+	width:15%;
+	text-align:right;
+	color:#ffffff;
+}
+.monthHeaderRow{
+	color:#000000;
+	height:24px;
+	font-size: 13px;
+	background-color:#e8eff7;
+}
+
+.recordRow{
+	display:block;
+	background-color:#FFFFFF; 
+	border:0px solid #A0C3FF;	
+}
+</style>

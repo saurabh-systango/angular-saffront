@@ -1,0 +1,219 @@
+<form method="post" ng-model="mergeRecordForm" action="saveMergeRecord.page">
+    <div class="top_btn_area">
+        <div style="float:left; margin-right:10px" class="btn_bg1">Merge</div>
+        <div class="balance"></div>
+    </div>
+
+    <div id="inside_page_content2">
+
+        <div class="gray_box2">
+
+            <table class="table_area" width="100%" cellspacing="0" border="0">
+
+                <tbody>
+                    <tr>
+                        <td colspan="9" class="normal" style="font-style: italic;" width="100%" valign="top">*Only displaying fields that are different.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="9" class="normal" style="padding-bottom:5px" width="100%" valign="top">
+                            <table id="workflowInfoTable" style="padding-left: 10px;" width="30%" cellspacing="0" cellpadding="0" align="left">
+                                <tbody>
+                                    <tr>
+                                        <td id="workflowLabel" style="display:none;" class="red" width="5%" align="left"><strong>Workflow: </strong>
+                                        </td>
+                                        <td id="wfTd" style="display:none;" width="42%" align="left">
+                                            <div>
+                                                <select disabled="" ng-model="wfListName" style="width: 200px; display: none;" class="listmenuWhite">
+                                                    <option value="290441">Accounts workflow</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td id="gapeTd" style="display:none;" width="8%" align="left"></td>
+                                        <td id="statusLabel" style="" class="red" width="3%" align="left"><strong>Status: </strong>
+                                        </td>
+                                        <td id="statusTd" width="42%" align="left">
+                                            <div>
+                                                <select disabled="" ng-model="statusList" style="width: 200px;" class="listmenuWhite">
+                                                    <option value="-1"> </option>
+                                                    <option value="Customer">Customer</option>
+                                                    <option value="Customer">Customer</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="red" style="padding-left: 20px;" width="15%" valign="top">Field</td>
+                        <td class="red" width="2%" valign="top">
+                            <input ng-model="chk_all" class="left-rbox-all" checked="checked" type="radio">
+                        </td>
+                        <td class="red" width="25%" valign="top">Record: 1</td>
+                        <td width="5%">&nbsp;</td>
+                        <td class="red" width="2%" valign="top">
+                            <input ng-model="chk_all" type="radio">
+                        </td>
+                        <td class="red" width="25%" valign="top">Record: 2</td>
+
+                        <td class="red" valign="top">Merged Record</td>
+                    </tr>
+
+                    <tr class="gray" style="background-color:#F0F0F0">
+                        <td style="padding-left: 20px;" valign="top">Company</td>
+                        <td width="2%" valign="top">
+                            <input ng-model="chk_company" class="left-rbox" type="radio">
+                        </td>
+                        <td class="normal" valign="top">NEW TEST COMPANY</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td width="2%" valign="top">
+                            <span class="black">
+						<input ng-model="chk_company" class="right-rbox"  type="radio"></span>
+                        </td>
+                        <td class="normal" valign="top">Asain Filtration</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td valign="top">
+                            <input ng-model="company" class="merge-input" type="text">
+                        </td>
+                    </tr>
+                    <tr class="gray_light" style="background-color:#FAFAFA">
+                        <td style="padding-left: 20px;" valign="top">First name</td>
+                        <td width="2%" valign="top">
+                            <input ng-model="chk_first_name" class="left-rbox" type="radio">
+                        </td>
+                        <td class="normal" valign="top">NEW</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td width="2%" valign="top">
+						<span class="black">
+							<input ng-model="chk_first_name" class="right-rbox" type="radio">
+						</span>
+                        </td>
+                        <td class="normal" valign="top">Ashish</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td valign="top">
+                            <input ng-model="first_name" class="merge-input" type="text">
+                        </td>
+                    </tr>
+                    <tr class="gray" style="background-color:#F0F0F0">
+                        <td style="padding-left: 20px;" valign="top">Last name</td>
+                        <td width="2%" valign="top">
+                            <input ng-model="chk_last_name" class="left-rbox" type="radio">
+                        </td>
+                        <td class="normal" valign="top">TEST</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td width="2%" valign="top">
+						<span class="black">
+						<input ng-model="chk_last_name" class="right-rbox" type="radio">
+						</span>
+                        </td>
+                        <td class="normal" valign="top">Joshi</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td valign="top">
+                            <input ng-model="last_name" class="merge-input" type="text">
+                        </td>
+                    </tr>
+                    <tr class="gray_light" style="background-color:#FAFAFA">
+                        <td style="padding-left: 20px;" valign="top">Email</td>
+                        <td width="2%" valign="top">
+                            <input ng-model="chk_email" class="left-rbox" type="radio">
+                        </td>
+                        <td class="normal" valign="top">test@gmail.com</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td width="2%" valign="top">
+						<span class="black">
+						<input ng-model="chk_email" class="right-rbox" type="radio">
+						</span>
+                        </td>
+                        <td class="normal" valign="top">sales@asdf.com</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td valign="top">
+                            <input ng-model="email" class="merge-input" type="text">
+                        </td>
+                    </tr>
+                    <tr class="gray" style="background-color:#F0F0F0">
+                        <td style="padding-left: 20px;" valign="top">Phone</td>
+                        <td width="2%" valign="top">
+                            <input ng-model="chk_phone" class="left-rbox" type="radio">
+                        </td>
+                        <td class="normal" valign="top">000-000-0000</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td width="2%" valign="top">
+						<span class="black">
+							<input ng-model="chk_phone" class="right-rbox" type="radio">
+						</span>
+                        </td>
+                        <td class="normal" valign="top">+917923213068</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td valign="top">
+                            <input ng-model="phone" class="merge-input" type="text">
+                        </td>
+                    </tr>
+                    <tr class="gray_light" style="background-color:#FAFAFA">
+                        <td style="padding-left: 20px;" valign="top">Created on</td>
+                        <td width="2%" valign="top">
+                            <input ng-model="chk_created_on" class="left-rbox"  type="radio">
+                        </td>
+                        <td class="normal" valign="top">11/30/16 06:51 PM</td>
+                        
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td width="2%" valign="top">
+						<span class="black">
+						<input ng-model="chk_created_on" class="right-rbox" type="radio"></span>
+                        </td>
+                        <td class="normal" valign="top">11/30/16 06:51 PM</td>
+                        
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td valign="top">
+                            <input ng-model="D_created_on" class="merge-input" type="text">
+                            
+                        </td>
+                    </tr>
+                    <tr class="gray" style="background-color:#F0F0F0">
+                        <td style="padding-left: 20px;" valign="top">Updated on</td>
+                        <td width="2%" valign="top">
+                            <input ng-model="chk_updated_on" class="left-rbox" type="radio">
+                        </td>
+                        <td class="normal" valign="top">12/29/16 11:19 AM</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td width="2%" valign="top">
+                            <span class="black">
+						<input ng-model="chk_updated_on" class="right-rbox" type="radio">
+						</span>
+                        </td>
+                        <td class="normal" valign="top">01/03/17 12:38 PM</td>
+                        
+                        <td width="5%">&nbsp;</td>
+                        <td valign="top">
+                            <input ng-model="D_updated_on"  class="merge-input" type="text">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="10" width="100%">&nbsp;&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div class="balance"></div>
+        </div>
+    </div>
+    <div class="top_btn_area" style="margin-top: 3px;">
+        <div style="float:left; margin-right:10px" class="btn_bg1" align="left">Merge</div>
+        <div class="balance"></div>
+    </div>
+</form>

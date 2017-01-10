@@ -1,0 +1,46 @@
+<div class="modal-header pop-header">
+  <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title">Test Email Template</h4>
+</div>
+<div class="modal-body" id="modal-body">
+   <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+      <div class="form-group">
+         <div class="col-md-3 col-sm-3 col-xs-3 text-right" style="text-align: left; width: auto;">
+		 <label class="red">To</label></div>
+         <div class="col-md-9 col-sm-9 col-xs-9">
+          <input class="form-control width-80"  type="text"  id="inputsm" ng-model="sendTo"  required="" style="width: 240px; display: inline;" /> (Enter email for testing)
+         </div>
+      </div>
+      <div class="form-group">         
+         <div class="col-md-12 col-sm-9 col-xs-9">
+         <input type="checkbox" ng-change="checkSpam(checked)" ng-model="checked" ng-true-value="'true'" ng-false-value="'false'"  required="" /> Check SPAM
+		<span href="javascript:void(0);" ng-click="clickTwit()" title="Click to know more" class="help-button"><img src="images/icon_info.png" border="0">
+	  
+  <div id="qtip-0" ng-class="class" class="qtip qtip-default  qtip-pos-tl qtip-fixed qtip-pos-tr qtip-focus none" style="width: 250px; z-index: 15001; opacity: 1; left: 17px; top: -14px;" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="false" data-qtip-id="0">
+  
+    <div class="qtip-tip" style="background-color: transparent ! important;border: 0px none ! important;width: 8px;height: 8px;line-height: 8px;left: -14px;">
+	
+        <canvas style="height: 0px;border-width: 4px;top: 27px;left: 1px;border-top: solid 5px transparent;border-right: solid  8px rgb(149, 194, 239);position: absolute;" width="8" height="8"></canvas>
+    </div>
+    <div class="qtip-titlebar">
+        <div id="qtip-0-title" class="qtip-title" aria-atomic="true">Check spam info</div><a class="qtip-close qtip-icon" title="Close" aria-label="Close" role="button"><span class="tooltip_close" ng-click="CloseMe()">×</span></a></div>
+    <div class="qtip-content" id="qtip-0-content" aria-atomic="true">Find out the probability of this email getting sent to the SPAM folder. </div>
+</div>
+
+	  </span>
+            <!-- <textarea class="form-control" id="exampleTextarea" rows="3"></textarea> -->
+         </div>
+      </div>
+      
+   </form>
+</div>
+
+
+
+<div class="modal-footer">
+   <div class="form-group">
+      <div class="text-center">
+         <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="ok()">Send Mail</button>
+      </div>
+   </div>
+</div>

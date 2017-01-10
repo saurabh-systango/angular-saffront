@@ -1,0 +1,616 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Soffront Online</title>
+
+<style>
+.dropbtn {
+	background-color: #058ae5;
+	color: white;
+ // padding: 16px;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #058ae5;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	background-color: #fff;
+	overflow: auto;
+	position: relative;
+	margin-top: 6px;
+	border: 1px solid #DBDBDB;
+	box-shadow: 4px 4px 4px #DCDCDC;
+	line-height: 20PX;
+}
+.dropdown-content a {
+	color: black;
+	padding: 2px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 13px;
+}
+ //.dropdown a:hover {
+background-color: #f1f1f1
+}
+.show {
+	display: block;
+}
+</style>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<!--Start on 6 December-->
+<div id="parentView"> </div>
+<div id="spreadsheet">
+  <div id="inside_page_content2" >
+    <div align="left" class="top_btn_area" style="position:relative; top:-9px; float: left; width: 70%; margin-left: 26px;">
+      <div  style="float: left; margin-right: 10px;">
+        <input type="button" name="save" value="Save" class="btn_bg1">
+      </div>
+       <div class="" style="float: left; margin-right: 10px;">
+        <input type="button" name="Generate" value="Generate" class="btn_bg1" data-toggle="modal" data-target="#myModal-1">
+      </div>
+       <div class="" style="float: left; margin-right: 10px;">
+               <input type="button" name="Preview" value="Preview" class="btn_bg1" ng-class=""   ng-click="addTab({name:'Preview'} );">
+
+      </div>
+      <div class="" style="float: left; margin-right: 10px;">
+        <input type="button" name="save" value="Close" class="btn_bg1" ng-click="closeInnerTemplate('Edit opt-in-form')">
+      </div>
+    </div>
+  </div>
+  <div id="videoDiv" align="right" style="position:relative;top:24px; right:78px; float: right; display: block;"><span><img alt="Video" src="images/video_icon.png" ng-click="addTab({name: 'Geeting Started'} )" title="Video"> </div>
+</div>
+<div id="inside_page_content">
+			<div class="table_area">
+				<table width="100%" cellspacing="0" cellpadding="0" border="0">
+				
+					<tbody><tr>
+						<td width="30%" valign="top" align="left" class="red">
+							<strong>Table</strong>&nbsp;
+						</td>
+						<td width="70%" valign="top" align="left" id="tdWebformNameLabel" colspan="2" class="red">
+							<strong>Name</strong>
+						</td>
+						<td valign="top" align="left" id="tdGroupLabel" class="red" style="display: none;">
+							<strong>Group</strong>
+							<div class="help" data-hasqtip="0" oldtitle="Group Info" title="">
+								<div style="display: none" class="info-box">
+								Created record through this Web Form will be added to the selected groups.
+								</div>
+								<a title="Click to know more" class="help-button" href="javascript:void(0);">
+									<img border="0" src="http://test.snapshotcrm.com:80/theme/blue/images/icon_info.png">
+								</a>
+							</div>
+							<div style="float: right;">
+								<a id="button_addGroup" style="font-weight: normal; float: left; margin-right: 6px;" href="javascript:addNewGroup();">
+									Add a new Group
+								</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td width="30%" valign="top" align="left">
+							<select style="width: 100%;" onchange="loadWebFormFields();" class="listmenu1" id="tableList" name="tableList" disabled="disabled">
+								<option value="10">Accounts</option>
+								<option value="13">Cases</option>
+								<option value="9">Contacts</option>
+							</select>
+						</td>
+						<td width="70%" valign="top" align="left" id="tdWebformName" colspan="2">
+							<input type="text" maxlength="128" value="Opt-in form" style="width: 99%;" class="textbox9" name="fName" id="fName">
+						</td>
+						
+					</tr>
+					<tr>
+						<td width="30%" valign="top" align="left">
+							<strong>Return URL </strong>
+							<a tabindex="0" uib-popover="Enter the URL where the form will redirect the submitter after successful post of the Web Form." class="info-box" popover-placement="right" popover-title="Return URL info">
+  								<img src="http://test.snapshotcrm.com:80/theme/blue/images/icon_info.png" border="0" >
+						</a>
+						</td>
+						<td width="35%" valign="top" align="left" id="tdAutoResponseLabel">
+							<strong>Auto Response </strong>
+							<a tabindex="0" uib-popover="The selected email template will be used to send an auto response when the record is submitted and has an email address." class="info-box" popover-placement="right" popover-title="Auto Response info">
+  								<img src="http://test.snapshotcrm.com:80/theme/blue/images/icon_info.png" border="0">
+							</a>
+							
+							<div style="float: right;">
+								<a id="button_autoResponse" style="font-weight: normal; float: left; display: none; margin-right: 25px;" href="javascript:editTemplate();">Edit Template</a>
+							</div>
+						</td>
+						<td width="35%" valign="top" align="left" id="tdAssignToLabel" >
+							<strong class="red">Assign To</strong>
+							<a tabindex="0" uib-popover="Select user(s) from the drop down list to whom you want to assign the created records. Round Robin Assignment will take place if multiple users have been chosen." class="info-box" popover-placement="right" popover-title="Assign To info">
+  								<img src="http://test.snapshotcrm.com:80/theme/blue/images/icon_info.png" border="0">
+							</a>
+							
+						</td>
+						<td valign="top" align="left">
+							<table width="100%" cellspacing="0" cellpadding="0">
+							<tbody><tr>
+							  	<td width="49%" valign="top" align="left" style="display:none; padding-top: 0px;" id="tdWorkflowLabel" class="red"><strong>Workflow</strong></td> 
+							  	<td width="49%" valign="top" align="left" id="tdSourceLabel" style="padding-top: 0px; display: none;" class="red">
+							  		<strong>Source</strong>
+							  	</td>
+							</tr>
+							</tbody></table>	
+						</td>
+					</tr>
+					<tr>
+						<td width="30%" valign="top" align="left">
+							<input type="text" value="" style="width: 99%" class="textbox9" id="fReturnUrl" name="fReturnUrl">
+						</td>
+						<td width="35%" valign="top" align="left" id="tdAutoResponseList" style="padding: 0px;">
+							<table width="100%">
+								<tbody><tr>
+									<td width="94%" align="left" style="padding-top: 0px;">
+										<select onchange="javascript:enableButton();" style="width: 100%" class="listmenu1" id="fAutoResponse" name="fAutoResponse"><option value="0" selected="selected"></option><option value="22334">gunjan</option><option value="22333">pooja</option><option value="22335">shail</option><option value="22344">testing1</option><option value="22345">testing2</option><option value="22346">testing6</option><option value="22347">testing8</option><option value="22337">Testing_3</option><option value="22343">test_2</option><option value="22342">test_3</option><option value="22340">test_6</option><option value="22341">test_9</option><option value="-1">---Create a new template---</option></select>
+									</td>
+									<td style="padding-top: 0px;">
+										<img width="12px" height="12px" border="0" title="Refresh" alt="refresh" onclick="javascript:getAutoResponseEmailTemplates();" src="http://test.snapshotcrm.com:80/theme/blue/images/NewDesign/icon_refresh_g.png">
+									</td>
+								</tr>
+							</tbody></table>
+						</td>
+						<td width="35%" valign="top" align="left" id="tdAssignToList">
+							
+							<select style="width: 100%; display: none;" multiple="" class="listmenu1" id="fAssignTo" name="fAssignTo">
+							
+								<option selected="selected" value="4833" groupid="4833">Ravi Teja</option>
+							
+								<option value="4859" groupid="4859">User1</option>
+							
+						</select><div class="dropdown-box" style="width: 428px;"><div tabindex="0" class="dropdown-header-webform dropbox" title="Ravi Teja"><div class="drop-menu-title" style="width: 420px;">Ravi Teja</div></div><div class="drop-menu-box-webform" style="display: none;"><div class="menu-items" style="width: 420px;"><table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr class="drop-menu-item item" tabindex="0" title="Ravi Teja" id="groupId_4833" groupid="4833"><td width="2%" valign="middle" align="left"><input type="checkbox" value="4833" id="l_ch_4833" name="l_ch" tabindex="-1"></td><td width="98%" align="left"><div class="item" style="width: 398px;">Ravi Teja</div></td></tr><tr class="drop-menu-item item" tabindex="0" title="User1" id="groupId_4859" groupid="4859"><td width="2%" valign="middle" align="left"><input type="checkbox" value="4859" id="l_ch_4859" name="l_ch" tabindex="-1"></td><td width="98%" align="left"><div class="item" style="width: 398px;">User1</div></td></tr></tbody></table></div></div></div>
+						</td>
+						<td valign="top" align="left">
+							<table width="100%" cellspacing="0" cellpadding="0">
+					 		<tbody><tr>
+					 			<td width="50%" valign="top" align="left" style="display:none; padding-top: 0px;" id="tdWorkflowList"><select id="workflowList" style="width: 98%;" class="listmenu1"><option value="19528">Case workflow</option></select></td>
+								<td width="50%" valign="top" align="left" id="tdSourceList" style="padding-top: 0px; display: none;">
+									
+									<select style="width: 100%" class="listmenu1" id="fSource" name="fSource">
+									
+										<option value="Cold call"> Cold call </option>
+									
+										<option value="Email Campaign"> Email Campaign </option>
+									
+										<option value="Networking Event"> Networking Event </option>
+									
+										<option value="Other"> Other </option>
+									
+										<option value="Partner referral"> Partner referral </option>
+									
+										<option value="Purchased list"> Purchased list </option>
+									
+										<option value="Seminar"> Seminar </option>
+									
+										<option value="Social Event"> Social Event </option>
+									
+										<option value="Trade show"> Trade show </option>
+									
+										<option value="Web"> Web </option>
+									
+									</select>
+								 </td>
+							 </tr>
+							 </tbody></table>
+						</td>
+					</tr>
+				
+				</tbody></table>
+			</div>
+		</div>
+<div style="margin-top: 20px; margin-bottom: 10px; padding: 0;" id="inside_page_content">
+  <div class="webform-table-area">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" align="left"><div style="width: 190px; clear: both;"></div></td>
+          <td valign="top" align="left"></td>
+        </tr>
+        <tr>
+          <td width="15%" valign="top"><div id="stylePanel" style="height: auto;" class="template-tool-panel">
+              <ul class="template-ui-tabs">
+                <li class="ui-tab active"> <a href="javascript:void(0);" id="themeLink">Colors &amp; fonts</a> </li>
+              </ul>
+              <div id="themeBox" style="width: 190px;" class="template-cf-panel">
+                <div class="template-cf-wrapper">
+                  <h3 class="template-cf-header">Header</h3>
+                  <div class="template-cf-lists">
+                    <div class="template-cf-list">
+                      <div class="template-list-title">Fonts</div>
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                          <tr>
+                            <td width="45%"><select style="width: 100%;" target="header" targetarea="editor-grid-header" property="font-family" sectionname="Header" id="headerFontFamily" class="theme_list_menu">
+                                <option value="Arial">Arial</option>
+                                <option value="ComicSansMS">Comic Sans MS</option>
+                                <option value="CourierNew">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="LucidaSansUnicode">Lucida Sans Unicode</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="TimesNewRoman">Times New Roman</option>
+                                <option value="TrebuchetMS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                              </select></td>
+                            <td width="35%"><select style="width: 100%;" target="header" targetarea="editor-grid-header" property="font-size" sectionname="Header" id="headerFontSize" class="theme_list_menu">
+                                <option value="10px">10px</option>
+                                <option value="11px">11px</option>
+                                <option value="12px">12px</option>
+                                <option value="13px" selected="selected">13px</option>
+                                <option value="14px">14px</option>
+                                <option value="15px">15px</option>
+                                <option value="16px">16px</option>
+                                <option value="17px">17px</option>
+                                <option value="18px">18px</option>
+                                <option value="19px">19px</option>
+                                <option value="20px">20px</option>
+                                <option value="21px">21px</option>
+                                <option value="22px">22px</option>
+                                <option value="23px">23px</option>
+                                <option value="24px">24px</option>
+                                <option value="25px">25px</option>
+                              </select></td>
+                            <td class="color-picker" width="20%" align="right" valign="top" target="header" targetarea="editor-grid-header" property="color" id="headerFontColorBox" colorpicker="hex" style="background-color: rgb(0, 0, 0);">
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <h3 class="template-cf-header">Normal Fields</h3>
+                  <div class="template-cf-lists">
+                    <div class="template-cf-list">
+                      <div class="template-list-title">Fonts</div>
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                          <tr>
+                            <td width="45%"><select style="width: 100%;" target="field" targetarea="editor-grid" property="font-family" sectionname="Normal Fields" id="fieldFontFamily" class="theme_list_menu">
+                                <option value="Arial">Arial</option>
+                                <option value="ComicSansMS">Comic Sans MS</option>
+                                <option value="CourierNew">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="LucidaSansUnicode">Lucida Sans Unicode</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="TimesNewRoman">Times New Roman</option>
+                                <option value="TrebuchetMS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                              </select></td>
+                            <td width="35%"><select style="width: 100%;" target="field" targetarea="editor-grid" property="font-size" sectionname="Normal Fields" id="fieldFontSize" class="theme_list_menu">
+                                <option value="10px">10px</option>
+                                <option value="11px">11px</option>
+                                <option value="12px">12px</option>
+                                <option value="13px" selected="selected">13px</option>
+                                <option value="14px">14px</option>
+                                <option value="15px">15px</option>
+                                <option value="16px">16px</option>
+                                <option value="17px">17px</option>
+                                <option value="18px">18px</option>
+                                <option value="19px">19px</option>
+                                <option value="20px">20px</option>
+                                <option value="21px">21px</option>
+                                <option value="22px">22px</option>
+                                <option value="23px">23px</option>
+                                <option value="24px">24px</option>
+                                <option value="25px">25px</option>
+                              </select></td>
+                            <td width="20%" align="right" valign="top" colorpicker="hex" style="background-color: rgb(0, 0, 0);"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <h3 class="template-cf-header">Required Fields</h3>
+                  <div class="template-cf-lists">
+                    <div class="template-cf-list">
+                      <div class="template-list-title">Fonts</div>
+                      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                          <tr>
+                            <td width="45%"><select style="width: 100%;" target="required" targetarea="field-required" property="font-family" sectionname="Required Fields" id="requiredFontFamily" class="theme_list_menu">
+                                <option value="Arial">Arial</option>
+                                <option value="ComicSansMS">Comic Sans MS</option>
+                                <option value="CourierNew">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="LucidaSansUnicode">Lucida Sans Unicode</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="TimesNewRoman">Times New Roman</option>
+                                <option value="TrebuchetMS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                              </select></td>
+                            <td width="35%"><select style="width: 100%;" target="required" targetarea="field-required" property="font-size" sectionname="Required Fields" id="requiredFontSize" class="theme_list_menu">
+                                <option value="10px">10px</option>
+                                <option value="11px">11px</option>
+                                <option value="12px">12px</option>
+                                <option value="13px" selected="selected">13px</option>
+                                <option value="14px">14px</option>
+                                <option value="15px">15px</option>
+                                <option value="16px">16px</option>
+                                <option value="17px">17px</option>
+                                <option value="18px">18px</option>
+                                <option value="19px">19px</option>
+                                <option value="20px">20px</option>
+                                <option value="21px">21px</option>
+                                <option value="22px">22px</option>
+                                <option value="23px">23px</option>
+                                <option value="24px">24px</option>
+                                <option value="25px">25px</option>
+                              </select></td>
+                            <td width="20%" align="right" valign="top" colorpicker="hex" style="background-color: rgb(255, 0, 0);"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div></td>
+          <td width="85%" valign="top" align="center" class="form-editor-td">
+							<div align="center" class="form-editor" ng-controller="webformCtrl" >
+								<div class="editor-pannel ui-sortable" ng-click="onload()" data-toggle="popover" data-content="Some content">
+									<div class="editor-grid"
+										style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial; background-color: transparent;">
+										<div class="drag-field"></div>
+										<div class="editor-field">
+										<table width="100%" cellpadding="20" cellspacing="20" border="0">
+										<tbody><tr><td width="20%" height="25px; valign="top">
+										<div class="field-label field-required" title="Company" style="color: rgb(255, 0, 0); font-size: 13px; font-family: Arial">name</div></td>
+										<td><div class="field-type" style="width: 75%; height:25px;"></div></td>
+										</tr></tbody>
+										</table>
+											
+					</div>
+								
+							</div>
+						</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+ 
+   <!--  <div ng-hide = "IsHidden">
+  <span class="popuptext" id="myPopup">
+  <li  class="popup"><a href="#add_field">Insert Field</a></li>
+   <li  class="popup"><a href="#add_field">Insert Header</a></li>
+    <li  class="popup"><a href="#add_field">Insert Header</a></li>
+  </span>
+</div> -->
+
+<div class="modal fade" id="myModal-1" role="dialog">
+    <div class="modal-dialog" id="dialog1">
+      <div class="modal-content" id="content2">
+        <div class="modal-header head3">
+        <button type="button" class="close" data-dismiss="modal" style="margin-top: -8px;">&times;</button>
+         <h4 class="modal-title " style="margin-top: -9px;">Generate HTML Code</h4>
+        </div>
+        <div class="modal-body">
+        	<table border="0" cellspacing="10" cellpadding="0" width="100%" align="center">
+			<tbody><tr>
+				<td align="right" style="font-weight: bold;">
+				<input type="button" class="small_btn" id="btnWithoutStyle" value="Without Styles" data-toggle="modal" data-target="#generate_opt">
+				</td>
+				<td align="left" width="80%" style="padding:15px">
+					<span class="dialog-text">The generated HTML code will not have any style applied to it. It will not use the colors and fonts you used in the form editor.</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" style="font-weight: bold;">
+                <input type="button" class="small_btn" id="btnWithStyle" value="With Styles" data-toggle="modal" data-target="#generate_opt1">
+				 </td>
+				<td align="left" width="80%" style="padding:15px;">
+					<span class="dialog-text">The generated HTML code will use the colors and fonts you used in the form editor.</span>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+       </div>
+        </div>
+       
+      </div>
+      
+    </div>  
+     <div class="modal fade" id="generate_opt" role="dialog">
+    <div class="modal-dialog" id="dialog1">
+      <div class="modal-content without_style_popup" id="content2" >
+        <div class="modal-header head3">
+        <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#myModal-1" style="margin-top: -8px;">&times;</button>
+         <h4 class="modal-title" style="margin-top: -9px;">Generate Copy of Opt-in form</h4>
+        </div>
+        <div class="modal-body">
+         <div class="table_area dialog-margin-top">
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+<tbody><tr>
+ <td>
+  <textarea id="htmlContent" name="htmlContent" cols="65" rows="20" readonly="readonly" style="resize: none;"><meta name='viewport' content='width=device-width, initial-scale=1'>
+         <form name="SoffrontSMBWebForm" action="https://restapitest.snapshotcrm.com/res/service/webform/processwebform" role="form" method="POST"><table cellspacing="5" cellpadding="5"><tbody><tr><td valign="top"><label for="company">Company</label></td><td><input id="company" name="company" placeholder="Enter Company" label="Company" fieldtype="201" emailfield="-1" type="text" required="required" maxlength="256"></td></tr><tr><td valign="top"><label for="synopsis">Synopsis</label></td><td><input id="synopsis" name="synopsis" placeholder="Enter Synopsis" label="Synopsis" fieldtype="201" emailfield="-1" type="text" maxlength="255"></td></tr><tr><td valign="top"><label for="severity">Severity</label></td><td><select id="severity" name="severity" label="Severity" style="width: 100%;"><option value="1-Critical">1-Critical</option><option value="2-Severe">2-Severe</option><option value="3-Workaround">3-Workaround</option><option value="4-Minor">4-Minor</option><option value="5-Enhancement">5-Enhancement</option></select></td></tr><tr><td colspan="2" align="center"><input id="btnSubmit" name="button" type="submit" value="Submit"></td></tr><tr><td colspan="2" align="center">Powered by <a href="http://www.soffront.com" target="_blank"><label style="color: rgb(92, 102, 112);">SOF</label><label style="color: rgb(240, 75, 36);">FRONT</label></a></td></tr></tbody></table><input id="returnUrl" name="returnUrl" value="" type="hidden"><input id="email_status" name="email_status" value="Opted-in" type="hidden"><input id="userEmail" name="userEmail" value="ravi@inflexonpoint.com" type="hidden"><input id="webFormId" name="webFormId" value="1610" type="hidden"><input id="webFormDefault" name="webFormDefault" size="1" placeholder="Honeypot" style="display: none;"></form>
+     </textarea>
+ </td>
+</tr>
+<tr>
+ <td>
+  <input id="copy" type="button" class="small_btn" value="Copy to my clipboard" style="float:left;">
+  <input id="close" type="button" class="small_btn_style" data-toggle="modal" data-target="#myModal-1" data-dismiss="modal" value="Close">
+ </td>
+ </tr>
+</tbody></table>
+</div>
+       </div>
+        </div>
+       
+      </div>
+      
+    </div>
+      <div class="modal fade" id="generate_opt1" role="dialog">
+    <div class="modal-dialog" id="dialog1">
+      <div class="modal-content without_style_popup" id="content2">
+        <div class="modal-header head3">
+        <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#myModal-1" style="margin-top:-8px;">&times;</button>
+         <h4 class="modal-title" style="margin-top:-9px;">Generate Copy of Opt-in form</h4>
+        </div>
+        <div class="modal-body">
+         <div class="table_area dialog-margin-top">
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+<tbody><tr>
+ <td>
+  <textarea id="htmlContent" name="htmlContent" cols="65" rows="20" readonly="readonly" style="resize: none;">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<div id="webformContainer" class="container-fluid"><form name="SoffrontSMBWebForm" action="https://restapitest.snapshotcrm.com/res/service/webform/processwebform" role="form" method="POST" class="form-horizontal"><div class="form-group"></div><div class="form-group"><label for="company" class="control-label col-sm-4" role="required" style="color: rgb(255, 0, 0); font-size: 13px; font-family: Arial">Company</label><div class="col-sm-7"><input id="company" name="company" placeholder="Enter Company" label="Company" fieldtype="201" emailfield="-1" type="text" required="required" maxlength="256" class="form-control"></div></div><div class="form-group"><label for="synopsis" class="control-label col-sm-4" role="field" style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial">Synopsis</label><div class="col-sm-7"><input id="synopsis" name="synopsis" placeholder="Enter Synopsis" label="Synopsis" fieldtype="201" emailfield="-1" type="text" maxlength="255" class="form-control"></div></div><div class="form-group"><label for="severity" class="control-label col-sm-4" role="field" style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial">Severity</label><div class="col-sm-7"><select id="severity" name="severity" label="Severity" class="form-control" style="width: 100%;"><option value="1-Critical">1-Critical</option><option value="2-Severe">2-Severe</option><option value="3-Workaround">3-Workaround</option><option value="4-Minor">4-Minor</option><option value="5-Enhancement">5-Enhancement</option></select></div></div><div class="form-group"><div class="col-sm-12 text-center"><input id="btnSubmit" name="button" value="Submit" class="btn btn-default" type="button" onclick="processWebForm(this.form)"></div></div><div class="form-group"><div class="col-sm-4"></div><div class="col-sm-8"><blockquote><footer>Powered by <a href="http://www.soffront.com" target="_blank"><label style="color: rgb(92, 102, 112);">SOF</label><label style="color: rgb(240, 75, 36);">FRONT</label></a></footer></blockquote></div></div><input id="returnUrl" name="returnUrl" value="" type="hidden"><input id="email_status" name="email_status" value="Opted-in" type="hidden"><input id="userEmail" name="userEmail" value="ravi@inflexonpoint.com" type="hidden"><input id="webFormId" name="webFormId" value="1607" type="hidden"><input type="hidden" id="webUrl" name="webUrl" value=""><input id="webFormDefault" name="webFormDefault" size="1" placeholder="Honeypot" style="display: none;"></form></div>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+<script src='https://s3.amazonaws.com/smb-webform/webform.process.testserver.js?v=1.3'></script>     </textarea>
+ </td>
+</tr>
+<tr>
+ <td>
+  <input id="copy" type="button" class="small_btn" value="Copy to my clipboard" style="float:left;">
+  <input id="close" type="button" data-dismiss="modal" data-toggle="modal" data-target="#myModal-1" class="small_btn_style " value="Close">
+ </td>
+ </tr>
+</tbody></table>
+</div>
+       </div>
+        </div>
+       
+      </div>
+      
+    </div>
+   
+</body>
+
+<script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery("#documents a").click(function() {
+                addTab(jQuery(this));
+            });
+
+            jQuery('#tabs').on('click','a.tab',function() {
+                // Get the tab name
+                var contentname = jQuery(this).attr("id") + "_content";
+
+                // hide all other tabs
+                jQuery("#content p").hide();
+                jQuery("#tabs li").removeClass("current");
+
+                // show current tab
+                jQuery("#" + contentname).show();
+                jQuery(this).parent().addClass("current");
+            });
+
+            jQuery('#tabs').on('click','a.remove', function() {
+                // Get the tab name
+                var tabid = jQuery(this).parent().find(".tab").attr("id");
+
+                // remove tab and related content
+                var contentname = tabid + "_content";
+                jQuery("#" + contentname).remove();
+                jQuery(this).parent().remove();
+
+                // if there is no current tab and if there are still tabs left, show the first one
+                if (jQuery("#tabs li.current").length == 0 && jQuery("#tabs li").length > 0) {
+
+                    // find the first tab    
+                    var firsttab = jQuery("#tabs li:first-child");
+                    firsttab.addClass("current");
+
+                    // get its link name and show related content
+                    var firsttabid = jQuery(firsttab).find("a.tab").attr("id");
+                    jQuery("#" + firsttabid + "_content").show();
+                }
+            });
+        });
+        function addTab(link) {
+            // If tab already exist in the list, return
+            if (jQuery("#" + $(link).attr("rel")).length != 0)
+                return;
+            
+            // hide other tabs
+            jQuery("#tabs li").removeClass("current");
+            jQuery("#content p").hide();
+            
+            // add new tab and related content
+            jQuery("#tabs").append("<li class='current' style='width:auto;'><a class='tab ' id='" +
+                $(link).attr("rel") + "' href='javascript:void(0);'><strong class='selected' style='width:170px'>" + $(link).html() + 
+                "</strong></a><a class='remove'><img src='images/tab_close_btn.png' class='tab_close_btn'></a></li>");
+
+            jQuery("#content").append("<p id='" + $(link).attr("rel") + "_content'>" + 
+                $(link).attr("title") + "</p>");
+            
+            // set the newly added tab as current
+            jQuery("#" + $(link).attr("rel") + "_content").show();
+        }
+		
+		
+		</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+	function showtab(str){
+		if(str == "color")
+		{
+			document.getElementById('b1').style.display = "block";
+			document.getElementById('c1').style.display = "none";
+		}
+		if(str == "bloc")
+		{
+			document.getElementById('c1').style.display = "block";
+			document.getElementById('b1').style.display = "none";
+		}
+	}
+
+	
+	</script>
+
+
+
+</html>

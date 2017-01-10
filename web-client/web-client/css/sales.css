@@ -1,0 +1,421 @@
+#recordList {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.sub-menu.sub-area {
+    margin-top: 1px;
+}
+
+.recordHeader .pull-right {
+	text-align:right;
+}
+
+.recordHeader-right ul.pagination {
+    margin: 0;
+    padding: 0;
+}
+
+.recordHeader-left span, .recordHeader-left div.h-search {
+    display: inline-block;
+    margin:0 10px 0 0;
+    vertical-align: middle;
+}
+.batch_list {
+    display: inline-block;
+    margin: 40px 0 0;
+    vertical-align: top;
+    width: 4%;
+}
+
+.batch_list ul {
+	padding:0;
+	margin:0;
+}
+
+.batch_list ul li {
+    display: inline-block;
+    width: 100%;
+	margin:0 0 10px 0;
+}
+/*6/1/2017*/
+.recordHeader-left span img {
+    margin: 0px 11px -2px 0px;
+    max-width: 13px;
+}
+
+.recordHeader-left .header-search span.search-title {margin:0;}
+
+.recordlist-content {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 75%;
+}
+
+.recordHeader .recordHeader-right ul.pagination li a {background:#058ae5;
+    border: 1px solid #058ae5;
+    border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-mos-border-radius: 2px;
+	-o-border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font: bold 12px Helvetica,Arial,sans-serif;
+    opacity: 0.8;
+    padding: 3px 4px !important;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ffffff;
+    transition: border-color 0.218s ease 0s;
+	margin-right: 4px;
+}
+
+.sub-menu ul.sublist {
+    padding: 0px;
+}
+
+.sub-menu ul.sublist li a {
+  color: #e1e1e1;
+  cursor: pointer;
+  font: 14px arial;
+}
+.sub-menu ul.sublist li {color: #ffffff;
+    display: inline;
+    float: left;
+    list-style-type: none;
+    margin: 0 10px;
+    padding: 3px 0;}
+
+.select-style {
+    padding: 0;
+    float: left;
+    margin: 0;
+    border:none;
+    width:95px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background:url(../images/arrow_open_orange.png) no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding:0px;
+    color:#FFF;
+    font-size: 14px;
+    font-weight: bold;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.select-style select option {
+    color: #333;
+    cursor: pointer;
+    background: #FFF;
+    list-style: outside none none;
+    margin: 0;
+    overflow: hidden;
+    padding: 3px 3px 3px 30px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.select-style select option.selected {
+    background-image: url("../images/checkmark.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.select-style select option:focus, .select-style select option:active, .select-style select option:hover {
+    background-color:transparent;
+}
+.sub-menu {
+  background-color: #058ae5;
+  border-bottom: 1px solid #cccccc;
+  clear: both;
+  height: 28px;
+  width: 100%;
+}
+.listmenu1 {
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
+    border-radius: 3px;
+    font-size: 13px;
+    height: 21px;
+    padding: 0;
+    width: 237px;
+}
+
+.float-left {
+    float: left;
+}
+
+table.listview_table {
+	border-color: transparent;
+	border-image: none;
+	border-style: solid;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table.listview_table tr th {
+	background-color: #95c2ef;
+	border: 1px solid #ffffff;
+	padding: 4px 0px 0;
+
+}
+
+table.listview_table tr th.selected {
+	background-color: #058ae5;
+	padding: 4px 1px 0;
+	font-weight:normal;
+}
+
+table.listview_table tr:last-child{
+	border-bottom:0;
+}
+
+table.listview_table td {
+	fonr-weight:normal;
+}
+
+table.listview_table .even_row{
+	background-color: #e8eff7;
+}
+
+table.listview_table .border_bottom {
+	border-bottom: 1px solid #E0E0E0;
+	height: 30px;
+}
+
+table.listview_table .listview_header_checkbox {
+	margin: 3px 0 0 2px;
+}
+
+table.listview_table .listview_checkbox {
+	margin: 6px 0 0 2px;
+}
+
+table.listview_table .img_inline_edit {
+	float: left;
+	margin-top: 8px;
+	/*position: absolute;*/
+}
+
+table.listview_table .listview_pheader_td{
+	font-weight:bold; 
+	cursor: pointer;
+}
+
+table.listview_table .listview_pheader_div{
+	margin-right: 20px;
+	width: 100%;
+	color: #ffffff;
+	font-size: 14px;
+	cursor: pointer;
+	height: 22px;
+	font-weight:normal;
+}
+
+table.listview_table .listview_pheader_cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+	padding: 0 2px 0 10px;
+	margin: 0 0 0 8px;
+}
+
+table.listview_table .listview_cheader_td{
+	font-weight:bold; 
+	cursor: default;
+}
+
+table.listview_table .listview_cheader_div{
+	margin-right: 20px;
+	width: 100%;
+	color: #ffffff;
+	font-size: 14px;
+	cursor: pointer;
+	height: 22px;
+	font-weight:normal;
+}
+
+table.listview_table .listview_cheader_cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+	background-size: cover;
+	position: relative;
+	padding: 0 2px 0 2px;
+	margin: 0 0 0 8px;
+	color:#ffffff;
+	font-weight:normal;
+}
+
+table.listview_table .listview_precord_td{
+	text-transform: none;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+	cursor: default;
+	font-size: 13px;
+	font-weight: normal;
+
+}
+
+table.listview_table .listview_precord_div{
+	width: 100%;
+} 
+
+table.listview_table .listview_precord_cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background-size: cover;
+	position: relative;
+	padding: 3px 0px 0 10px;
+	margin: 0 0 0 8px;
+	line-height:16px;
+}
+
+table.listview_table .listview_crecord_td{
+	text-transform: none;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+	cursor: default;
+	font-size: 13px;
+	font-weight: normal;
+
+}
+
+table.listview_table .listview_crecord_div{
+	width: 100%;
+}
+
+table.listview_table .listview_crecord_cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background-size: cover;
+	position: relative;
+	margin: 0px 8px;
+}
+
+table.listview_table .show_all{
+	overflow: hidden;
+	white-space: nowrap;
+	width: 55px;
+	display: none;
+}
+
+table.listview_table .show_all strong{
+	color: blue;
+	cursor: pointer;
+	font-weight: normal;
+	padding-left: 5px;
+}
+
+table.listview_table .show_all strong:HOVER{
+	text-decoration: underline;
+}
+
+table.listview_table .child_field_label{
+	font-weight: normal;
+	color: #ffffff;
+}
+
+table.listview_table .listview_img {
+	width: auto;
+	height: auto;
+	max-height: 24px;
+	max-width: 26px;
+	cursor: pointer;
+	margin: 3px  5px;
+}
+
+table.listview_table .listview_header_img {
+	width: auto;
+	height: auto;
+	max-height: 24px;
+	max-width: 32px;
+	cursor: default;
+	margin: -2px 4px;
+}
+
+.inline_edit {
+	border: 1px solid silver;
+	width: 98%;
+	background-color: #FFF!important;
+	float: left;
+	height: 20px;
+}
+table.listview_table .detailview_hyperlink{
+	text-decoration: underline;
+	cursor: pointer;
+}
+table.listview_table .detailview_inline_edit {
+	float: left;
+	width: 16px;
+	margin-top: 8px;
+	visibility: hidden;
+}
+table.listview_table .detailview_precord_td{
+	text-transform: none;
+	padding: 0px;
+	margin: 0px;
+	cursor: default;
+	font: normal 14px/22px arial,verdana;
+	color: #626464;
+}
+table.listview_table .detailview_phone {
+	position: relative;
+	vertical-align: middle;
+	cursor: default;
+}
+table.listview_table .detailview_placeholder{
+	border: none;
+	background: transparent;
+	position: absolute;
+	outline: none;
+	color: #b5b5b5;
+}
+
+.post_link_img{
+	margin:10px 0 10px 0;
+	word-wrap: break-word;
+	word-break : break-all;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+}
+.placeholdershowColor{
+	color: #a9a9a9 !important;
+	visibility : visible;
+	font-size : 12px;
+}
+.placeholderNormalColor{
+	color: #b5b5b5 !important;
+	visibility : visible;
+	font-size : 14px
+}
+.nav-tabs .ng-scope.ng-isolate-scope .ng-binding{  
+    float: left;    
+}

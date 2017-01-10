@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html ng-app="soffrontApp">
+   <head>
+      <title>Soffront Online</title>
+        
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="text/html; charset=UTF-8">
+      <meta name="description" content="Snapshot CRM, marketing automation and small business CRM software for small, mid-size and enterprise businesses.">
+      <meta name="keywords" content="marketing automation, CRM, Small Business CRM software, CRM software">
+      <meta name="robots" content="all">
+      <meta name="robots" content="index, follow">
+      <meta name="revisit-after" content="7 days">
+
+      <!--
+      IE8 support, see AngularJS Internet Explorer Compatibility https://docs.angularjs.org/guide/ie
+      For Firefox 3.6, you will also need to include jQuery and ECMAScript 5 shim
+       -->
+       <!--[if lt IE 9]>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+         <script>
+           document.createElement('ui-select');
+           document.createElement('ui-select-match');
+           document.createElement('ui-select-choices');
+         </script>
+       <![endif]-->
+
+     <!--  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"> -->
+
+      <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/ngPrint.css" />
+  
+      <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+      <link href="css/dhtmlxscheduler.css" rel="stylesheet" />
+      <link rel="shortcut icon" href="images/favicon.ico" />
+      <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'> 
+      <link rel='stylesheet' href='css/loading-bar.css' type='text/css' media='all' />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+
+      <link rel="stylesheet" href="css/simple-autocomplete.css">
+
+      <link rel="stylesheet" href="css/select.css">
+
+      <!-- CSS for color picker in web from. -->
+      <link href="css/color-picker/colorpicker.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/angular-toastr.css" />
+      <link href="css/signin.css" rel="stylesheet" />
+      <link href="css/home.css" rel="stylesheet">
+      <link href="css/sales.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+
+      <!-- Css for marketing template. -->
+      <link rel="stylesheet" href="css/marketing-css/spectrum.css">
+      <link rel="stylesheet" href="css/marketing-css/style.css">
+      <link rel="stylesheet" href="css/marketing-css/main.css">
+
+	  <link rel="stylesheet" href="css/marketing-css/copy_tmpl.css">
+
+      
+   </head>
+   <body>
+
+      <header ng-include="'view/header/header.html'"></header> 
+         
+         <div ui-view ></div>
+      
+      <footer ng-include="'view/footer/footer.html'"  ng-show="$state.includes('login')"></footer>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/themes/black-tie/jquery-ui.css"></script>    
+      <script src="ckeditor/ckeditor.js"></script>
+      <script type="text/javascript" src="js/libs/angular.min.js"></script>
+     
+     <!--  <script src="https://s3-ap-southeast-1.amazonaws.com/naveensingh/posts_data/ckeditor_example/ng-ckeditor.min.js"></script> -->
+
+      <script type="text/javascript" src="js/libs/angular-ui-router.js"></script>
+      <script type="text/javascript" src="js/libs/angular-animate.js"></script>
+      <script type="text/javascript" src="js/libs/angular-sanitize.js"></script>
+      <script type="text/javascript" src="js/libs/angular-aria.min.js"></script>
+      <script type="text/javascript" src="js/libs/ui-bootstrap-tpls-2.1.4.min.js"></script>
+
+      <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+      <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+      <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+      <script src="https://rawgit.com/gilf/ngPrint/master/ngPrint.js"></script>
+
+      <script type="text/javascript" src="js/libs/simple-autocomplete.js"></script>
+
+      <script src="js/libs/select.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+      <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script> 
+      <script src="js/libs/ui-grid.js"></script>
+      <script type="text/javascript" src="js/libs/ng-lodash.min.js"></script>
+      <script src="js/libs/angular-toastr.tpls.js"></script>
+      <script src="js/libs/draganddrop.js"></script>
+      <script src="js/libs/select.js"></script>
+      <script src="js/libs/app.scheduler.js"></script>
+      <script src="js/libs/dhtmlxscheduler.js"></script>
+      <script src="js/libs/datetime-picker.js"></script>
+      <script src="js/libs/moment.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/funnel.js"></script>
+      <script src="js/libs/checklist-model.js"></script>
+
+	  <script type="text/javascript" src="js/libs/docs.js"></script>
+      <script type="text/javascript" src="js/libs/prettify.js"></script>
+      <script type="text/javascript" src="js/libs/spectrum.js"></script>
+      <script type="text/javascript" src="js/libs/toc.js"></script>
+
+      <!-- JS for color picker in web from. -->
+      <script type="text/javascript" src="js/libs/color-picker/bootstrap-colorpicker-module.js"> </script>
+
+      <script type="text/javascript" src="js/app.js"> </script>
+      <script type="text/javascript" src="js/config/config.js"> </script>
+      <script type="text/javascript" src="js/router/router.js"> </script>
+
+      <script type="text/javascript" src="view/login/loginCtrl.js"></script>
+      <script type="text/javascript" src="view/home/homeCtrl.js"></script>
+      <script type="text/javascript" src="view/sales/accounts/accountCtrl.js"></script>
+      <script type="text/javascript" src="view/sales/accounts/accountsDataService.js"></script>      
+      <script src="view/sales/sales-template/salesTemplateCtrl.js"></script>
+      <script src="view/sales/sales-template/salesDataService.js"></script>
+
+      <script src="view/sales/calendar/calendarCtrl.js"></script>
+      <script src="view/sales/calendar/appointment/allAppointmentsCtrl.js"></script>
+      <script src="view/sales/calendar/appointment/allAppointmentDataService.js"></script>
+      <script src="view/sales/calendar/pendingTasks/pendingTaskCtrl.js"></script>
+      <script src="view/sales/calendar/pendingTasks/pendingTaskDataService.js"></script>
+      <script src="view/sales/calendar/allTasks/allTasksCtrl.js"></script>
+
+      <script src="view/sales/calendar/allTasks/allTasksDataService.js"></script>
+      <script src="view/sales/opportunities/opportunitiesCtrl.js"></script>
+      <script src="view/sales/opportunities/opportunitiesDataService.js"></script>
+      <script src="view/sales/reports/reportsCtrl.js"></script>
+      <script src="view/sales/reports/reportsDataService.js"></script>
+
+      <script src="view/marketing/marketing-template/marketingTemplatesCtrl.js"></script>
+      <script src="view/marketing/marketing-template/marketingDataService.js"></script>
+
+      <script src="view/marketing/contact/contactCtrl.js"></script>
+      <script src="view/marketing/contact/contactDataService.js"></script>
+
+      <script src="view/marketing/webforms/webformCtrl.js"></script>
+      <script src="view/marketing/webforms/webformsDataService.js"></script>
+      
+      
+   </body>
+</html>

@@ -1,0 +1,126 @@
+<div class="container-fluid padd-50-padd sf-container">
+ 	<div class="col-md-6" style="margin-top: 15px">
+ 		<button type="button" id="btnSave" name="btnSave" class="btn_bg1 btn sf-btn-gap btn-sf-primary" ng-click="saveOpportinitiesData()">Save</button>
+ 		<button type="button" id="btnCancel" name="btnCancel" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnCancel()">Cancel</button>
+ 	</div>
+ 	<div class="col-md-12 margin-top">
+ 		<div class="sf-form-header sf-label ng-binding ng-scope">Opportunities Details</div>
+ 	</div>
+ 	
+ 	<div class="form-group">		
+ 		<div class="col-md-6">
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red">Name</label>				
+ 				<input class="form-control edit-input" ng-model="editData.name" type="text">
+ 			</div>
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red" >Status</label>							
+ 				<select  id="sales_rep" ng-model="editData.t_status" class="form-control edit-input" disabled="disabled">
+ 					<option value="Prospect" >Qualified</option>
+ 					<option value="Customer" >Customer</option>		
+ 				</select>
+ 			</div>
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Opp Type</label>							
+ 				<select id="sales_rep" ng-model="editData.type" class="form-control edit-input">
+ 					<option value="Prospect" >Prospect</option>
+ 					<option value="Customer" >Customer</option>		
+ 				</select>
+ 			</div>
+
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Probability %</label>							
+ 				<input class="form-control edit-input" ng-model="editData.opportunity_amount" type="text" disabled="disabled" value="20.0">
+ 			</div>
+
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red">Close date</label>							
+				<p class="date-close input-group">
+	<input class="form-control ng-pristine ng-isolate-scope ng-empty ng-invalid ng-invalid-required ng-valid-datetime ng-touched" datetime-picker="MM/dd/yyyy HH:mm"  ng-model="editData.close_date" is-open="picker4.open" required="" style="" type="text"><!-- ngIf: isOpen && showPicker == 'date' --><!-- ngIf: isOpen && showPicker == 'time' --><!-- ngIf: isOpen && showPicker == 'date' --><!-- ngIf: isOpen && showPicker == 'time' -->
+	<span class="input-group-btn">
+		<button type="button" class="btn btn-default" ng-click="openCalendar2($event, 'picker4')"><span class="glyphicon glyphicon-calendar"></span></button>
+	</span>
+</p>
+ 				
+ 			</div>
+
+ 			
+ 			
+ 		</div>		
+ 		<div class="col-md-6">
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red">Company</label>							
+ 				<input  ng-model="editData.company" class="form-control edit-input" type="text">
+ 			</div>
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Sales rep</label>							
+ 				<select ng-model="editData.sales_rep" id="sales_rep" class="form-control edit-input">
+ 					<option value="Prospect" >Ravi Teja Villa</option>
+ 				</select>
+ 			</div>
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red">Opportunity $</label>							
+ 				<input ng-model="editData.opportunity_amount" class="form-control edit-input" type="text">
+ 			</div>	
+ 			<div class="form-group edit-form">
+ 				<label class="edit-lable text-right">Forecast $</label>
+ 				<input ng-model="editData.forecast_amount" class="form-control edit-input" type="text">
+ 			</div>			
+ 			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red">Source</label>							
+ 				<select ng-model="editData.source" class="form-control edit-input">
+ 					<option value="Prospect" >Prospect</option>
+ 					<option value="Customer" >Cold call</option>
+ 					<option value="Customer" >Networking Event</option>		
+ 				</select>
+ 			</div>	
+ 			
+ 			
+ 		</div>	
+ 	</div>
+ 	<div class="col-md-12 margin-top">
+ 		<div class="sf-form-header sf-label ng-binding ng-scope">Additional Information</div>
+ 	</div>
+ 	<div class="form-group">		
+ 		<div class="col-md-6">
+ 			<div class="form-group edit-form">
+ 				<label class="edit-lable text-right red">Created by</label>
+ 				<input  ng-model="editData.t_creater" class="form-control edit-input" type="text" disabled="disabled" placeholder="Ravi Teja Villa">
+ 			</div>		
+ 			<div class="form-group edit-form">
+ 				<label class="edit-lable text-right red">Updated by</label>
+ 				<input class="form-control edit-input" ng-model="editData.updated_by" type="text" disabled="disabled" >
+ 			</div>
+ 			<div class="form-group edit-form">
+ 				<label class="edit-lable text-right red">Visible to</label>
+ 				<input class="form-control edit-input" type="text" disabled="disabled" ng-model="editData.visible_to">
+ 			</div>		
+ 			
+ 		</div>		
+ 		<div class="col-md-6">
+ 			<div class="form-group edit-form">
+ 				<label class="edit-lable text-right red">Created on</label>
+ 				<input ng-model="editData.created_on" class="form-control edit-input" type="text"  disabled="disabled">
+ 			</div>		
+ 			<div class="form-group edit-form">
+ 				<label  class="edit-lable text-right red">Updated on</label>
+ 				<input class="form-control edit-input" ng-model="editData.updated_on" type="text" disabled="disabled">
+ 			</div>
+ 			
+ 			<div class="form-group edit-form">
+ 				<label class="edit-lable text-right">Workflow name</label>
+ 				<input ng-model="editData.workflow_name" class="form-control edit-input" type="text" disabled="disabled" placeholder="Opportunity workflow">
+ 			</div>
+ 		</div>		
+ 	</div>
+ 	
+<div class="col-sm-6">
+	<button type="button" id="btnSave" name="btnSave" class="btn_bg1 btn sf-btn-gap btn-sf-primary" ng-click="saveOpportinitiesData()">Save</button>
+	<button type="button" id="btnCancel" name="btnCancel" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnCancel()">Cancel</button>
+</div>
+ 	
+ </div>
+ 
+ 
+</div>
+</div>

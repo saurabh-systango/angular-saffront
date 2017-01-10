@@ -1,0 +1,51 @@
+<div class="container-fluid " ng-controller="callReportCtrl">
+     <div class="col-md-12" style="margin-top: 20px;">
+        <form>
+            <div class="col-md-3">
+                <select class="form-control" ng-model="parametersData.due_by">
+				<option value="td">Today</option>
+				<option value="yd">Yesterday</option>
+				<option value="tw">This Week</option>
+				<option value="tm">This Month</option>
+				<option value="tq">This Quarter</option>
+				<option value="ty">This Year</option>
+				<option value="lw">Last Week</option>
+				<option value="lm">Last Month</option>
+				<option value="lq">Last Quarter</option>
+				<option value="ly">Last Year</option>
+				<option value="cust">Custom</option>
+			</select>
+            </div>
+            <div ng-show="parametersData.due_by=='cust'">
+                <div class="col-md-2">
+                    <input type="text" class="form-control" datetime-picker="MM/dd/yyyy" ng-click="openCalendar($event, 'picker3')" ng-model="picker3.date"
+                        is-open="picker3.open" />
+
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" datetime-picker="MM/dd/yyyy" ng-click="openCalendar($event, 'picker4')" ng-model="picker4.date"
+                        is-open="picker4.open" />
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control" ng-model="parametersData.user_name" ng-options="item for item in data.user_names">
+            </select>
+            </div>
+			
+        <div class="col-md-2">
+            <img title="Refresh" ng-click="reports()" alt="Refresh" src="images/icon_refresh_g.png" action="refresh" style=" margin: 2px 10px;">
+            <img title="Print" alt="Print" src="images/icon_print.png" action="printMe" style="margin: 2px 10px;">
+        </div>
+        </form>
+
+    </div>
+    <div class="col-md-12">
+        <div id="container">Placeholder for chart</div>
+
+    </div>
+    <div class="col-md-12">
+        <div id="container1">Placeholder for chart</div>
+
+    </div>
+</div>

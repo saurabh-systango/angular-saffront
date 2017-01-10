@@ -1,0 +1,41 @@
+<div style="margin-top: -18px;">
+	<div id="preview" style="background-color:#eeeeee; padding:15px;" ng-show="isTemplate">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="preview_title_box">{{previewTemplateData.t_name}}</div>
+                        <div class="preview_content_box">
+                        	<div ng-bind-html="showTemplate"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-hide="isTemplate" style="text-align: center; margin-top: 250px;">
+    	<img id="loader" name="loader" src="../web-client/images/ajax-loader.gif" alt="Processing... please wait..." title="Processing... please wait...">
+    </div>
+</div>
+<style type="text/css">
+	.preview_title_box{
+		background-color: #CBCBCB;
+	    color: #ffffff;
+	    border-radius: 10px;
+	    box-shadow: 0 -2px 4px #909090;
+	    margin-bottom: 10px;
+	    font: bold 18px Arial, Helvetica, sans-serif;
+	    padding: 10px 15px;
+	}
+	.preview_content_box{
+	    background-color: #ffffff;
+	    -moz-border-radius: 10px;
+	    -webkit-border-radius: 10px;
+	    border-radius: 10px;
+	    -moz-box-shadow: 0 -2px 4px #909090;
+	    -webkit-box-shadow: 0 -2px 4px #909090;
+	    box-shadow: 0 -2px 4px #909090;
+	    padding: 20px 15px;
+	    font: 14px Arial, Helvetica, sans-serif;
+	}
+</style>

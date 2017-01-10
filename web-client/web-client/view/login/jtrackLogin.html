@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="jtrack login">
+
+            <form style=" width: 100%;" name="loginForm" ng-submit="submitForm(loginForm.$valid)" novalidate>
+        
+                <h2 class="form-signin-heading" style="font-size: 28px">
+                    You are signed out of Soffront CRM
+                </h2>
+
+                <h2 class="form-signin-heading" style="font-size: 18px; height: auto;">
+                    How would you rate your experience with Soffront?
+                </h2>               
+                <p>
+                    <a href="http://soffront.com/soffront-awesome/" target="_new" onclick="saveFeedbackforTW('Awesome. I will recommend to others.');" style="color:#058ae5;cursor:pointer;">
+                        Awesome. I will recommend to others.
+                    </a>
+                </p>
+
+                <p>
+                    <a href="http://soffront.com/soffront-pretty-good/" target="_new" onclick="saveFeedbackforTW('Pretty good. I am getting my money`s worth.');" style="color:#058ae5;cursor:pointer;">
+                        Pretty good. I am getting my money's worth.
+                    </a>
+                </p>
+
+                <p>
+                    <a href="http://soffront.com/soffront-okay/" target="_new" onclick="saveFeedbackforTW('All Right. Nothing special.');" style="color:#058ae5;cursor:pointer;">
+                        All Right. Nothing special.
+                    </a>
+                </p>
+
+                <p>
+                    <a href="http://soffront.com/soffront-not-so-good/" target="_new" onclick="saveFeedbackforTW('Needs Improvement.');" style="color:#058ae5;cursor:pointer;">
+                        Needs Improvement.
+                    </a>
+                </p>
+
+                <p style="margin-left:360px;">
+                    <a ui-sref="login" style="color:#058ae5;font-size:14px;text-decoration:none;">
+                        No Thanks
+                    </a>
+                </p>
+                
+            </form>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,78 @@
+<div class="modal-header pop-header" ng-app="account" ng-controller="accountsCtrl">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title">Add Accounts</h4>
+</div>
+<div class="modal-body" id="modal-body">
+<form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Status</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+
+         <select class="form-control" ng-model="acount.t_status">
+            <option>Lead</option>
+            <option>Prospect</option>
+            <option>Customer</option>
+            <option>Duplicate</option>
+         </select>
+
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right"><label>Company</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+         <input type="text" class="form-control" ng-model="accounts.company">
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Sales rep</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+         <select class="form-control"  ng-model="accounts.sales_rep"
+               data-ng-options="filed as filed for filed in sales_rep">
+              <option value=""> Ravi Teja Villa</option>
+         </select>
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right"><label>First name</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+         <input type="text" class="form-control" ng-model="accounts.firstname">
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right"><label>Last name</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+         <input type="text" class="form-control"  ng-model="accounts.last_name">
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right"><label>Email</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+         <input type="text" class="form-control" ng-model="accounts.email">
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right"><label>Phone</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+         <input type="text" class="form-control" ng-model="accounts.phone">
+      </div>
+   </div>
+ 
+</div>
+
+   <div class="modal-footer">
+   <div class="form-group">
+      <div class="col-md-3 col-sm-1"><label></label></div>
+      <div class="col-md-9 col-sm-11">
+         <div class="col-md-5">
+			<input data-ng-model="notify.value" style="margin-top: 2px;" ng-checked="true" type="checkbox">
+			<span> Notify Sales rep</span>
+         </div>
+         <div class="col-md-7 col-sm-6  text-right">
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="queckAddAccount()">Save</button>
+                <a href="" class="sf-btn-gap" ng-click="Expand()" >Expand</a>
+                <a href="" ng-click="customizeAccounts()">Customize</a>
+         </div>
+      </div>
+   </div>
+   </div>
+	

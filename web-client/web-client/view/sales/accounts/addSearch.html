@@ -1,0 +1,19 @@
+<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title">Confirmation Dialog</h4>
+</div>
+<div class="modal-body" id="modal-body">
+  <div class="col-md-12">
+	<label>Search by Company </label>
+  </div>
+  <div class="col-md-12 search-company">  
+  <input name="formCondition" value="*" id="formCondition" class="form-control" type="text">
+  <input class="small_btn"  value="Search" type="button">
+  </div>
+  <div class="col-md-12">
+	<input id="selectButton" class="small_btn" value="Select" ng-click="ok()" type="button"> 
+	  <div id="grid1" ui-grid="gridOptions1" class="grid"></div>
+  </div>
+</div>
+<div class="modal-footer">   
+</div>

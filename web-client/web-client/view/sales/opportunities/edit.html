@@ -1,0 +1,43 @@
+
+
+<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title">Batch Edit</h4>
+</div>
+<div class="modal-body" id="modal-body">
+<form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Modifiy field: </label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+       <!--   <select class="form-control"  ng-model="accounts.status">
+            <option value="Lead">Title</option>
+            <option value="Prospect">Zip code</option>
+            <option value="Customer">Website</option>
+         </select> -->
+
+         <select id="batchUpdateFields" name="batchUpdateFields" class="form-control" >
+            <option value="">Close date</option>
+            <option value="">Company</option>
+            <option value="">Name</option>
+            <option value="">Opp Type</option>
+            <option value="">Sales rep</option>
+            <option value="">Source</option>
+         </select>
+      </div>
+   </div>
+   <div class="form-group">
+      <div class="col-md-3 col-sm-3 col-xs-3 text-right"><label>With value:</label></div>
+      <div class="col-md-9 col-sm-9 col-xs-9">
+         <input type="text" class="form-control" id="exampleTextarea"/>
+      </div>
+   </div>
+   
+   </form>
+</div>
+<div class="modal-footer">
+   <div class="form-group">
+      <div class="col-md-12 col-sm-11" style="text-align:center;">
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="ok()">Update</button>
+      </div>
+   </div>
+</div>

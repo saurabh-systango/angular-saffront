@@ -1,0 +1,148 @@
+﻿<div id="new_task">
+    <div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header pop-header">
+                <button type="button" class="close" ng-click="cancel()">&times;</button>
+                <h4 class="modal-title">Add Task</h4>
+            </div>
+            <div class="modal-body">
+                <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right red"><label>Task Name</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <input type="text" class="form-control" ng-model="t_name" required />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right red">
+								<label>Due By</label>
+							</div>
+                            <div class="col-sm-9">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" datetime-picker="MM/dd/yyyy HH:mm" ng-click="openCalendar($event, 'picker3')" ng-model="picker3.t_dueby" is-open="picker3.open" required />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openCalendar($event, 'picker3')"><span class="glyphicon glyphicon-calendar"></span></button>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group ">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right red"><label>Status</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <select class="form-control" required="required" ng-model="t_status">
+                                    <option value="Lead">Cancelled</option>
+                                    <option value="Prospect">Pending</option>
+                                    <option value="Customer">Completed</option>
+                                </select>
+                            </div>
+                        </div>
+
+ <div class="form-group">
+                            <div ng-repeat="obj in user.reminder track by $index" style="clear: both;">
+                                <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label ng-show="$index == 0">Reminder</label></div>
+                                <div class="col-md-9 col-sm-8 col-xs-8">
+                                    <div class="col-md-5 col-sm-4 col-xs-4 padd-10">
+                                        <select class="form-control" ng-model="user.reminder[$index].t_reminder_type" ng-options="x for x in reminderType"></select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2 padd-10">
+                                        <input class="form-control" maxlength="3" type="text" ng-model="user.reminder[$index].t_time_value">
+                                    </div>
+                                    <div class="col-md-4 col-sm-3 col-xs-3 padd-10">
+                                        <select class="form-control" required="required" ng-model="user.reminder[$index].t_time_type" ng-options="x for x in reminderIn"></select>
+                                    </div>
+                                    <div class="col-md-1" style="padding:0px;">
+                                        <img src="../../../images/close_button_datetime.png" ng-click="deleteReminder($index)" title="Close" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-9 col-sm-8 col-xs-8" ng-hide="user.reminder.length >= 3" style="margin-left:25%;">
+                                <a ng-click="addReminder()" style="color:blue;">Add a reminder</a>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Company</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <p class="input-group">
+								<input class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" ng-model="company" required="" style="" type="text">
+								<span class="input-group-btn">
+									<button type="button" ng-click="addSearch()" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+							</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Full Name</label></div>
+                            <div class="col-md-8 col-sm-7 col-xs-7">
+                                <input class="form-control" type="text" ng-model="fullname">
+                            </div>
+                            <div class="col-md-1">
+                                <a ng-click="emailAlert()"><img src="../../../images/icon_email_small.png" style="width: 17px; height: 12px;"></a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Description</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <textarea class="form-control" ng-model="t_description"> </textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Repeat</label></div>
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                               <input type="checkbox" class="form-control" ng-click="taskRepeatReminder('')" ng-model="user.is_repeat" style="margin:0 5px; width: auto;"/>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right red"><label>Owner</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <select class="form-control" required="required" ng-model="t_owner">
+                                    <option value="Ravi Teja Villa">Ravi Teja Villa</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <h4 class="border-bottom">Add a Note</h4>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-2 col-sm-4 col-xs-4 text-right"><label>Type</label></div>
+                            <div class="col-md-10 col-sm-8 col-xs-8">
+                                <select class="form-control" required="required" ng-model="note_type">
+                                    <option value="Lead">Appointment</option>
+                                    <option value="Prospect">Prospect</option>
+                                    <option value="Customer">Customer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-2 col-sm-4 col-xs-4 text-right"><label>Note</label></div>
+                            <div class="col-md-10 col-sm-8 col-xs-8">
+                                <textarea class="form-control" ng-model="note"> </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="text-center">
+                        <input name="" value="Save" ng-click="addNewTask()"  class="btn_bg1 small_btn" type="submit">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

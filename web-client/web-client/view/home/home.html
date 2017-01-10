@@ -1,0 +1,141 @@
+<div class="home-contral" ng-controller="homeCtrl">
+<div class="container-large top-headering"  ng-hide="$state.includes('login')" >
+    <div class="row" >
+        <div class="header-top">
+            <div class="col-md-3 logo">
+                <a href="http://www.soffront.com/" target="_blank"><img src="images/soffront_logo-home.png" alt="Logo" />
+                </a>
+                <div class="powered_by">
+                    Powered by
+                    <br>
+                    <a class="ssblack" style="text-decoration: none" href="http://www.soffront.com/" target="_blank">sof<span>front</span></a>
+                </div>
+            </div>
+            <div class="col-md-6 h-search">                
+                <div class="h-search" ng-init="columnSort= {name:'Accounts'}" >
+                   <div class="header-search">
+                      <span class="search-title">{{columnSort.name}}</span>
+                      <div class="input-group" id="adv-search">
+                         <div class="dropdown  dropdown-lg">
+                            <div class="btn-group" uib-dropdown>
+                               <img src="images/img_down_arrow.png" class="dropIcon" align="absmiddle" uib-dropdown-toggle />
+                               <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                  <li ng-repeat="colname in FilterList | orderBy:'name' ">
+                                     <a href="javascript:void(0)" ng-click="colnameSelected(colname)">{{colname.name}}</a>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                          <input type="text" class="form-control"  ng-model="searchType"   placeholder="Type a keyword and press enter" />
+                         <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                               <button ng-click="searchFilter()">
+                                <img src="images/icon_magnifying.png">
+                               </button>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <span class="advSpan"><a ng-click="advanceSearch()">Advanced</a></span>
+                </div>                
+            </div>
+            <div class="col-md-3 h-quick-links row">
+                <ul class="nav navbar-nav">
+              <li ng-show="myvalue">
+                 <div style="" class="newFeatureBox" id="featureBox">
+       <table cellspacing="0" cellpadding="0" border="0">
+       <tbody><tr>
+       <td><a onclick="openNewFeature();" href="http://soffront.com/help/knowledge-base/release-notes-september-8-2016/" target="_blank">What's new</a></td>
+       <td>
+       <div class="newFeatureBox_close"><img border="0" ng-click="showAlert()" style="cursor: pointer;" title="Close" alt="Close" src="images/close_button_datetime.png"></div>
+       </td>
+       </tr>
+       </tbody></table>
+       </div>
+               </li>
+                    <li>
+                      <a href="http://soffront.com/help/" target="_blank" style="letter-spacing: -1pt;"> <!-- getSupport.page -->
+					  <input class="soffront_guider" onclick="javascript:openGuider();" id="soffrontGuider" title="Quick Tour" style="cursor: pointer; visibility: visible;" guiderid="1" type="button">
+                        <strong>Help</strong>
+                      </a>
+                    </li>
+                    <li class="dropdown"  uib-dropdown>
+                   
+                      <a href="" class="btn btn-link" uib-dropdown-toggle title="{{emailID}}">
+                          {{userName}}
+                               <img src="images/img_down_arrow.png" class="" border="0">
+                      </a>
+                      <ul class="dropdown-menu logout" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                        <li role="menuitem">
+                            <a href="javascript:void(0)" ng-click="openCalendar();">  Calendar/Tasks </a></li>
+                        <li role="menuitem"><a href="javascript:void(0)" ng-click="logout()">Sign Out</a></li>
+                      </ul>
+           
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header-bottom" >
+    <uib-tabset class="ui-sortable" active="activeTabIndex">
+          <uib-tab ng-repeat="t in tabs" >
+              <uib-tab-heading ng-click="showMe(t)" title="{{t.title}} ">
+                  <span>{{t.title}} </span>
+                  <a ng-click="removeTab($index)" href="javascript:void(0)" ng-hide="t.title == 'Home'">
+                      <img src="images/tab_close_btn.png" title="Close" class="tab_close_btn" border="0" align="absmiddle">
+                  </a>
+              </uib-tab-heading>  
+               <div ng-include="t.url"></div>
+          </uib-tab>
+    </uib-tabset>
+    <div class="header-bottom" ng-show="homeShow">
+        <div class="home-content margin-40">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+                <span><img src="images/icon_marketing.png" /></span>
+                <h3>Marketing</h3>
+                <ul>
+                    <li ng-repeat=" it in moduleItem" ng-click="addTab(it);">
+                        <a href="javascript:void(0)" title="{{ it.name }}">
+                            {{ it.name }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+                <span><img src="images/icon_sales.png" /></span>
+                <h3>Sales</h3>
+                <ul>
+                    <li ng-repeat=" it in moduleItem2 " ng-click="addTab(it);">
+                        <a href="javascript:void(0)" title="{{ it.name }}">
+                            {{ it.name }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+                <span><img src="images/icon_services.png" /></span>
+                <h3>Service</h3>
+                <ul>
+                    <li ng-repeat=" it in moduleItem3">
+                        <a href="javascript:void(0)" title="{{ it.name }}">
+                            {{ it.name }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+                <span><img src="images/icon_setting.png" /></span>
+                <h3>Settings</h3>
+                <ul>               
+                    <li ng-repeat=" it in moduleItem4">
+                        <a href="javascript:void(0)" title="{{ it.name }}">
+                            {{ it.name }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

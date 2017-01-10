@@ -1,0 +1,22 @@
+﻿<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title"><span ng-if="modelType.count = 1"> {{modelType.formData}} </span><span ng-if="modelType.count > 1">Complete the appointment</span></h4>
+</div>
+<div class="modal-body" id="modal-body">
+
+    <div class="form-group">
+        <label>Add a Note (optional)</label>     
+    </div>
+    <div class="form-group">       
+        <div class="">
+            <textarea ng-model="note_text" class="form-control" id="note_text"></textarea>
+        </div>
+    </div>
+
+</div>
+<div class="modal-footer">
+   <div class="form-group text-center">
+        <button type="button"  class="btn_bg1" ng-click="completeApi()">Complete</button>
+        <button type="button" class="btn_bg1" ng-click="cancel()">Cancel</button>
+   </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="salesTemplate-width" ng-controller="createSalesTemplatesCtrl">       
+                
+        <form name="createSalesTemplates" >
+            
+         <div class="col-md-12">
+         <button type="submit"  ng-click="saveSalesTempl12()" class="btn_bg1">Save</button>
+                <span ng-show="showeMoreAction">
+                    <button type="button" class="btn_bg1" ng-click="copySaleTemplate()">Copy</button>
+                    <button type="button" ng-click="test()"  class="btn_bg1">Test</button>
+                    <button type="button" class="btn_bg1"  ng-click="alertPopup()">Delete</button>
+                    <button type="button" class="btn_bg1" ng-click="openWindow()">Preview</button>
+                </span>
+        </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-10">
+                        <label></label>
+                        <input class="form-control" focus-me="true" id="inputsm" type="text" ng-model="add.name" placeholder="Name">
+                    </div>
+                    <div class="col-md-2">
+                        <label></label>
+            
+                        <select class="form-control" id="mySelect" ng-options="option.name for option in add.availableOptions track by option.name"
+                           ng-model="add.status"></select>
+                        <!-- <select  ng-model="add.status"
+                             data-ng-options="filed as filed for filed in status">
+                           <option>Active</option>
+                        </select> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <br>
+                <div class="row">
+                    <div class="col-md-10">
+                        
+                        <input class="form-control"  type="text" id="subject" ng-model="add.subject" placeholder="Subject"> 
+                    </div>
+                    <div class="col-md-2">
+
+                        <div class="btn-group dropdown right-side" uib-dropdown="" style="">                            
+                            <p> <strong class="dropIcon dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false" align="absmiddle">Personalize 
+                            <img src="images/img_down_arrow.png"/>
+							 </strong> 
+							</p>
+                            <ul class="dropdown-menu" uib-dropdown-menu="" role="menu" aria-labelledby="split-button">
+                                <li ng-click="addMailMarge(item)" class="ng-scope" ng-repeat="item in tempObject">
+                                    <a  class="ng-binding">{{item.title}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                   <div class="col-md-12">
+                                            
+                        <textarea ng-model="add.email_message" data-ck-editor>{{content}}</textarea>
+                    </div>
+                </div>
+            </div>
+<div class="col-md-12">
+             <button type="submit"  ng-click="saveSalesTempl12()" class="btn_bg1">Save</button>
+
+              <span ng-show="showeMoreAction">
+            <button type="button" class="btn_bg1" ng-click="copySaleTemplate()">Copy</button>
+            <button type="button" ng-click="test()"  class="btn_bg1">Test</button>
+            <button type="button" class="btn_bg1"  ng-click="deleteSalesTemplate()">Delete</button>
+            <button type="button" class="btn_bg1" ng-click="openWindow()">Preview</button>
+        </span>
+</div>		
+        </form>
+    </div>
+</div>
+

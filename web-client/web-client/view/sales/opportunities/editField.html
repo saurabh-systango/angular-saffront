@@ -1,0 +1,76 @@
+<div class="pop-add-field">
+<div class="modal-content" uib-modal-transclude="">
+<div class="modal-header pop-header">
+    <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Edit field</h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+		<ul class="add-field">
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Field Name</label>							
+ 				<select id="sales_rep" ng-model="editData.type" class="form-control edit-input ng-pristine ng-valid ng-empty ng-touched" style=""><option value="? undefined:undefined ?"></option>
+ 					<option value="Prospect">Prospect</option>
+ 					<option value="Customer">Customer</option>		
+ 				</select>
+ 			</div>
+			</li>		
+				
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red">Field Label</label>							
+ 				<input type="text" class="edit-input form-control" ng-model="data.fieldLabel">
+ 			</div>
+			</li>		
+			
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Field Type</label>							
+ 				<select id="sales_rep" ng-model="editData.type" class="form-control edit-input ng-pristine ng-valid ng-empty ng-touched" style=""><option value="? undefined:undefined ?"></option>
+ 					<option value="Prospect">Prospect</option>
+ 					<option value="Customer">Customer</option>		
+ 				</select>
+ 			</div>
+			</li>		
+			
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">List Type</label>							
+ 				<select id="sales_rep" ng-model="editData.type" class="form-control edit-input ng-pristine ng-valid ng-empty ng-touched" style=""><option value="? undefined:undefined ?"></option>
+ 					<option value="Prospect">Prospect</option>
+ 					<option value="Customer">Customer</option>		
+ 				</select>
+ 			</div>
+			</li>		
+			
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Default</label>							
+ 				<select id="sales_rep" ng-model="editData.type" class="form-control edit-input ng-pristine ng-valid ng-empty ng-touched" style=""><option value="? undefined:undefined ?"></option>
+ 					<option value="Prospect">Prospect</option>
+ 					<option value="Customer">Customer</option>		
+ 				</select>
+ 			</div>
+			</li>		
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Length</label>							
+ 				<input type="text" class="edit-input form-control" ng-model="data.fieldLabel">
+ 			</div>
+			</li>		
+			<li style="width: 100%;">
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right" style="width: 14%;">Description</label>							
+				<input class="edit-input form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="data.fieldLabel" style="width: 84%;" type="text">
+ 			</div>
+			</li>
+		</ul>
+		<div class="fild-btn">
+			<input id="btnOk" class="small_btn" value="OK" onclick="onOk();" style="width: 90px;" type="button">
+			<input id="btnListItems" class="small_btn_inactive" value="List Items" onclick="showValueList();" style="width: 90px;" disabled="" type="button">
+		</div>
+	</form>
+</div>
+</div>
+</div>

@@ -1,0 +1,95 @@
+<div class="container-fluid padd-50-padd addFilter">
+    <form class="form-horizontal ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength" role="form" style="padding-top: 30px;">
+        <div class="form-group">
+            <div class="col-sm-6">
+                <!-- ngIf: canEdit -->
+                <button type="button" id="btnSave" name="btnSave" class="small_btn" data-ng-click="saveFilter()">Save</button>
+				
+                <!-- end ngIf: canEdit -->
+                <!-- ngIf: filter.queryId> 0 -->
+                <!-- ngIf: filter.queryId> 0 -->
+                <!-- ngIf: filter.queryId> 0 -->
+                <!-- ngIf: !canEdit -->
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <input id="filterName" name="filterName" class="form-control ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-touched" placeholder="Filter Name" required="" maxlength="64" data-ng-model="filter.filterName" type="text">
+            </div>
+        </div>
+        <!-- ngRepeat: criteria in filter.filterCriterias -->
+        <div class="form-group">
+            <div class="col-sm-6">
+               <table class="sf-table" style="width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="filterFieldList" name="filterFieldList" class="form-control">
+                                    <option value="">Click here to add a field to the filter</option>                                   
+                                    <option value="175">Address1</option>
+                                    <option value="176">Address2</option>
+                                    <option value="177">City</option>
+                                    <option value="3909">Comments</option>
+                                    <option value="170">Company</option>
+                                    <option value="180">Country</option>
+                                    <option value="3042">Created by</option>
+                                    <option value="191">Created on</option>
+                                    <option value="3582">Custom Field1</option>
+                                    <option value="3583">Custom Field2</option>
+                                    <option value="3584">Custom Field3</option>
+                                    <option value="3585">Custom Field4</option>
+                                    <option value="3586">Custom Field5</option>
+                                    <option value="3587">Custom Field6</option>
+                                    <option value="3588">Custom Field7</option>
+                                    <option value="3589">Custom Field8</option>
+                                    <option value="188">Email</option>
+                                    <option value="183">First name</option>
+                                    <option value="-9999">Groups</option>
+                                    <option value="171">Industry</option>
+                                    <option value="184">Last name</option>
+                                    <option value="5218">Lead Score</option>
+                                    <option value="187">Mobile</option>
+                                    <option value="3246">Other email</option>
+                                    <option value="3848">Outlook Sync</option>
+                                    <option value="185">Phone</option>
+                                    <option value="169">Priority</option>
+                                    <option value="168">Sales rep</option>
+                                    <option value="182">Salutation</option>
+                                    <option value="3244">Source</option>
+                                    <option value="178">State</option>
+                                    <option value="3679">Status</option>
+                                    <option value="189">Title</option>
+                                    <option value="3730">Type</option>
+                                    <option value="3120">Updated by</option>
+                                    <option value="3119">Updated on</option>
+                                    <option value="4794">User List1</option>
+                                    <option value="3160">Visible to</option>
+                                    <option value="181">Website</option>
+                                    <option value="4731">Workflow Name</option>
+                                    <option value="179">Zip code</option>
+                                </select>
+                            </td>
+                            <td width="80px" align="right">
+                                <button type="button" id="btnAdd" name="btnAdd" class="small_btn" data-ng-click="addCriteria()">Add</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <div class="form-group">
+			<div class="col-sm-6">
+				<div class="dropdown">
+				  <button class="btn btn-sf-primary dropdown-toggle" type="button" data-toggle="dropdown" onclick="">
+				  	Add <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li data-ng-repeat="field in fieldList | orderBy:'fieldLabel'" data-ng-click="addCriteria()"><a href="javascript:void(0)">{{field.fieldLabel}}</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div> -->
+
+        <!-- ngIf: filter.filterCriterias.length> 0 -->
+    </form>
+</div>

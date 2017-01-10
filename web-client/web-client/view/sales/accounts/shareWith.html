@@ -1,0 +1,19 @@
+<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title">Share with</h4>
+</div>
+<div class="modal-body" id="modal-body">
+	 <div class="form-group">	
+		<div ng-repeat="user in userList">
+			<span>
+				<input type="checkbox" ng-model="user.selected" value={{user.id}} /> {{user.name}}
+			</span>
+		</div>
+	</div>  
+	<ul>   
+</div>
+<div class="modal-footer ng-scope" style="text-align: left; padding-top: 0px;">
+    <button type="button" id="btnSave" name="btnSave" class="small_btn" ng-click="shareAccount()">	Apply
+    </button>
+<br><br>    
+</div>

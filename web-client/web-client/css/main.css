@@ -1,0 +1,7904 @@
+/**Nirakar@Start**/
+.sf-body {
+	margin-top: 30px;
+}
+.sf-form-header {
+	height: 30px;
+	padding: 5px 10px;
+  	font-size: 15px;
+  	font-weight: bold;
+  	line-height: 1.5;
+	background-color:#f0f0f0;	
+	color:#000000;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:100%;
+	padding:5px;
+	margin:-2px 0 0px;
+	border:1px solid #dfdfdf;
+}
+.sf-dialog {
+	background-color: #EEE;
+	margin-top: 20px;
+}
+.sf-dialog-container {
+	max-height: 350px;
+	overflow-x: hidden;
+	overflow-y: auto;  
+}
+.sf-container {
+	margin: 0 4.5%;
+}
+.sf-font-normal {
+	font-weight: normal;
+}
+.sf-btn {
+	display: inline !important;	
+}
+.sf-panel {
+	padding: 5px;
+	background-color: #E8EFF7;
+}
+.sf-badge {
+  border: 1px solid #DDD;
+  background-color: #FFF;
+  padding: 3px 4px;
+  margin-top: 4px;
+}
+.sf-gray {
+	color: #777;
+}
+.sf-btn-gap {
+	margin-right: 10px;
+}
+.sf-btn-group>.btn input[type=radio]{
+  position: absolute;
+  clip: rect(0,0,0,0);
+  pointer-events: none;
+}
+.sf-scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+.bg-white {
+	background-color: #FFF !important;
+}
+.sf-table {
+	width: 100%;
+}
+.sf-table-col-sm {
+	width: 2%;
+}
+.sf-text-ellipsis {
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: pre;
+  	width: inherit;
+}
+.hidden {
+	position: fixed; 
+	top: -999px; 
+	left: -999px; 
+	display: none;
+	visibility: hidden;
+	height: 0;
+	resize: none;
+	width: 0;
+	outline: none;
+}
+.info-text {
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	margin: 30px 4.5%;
+	color: #5c5c5c;
+}
+.info-text div.text {
+	padding-bottom: 10px;
+} 
+.report_table_area table td, th {
+	/* padding: 6px; */
+	font-weight: bold;
+	font-size: 13px;
+}
+.fixed_pos_report {
+	position: absolute;
+	left: -4.5%;
+	color: #919396;
+	display: inline;
+	z-index: 10;
+}
+.hrRule{border-top:2px solid #058ae5; color:#2c2c2c;}
+.report_text {
+	color: #6A6A6A;
+	font-size: 13px;
+	font-weight: normal;
+	/* width: 100%; */
+	padding-top: 5px;
+}
+.report_text a{
+	text-decoration: none;
+	float: right;
+	padding-right: 5px;
+}
+.progress_bar {
+	height: 15px;
+	background-color: #d5d5d5;
+	width: 100%;
+	float: left;
+}
+.percentage_value {
+	float: left;
+	margin-top: -1px;
+	font-weight: normal;
+	font-family: Arial, sans serif;
+	font-size: 12px;
+	color: #6A6A6A;
+	margin-left: 5px;
+}
+.row_odd {
+	background-color: #e8eff7;
+	padding: 5px 0 5px 0px;
+}
+
+.row_even {
+	background-color: #FFF;
+	padding: 5px 0 5px 0px;
+}
+.import-ul {
+	list-style: none;
+	padding: 0;
+}
+.import-ul li{
+	margin-top: 5px;
+}
+.import-ul ul {
+	list-style: none;
+}
+.import-ul ul li{
+	margin-top: 5px;
+}
+.import-gray-text{
+	color: #777777;
+	font-weight: normal;
+}
+.dialog-margin-top{
+	margin-top: 20px;
+}
+.ui-tabs{
+	border: 0;
+	border-radius: 0px;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	text-decoration: none;
+	list-style: none;
+	width: 100%;
+	line-height: 1.3;
+	font-size: 100%;
+	text-align: left;
+	background: #f3f3f3;
+	display: inline-block;
+	-webkit-box-shadow: inset 0 -3px 5px rgba(0,0,0,.1);
+	box-shadow: inset 0 -3px 5px rgba(0,0,0,.1);
+	clear: both;
+}
+.ui-tabs .ui-tab{
+	float: left;
+	position: relative;
+	white-space: nowrap;
+	border-right: 1px solid #D6D6D6;
+}
+.ui-tabs .ui-tab a{
+	display: block;
+	padding: 10px 15px;
+	color: #515151;
+	text-decoration: none;
+	outline: none;
+	font-weight: bold;
+}
+.ui-tabs .active{
+	background: #fff;
+}
+.clear-input-format input[type=radio], .clear-input-format input[type=checkbox]{
+	margin: 0;
+	padding: 0;
+	vertical-align: text-bottom;
+}
+.defaultText { color: #cccccc; }
+.inline-edit {
+	border: 1px solid silver;
+	width: 98%;
+	background-color: #FFF!important;
+	float: left;
+}
+.img-inline-edit{
+	float: left;
+	margin-top: 5px;
+	position: absolute;
+}
+.arrow{
+	font-family: Arial,Helvetica,Tahoma,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	display: block;
+	margin-top: -1px;
+}
+.list_gray{
+	/*color: #666;*/
+	color:#000000;
+}
+.result_table2{	
+}
+table.result_table, .list_table, .dialog_list_table {
+	border-color: transparent;/*#EE9500 transparent transparent;*/
+	border-image: none;
+	border-style: solid;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.dialog_list_table tr th{
+	background-color: #a8a8a8;
+	padding: 4px 1px 0;
+}
+table.result_table tr th {
+	background-color: #95c2ef;
+	border: 1px solid #ffffff;
+	padding: 4px 1px 0;
+}
+table.result_table tr th.selected {
+	background-color: #058ae5;
+	padding: 4px 1px 0;
+	font-weight:normal;
+}
+table.result_table tr:last-child td
+{
+	border-bottom:0;
+}
+
+table.result_table td {
+	border-bottom: 1px solid #E0E0E0;
+	padding: 2px 0;
+	fonr-weight:normal;
+}
+.child-fieldLabel{
+	font-weight: normal;
+	color: #ffffff;
+}
+.precord-cdiv-span{
+	white-space: initial;
+}
+.inline_input_box{
+	border: 1px solid silver;
+	width: 98%;
+	background-color: #fff;
+	float: left;
+}
+.horizontal_row{
+	display:block; 
+	height:1px; 
+	margin: 20px 0 5px; 
+	background-color:#C6C6C6; 
+	border-bottom:1px solid #ffffff;
+}
+.soffront_guider{
+	background-image: url(../images/NewDesign/help.png); 
+	background-repeat: no-repeat;
+	border: none; 
+	background-color: rgba(0, 0, 0, 0);
+	width: 16px; 
+	height: 16px; 
+}
+.ipad-div{
+	position: absolute!important; 
+	overflow: auto!important; 
+	height: 100%; 
+	width: 100%;
+}
+.ipad-list-div{
+	background: none; 
+	padding:0; 
+	margin: 0; 
+	overflow: auto!important; 
+	max-height: 200px;
+}
+div.menu{
+	background: #fff;
+	position: absolute;
+	z-index: 9999;
+	border: 1px solid rgba(0,0,0,.2);
+	cursor: default;
+	font-size: 13px;
+	margin: 0;
+	outline: none;
+	padding: 6px 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-transition: opacity .218s;
+	transition: opacity .218s;
+	max-height: 360px;
+	width: 200px;
+	overflow: auto;
+	white-space: nowrap;
+	text-align: left;
+	display: none;
+}
+div.menu-items{
+	text-align: left;
+}
+div.menu-item{
+	position: relative;
+	color: #333;
+	cursor: pointer;
+	list-style: none;
+	margin: 0;
+	padding: 3px 3px 3px 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+div.menu-item:HOVER {
+	background-color: #F1F2F2;
+}
+div.selected{
+	background-image: url(../images/NewDesign/Arrows/checkmark.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+.pheader-td{
+	font-weight:bold; 
+	cursor: pointer;
+}
+.pheader-div{
+	margin-right: 20px;
+	width: 100%;
+	color: #ffffff;
+	font-size: 14px;
+	cursor: pointer;
+	height: 22px;
+	font-weight:normal;
+}
+.pheader-cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+	padding: 0 2px 0 10px;
+	margin: 0 0 0 8px;
+	/*white-space: pre-line;
+	word-break: break-word;*/
+}
+.cheader-td{
+	font-weight:bold; 
+	cursor: default;
+}
+.cheader-div{
+	margin-right: 20px;
+	width: 100%;
+	color: #F37736;
+	font-size: 13px;
+	cursor: default;
+}
+.cheader-cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+	background-size: cover;
+	position: relative;
+	padding: 0 2px 0 2px;
+	margin: 0 0 0 8px;
+	/*white-space: pre-line;
+	word-break: break-word;*/
+	color:#ffffff;
+	font-weight:normal;
+}
+.precord-td{
+	text-transform: none;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+	cursor: default;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: Arial, sans serif;
+}
+.precord-div{
+	margin-right: 20px;
+	width: 100%;
+}
+.precord-cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+	background-size: cover;
+	position: relative;
+	padding: 3px 2px 0 10px;
+	margin: 0 0 0 8px;
+	/*white-space: pre-line;
+	word-break: break-word;*/
+}
+.crecord-td{
+	text-transform: none;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+	cursor: default;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: Arial, sans serif;
+}
+.crecord-div{
+	margin-right: 20px;
+	width: 100%;
+}
+.crecord-cdiv{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background-size: cover;
+	position: relative;
+	padding-top: 2px;
+	/*white-space: pre-line;
+	word-break: break-word;*/
+}
+
+.crecord-cdiv span.record-field{
+	/*padding: 0 2px 0 2px;*/
+	margin: 0 0 0 8px;
+}
+.showAll{
+	text-align: left;
+	padding: 5px 5px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+	position: absolute;
+	margin-top: -7px;
+}
+.showAll strong{
+	color: blue;
+	cursor: pointer;
+	font-weight: normal;
+	padding-left: 5px;
+}
+.showAll strong:HOVER{
+	text-decoration: underline;
+}
+/*.table-pdiv{
+		width: 160px;
+	}
+.table-div{
+		width: 150px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+}*/
+.loader,.ajax-loader, .inline-loader {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #0063ac;
+	text-align: center;
+	display: none;
+}
+.loader, .inline-loader div img{
+	cursor: default;
+}
+.inline-loader{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	z-index: 1000;
+	background: #fff;
+	opacity: .75;
+}
+.ajax-loader {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 1000;
+	background: #fff;
+	opacity: .75;
+	width: 100%;
+	height: 100%;
+}
+
+.add-a-picture {
+	font-size: 11px;
+	color: #222;
+	text-align: center;
+	text-decoration: underline;
+	background-color: #fff;
+	opacity: .65;
+	cursor: default;
+}
+
+.drag {
+	float: left;
+	width: 10px;
+	height: 100%;
+	z-index: 1000;
+	cursor: move;
+	border-left: 1px dashed #ccc;
+	border-right: 1px dashed #ccc;
+}
+.inline-popup{
+	/*width: 250px; 
+	height: 35px; 
+	border: 1px solid #ABCEF5; 
+	background-color:#FFF4D1;*/
+	position: absolute; 
+	display: none;
+	z-index: 999; 
+	margin-left: 4.5%;
+	margin-top:-1.5%;
+	}
+
+/**Nirakar@End**/
+html,body {
+	border: none;
+	color: #000000;
+	font-family: Arial, sans serif;
+	font-size: 13px;
+	/* height: 100%;*/
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+.body_bg {
+	margin: 0;
+	/*background: url(../images/NewDesign/bg.png) repeat;*/
+}
+
+#header {
+	background: url(../images/NewDesign/header_top.png) repeat-x left bottom #ffffff;
+	height: 118px;
+	padding: 0 5%;
+}
+
+.header_top {
+	height: 60px;
+}
+
+.powered_by {
+	color: #505050;
+	font: 9px Arial, Helvetica, sans-serif;	
+	padding: 0px 0 0 10px;
+	float:left;
+	
+}
+
+a.ssblack {
+	color: #5C6670 !important;
+	font: bold 8px Verdana, Arial, Helvetica, sans-serif !important;
+	text-transform: uppercase !important;	
+}
+
+a.ssblack span {
+	color:#F04B24 !important;
+	font: bold 8px Verdana, Arial, Helvetica, sans-serif !important;
+	text-transform: uppercase !important;	
+	}
+
+.top_text,.top_text a {
+	font: bold 13px Arial, Helvetica, sans-serif;
+	color: #058ae5;
+	letter-spacing: -.3pt;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.img_margin {
+	margin:4px 0 0 4px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.img_margin {
+	margin:3px 0 0 4px;
+}
+}
+
+.logout {
+	margin-top: 20px;
+}
+
+.home_content {
+	display: block;
+	margin: 0px 5%;
+	padding-bottom: 30px;
+}
+
+.option_box {
+	/*width: 91px;*/
+	padding: 0px;
+}
+
+.option_box a {
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 9px;
+	color: #ffffff;
+}
+
+.option_box a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.top-padding1 {
+	padding-top: 14px;
+}
+
+.top-padding2 {
+	padding-top: 21px;
+}
+
+.textbox_area {
+	background-color:#ffffff;
+	border:1px solid #cccccc;
+	height:23px;
+	padding:0px;
+	margin:0px;
+	padding-right:2px;	
+	width:98%;
+}
+
+.textbox_bg {
+	font: normal 13px Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	border: 0px;
+	width: 100%;
+	height: 18px;
+	outline:none;
+	background: transparent;
+}
+
+.box1 {
+	padding: 0;
+	color: #ffffff;
+	width: 123px;
+	height: 123px;
+}
+
+.box1:hover {
+	background: url(../images/NewDesign/box1_hover.png) no-repeat left top;
+	padding: 0;
+	color: #ffffff;
+	width: 123px;
+	height: 123px;
+}
+
+.box2 {
+	padding: 0;
+	color: #ffffff;
+	width: 91px;
+	height: 79px;
+}
+
+.box2:hover {
+	background: url(../images/NewDesign/box2_hover.png) no-repeat left top;
+	padding: 0;
+	color: #ffffff;
+	width: 91px;
+	height: 91px;
+}
+
+.box3 {
+	padding: 0;
+	color: #ffffff;
+	width: 91px;
+	height: 91px;
+}
+
+.box3:hover {
+	background: url(../images/NewDesign/box3_hover.png) no-repeat left top;
+	padding: 0;
+	color: #ffffff;
+	width: 91px;
+	height: 91px;
+}
+
+a div.box1,a div.box2,a div.box3 {
+	font: bold 10px/ 9px verdana, Arial, Helvetica, sans-serif;
+	outline: none;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*start company styles*/
+.icon_area {
+	float: left;
+	/*text-align: right;*/
+	margin-top: 0px;
+	padding-top:9px;
+	/* padding-top:10px; */
+	font-size: 14px;
+	color:#000000;
+}
+.databox {
+	/*text-transform: none;
+	font-size: 12px;
+	font-weight: normal;*/
+	text-transform: none;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+	cursor: default;
+}
+
+.list_area {
+	margin: 45px 0 25px;
+	color: #DA6326;
+}
+
+.text1 {
+	color: #000000;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+/*end company styles*/
+.balance {
+	clear: both;
+}
+
+/*start header dropdown style*/ /* remove the list style */
+#nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* make the LI display inline */
+	/* it's position relative so that position absolute */
+	/* can be used in submenu */
+#nav ul {
+	position: absolute;
+	left: 0;
+	display: none;
+	margin: 0 0 0 -1px;
+	list-style: none;
+	z-index: 99;
+	min-height: 10px;
+	padding: 10px 0;
+}
+
+#nav li {
+	position: relative;
+	z-index: 99;
+	margin: 0 1px;
+}
+
+/* this is the parent menu */
+#nav li a {
+	font: normal 13px Helvetica, Arial, sans-serif;
+	display: block;
+	height: 15px;
+	letter-spacing: -1px;
+	text-decoration: none;
+	margin: 0px;
+}
+
+/* submenu, it's hidden by default */
+#nav ul li a:hover {
+	display: block;
+	height: 15px;
+	background-color: #E1E1E1;
+	text-decoration: none;
+}
+
+#nav ul.dropbox {
+	position: absolute;
+	padding:0px;
+	left: 85px;
+	background-color: #F3F4F4;
+	border: 1px solid #DBDBDB;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	z-index: 99;
+	-moz-box-shadow: 4px 4px 4px #DCDCDC;
+	-webkit-box-shadow: 4px 4px 4px #DCDCDC;
+	box-shadow: 4px 4px 4px #DCDCDC;
+}
+
+#nav ul.dropbox li {
+	width: 132px;
+	padding: 4px 4px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+#nav ul.dropbox li a {
+	color: #909090;
+}
+
+#nav ul.dropbox li:hover {
+	height: 15px;
+	background-color: #E1E1E1;
+}
+/* display block will make the link fill the whole area of LI */
+	/* fix ie6 small issue */
+	/* we should always avoid using hack like this */
+	/* should put it into separate file : ) */
+* html #nav ul li ul.dropbox {
+	margin: 0 0 0 -2px;
+}
+
+/*end header dropdown style*/
+#inside_page_content,#inside_page_content_media,#inside_page_content_import{ /*width:90%;*/
+	margin: 0 4.5%;
+	display: block;
+	background-color: #ffffff;
+	/*padding: 15px;*/
+	padding: 15px 0;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.title_area {
+	float: left;
+	display: block;
+	height: 82px;
+	border-bottom: 1px solid #0063ac;
+	font-size: 48px;
+	color: #0063ac;
+	margin-right: 100px;
+}
+
+.icon_box {
+	display: block;
+	float: left;
+	margin-top: 42px;
+	width: 50px;
+	font-size: 12px;
+	color: #E98400;
+	text-align: center;
+}
+
+.icon_box a {
+	font-size: 12px;
+	color: #0063ac;
+	text-decoration: none;
+}
+
+.contact_list {
+	margin: 30px 5% 60px;
+}
+
+ul.list {
+	float: left;
+	width: 50%;
+	width: 48% \9;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+}
+
+.list_part1 {
+	float: left;
+	width: 50%;
+	width: 53% \9;
+	margin-right: 5%;
+	margin-right: 2% \9;
+}
+
+.list_part2 {
+	float: left;
+	width: 45%;
+}
+
+ul.list li {
+	list-style: none;
+	background: url(../images/NewDesign/bullet.gif) no-repeat left 8px;
+	padding-left: 13px;
+	line-height: 18px;
+}
+
+div.list_heading {
+	list-style: none;
+	background: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: #E98400;
+	border-bottom: 1px solid #DF7A40;
+	padding: 0px 0 3px;
+	margin-bottom: 5px;
+}
+
+ul.list li a {
+	text-decoration: none;
+}
+
+ul.list li a:hover {
+	text-decoration: underline;
+}
+
+a.notes {
+	display: block;
+	background: url(../images/NewDesign/symbol_notes_off.png) no-repeat left
+		top;
+	width: 41px;
+	height: 41px;
+}
+
+a.notes:hover,a.select_notes {
+	display: block;
+	background: url(../images/NewDesign/symbol_notes_on.png) no-repeat left
+		top;
+	width: 41px;
+	height: 41px;
+}
+
+a.task {
+	display: block;
+	background: url(../images/NewDesign/symbol_task_off.png) no-repeat left
+		top;
+	width: 41px;
+	height: 41px;
+}
+
+a.task:hover,a.select_task {
+	display: block;
+	background: url(../images/NewDesign/symbol_task_on.png) no-repeat left
+		top;
+	width: 41px;
+	height: 41px;
+}
+
+a.contacts {
+	display: block;
+	background: url(../images/NewDesign/symbol_contacts_off.png) no-repeat
+		left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.contacts:hover,a.select_contacts {
+	display: block;
+	background: url(../images/NewDesign/symbol_contacts_on.png) no-repeat
+		left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.activities {
+	display: block;
+	background: url(../images/NewDesign/symbol_activities_off.png) no-repeat
+		left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.activities:hover,a.select_activities {
+	display: block;
+	background: url(../images/NewDesign/symbol_activities_on.png) no-repeat
+		left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.cases {
+	display: block;
+	background: url(../images/NewDesign/symbol_cases_off.png) no-repeat left
+		top;
+	width: 41px;
+	height: 41px;
+}
+
+a.cases:hover,a.select_cases {
+	display: block;
+	background: url(../images/NewDesign/symbol_cases_on.png) no-repeat left
+		top;
+	width: 41px;
+	height: 41px;
+}
+
+a.opportunities {
+	display: block;
+	background: url(../images/NewDesign/symbol_opportunities_off.png)
+		no-repeat left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.opportunities:hover,a.select_opportunities {
+	display: block;
+	background: url(../images/NewDesign/symbol_opportunities_on.png)
+		no-repeat left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.attachments {
+	display: block;
+	background: url(../images/NewDesign/symbol_attachments_off.png)
+		no-repeat left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.attachments:hover,a.select_attachments {
+	display: block;
+	background: url(../images/NewDesign/symbol_attachments_on.png) no-repeat
+		left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.autoresponder {
+	display: block;
+	background: url(../images/NewDesign/symbol_autoresponder_off.png)
+		no-repeat left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.autoresponder:hover,a.select_autoresponder {
+	display: block;
+	background: url(../images/NewDesign/symbol_autoresponder_on.png)
+		no-repeat left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.employee {
+	display: block;
+	background: url(../images/NewDesign/symbol_employee_off.png) no-repeat
+		left top;
+	width: 41px;
+	height: 41px;
+}
+
+a.employee:hover,a.select_employee {
+	display: block;
+	background: url(../images/NewDesign/symbol_employee_on.png) no-repeat
+		left top;
+	width: 41px;
+	height: 41px;
+}
+
+.close_btn_pos {
+	float: right;
+	/*position:fixed;*/
+	z-index: 4;
+	top: 7px;
+	right: 5px;
+	width: 24px;
+	height: 24px;
+	text-align: right;
+}
+
+.close {
+	float: right;
+	padding: 5px 5px 0 0;
+	vertical-align: top;
+	text-align: right;
+	margin-top: -26px\9;
+}
+
+.left_col {
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+}
+
+.right_col {
+	float: left;
+	width: 48%;
+}
+
+.record_heading {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+	/*margin-top: 30px;*/
+}
+
+.record_heading span {
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.record_heading span:HOVER {
+	text-decoration: underline;
+}
+
+.contact_img {
+	float: left;
+	width: auto;
+	height: auto;
+	margin-left: 20px;
+}
+.contact_img_for_spreadsheet {
+	width: auto;
+	height: auto;
+	margin: 0px;
+}
+
+
+.alphabetic_list_area{
+	font:11px Arial, Helvetica, sans-serif;	
+	float:right;
+	margin-right:20px; 
+	margin-top:1px;
+	/* padding-top: 3px; */
+}
+a.alphabetic_list {
+    background-color: #ffffff;
+	border:1px solid #e6e7e8;	
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	color: #939598;
+	display: block;
+	float: left;
+	font-weight: normal;
+	height: 15px;
+	line-height: 15px;
+	margin-right: 2px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 12px;
+}
+a.alphabetic_list:hover {
+    background-color: #058ae5;
+	border:1px solid #058ae5;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	color: #ffffff;
+	display: block;
+	float: left;
+	font-weight: normal;
+	height: 15px;
+	line-height: 15px;
+	margin-right: 2px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 12px;	
+}
+.active_alphabetic_list{
+	background-color: #058ae5;
+	border:1px solid #058ae5;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	font-weight: normal;
+	height: 15px;
+	line-height: 15px;
+	margin-right: 2px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 12px;
+}
+
+
+.closeSpan {
+	display: block;
+	background: url(../images/NewDesign/close_icon.png) no-repeat left top;
+}
+
+#ts_tabmenu {
+	font-size: 14px; /* set the font size */
+	padding: 25px 0px 0px 0px; /* set the padding */
+}
+#ts_tabmenu ul {
+	line-height: 13px; /* setting the line height now so we don't have any headaches*/
+	margin: 0px; /* let's keep the margin set to 0 for the same reasons as above*/
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	padding: 0px 0px 0px 5px; /* give it a left padding of 5px to counter the effect of margin -5px below */
+}
+/*#ts_tabmenu ul li {
+	float: left; 
+	font:bold 14px/13px Verdana, Arial, Helvetica, sans-serif;
+	list-style-type:none;	
+	white-space:nowrap;
+	margin-right: 6px;
+}*/
+#ts_tabmenu ul li {
+	float: left; 
+	font:bold 14px/17px Verdana, Arial, Helvetica, sans-serif;
+	list-style-type:none;	
+	white-space:nowrap;
+	margin-right: 6px;
+	/*position:relative;
+	z-index: 0;*/
+}
+#ts_tabmenu ul li a {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/tab.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	/*z-index: 0; 
+	position: relative;*/
+	color: #939598;
+        transition: none 0s ease 0s ;
+}
+#ts_tabmenu ul li a strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	text-align:center;
+	background: url(../images/NewDesign/tab.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 6px 21px 7px 5px;  /* important, as through this you define the position of the text within the tab */
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+}
+#ts_tabmenu ul li a:hover {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/tab_hover.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	z-index: 0; /* keep it on layer 0 (default) */
+	position: relative;  /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #ffffff;  /* color of the tab text */
+}
+#ts_tabmenu ul li a:hover strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	text-align:center;
+	background: url(../images/NewDesign/tab_hover.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 6px 21px 7px 5px;  /* important, as through this you define the position of the text within the tab */
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+}
+#ts_tabmenu ul li a.selected {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/tab_selected.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	position: relative; /* again, keep things relative */
+	z-index: 5; /* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+	color: #fffff;  /* color of the tab text */	
+}
+#ts_tabmenu ul li a strong.selected {
+	color:#ffffff;
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	text-align:center;
+	background: url(../images/NewDesign/tab_selected.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 6px 21px 7px 5px;  /* important, as through this you define the position of the text within the tab */
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative; /* keep it relative */
+	z-index: 5; /* show this on layer 5 as well */	
+}
+/*#ts_tabmenu ul li div{	
+	display: block;
+	width:10px;
+	height:10px;     
+    float: right;
+    left: -4px;
+    position: relative;
+    z-index: 100;
+    text-decoration: none;
+    top: 4px;
+    text-align:left;
+	}*/
+#ts_tabmenu ul li div{	
+	display: block;
+    float: right;
+    right: 4px;
+    /*position: absolute;
+    z-index: 10;*/
+    text-decoration: none;
+    top: 0px;
+    text-align:left;
+	}
+.tab_close_btn {
+	
+	border: medium none;
+	cursor: pointer;
+	float: right;
+	/*padding-right: 0px;	
+	margin-top: 0px;
+	margin-top: 0px\9;*/
+	padding:3px;
+	margin-top: 2px;
+	margin-top: 0px\9;
+	margin-right:-4px;
+	position: relative;
+	z-index: 5;
+	/*height:10px;
+	width:10px;*/	
+}
+@media all and (min-width:0){
+	.tab_close_btn {
+	margin-top: 3px \0/;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.tab_close_btn {
+		margin-top: 2px;
+		margin-right:-4px;
+	}
+}
+
+.right_text {
+	float: right;
+	color: #808083;
+}
+
+.right_text a {
+	text-decoration: none;
+	color: #808083;
+}
+
+.right_text a:hover {
+	text-decoration: underline;
+	color: #808083;
+}
+
+a.link1 {
+	font-weight: normal;
+	text-decoration: none;
+	color: #E98400;
+}
+
+a.link1:hover {
+	font-weight: normal;
+	text-decoration: underline;
+	color: #E98400;
+}
+
+.close {
+	float: right;
+	margin-top: 2px;
+}
+
+
+/*end style record*/ /*start style for setup page*/
+.setup_col {
+	float: left;
+	width: 31%;
+	width: 31% \9;
+	color: #000000;
+	margin: 0 2% 0 0;
+	padding: 0px;
+}
+
+div.setup_heading {
+	background: none repeat scroll 0 0 transparent;
+	color: #058ae5;
+	font-size: 20px;
+	font-weight: normal;
+	list-style: none outside none;
+	margin-bottom: 5px;
+	padding: 0 0 3px;
+}
+
+ul.setup_list {
+	float: left;
+	width: 100%;
+	color: #000000;
+	margin: 0 0 20px;
+	padding: 0 0 0 15px;
+}
+
+ul.setup_list li {
+	list-style: none;
+	background: url(../images/NewDesign/bullet.gif) no-repeat left 8px;
+	padding-left: 13px;
+	line-height: 23px;
+}
+
+ul.setup_list li a {
+	text-decoration: none;
+	color: #000000;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+
+ul.setup_list li a:hover {
+	text-decoration: underline;
+}
+
+/**/
+ul.query_list {
+	float: left;
+	width: 100%;
+	color: #000000;
+	margin: 0 0 30px;
+	padding: 0 0 0 15px;
+}
+
+ul.query_list li {
+	color: #000000;
+	background: url(../images/NewDesign/bullet.gif) no-repeat 2px 10px;
+	cursor: default;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	list-style-type: none;
+	padding: 3px 0 7px 12px;
+	width: 95%;
+	height: 15px;
+}
+
+ul.query_list li:hover {
+	color: #000000;
+	background: url(../images/NewDesign/bullet.gif) no-repeat 2px 10px;
+	background-color: #ffffff;
+	border: 1px solid #0063ac;
+	cursor: default;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	list-style-type: none;
+	padding: 3px 0 7px 12px;
+	width: 95%;
+	height: 15px;
+}
+
+.db_report {
+	float: left;
+	font: 13px/ 18px Arial, Helvetica, sans-serif;
+	list-style-type: none;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 69%;
+	cursor: pointer;
+}
+
+.user_action_span {
+	margin-right: 5px;
+	display: none;
+}
+
+ul.query_list li a.edit {
+	background: url("../images/NewDesign/dbr_pencil.png") no-repeat scroll 0
+		5px transparent;
+	cursor: pointer;
+	position: relative;
+	right: 0;
+}
+
+ul.query_list li a.remove {
+	background: url("../images/NewDesign/dbr_delete.png") no-repeat scroll 0
+		5px transparent;
+	cursor: pointer;
+	position: relative;
+	right: 0;
+}
+
+ul.query_list li a.mark {
+	background: url("../images/NewDesign/check.png") no-repeat scroll 0
+		5px transparent;
+	cursor: pointer;
+	position: relative;
+	right: 0;
+}
+
+ul.query_list li a.unmark {
+	background: url("../images/NewDesign/uncheck.png") no-repeat scroll 0
+		5px transparent;
+	cursor: pointer;
+	position: relative;
+	right: 0;
+}
+
+ul.query_list li a {
+	text-decoration: none;
+	color: #000000;
+	width: 100%;
+	padding: 4px 8px;
+}
+
+ul.query_list li a:hover {
+	text-decoration: none;
+	width: 100%;
+	padding: 4px 8px;
+}
+
+/*modified style on 11-09-12 */ /*start style record*/
+.title_heading1 {
+	/*color: #231F20;
+	width: 390px;*/
+	color:#058ae5;
+	background-color:#f0f0f0;	
+	/*color:#0063ac;*/
+	color:#000000;
+	font-size: 15px;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:100%;
+	padding:5px;
+	margin:-2px 0 0px;
+	border:1px solid #dfdfdf;
+}
+
+.form_title_heading1 {
+	color:#000000;
+	font-size: 15px;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:100%;
+}
+
+.required {
+	color: #FE0000 !important;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+.page_heading1 {
+	color: #000000;    
+    font: 20px Arial,Helvetica,sans-serif;		
+	font-weight: normal;
+	margin-bottom: 22px;
+}
+
+/*start modified css on 120912 ar */
+.textareabox {
+	background-color: #D1D3D4;
+	border: 0 none;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 21px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;  
+}
+.textbox1 {
+	background-color: #D1D3D4;
+	border: 0 none;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 21px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;  
+}
+
+.textbox2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	width: 615px;
+	border: 0px;
+	background-color: #D1D3D4;
+	height: 21px;
+	padding: 0 2px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px; 
+}
+
+.textbox8 {
+	background-color: #FFFFFF;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 19px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+    border: 1px solid #CBCBCB;  
+}
+
+.listmenu1 {
+	background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 21px;
+	padding: 0;
+	width: 237px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;  
+}
+
+
+.table_area table td {
+	font-family: Arial,sans-serif, Helvetica;
+	font-size: 13px;
+	padding: 2px 0;
+	/*color:#666666;*/
+}
+
+.table_area table td span {
+	/*padding-left: 10px;*/
+}
+
+.fixed_pos {
+	position: fixed;
+	left: 1.2%;
+	color: #919396;
+	top: 20.5%;
+	display: inline;
+	z-index: 10;
+}
+
+.fixed_pos a {
+	color: #919396;
+	text-decoration: none;
+	font: normal 12px Arial, Helvetica, sans-serif;
+}
+
+.fixed_pos_task {
+	position: absolute;
+	left: inherit;
+	color: #919396;
+	/* top: 15%; */
+	display: inline;
+	z-index: 10;
+}
+
+.fixed_pos_task a {
+	color: #919396;
+	text-decoration: none;
+	font: normal 12px Arial, Helvetica, sans-serif;
+}
+
+.oppBatchIcons {
+	position: fixed;
+	color: #919396;
+	top: 163px;
+	display: inline;
+	z-index: 10;
+}
+
+.oppBatchIcons a {
+	color: #919396;
+	text-decoration: none;
+	font: normal 12px Arial, Helvetica, sans-serif;
+}
+
+.gray_tab { /*modified style*/
+	float: left;
+	/*min-width: 122px;
+	width: 122px\9;*/
+	font: normal 20px Arial, Helvetica, sans-serif;
+	color: #000000;	
+	padding: 5px 20px 9px 0;	
+	background-color: #ffffff;
+	position: relative;
+	z-index: 2;
+	margin-bottom: -25px\9;	
+}
+@media all and (min-width:0)
+{
+	.gray_tab{
+		margin-bottom: 0px \0/;
+	} 
+	
+}
+.red { /*modified style*/
+	color: #FE0000 !important;
+	font-size: 13px;
+}
+
+a.red { /*modified style*/
+	color: #FE0000;
+	text-decoration: none;
+}
+
+a.red:hover { /*modified style*/
+	color: #FE0000;
+	text-decoration: underline;
+}
+
+.top_btn_area { /*modified style*/
+	width: 90%;
+	margin: 0 4.5% 3px;
+}
+.btn_bg1 { /*modified style*/
+	display: table;
+	background:#058ae5;	
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 8px 20px;
+	/* text-transform: uppercase; */
+	white-space: nowrap;
+	display:inline-block\0/;
+    padding: 8px 20px\0/;
+}
+@media all and (min-width:0){
+.btn_bg1{
+	display:inline-block\0/;
+	padding: 8px 20px\0/;
+}
+
+.btn_bg1_sub { /*modified style*/
+	display: block;
+	background: url(../images/NewDesign/btn_bg1.jpg) repeat-x;
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 20px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	height:26px;
+	display:table;
+	width:83px;
+	text-align:center;;
+}
+
+.btn_bg_small { /*modified style*/
+	display: table;
+	background-color:#0063ac;
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 3px 10px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+@media all and (min-width:0){
+.btn_bg_small{
+	display:inline-block\0/;
+	padding: 3px 10px\0/;
+}
+}
+.small_btn { /*modified style*/
+	display: table;
+	background:#058ae5;	
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 3px 15px;
+	text-align: center;
+	white-space: nowrap;
+}
+.medium_btn { /*modified style*/
+	display: table;
+    background: #058ae5;
+    border: 0px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: bold 12px arial, verdana;
+    padding: 5px 15px 6px 15px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 8px;
+}
+@media all and (min-width:0){
+.small_btn{
+	display:inline-block\0/;
+	padding: 3px 15px\0/;
+}
+}
+.small_btn_inactive { /*modified style*/
+	display: table;
+	background:#A7CFE4; 
+    background:linear-gradient(#CAE5F3, #A7CFE4);
+	background:-moz-linear-gradient(#CAE5F3, #A7CFE4);
+	background:-webkit-linear-gradient(#CAE5F3, #A7CFE4);	 
+	border:1px solid #A7CFE4;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #F7FBFD;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 3px 15px;
+	text-align: center;
+	white-space: nowrap;
+}
+@media all and (min-width:0){
+.small_btn_inactive {
+	display: inline-block\0/;
+	padding: 3px 15px\0/;
+}
+}
+.gray_box { /*modified style*/
+	/*padding: 18px;*/
+	padding:18px 0;
+	color: #F37736;
+	-moz-border-radius: 0px 10px 10px 10px;
+	-webkit-border-radius: 0px 10px 10px 10px;
+	border-radius: 0px 10px 10px 10px;
+	background-color: #ffffff;
+	position: relative;
+	/*margin-top: -5px;*/
+	margin-top: 0px;
+}
+.list_gray_box { /*modified style*/
+	padding: 18px;
+	color: #000000;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #ffffff;
+	z-index: 1;
+	margin-top: 0px;
+}
+
+.btn_bg2 {
+	display: table;
+	background: url(../images/NewDesign/btn_bg1.jpg) repeat-x;
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 8px 20px;
+	text-transform: uppercase;
+}
+
+.black_big {
+	margin: 6px 10px 0 0;
+	font: bold 13px Arial, Helvetica, sans-serif;
+	color: #231F20;
+}
+
+.black {
+	color: #000000;
+	font-size: 13px;
+}
+
+.black_big2 {
+	margin: 6px 10px 0 0;
+	font: bold 24px Verdana, Arial, Helvetica, sans-serif;
+	color: #6D6E71;
+}
+
+.total {
+	margin: 0 10px 0 0;
+	font: bold 16px Arial, Helvetica, sans-serif;
+	color: #000000;
+	float: right;
+	position: relative;
+	padding-top:8px;
+}
+
+.textarea_border {
+	font: 13px Arial, Helvetica, sans-serif;
+	border:1px solid #CBCBCB;
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 180px;
+	padding: 0px;
+}
+
+.textarea_border2 {
+	font: 13px Arial, Helvetica, sans-serif;
+	border: 0px;
+	background-color: #D1D3D4;
+	width: 90%;
+	height: 180px;
+	padding: 2px;
+}
+
+.img_left {
+	float: left;
+	padding: 2px 0 0;
+}
+
+.img_right {
+	float: right;
+	padding: 2px 0 0;
+}
+
+.btn_1 {
+	display: block;
+	background: url(../images/NewDesign/btn_arrow_right_bg.png) no-repeat;
+	width: 135px;
+	height: 27px;
+	padding-bottom: 2px;
+	vertical-align: middle;
+	text-align: center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 13px arial, verdana;
+	margin-bottom: 10px;
+	border: 0px;
+}
+
+.btn_2 {
+	display: block;
+	background: url(../images/NewDesign/btn_arrow_left_bg.png) no-repeat;
+	width: 135px;
+	height: 27px;
+	padding-bottom: 2px;
+	vertical-align: middle;
+	text-align: center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 13px arial, verdana;
+	margin-bottom: 10px;
+	border: 0px;
+}
+
+#inside_page_content2 {
+	border-radius: 10px 10px 10px 10px;
+	display: block;
+	margin: 0 4.5%;
+	padding: 0px;
+}
+
+.gray_box2 { /*modified style bm*/
+	padding: 18px 0;
+	font-weight: bold;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	/*min-height:300px;*/ /*added on 0603148*/
+	overflow-y: auto;
+}
+
+table.table_area2 th { /*modified style bm*/
+	padding: 4px 5px;
+	background-color: #CFD1D2;
+	text-align: left;
+	font-family: Arial, sans serif;
+	font-size: 13px;
+}
+
+table.table_area2 td { /*modified style bm*/
+	padding: 4px 5px;
+	text-align: left;
+	border-bottom: 1px solid #CFD1D2;
+	font-family: Arial, sans serif;
+	font-size: 13px;
+}
+
+.textbox3 {
+	font: 13px Arial, Helvetica, sans-serif;
+	width: 320px;
+	border: 0px;
+	background-color: #D1D3D4;
+	height: 21px;
+	padding: 0 2px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px; 
+}
+
+.textbox4 {
+	font: 13px Arial, Helvetica, sans-serif;
+	width: 550px;
+	border: 0px;
+	background-color: #D1D3D4;
+	height: 21px;
+	padding: 0 2px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px; 
+}
+
+.listmenu2 {
+	font: 13px Arial, Helvetica, sans-serif;
+	/*width:400px;*/
+	width: 100%;
+	border: 0px;
+	background-color: #D1D3D4;
+	height: 21px;
+	padding: 0 2px;
+}
+
+.calender_pos {
+	display: block;
+	float: right;
+	position: relative;
+	right: 0px;
+	text-align: right;
+	top: -20px;
+	width: 20px;
+	height: 20px;
+}
+
+.calender_pos2 {
+	display: block;
+	float: right;
+	height: 20px;
+	position: relative;
+	right: 58px;
+	text-align: right;
+	top: 0;
+	width: 20px;
+}
+
+.textarea_border3 {
+	font: 13px Arial, Helvetica, sans-serif;
+	border: 0px;
+	background-color: #ffffff;
+	width: 98%;
+	height: 102px;
+	padding: 2px;
+	overflow-y: auto;
+}
+
+/*end style on 12-09-12 onwards*/
+	/*start style for dropdown menu broadcast*/
+#menu,#menu2 {
+	float: right;
+	margin-right: 10%;
+	margin-right: 20% \9;
+	text-align: left;  
+}
+
+#menu3 {
+	float: right;
+	margin-right: 0%;
+	text-align: left;
+}
+
+#menu ul,#menu2 ul,#menu3 ul {
+	margin: 0;
+	padding: 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li,#menu2 li,#menu3 li {
+	display: block;
+	float: left;
+}
+
+#menu a,#menu2 a,#menu3 a,#menu span,#menu2 span,#menu3 span {
+	font-weight: normal;
+	color: #6D6E71;
+	text-decoration: none;
+}
+
+#menu span,#menu2 span,#menu3 span {
+	font-weight: bold;
+}
+
+#menu .drop-menu,#menu2 .drop-menu2,#menu3 .drop-menu3 {
+	cursor: pointer;
+}
+
+#menu li ul,#menu2 li ul {
+	display: none;
+	padding: 5px;
+	background-color: #ffffff;
+	border: 1px solid #D1D3D4;
+	width: 200px;
+	height: 95px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-left: -103px;
+	margin-left: -143px\9;
+	margin-top: 4px;
+	position: absolute;
+	/*opacity: 0.90;
+	-moz-opacity: 0.90;
+	-khtml-opacity: 0.90;
+	-webkit-opacity: 0.90;
+	filter: alpha(opacity =     90);
+	zoom: 1;*/
+}
+
+#menu3 li ul {
+	display: none;
+	padding: 5px;
+	background-color: #ffffff;
+	border: 1px solid #D1D3D4;
+	width: 120px;
+	height: 95px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	/* margin-left: -114px;*/
+	margin-left: -74px;
+	margin-top: 4px;
+	position: absolute;
+	/* opacity: 0.90;
+	-moz-opacity: 0.90;
+	-khtml-opacity: 0.90;
+	-webkit-opacity: 0.90;
+	filter: alpha(opacity =     90);
+	zoom: 1; */
+}
+
+#menu li ul li,#menu2 li ul li,#menu3 li ul li {
+	display: block;
+	width: 100%;
+	padding: 2px 0;
+}
+
+#menu li ul li a span,#menu2 li ul li a span,#menu3 li ul li a span {
+	font-weight: normal;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space:nowrap;
+}
+#menu li ul li:hover,#menu2 li ul li:hover,#menu3 li ul li:hover {
+	display: block;
+	width: 100%;
+	background-color: #EAEBEC;
+	padding: 2px 0;
+}
+
+/*end style for dropdown menu broadcast*/
+	/*start small tab menu for email page*/
+#ts_smalltabmenu {
+	font-size: 14px; /* set the font size */
+	padding: 0px 0px 0px 0px; /* set the padding */
+}
+
+#ts_smalltabmenu ul {
+	line-height: 10px;
+	/* setting the line height now so we don't have any headaches*/
+	margin: 0px;
+	/* let's keep the margin set to 0 for the same reasons as above*/
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left;
+	/* we float the list to the left like we will all the elements inside*/
+	padding: 0px 0px 0px 5px;
+	/* give it a left padding of 5px to counter the effect of margin -5px below */
+}
+
+#ts_smalltabmenu ul li {
+	float: left; /* floatin' left */
+	font: bold 13px/ 10px Arial, Helvetica, sans-serif;
+	list-style-type: none;
+	white-space: nowrap;
+	margin-right: 5px;
+}
+
+#ts_smalltabmenu ul li a {
+	text-decoration: none;
+	/* remove the default underline off the anchor text */
+	display: block;
+	/* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 10px;
+	/* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/smalltab.png) no-repeat left top;
+	/* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;
+	/* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	z-index: 0; /* keep it on layer 0 (default) */
+	position: relative;
+	/* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #000000; /* color of the tab text */
+}
+
+#ts_smalltabmenu ul li a strong {
+	font-weight: normal; /* remove the bold effect */
+	display: block;
+	/* display the strong element as a block so we can pad it, etc. */
+	float: left; /* float it left as well */
+	text-align: center;
+	background: url(../images/NewDesign/smalltab.png) no-repeat right top;
+	/* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 5px 4px 0px;
+	/* important, as through this you define the position of the text within the tab */
+	cursor: pointer;
+	/* this makes the browser show the "hand" cursor when hovering over the tab */
+}
+
+#ts_smalltabmenu ul li a:hover {
+	position: relative; /* again, keep things relative */
+	z-index: 5;
+	/* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+	background: url(../images/NewDesign/smalltab.png) no-repeat left bottom;
+	/* now we show the bottom part of the tabs image, the "hover" instance */
+	color: #000000; /* we color the hovered tab's text black */
+}
+
+#ts_smalltabmenu ul li a:hover strong {
+	background-image: url(../images/NewDesign/smalltab.png) no-repeat;
+	position: relative; /* keep it relative */
+	z-index: 5; /* show this on layer 5 as well */
+	background-position: right bottom;
+	/* we show the right bottom part of the tabs image (the hover instance) */
+}
+
+#ts_smalltabmenu ul li a:hover {
+	position: relative; /* again, keep things relative */
+	z-index: 5;
+	/* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+	background: url(../images/NewDesign/smalltab.png) no-repeat left bottom;
+	/* now we show the bottom part of the tabs image, the "hover" instance */
+	color: #000000; /* we color the hovered tab's text black */
+}
+
+#ts_smalltabmenu ul li a:hover strong {
+	background-image: url(../images/NewDesign/smalltab.png) no-repeat;
+	position: relative; /* keep it relative */
+	z-index: 5; /* show this on layer 5 as well */
+	background-position: right bottom;
+	/* we show the right bottom part of the tabs image (the hover instance) */
+}
+
+#ts_smalltabmenu ul li a.selected {
+	position: relative; /* again, keep things relative */
+	z-index: 5;
+	/* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+	background: url(../images/NewDesign/smalltab.png) no-repeat left bottom
+		!important;
+	/* now we show the bottom part of the tabs image, the "hover" instance */
+	color: #000000; /* we color the hovered tab's text black */
+}
+
+#ts_smalltabmenu ul li a strong.selected {
+	background: url(../images/NewDesign/smalltab.png) no-repeat right bottom
+		!important;
+	position: relative; /* keep it relative */
+	z-index: 5; /* show this on layer 5 as well */
+}
+
+/*end small tab menu for email page*/
+	/*start metrix+distribution page style*/
+#page-wrap {
+	width: 100%;
+	margin: 50px auto;
+}
+
+.tabs {
+	list-style: none;
+	overflow: hidden;
+	margin-bottom: 0px;
+	margin-left: -20px;
+}
+
+.tabs li {
+	display: inline;
+}
+
+.tabs li a {
+	float: left;
+	min-width: 122px;
+	width: 122px\9;
+	font: bold 18px Arial, Helvetica, sans-serif;
+	color: #231F20;
+	padding: 2px 15px 2px;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	background-color: #D1D3D4;
+	position: relative;
+	top: 4px;
+	z-index: 0;
+	margin-bottom: -27px\9;
+	text-decoration: none;
+}
+
+.tabs li a.current {
+	background: #ffffff;
+	border-bottom: 0;
+	padding: 4px 15px 4px;
+	position: relative;
+	top: 2px;
+	z-index: 2;
+}
+
+.box-wrapper {
+	padding: 0px;
+	margin: -1px 0 0 0;
+	position: relative;
+}
+
+.content-box {
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.current {
+	z-index: 100;
+}
+
+.col-one,.col-two {
+	width: 100%;
+	float: left;
+	position: relative;
+	top: 400px;
+}
+
+.col-one,.col-two {
+	margin-right: 0%;
+}
+
+/*end metrix distribution page style*/
+	/*start style on 190912 onwards ar*/
+.gray_tab2 {
+	float: left;
+	width: 60px\9;
+	font: bold 14px Arial, Helvetica, sans-serif;
+	color: #231F20;
+	padding: 4px 15px 8px;
+	background-color: #E5E5E5;
+	position: relative;
+	z-index: 0;
+	margin-bottom: -25px\9;
+}
+@media all and (min-width:0){
+.gray_tab2{
+	padding: 4px 15px 8px\0/;
+	height:22px\0/;
+}
+}
+.gray_box3 {
+	padding: 18px;
+	font-weight: bold;
+	background-color: #E5E5E5;
+	position: relative;
+	z-index: 1;
+	margin-top: -5px;
+}
+
+.gray_box3 a {
+	color: #000000;
+	text-decoration: none;
+}
+.gray_box4 {
+	padding: 18px;
+	font-weight: bold;
+	background-color: #E5E5E5;
+	position: relative;
+	z-index: 1;
+	margin-top: -20px;
+}
+
+.gray_box4 a {
+	color: #000000;
+	text-decoration: none;
+}
+.state-default-label {
+	display: block;
+	width: 100px;
+	height: 20px;
+	padding-left: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: right;
+	color: black;
+	font-size: 13px;
+}
+
+.table_area table td { /*modified style*/
+	padding: 2px 2px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+ul.list a {
+	text-decoration: none;
+	color: #000000;
+}
+
+ul.list a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+
+.table2 {
+	border: 1px solid #86888B;
+	background-color: #F1F2F2;
+	border-collapse: collapse;
+	padding: 10px;
+}
+
+.table2 th {
+	background-color: #D1D3D4;
+	border-bottom: 1px solid #f1f2f2;
+	text-align: left;
+	padding: 5px;
+	font-size: 13px;
+}
+
+.table2 td {
+	text-align: left;
+	padding: 5px;
+	font-size: 13px;
+}
+
+.table2 td.current {
+	border-top: 1px solid #DF7A40;
+	border-bottom: 1px solid #DF7A40;
+	text-align: left;
+	padding: 5px;
+	font-size: 13px;
+}
+
+.textbox5 {
+	font: 13px Arial, Helvetica, sans-serif;
+	width: 400px;
+	border: 0px;
+	background-color: #D1D3D4;
+	height: 21px;
+	padding: 0 2px;
+}
+
+.textbox6 {
+	font: 13px Arial, Helvetica, sans-serif;
+	border: 0px;
+	background-color: #D1D3D4;
+	height: 21px;
+	padding: 0 2px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px; 
+}
+
+/*start sales step tabmenu style*/
+.salesstep_tab  {
+	font-size: .75em; /* set the font size */
+	padding: 0px; /* set the padding */
+	border-bottom: 2px solid #95C2EF;
+	height: 27px;
+	display:block;
+	vertical-align: bottom;
+   
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	.salesstep_tab
+	{
+		height: 28px;
+	}
+}	
+.salesstep_tab  ul {
+	line-height: 1em; /* setting the line height now so we don't have any headaches*/
+	line-height: .7em\9;
+	margin: 0 0 0 -3px; /* let's keep the margin set to 0 for the same reasons as above*/
+	
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	padding: 2px 0 0 10px /* give it a left padding of 5px to counter the effect of margin -5px below */
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	.salesstep_tab  ul 
+	{
+		margin-top:1px;
+	}
+}	
+.salesstep_tab  ul li {
+	float: left; /* floatin' left */
+	margin-left: 20px;
+	font:bold 14px/13px Verdana, Arial, Helvetica, sans-serif;
+}
+.salesstep_tab  ul li a 
+{
+	width:100%;
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -27px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	/*position: relative;*/  /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #666666; /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+	outline: none;
+	
+}
+.salesstep_tab  ul li a strong 
+{
+	width:100%;
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 8px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+}
+.salesstep_tab  ul li a img:hover
+{
+ padding:0px;
+ background-color:#d5000c;
+ -moz-border-radius:10px;
+ -webkit-border-radius:10px;
+ border-radius:10px;
+}
+
+.salesstep_tab  ul li a:hover {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab_hover.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -27px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+}
+.salesstep_tab  ul li a:hover strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab_hover.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 8px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+}
+.salesstep_tab  ul li a.selected {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab_selected.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -27px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+	outline: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+.salesstep_tab  ul li a.selected 
+{
+	margin-top: 0px;
+}
+}	
+.salesstep_tab  ul li a strong.selected {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab_selected.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+}
+.salesstep_tab  ul li a strong img.salesstep_tab_edit:hover
+{
+ padding:0px;
+ background:none;
+ -moz-border-radius:0px;
+ -webkit-border-radius:0px;
+ border-radius:0px;
+}
+/*end sales step tabmenu style*/ 
+
+/*Start sales step tabmenu style for type*/ 
+#salesstep_tab2  {
+	font-size: .75em; /* set the font size */
+	padding: 0px; /* set the padding */
+	border-bottom: 2px solid #868686;	
+	height: 27px;
+	display:block;
+	vertical-align: bottom;
+   
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	#salesstep_tab2
+	{
+		height: 28px;
+	}
+}
+
+#salesstep_tab2  ul {
+	line-height: 1em; /* setting the line height now so we don't have any headaches*/
+	line-height: .7em\9;
+	margin: 0 0 0 -3px; /* let's keep the margin set to 0 for the same reasons as above*/
+	
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	padding: 2px 0 0 10px /* give it a left padding of 5px to counter the effect of margin -5px below */
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	#salesstep_tab2  ul 
+	{
+		margin-top:1px;
+	}
+}
+
+#salesstep_tab2  ul li {
+	float: left; /* floatin' left */
+	margin-left: 20px;
+	font:bold 14px/13px Verdana, Arial, Helvetica, sans-serif;
+}
+#salesstep_tab2  ul li a 
+{
+	width:100%;
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab2.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -27px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	/*z-index: 0;*/ /* keep it on layer 0 (default) */
+	/*position: relative;*/  /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #666666; /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+	outline: none;
+	
+}
+#salesstep_tab2  ul li a strong 
+{
+	width:100%;
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab2.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 8px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+	z-index:2;
+}
+#salesstep_tab2  ul li a img:hover
+{
+ padding:0px;
+ background-color:#d5000c;
+ -moz-border-radius:10px;
+ -webkit-border-radius:10px;
+ border-radius:10px;
+}
+
+#salesstep_tab2  ul li a:hover {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab2_hover.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -27px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+}
+#salesstep_tab2  ul li a:hover strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab2_hover.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 8px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+	z-index:2;
+}
+#salesstep_tab2  ul li a.selected {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab2_selected.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -27px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+	outline: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+#salesstep_tab2  ul li a.selected 
+{
+	margin-top: 0px;
+}
+}	
+#salesstep_tab2  ul li a strong.selected {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab2_selected.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+	z-index:2;
+}
+#salesstep_tab2  ul li a strong img.salesstep_tab_edit:hover
+{
+ padding:0px;
+ background:none;
+ -moz-border-radius:0px;
+ -webkit-border-radius:0px;
+ border-radius:0px;
+}
+/*end sales step tabmenu style for type*/ 
+
+/*start style for autoresponder*/
+/*start autorespont tabmenu style*/
+#autorespond_tab  {
+	font-size: .75em; /* set the font size */
+	padding: 0px; /* set the padding */
+	border-bottom: 2px solid #95C2EF;	/*#0081C1*/
+	height: 27px;
+	display:block;
+	vertical-align: bottom;
+   
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	#autorespond_tab
+	{
+		height: 29px;
+	}
+}	
+#autorespond_tab  ul {
+	line-height: 1em; /* setting the line height now so we don't have any headaches*/
+	line-height: .7em\9;
+	margin: 0 0 0 -1px; /* let's keep the margin set to 0 for the same reasons as above*/
+	
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	padding: 2px 0 0 10px /* give it a left padding of 5px to counter the effect of margin -5px below */
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	#autorespond_tab ul 
+	{
+		margin-top:2px;
+	}
+}	
+#autorespond_tab  ul li {
+	float: left; /* floatin' left */
+	margin-left: 17px;
+	font:bold 14px/13px Verdana, Arial, Helvetica, sans-serif;
+}
+
+#autorespond_tab  ul li a 
+{
+	width:100%;
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -25px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	/*z-index: 0;*/ /* keep it on layer 0 (default) */
+	/*position: relative;*/  /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #666666; /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+	
+}
+#autorespond_tab  ul li a strong 
+{
+	width:100%;
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+	z-index:2;
+}
+#autorespond_tab  ul li a img:hover
+{
+ padding:0px;
+ background-color:#d5000c;
+ -moz-border-radius:10px;
+ -webkit-border-radius:10px;
+ border-radius:10px;
+}
+
+#autorespond_tab  ul li a:hover {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab_hover.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -25px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+}
+#autorespond_tab  ul li a:hover strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab_hover.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+	z-index:2;
+}
+#autorespond_tab  ul li a.selected{
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 1px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab_selected.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -25px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+#autorespond_tab  ul li a.selected 
+{
+	margin-top: 0px;
+}
+}	
+#autorespond_tab  ul li a.selected strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab_selected.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	
+}	
+/*start 2nd level style*/
+#autorespond_tab  ul li ul {
+	line-height: 1em; /* setting the line height now so we don't have any headaches*/
+	line-height: .7em\9;
+	margin: 0px; /* let's keep the margin set to 0 for the same reasons as above*/
+	
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	margin: 0 0 0 -18px;
+    padding: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	#autorespond_tab  ul li ul 
+	{
+		margin-top:0px;
+		margin-left:-18px;
+	}
+}	
+#autorespond_tab  ul li ul li {
+	float: left; /* floatin' left */
+	margin-left: 19px;
+	font:bold 14px/13px Verdana, Arial, Helvetica, sans-serif;
+}
+
+#autorespond_tab  ul li ul li a 
+{
+	width:100%;
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -29px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	/*z-index: 0;*/ /* keep it on layer 0 (default) */
+	/*position: relative;*/  /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #666666; /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+	
+}
+#autorespond_tab  ul li ul li a strong 
+{
+	width:100%;
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative;
+	z-index:2;
+}
+#autorespond_tab  ul li ul li a img:hover
+{
+ padding:0px;
+ background-color:#d5000c;
+ -moz-border-radius:10px;
+ -webkit-border-radius:10px;
+ border-radius:10px;
+}
+
+#autorespond_tab  ul li ul li a:hover {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab_hover.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -29px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+}
+#autorespond_tab  ul li ul li a:hover strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab_hover.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	
+}
+#autorespond_tab  ul li ul li a.selected{
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 1px 15px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/sales_step_tab_selected.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -29px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	color: #666666;  /* color of the tab text */
+	font-size:14px;
+	text-align:center;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+#autorespond_tab  ul li ul li a.selected 
+{
+	margin-top: 0px;
+}
+}
+#autorespond_tab  ul li ul li a.selected strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	background: url(../images/NewDesign/sales_step_tab_selected.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 5px 15px 9px 0px;  /* important, as through this you define the position of the text within the tab */
+	padding: 6px 15px 11px 0px\9;	
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	
+}
+/*end 2nd level style*/
+.autorespond_tab_close_btn {
+    border: medium none;
+    cursor: pointer;
+    float: right;
+    margin-left: -5px;
+    padding-right: 0;
+    position: relative;
+    right: 12px;
+    top: 5px;
+    z-index: 1000;
+    height: 7px;
+}
+.plus_sign 
+{
+	margin-top: 0px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+.plus_sign 
+{
+	margin-top: 0px;
+}
+}
+/*end style for autoresponder*/ /*end style on 190912 onwards ar*/
+	/* start style for table manager dropdown style */
+	/* remove the list style */
+#nav2 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* make the LI display inline */
+	/* it's position relative so that position absolute */
+	/* can be used in submenu */
+#nav2 ul {
+	position: absolute;
+	left: 0;
+	display: none;
+	margin: 0 0 0 -1px;
+	list-style: none;
+}
+
+#nav2 li {
+	position: relative;
+	z-index: 500;
+	margin: 0 1px;
+	font: normal 13px Arial, sans-serif;
+}
+	
+/* this is the parent menu */
+#nav2 li a {
+	font: normal 13px Arial, sans-serif;
+	letter-spacing: -1px;
+	text-decoration: none;
+}
+
+/* submenu, it's hidden by default */
+#nav2 ul li a:hover {
+	display: block;
+	height: 15px;
+	background-color: #E1E1E1;
+	text-decoration: none;
+}
+
+#nav2 ul.dropbox {
+	position: absolute;
+	padding: 0px;
+	left: 2%;	
+	background-color: #ffffff;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	z-index: 10000;
+	-moz-box-shadow: 2px 2px 2px #A7A7A7;
+	-webkit-box-shadow: 2px 2px 2px #A7A7A7;
+	box-shadow: 2px 2px 2px #A7A7A7;
+}
+
+#nav2 ul.dropbox li {
+	/*width: 100px;*/
+	padding: 4px 4px;
+	height:15px;
+	border-bottom: 1px solid #DBDBDB;
+	text-align:left;
+	outline: none;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+#nav2 ul.dropbox li a {
+	color: #757575;
+	font:13px arial;
+}
+
+#nav2 ul.dropbox li:hover {	
+	background-color: #E1E1E1;
+}
+
+/* display block will make the link fill the whole area of LI */
+	/* fix ie6 small issue */
+	/* we should always avoid using hack like this */
+	/* should put it into separate file : ) */
+* html #nav2 ul li ul.dropbox {
+	margin: 0 0 0 -2px;
+}
+
+/* end style for table manager dropdown style */
+.textbox_area2 {
+	background-color:#E2E3E4;	
+	height:21px;
+	padding:0 2px;
+	width:100%;		
+}
+.textbox_area3{ /* table manager page */
+	background-color:#E2E3E4;	
+	height:31px;
+	padding:0 2px;
+	width:100%;		
+}
+.edit_contact_left {
+	width: 75%;
+	background-color: #D1D3D4;
+	padding: 15px;
+}
+.textbox_bg2{ /*modified class*/
+	font:normal 12px Arial, Helvetica, sans-serif;
+	background-color:#DFE0E1;
+	border:0px;
+	width:100%;
+	height:15px;
+	text-align:left;	
+}
+a.black {
+	color: #000000;
+	text-decoration: none;
+}
+
+.textbox_portion {
+	width: 200px;
+	background-color: #D1D3D4;
+	height: 20px;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+.textbox7 {
+	font: 13px Arial, Helvetica, sans-serif;
+	width: 210px;
+	border: 0px;
+	background-color: #D1D3D4;
+	height: 19px;
+	padding: 0 2px;
+}
+
+.button {
+	width: 18px;
+	height: 18px;
+	background-color: #D1D3D4;
+	border: 0px;
+	font: bold 14px Arial, Helvetica, sans-serif;
+}
+
+/*end style on 190912 onwards ar*/
+	/*start modified css on 130912 buddhasis */
+.formTextLebelNew2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: 100;
+	color: #858584;
+}
+
+.standardNavyBlue {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: 100;
+	color: #434950;
+}
+
+.standardError {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #ff0000;
+}
+
+.formTextLebelNew {
+	font:normal 13px Arial, Helvetica, sans-serif;
+	/*font-weight: 100; firefox issue*/
+	color: #636362;
+}
+
+.formRequiredField_13 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #CC3300;
+	font-weight: 100;
+	white-space: nowrap;
+}
+
+table.sortable a.sortheader {
+	color: #000000;
+	text-decoration: none;
+	background-color: #CFD1D2;
+	font-size: 13px;
+}
+
+table.sortable span.sortarrow {
+	color: #000000;
+	text-decoration: none;
+}
+
+.dataRows {
+	text-align: left;
+	vertical-align: top;
+	background: #FFFFFF;
+	font-size: 13px;
+	font-family: Arial, Helvetica;
+	padding:2px;
+}
+
+.btn_3 {
+	display: block;
+	background: url(../images/NewDesign/btn_bg.png) no-repeat;
+	width: 135px;
+	height: 27px;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 13px arial, verdana;
+	margin-bottom: 10px;
+	border: 0px;
+}
+
+.tabCellNormalPreviewForm {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-color: #DCDCDC;
+	border-width: 1px;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	text-align: center;
+}
+
+.standardBoldHeader {
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.listmenu3 {
+	width: 100%;
+	border: 0px;
+	font: 13px Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	padding: 0 2px;
+	width: 200px;
+}
+
+/*end modified css on 130912 buddhasis */
+.fileControl {
+	background-color: #D1D3D4;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 21px;
+	padding: 0 2px;
+	width: 236px;
+	position: relative;
+	border: 1px dashed #BBB;
+}
+
+.submenu_area {
+	background-color: #058ae5;
+	height: 28px;
+}
+ul.sublist {
+	color: #FFFFFF;
+	font: 14px Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding-left: 10px;
+	overflow: hidden;
+}
+
+ul.sublist li a.active {
+	/*color: #231F20;*/
+	color:#ffffff;
+	font: 14px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+ul.sublist li a {
+	/*color: #FFFFFF;*/
+	/*color: #fadfb3;*/
+	color: #e1e1e1;
+	font: 14px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+ul.sublist li a:hover {
+	color: #FFFFFF;	
+	font: 14px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+ul.sublist li {
+	color: #FFFFFF;
+	display: inline;
+	list-style-type: none;
+	margin:0 10px;
+	padding: 3px 0;
+	float: left;	
+}
+
+.icon_bar {
+	border-bottom: 1px solid #c0c0c0;
+	height: 20px;
+	padding: 8px 0 0px 5%;
+}
+
+.icon_gap {
+	margin-right: 10px;
+}
+
+.btn_bg1_inactive {
+	background: url("../images/btn_bg1_inactive.jpg") repeat-x scroll 0 0
+		transparent;
+	border: 0 none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	/*color: #C5C5C6;*/
+	color:#EFF6FD;
+	cursor: pointer;
+	display: table;
+	font: bold 12px arial, verdana;
+	padding: 8px 20px;
+	text-transform: uppercase;
+	cursor: default;
+}
+
+.btn_3_inactive {
+	display: block;
+	background: url("../images/btn_bg1_inactive.jpg") repeat-x scroll 0 0
+		transparent;
+	width: 135px;
+	height: 27px;
+	vertical-align: middle;
+	text-align: center;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	/*color: #C3D2DD;*/
+	color:#D9E8F8;
+	cursor: pointer;
+	font: bold 13px arial, verdana;
+	margin-bottom: 10px;
+	border: 0px;
+	cursor: default;
+}
+
+img {
+	cursor: pointer;
+}
+
+.icon_bar img {
+	margin-right: 10px;
+}
+
+.report_col {
+	float: left;
+	width: 33%;
+	line-height: 24px;
+}
+
+.way_math_sign {
+	color: #898989;
+	font: bold 24px Arial, Helvetica, sans-serif;
+	margin: 3px 0 8px;
+}
+
+.way_box1 {
+	background: url(../images/NewDesign/way_box1.png) no-repeat;
+	width: 237px;
+	height: 54px;
+	padding: 5px;
+}
+
+.way_box2 {
+	background: url(../images/NewDesign/way_box2.png) no-repeat;
+	width: 237px;
+	height: 54px;
+	padding: 5px;
+}
+
+.way_report_textbox {
+	background-color: #F1F2F2;
+	border: 1px solid #D8D8D8;
+	font: 12px Arial, Helvetica, sans-serif;
+	width: 210px;
+	height: 19px;
+	padding: 0 2px;
+}
+
+.way_listmenu {
+	background-color: #F1F2F2;
+	border: 1px solid #D8D8D8;
+	width: 212px;
+	height: 21px;
+	padding: 0 2px;
+}
+
+.fr_box {
+	width: 100%;
+	vertical-align: top;
+	overflow: auto;
+}
+
+.fr_box_left {
+	vertical-align: top;
+	width: 650px;
+	float: left;
+}
+
+.fr_box_right {
+	width: 191px;
+	visibility: hidden;
+	float: left;
+	padding-left: 12px;
+}
+
+.btn_2_inactive {
+	display: block;
+	background: url(../images/NewDesign/btn_arrow_left_inactive_bg.png)
+		no-repeat;
+	width: 135px;
+	height: 27px;
+	padding-bottom: 2px;
+	vertical-align: middle;
+	text-align: center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	/*color: #C3D2DD;*/
+	color:#D9E8F8;
+	cursor: pointer;
+	font: bold 13px arial, verdana;
+	margin-bottom: 10px;
+	border: 0px;
+	cursor: default;
+}
+
+.form_btn {
+	display: block;
+	background: url(../images/NewDesign/btn_bg.png) no-repeat;
+	width: 100px;
+	height: 27px;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 13px arial, verdana;
+	margin-bottom: 5px;
+	border: 0px;
+}
+
+.form_btn_inactive {
+	display: block;
+	background: url("../images/btn_bg1_inactive.jpg") repeat-x scroll 0 0
+		transparent;
+	width: 100px;
+	height: 27px;
+	vertical-align: middle;
+	text-align: center;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #FFFFFF;
+	cursor: default;
+	font: bold 13px arial, verdana;
+	margin-bottom: 5px;
+	border: 0px;
+}
+
+#nav ul.dropbox li:last-child {
+	border-bottom: 0px;
+}
+.listmenu4{
+    background-color:#DFE0E1;
+	border: 0 none;
+	font: 12px Arial, Helvetica, sans-serif;
+	height: 15px;
+	padding: 0 2px;
+	width: 100%;
+}
+.search_area_img{
+	margin-top:3px;
+	margin-top:-6px\9;
+	outline:none;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.search_area_img{
+	margin-top:-6px;
+	outline:none;
+ }
+}
+dd, dl, dt{
+ margin:0px;
+ padding:0px;
+ }
+table.result_table{
+	margin:0px;
+	padding:0px;
+}
+table.blue_row tr:nth-child(even){
+    background-color: #e8eff7;
+}
+	
+table.result_table td{
+ 	padding:0px;
+ }
+ .td_heading{
+ 	font-weight:bold; 
+ }
+ .custom_dialog_heading{
+ 	font-weight:bold; 
+ 	background-color:#A5A5A5;
+ 	color:#FFFFFF;
+ 	height:18px;
+ }
+ 
+ .tab_close_btn:hover{ 	
+ 	background-color:#ffffff;
+ 	-moz-border-radius:5px;
+ 	-webkit-border-radius:5px;
+ 	border-radius:5px;
+	padding: 3px;
+	border: medium none;
+	cursor: pointer;
+	float: right;
+	margin-top: 2px;
+	margin-top: 0px\9;
+	margin-right:-4px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.tab_close_btn:hover {
+		margin-top: 2px;
+		margin-right:-4px;
+	}
+}
+@media all and (min-width:0){
+	.tab_close_btn:hover {
+	margin-top: 3px \0/;
+	}
+}
+
+/*start modified style on 261112*/
+.bottom_border{
+	border-bottom:1px solid #D0D1D3;
+}
+.floatTable td{
+	padding-bottom: 8px;
+}
+
+/*.logoMax{
+	max-width: 181px;
+	width: expression( this.width >81 ? 80 : true);
+	max-height: 41px;
+	height: expression( this.height >41 ? 40 : true);
+	float: left;	
+}*/
+
+.list_part2 {
+	float: right;
+	width: 50%;
+	width: 53% \9;
+	margin-left: 5%;
+	margin-left: 2% \9;
+}
+/*recurly css*/
+
+
+.formTextLabelReport {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	color: #666666;
+}
+
+/*end modified style*/
+
+/* added style on 041213 */
+a.loglink{
+	color: #000000;
+    text-decoration: none;
+}
+a.loglink:hover{
+	color: #000000;
+    text-decoration:underline;
+}
+.login_text{	
+    color: #000000;
+    font-size: 14px;
+}
+.login_textbox{
+	background-color: #D1D3D4;
+	border: 0 none;
+	font: 14px Arial, Helvetica, sans-serif;		
+	padding: 0 2px;
+	padding: 8px 2px\9;
+	height:30px; 
+	height:14px\9; 	
+	width:414px; 
+	font-size:14px;
+	}
+.login_copyright{
+	padding-top:15px;
+	font:11px arial;
+	color:#878787; 	
+	}
+.login_btn_bg { 
+	display: table;
+	display: block\9;
+	background: url(../images/NewDesign/btn_bg1.jpg) repeat-x;
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 8px 20px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+
+.login_logo_area{    
+    display: block;
+    margin: 0 13.5%;
+    padding:32px 0 0 20px;
+}
+
+#login_page_content {
+    background-color: #F1F2F2;
+    border-radius: 10px 10px 10px 10px;
+    display: block;
+    margin: 4% 17% 0;
+    padding:30px 15px;
+    -moz-box-shadow:0px 2px 8px #aaaaaa;
+    -webkit-box-shadow:0px 2px 8px #aaaaaa;
+    box-shadow:0px 2px 8px #aaaaaa;
+}
+/*end style on 04012013 */
+/* start style on 160113*/
+.pop_subheading{
+	font: bold 13px arial, verdana;
+	color:#666666;
+	padding-bottom:5px;
+}
+.pop_textarea{	 
+	height:150px; 
+	resize: none; 
+	background-color: #D1D3D4; 
+	font-family: Arial; 
+	border:none;
+	}
+/* start style on 140213*/
+.btn_bg_gray {
+    background-color: #939598;
+    border: 0 none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    font: bold 12px arial,verdana;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+/* end style on 140213 */
+@media all and (min-width:0){
+.btn_bg_gray{
+	display:inline-block\0/;
+	padding: 3px 10px\0/;
+}
+}
+a.small_btn2 { /*modified style*/
+	display: inline_block;
+	background: #BE8A2D; 
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 3px 15px;
+	text-align: center;
+	text-decoration:none;
+	white-space: nowrap;
+}
+a.small_btn2:hover { /*modified style*/
+	display: inline_block;
+	background: url(../images/NewDesign/btn_bg1.jpg) repeat-x;
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 3px 15px;
+	text-align: center;
+	text-decoration:none;
+	white-space: nowrap;
+}
+a.small_btn2_active{ /*modified style*/
+	display: inline_block;
+	background: url(../images/NewDesign/btn_bg1.jpg) repeat-x;
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 3px 15px;
+	text-align: center;
+	text-decoration:none;
+	white-space: nowrap;
+}
+
+.selectedChildDataRowsEven {
+	background-color: #ff1f1;
+	color:#6A6A6A; 
+	font-family: Arial, Helvetica;
+	font-size: 12px;
+	padding: 3px 17px 6px 0px;
+	vertical-align: top;
+	max-width:120px;
+	min-width:20px;
+	width:expression( this.width <20 ? "20px" : this.width >120 ? "120px" : "auto");
+}
+
+.selectedChildDataRowsOdd {
+	background-color: #D1D3D4;
+	color:#6A6A6A;  
+	font-family: Arial, Helvetica;
+	font-size: 12px;
+	padding: 3px 17px 6px 0px;
+	vertical-align: top;
+	max-width:120px;
+	min-width:20px;
+	width:expression( this.width <20 ? "20px" : this.width >120 ? "120px" : "auto");
+}
+
+.planmsg{
+    font: bold 18px Arial,Helvetica,sans-serif;
+    color:#939598; 
+    padding-top:23px;
+    margin-left:82px;
+    margin-bottom:4px;
+    z-index:9999;
+
+}
+
+table.table_area td.field {
+    padding: 4px 5px;
+    text-align: right;
+    /*color: rgb(128, 130, 133);*/
+}
+table.table_area tr.gray {
+    padding: 4px 5px;
+    background-color: rgb(207, 209, 210);
+    text-align: left;
+}
+table.table_area tr.gray_light {
+    padding: 4px 5px;
+    background-color: rgb(223, 226, 228);
+    text-align: left;
+}
+table.table_area td {
+    padding: 4px 5px;
+    text-align: left;
+}
+div.profile_pic{
+		position:relative;
+		align:center;	
+    }
+div.change_button{
+	background-color:#0063ac;
+    margin-top:4px;
+    bottom: -34px;
+    color: #ffffff;
+    display: none;
+    font:bold 12px arial,verdana;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 140px;
+    -moz-border-radius:0 0 5px 5px;
+    -webkit-border-radius:0 0 5px 5px;
+    border-radius:0 0 5px 5px;
+	}
+div.change_button_text{
+		padding:10px;
+	}
+.mapbar{
+	background-color:#e8eff7;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:4px 15px;
+	font:14px Arial, Helvetica, sans-serif;
+	margin-bottom:5px;	
+}
+.mapbar_alternate{
+	background-color:#FFFFFF;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:4px 15px;
+	font:14px Arial, Helvetica, sans-serif;
+	margin-bottom:5px;	
+}
+.map_textbox{
+    background-color: #ffffff;
+    border: 0 none;
+    font: 12px Arial,Helvetica,sans-serif;
+    height: 19px;
+    outline: medium none;
+    width:190px;
+}
+.filterTable{
+	color: #777777;
+}
+.importTable{
+	color: #777777;
+}
+.workflowTask{
+	margin:3px;
+	background-color:#ffffff;
+	border:1px solid #cdcdcd;
+	cursor:move;
+	padding:3px;
+}
+.ruleTask{
+	margin:5px;
+	background-color:#ffffff;
+	border:1px solid #cdcdcd;
+	cursor:move;
+	padding:5px;
+}
+.textbox9 {
+	background-color: #FFFFFF;
+	border: 1px solid #CBCBCB;
+	font: 13px Arial, sans-serif;
+	height: 21px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;  
+}
+
+input.textbox9[readonly="readonly"]{
+   border:1px solid #CBCBCB;
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;        
+   font:12px Arial, sans-serif;
+   height: 22px;    
+   padding-top: 1px 0 1px 4px;
+   background-color:#FFFFFF;
+   color:#B5B5B5;
+}
+
+
+/*jquery information box by Raktim Ghosh*/
+.help { display: inline-block; position: relative; }
+
+.help-button {
+  color: #222;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.info-box {
+    background-color: #FBDD9F;	
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    bottom: 0;
+    box-shadow:  0 0 3px #4D565A;
+    -moz-box-shadow:  0 0 3px #4D565A;
+    -webkit-box-shadow:  0 0 3px #4D565A;
+    color: #454545;    
+    font-family: sans-serif;
+    font-size: smaller;
+    padding: 5px;
+    position: absolute;
+    right:-230px;
+    width: 200px;
+    display: none;	
+    z-index:1;  
+}
+
+
+.info-box:after {
+  content: "";
+  border-top: 10px solid transparent;
+  border-right: 15px solid #FBDD9F;  
+  display: block;
+  position: absolute;
+  left: -15px;
+  bottom: 0px;
+  width: 0;
+  height: 0;
+}
+
+.info-box .close-button {
+    border: 0px solid #aaaaaa;
+    color: #222222;
+    float: right;
+    padding:0px 3px;
+    text-decoration: none; 
+}
+
+.info-box .close-button:hover {
+  border-color: #aaa;
+  color: #aaa;
+}
+/*jquery information box by Raktim Ghosh*/
+
+/* Css for New HomeLayout Start*/ 
+.option_box {
+    padding: 0;
+    width:100px;
+}
+.home_box{
+    color: #FFFFFF;
+	background:url(../images/NewDesign/box1.png) no-repeat;
+	width: 100px;
+    height: 100px;
+    padding: 0;	    
+}
+.img_box{
+	width:90px;	
+	padding-top:18px;	
+	margin:0 auto;
+}
+.items_inner{
+	width:90px;
+	height:90px;
+	cursor:pointer; 
+}
+.item_text{	 
+	width:90px;
+	text-align:center; 
+	font:bold 12px Arial, Helvetica, sans-serif;	
+	padding-top:10px;
+	color:#F49C00;
+}
+.home_box:hover{
+    color: #FFFFFF;
+	background:url(../images/NewDesign/homeBox_hover.png) no-repeat;
+	width: 100px;
+    height: 100px;
+    padding: 0;	    
+}
+/* Css for New HomeLayout End*/ 
+
+.probability{
+	color: #414141;
+	font-weight: 100;
+	float: right;
+	font-style: italic;
+	font-size: 8;
+	position: relative;
+	top: 8px;
+	right: 0;
+	cursor: pointer;
+}
+.salesstep_tab_edit{
+	top: 2px;
+	right: 4px;
+	position: relative;
+	cursor: pointer;
+	float: left;
+	background:url(../images/NewDesign/icon_edit_smaller.png) no-repeat;
+}
+.salesstep-close{
+	cursor: pointer;
+	height: 7px;
+	position: relative;
+	top: 3px;
+}
+@-moz-document url-prefix() { 
+	  .salesstep-close {
+		top: -2px;
+ }
+}
+/* Css  For No Record page Start */
+.norecord_gray_box {
+    background-color: #ffffff;
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+    color: #F37736;    
+    padding: 18px;
+	margin:10px auto 0; 
+	width:97%;
+	min-height:300px;  
+}
+.norecord_white_box{
+	background-color: #f1f1f1;
+    border: 1px solid #95c2ef;
+	box-shadow:2px 2px 2px #aaaaaa;
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding:20px;
+	margin:5% auto 0;
+	width:55%;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color:#454545;
+}
+.norecord_white_box_iPad{
+	background-color: #F1F1F1;
+	 border: 1px solid #79BEDF;
+	box-shadow:2px 2px 2px #aaaaaa;
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding:20px;
+	margin:5% auto 0;
+	width:75%;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color:#454545;
+}
+.norecord_white_box .image{
+	float:left;
+	width:120px;	
+}
+.norecord_white_box img{
+	padding:7px;
+	border:1px solid #dddddd;
+	
+}
+.norecord_white_box .text_portion{
+	float:left;
+	width:74%;
+}
+.norecord_white_box .heading{
+	font:normal 24px Arial, Helvetica, sans-serif;
+	color:#000000;
+	padding:0 0 10px;
+}
+.norecord_white_box p{
+	margin:0px;
+	padding:0 0 20px;
+}
+
+.btn_bg1_no_record {    
+    background:#058ae5; 
+    /*background:linear-gradient(#8FC8E5, #4D9BC6);
+	background:-moz-linear-gradient(#8FC8E5, #4D9BC6);
+	background:-webkit-linear-gradient(#8FC8E5, #4D9BC6);*/ 
+	border:1px solid #058ae5;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+   	font: bold 12px arial,verdana;
+	padding: 12px 15px;
+	white-space: nowrap;   
+	
+}
+.btn_mid_text{
+	float:left; 
+	padding:12px 10px 0 0;
+	font-weight:bold;
+}
+
+/*campaign rule css k.n*/
+.webformSection{
+	
+	/*border:1px solid;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #F1F2F2;*/
+	position: relative;
+	z-index: 1;
+	margin: 10px 0;
+	padding:10px;
+	display:none;
+	
+}
+
+.linkclickSection{
+	
+	/*border:1px solid;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;*/
+	position: relative;
+	z-index: 1;
+	margin: 10px 0;
+	padding:10px;
+	
+	
+	
+	}
+.bcdetails{
+	/*border:1px solid;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;*/
+	position: relative;
+	z-index: 1;
+	margin: 10px 0;
+	padding:10px;
+	
+	}
+.actionclass{
+	/*border:1px solid;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;*/
+	position: relative;
+	z-index: 1;
+	margin: 10px 0;
+	padding:10px;
+	
+	}
+.groupclass{
+	/*		border:1px solid;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;*/
+	position: relative;
+	z-index: 1;
+	margin: 10px 0;
+	padding:10px;
+	color:#000000;
+	
+	}
+	
+.noteclass{
+	/*border:1px solid;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;*/
+	position: relative;
+	z-index: 1;
+	/*margin: 10px 0;*/
+	padding:10px;
+	color:#000000;
+	}	
+.taskclass {
+    color: #000000;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}	
+.notifyDiv{
+  /*	border:1px solid;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;*/
+	position: relative;
+	z-index: 1;
+	margin: 10px 0;
+	padding:10px;
+	color:#000000;
+	}
+/* Css  For No Record page End */
+
+.anchor_css{
+	margin-left: 10px;
+	padding-top: 2px;
+}
+/* Start CSS For White textbox,selectList,textArea Fields for Dialog boxes */
+.textboxWhite {
+	background-color: #FFFFFF;
+	border: 1px solid #CBCBCB; 
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 19px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;  
+}
+.listmenuWhite {
+    background-color: #FFFFFF;
+	border: 1px solid #CBCBCB; 
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 20px;
+	padding: 0;
+	width: 237px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px; 
+}
+.textareaboxWhite {
+	background-color: #FFFFFF;
+	border: 1px solid #CBCBCB;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 19px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;  
+}
+input.textboxWhite[disabled="disabled"]{
+   border:1px solid #CDCDCD;
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;        
+   font:13px Arial,sans serif;    
+   height: 19px;    
+   padding-top: 1px 0 1px 4px;
+   background-color:#E3E4E4;
+   color:#838383;
+}
+select.listmenuWhite[disabled="disabled"]{
+   border:1px solid #CDCDCD;
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;        
+   font:13px Arial,sans serif;    
+   height: 19px;    
+   padding-top: 1px 0 1px 4px;
+   background-color:#E3E4E4;
+   color:#838383;
+}
+textarea.textareaboxWhite[disabled="disabled"]{
+   background-color: #E3E4E4;
+   border: 1px solid #CDCDCD;
+   font: 13px Arial, Helvetica, sans-serif;
+   height: 19px;
+   padding: 0 2px;
+   width: 236px;
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   color:#838383;
+}
+/* End CSS For White textbox,selectList,textArea Fields For Dialog boxes */
+
+/* Start CSS For White textbox,selectList,textArea Fields for SF Process Forms */
+.sfTextboxWhite {
+	background-color: #FFFFFF;
+	border: 1px solid #CBCBCB; 
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 22px;
+	border-radius: 3px 3px 3px 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+    padding-left: 4px;
+	padding-top: 1px;/*2px*/
+	padding-bottom: 1px; 
+	color:#000000; 
+}
+.sfListmenuWhite {
+    background-color: #FFFFFF;
+	border: 1px solid #CBCBCB; 
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 22px;
+	border-radius: 3px 3px 3px 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px; 
+    padding-left: 4px;
+	padding-top: 1px;/*2px*/
+	padding-bottom: 1px;
+	color:#000000; 
+}
+.sfTextareaboxWhite {
+	background-color: #FFFFFF;
+	border: 1px solid #CBCBCB;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 22px;
+	border-radius: 3px 3px 3px 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px; 
+    padding-left: 4px;
+	padding-top: 1px;/*2px*/
+	padding-bottom: 1px; 
+	color:#000000; 
+}
+input.sfTextboxWhite[disabled="disabled"]{
+   border:1px solid #CDCDCD;
+   border-radius: 3px 3px 3px 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;        
+   font:13px Arial,sans serif;    
+   height: 22px;    
+   background-color:#E3E4E4;
+   color:#838383;
+   padding-left: 4px;
+   padding-top: 1px;/*2px*/
+   padding-bottom: 1px; 
+}
+select.sfListmenuWhite[disabled="disabled"]{
+   border:1px solid #CDCDCD;
+   border-radius: 3px 3px 3px 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;        
+   font:13px Arial,sans serif;    
+   height: 22px;    
+   background-color:#E3E4E4;
+   color:#838383;
+   padding-left: 4px;
+   padding-top: 1px;/*2px*/
+   padding-bottom: 1px; 
+}
+/* End CSS For White textbox,selectList,textArea Fields for SF Process Forms */
+
+.ui-autocomplete {
+		max-height: 116px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+	 * we use height instead, but this forces the menu to always be this tall
+	 */
+* html .ui-autocomplete {
+		height: 100px;
+}
+.ui-autocomplete-loading { 
+	background: url('../images/ajax-circular-loader.gif') right top no-repeat; 
+}
+.div-loading {
+	background: url('../images/ajax-circular-loader.gif') center center no-repeat !important; 
+	height: 20px;
+}
+.merge-input{
+		width: 96%;
+		border: none;
+		float: left;
+}
+.normal{
+		font-weight: normal;
+}
+/* start ar 17-02-14 */ 
+.white { /*modified style*/
+	color: #ffffff;
+	font-size: 13px;
+}
+
+a.white { /*modified style*/
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.white:hover { /*modified style*/
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+
+.textbox-adv {
+    background-color: #FFFFFF;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 21px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+    border: 1px solid #CBCBCB;  
+}
+.submenu_divider{
+	border-top:1px solid #95c2ef;
+	background-color:#95c2ef; 
+}
+/* end ar 17-02-14 */
+
+/* start bm 17-02-14 css for new Home Page Design */
+.hp_box{
+ 	background-color: #ffffff;
+	/*border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;*/	
+	display: block;
+	left: 5%;
+	margin: 0 auto;
+	/*padding: 32px 10px 32px 0;*/
+	padding: 32px 0px 32px 20px;
+	position: absolute;
+	top: 3%;
+	width:88%;	
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.hp_box
+	{
+	width:87%;	
+	padding: 32px 20px;
+	}
+}
+.hp_box .column{
+	padding:0 30px 0 10px;	
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.hp_box .column
+	{	
+		padding:0 20px;	
+	}
+}
+.hp_box .divider{
+border-left:1px solid #dddddd;
+}
+.hp_box .heading{
+	 margin-top:10px;
+	 background-color:#e8eff7;
+	 padding:3px 10px;
+	 font:30px Arial, Helvetica, sans-serif;
+	 color:#4f4f4f; 
+	 text-align:left;
+}
+.column p{
+    font:14px Arial, Helvetica, sans-serif;
+	color:#2f2f2f;
+	text-align:left; 
+	padding:10px 10px 5px;
+	margin:0px 0px 10px 0px;
+	line-height:20px;
+}
+.column p a{
+	font:14px Arial, Helvetica, sans-serif;	
+	color:#2f2f2f;
+	text-decoration:none;
+	line-height:26px;
+}
+.column p a:hover{
+	font:14px Arial, Helvetica, sans-serif;	
+	color:#000000;
+	text-decoration:underline;	
+	line-height:26px;
+}
+#infobox
+{
+	float:left;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	 border-radius:10px;
+	 margin-left:15px;
+	 background:#e8eff7;
+	 border:1px solid #95c2ef;
+	 padding:6px;	
+}
+.newFeatureBox {
+    /*background-color:#ffffff;*/
+    border: 1px solid #95c2ef;
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#058ae5;
+    border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+    float: left;    
+    margin-left: 0px;
+    margin-top: -3px;
+    padding: 3px 0 3px 10px;
+    background-color:#ffffff;
+    /*background: linear-gradient(-90deg, #ffffff, #E1F5FF);
+    background: -moz-linear-gradient(-90deg, #ffffff, #E1F5FF);
+    background: -webkit-linear-gradient(-90deg, #ffffff, #E1F5FF);*/
+    
+	
+}
+.newFeatureBox a{
+	font:bold 12px Arial, Helvetica, sans-serif;
+	color:#058ae5;
+	text-decoration:none;
+	white-space:nowrap;
+	outline:none;
+}
+.newFeatureBox_close{
+	float:right; 
+	margin-top:-5px; 
+	padding:0 5px;
+}
+#dataCoach tr td{/* for coach client report in ssadmin*/
+background-color: #E8E8E8 !important;
+}
+.record_no_area{
+	float: right;
+	padding:10px 0 0;
+}
+/* end bm 17-02-14 css for new Home Page Design */
+
+/* Social Media - Animesh */
+.social_gray_box { 
+	padding:0 15px 15px;
+	color: #F37736;
+	-moz-border-radius: 0px 10px 10px 10px;
+	-webkit-border-radius: 0px 10px 10px 10px;
+	border-radius: 0px 10px 10px 10px;
+	background-color: #ffffff;
+	position: relative;
+	margin-top: -5px;
+}
+.social_wrap{
+	width:97%;
+	/*background-color:#f1f1f1;*/
+	padding:1.5%;
+	/*border-bottom:1px solid #cdcdcd;*/
+	margin-bottom:0px;
+}
+.social_icon{
+	float:left;
+	width:100%;
+	height:70px;
+}
+.social_icon p{
+	font:23px Arial, Helvetica, sans-serif;
+	margin:0px;
+	padding:25px 0 0;
+	line-height:18px;
+}
+.social_icon span{
+	font:13px Arial, Helvetica, sans-serif;
+	font-style:italic;
+}
+.social_infobox{
+	float:right;	
+	padding:5px 5px 5px 12px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color:#ffffff;
+	border:2px solid #e9e9e9;
+	box-shadow:0px 1px 1px #d1d1d1;
+	font:12px arial;
+	/*height:70px;*/	
+	text-align: left;
+	white-space:nowrap;	
+}
+.social_button_area{
+	float:right;
+	/*width:18px;	
+	padding-top: 20px;*/
+	padding-top: 2px;
+}
+.social_infobox2{
+	float:right;	
+	padding:5px 5px 5px 12px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color:#ffffff;
+	border:2px solid #e9e9e9;
+	box-shadow:0px 1px 1px #d1d1d1;
+	font:12px arial;
+	/*height:70px;*/	
+	text-align: left;	
+	width:280px;
+}
+.social_button_area2{
+	float:right;
+	/*width:18px;	
+	padding-top: 20px;*/
+	padding-top: 2px;
+	width:100%;
+}
+.social_button{	
+	float:right;
+    background:#058ae5;     
+	border:1px solid #058ae5;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    font: bold 13px arial,verdana;
+    padding: 5px 8px;
+    white-space: nowrap;	
+}
+.social_button:hover{	
+	float:right;
+   	background:#058ae5;     
+	border:1px solid #058ae5;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    font: bold 13px arial,verdana;
+    padding:  5px 8px;
+    white-space: nowrap;	
+}
+.social_button_disconnect{	
+	float:right;
+    background: linear-gradient(#EFEEEE, #D2D2D2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -moz-linear-gradient(#EFEEEE, #D2D2D2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -webkit-linear-gradient(#EFEEEE, #D2D2D2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #B6B6B6;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #3D3D3D;
+    cursor: pointer;
+    display: table;
+    font: normal 8px arial,verdana;
+    padding: 0px;
+    white-space: nowrap;
+    width:15px;
+    height:16px;
+    vertical-align:top; 
+    margin:2px 2px 0 10px;	
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.social_button_disconnect
+	{	
+		 margin:4px 2px 0 10px;
+	}
+}
+.social_button_disconnect:hover{	
+	float:right;
+    background: linear-gradient(#D2D2D2, #EFEEEE) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -moz-linear-gradient(#D2D2D2, #EFEEEE) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -webkit-linear-gradient(#D2D2D2, #EFEEEE) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #B6B6B6;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #3D3D3D;
+    cursor: pointer;
+    display: table;
+    font: normal 8px arial,verdana;
+    padding: 0px;
+    white-space: nowrap;
+    width:15px;
+    height:16px;	
+}
+.social_img{
+	float:left;
+	margin-right:10px;	
+	vertical-align:middle;
+}
+.profile_info{
+	font:normal 12px Arial,helvetica;
+	line-height: 23px;
+	padding-right:10px;	
+}
+.profile_info a{
+	font:normal 18px Arial,helvetica;
+	color:#000000;
+	text-decoration: none;
+}
+.profile_info a:hover{
+	font:normal 18px Arial,helvetica;
+	color:#939598;
+	text-decoration:underline;
+}
+.profile_info span{
+	font:normal 18px Arial,helvetica;
+	color:#000000;
+	text-decoration: none;
+}
+.profile_img{
+	float:left;	
+	display:block;
+	height:60px;
+	width:60px;	
+	padding:5px 10px 5px 0;
+}
+.social_infobox table td{
+	vertical-align: top;
+}
+.SocialMedia_droparrow{
+	position:absolute;
+	z-index:101;	
+	top:-15px;
+}
+.SocialMedia_rgtbox1{	
+	/*padding-left:8px;*/
+	border:1px solid #e5e5e5;	
+	background-color:#f5f5f5;
+	box-shadow:1px 1px 2px #aaaaaa;
+	-moz-box-shadow:1px 1px 2px #aaaaaa;
+	-webkit-box-shadow:1px 1px 2px #aaaaaa;
+	margin:4px 0 0px;
+	line-height:18px;
+	position:relative;
+	z-index:9999;
+	top:276px;
+	width:450px;
+}
+.balance{
+	clear:both;
+}
+/*------------------------*/
+.profile_img_1{
+	float:left;	
+	display:block;	
+	width:30px;
+	height:30px;	
+	padding:2px 0px 5px 0;	
+}
+.profile_info_1{
+	float:left;
+	width:100%;
+	font:normal 12px Arial,helvetica;
+	color:#343434;
+	line-height:18px;
+	padding-right:0px;	
+}
+/*.profile_info_img_1{
+	background-color:#BCBDC0;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	padding:2px 4px 3px;
+	float:right;	
+	text-align:right;
+	margin-right:5px;		
+}*/
+.profile_info_img_1{
+	background: -webkit-linear-gradient(#FCFCFC, #E2E2E2); 
+	background: -o-linear-gradient(#FCFCFC, #E2E2E2); 
+	background: -moz-linear-gradient(#FCFCFC, #E2E2E2);
+	background: linear-gradient(#FCFCFC, #E2E2E2); 
+	border:1px solid #CFCFCF;
+	border-bottom:1px solid #bababa; 
+	color:#343434;
+	font:12px arial;
+	border-radius:3px; 
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;	
+	padding:2px 10px;
+	padding:2px 8px 1px\9;
+	float:right;	
+	text-align:right;
+	margin-right:5px;
+	cursor:pointer;			
+}
+.profile_info_img_1:hover{
+	background: -webkit-linear-gradient(#FCFCFC, #E2E2E2); 
+	background: -o-linear-gradient(#FCFCFC, #E2E2E2); 
+	background: -moz-linear-gradient(#FCFCFC, #E2E2E2);
+	background: linear-gradient(#FCFCFC, #E2E2E2); 
+	border:1px solid #888888;	
+	color:#141414;
+	font:12px arial;	
+	border-radius:3px; 
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;	
+	padding:2px 10px;
+	padding:2px 8px 1px\9;
+	float:right;	
+	text-align:right;
+	margin-right:5px;	
+	cursor:pointer;	
+}
+.profile_header{
+	font:normal 13px Arial,helvetica!important;
+	color:#000000!important;
+	text-decoration: none!important;
+	width:100%;
+}
+.profile_header a{
+	font:normal 13px Arial,helvetica!important;
+	color:#000000!important;
+	text-decoration: none!important;
+}
+.profile_header a:hover{
+	font:normal 13px Arial,helvetica!important;
+	color:#000000!important;
+	text-decoration:underline!important;
+}
+.profile_info_1 a{
+	font:normal 13px Arial,helvetica;
+	color:#058ae5;
+	text-decoration: none;	
+}
+.profile_info_1 a:hover{
+	font:normal 13px Arial,helvetica;
+	color:#058ae5;
+	text-decoration:underline;
+}
+.profile_info_1 span{
+	font:bold 13px Arial,helvetica;
+	color:#000000;
+	text-decoration: none;
+	width:190px;
+	height:20px;
+	overflow:hidden;
+	display:block;
+	text-overflow:ellipsis;
+	/*white-space:nowrap;*/
+	padding-top:0px;
+	line-height:18px;
+}
+.social_search_area{
+	padding:10px 0;
+	width:272px;
+	margin:0 auto;
+}
+.social_searchbox{
+	border:1px solid #CBCBCB;
+	background-color:#ffffff;
+	height:19px;
+	width:180px;
+}
+.social_header_1{	
+	border-bottom:1px solid #cdcdcd;	
+	padding: 0 0 5px;
+	margin:10px 4px 0;
+}
+.social_heading_1{
+	font:bold 15px Arial;
+	color:#000000;
+	padding-left:4px;
+}
+.social_content_1{
+	padding:0 5px;	
+}
+.social_content_1 td{
+	padding-bottom:10px;
+}
+.social_content_1 a{
+	color:#058ae5;
+	text-decoration: none;	
+}
+.social_content_1 a:hover{
+	color:#058ae5;
+	text-decoration:underline;
+}
+.social_text2{
+	color:#626364!important;
+	display:inline!important;
+	width:none!important;
+	font-weight:normal!important;
+	font-size:13px!important;
+}	
+.social_search_result{
+	display:block;
+	max-height:450px;
+	overflow-y:auto;
+	overflow-x:hidden;				
+}
+.social_content_1 img{
+	float:left;
+	padding:3px 5px 0 0;
+	
+}
+.social_header_1 img{
+	/*padding:1px;
+	box-shadow:1px 1px 2px #aaaaaa;
+	-moz-box-shadow:1px 1px 2px #aaaaaa;
+	-webkit-box-shadow:1px 1px 2px #aaaaaa;*/
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";	
+	filter: alpha(opacity=50);	
+	-moz-opacity:0.5;	
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	padding:1px;
+	background-color:#ffffff;
+	border:1px solid #F5F5F5;
+}
+.social_header_1 img:hover{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";	
+	filter: alpha(opacity=100);	
+	-moz-opacity:1;	
+	-khtml-opacity:1;
+	opacity: 1;
+	padding:1px;
+	background-color:#ffffff;
+	border:1px solid #BABABA;
+}
+.social_header_1 img.active{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";	
+	filter: alpha(opacity=100);	
+	-moz-opacity:1;	
+	-khtml-opacity:1;
+	opacity: 1;
+	padding:1px;
+	border:1px solid #BABABA;
+}
+.social_box_1{
+	padding:0 0 5px;
+	border-bottom:1px solid #cdcdcd;
+	margin:0 0 5px;
+}
+.social_box_divider_1{
+	border-bottom:1px solid #cdcdcd; 
+	display:block; 
+	height:1px;
+	margin:3px 0;	
+}
+/* Social Media - Animesh */
+.recordHeader{
+	margin-bottom: 10px;
+}
+.social_button2{	
+    background:#058ae5;     
+	border:1px solid #058ae5;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    font: bold 13px arial,verdana;    
+    padding:0 10px;
+  	height:34px;
+  	line-height:34px;
+  	vertical-align:middle;
+    white-space: nowrap;	
+}
+.social_button2:hover{		
+    background:#058ae5;     
+	border:1px solid #058ae5;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    font: bold 13px arial,verdana;
+    padding:0 10px;
+  	height:34px;
+  	line-height:34px;
+  	vertical-align:middle;  	
+    white-space: nowrap;	
+}
+.connectFail{
+	display:table-cell;
+	vertical-align: middle;	
+	height:70px;
+}
+/* end bm 17-02-14 css for new Home Page Design */
+
+/* added on 08-04-14 for campaign */
+.textbox_cpn {
+	background-color: #F1F2F2;
+	border: 1px solid #939598;
+	font: 13px Arial, sans-serif;
+	height: 21px;
+	padding: 0 2px;
+	width: 236px;
+	outline:none;		 
+}
+.listmenu_cpn {
+	background-color: #F1F2F2;
+	border: 1px solid #939598;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 21px;
+	padding: 0;
+	width: 237px;	
+
+}
+/* end for campaign */
+
+.uploadWrapper {
+	float:left;
+	display:block;
+	background:#058ae5;	
+	white-space: nowrap;
+	color:#ffffff;
+	font:14px arial;
+	text-align:center;
+	vertical-align:middle;
+	border-radius:3px; 
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+    overflow: hidden;
+    position: relative;    
+    text-align: center;
+    vertical-align: middle;
+    width:80px;
+    height:28px;
+    line-height:28px;  
+    cursor:pointer;
+}
+.uploadWrapper:hover {	
+	cursor:pointer;
+}	
+.uploadWrapper input {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor:pointer;
+    margin-left:-50px;
+}
+.uploadWrapper p {
+    margin: 0 0px;
+    padding:0px;
+    width:100px;
+    text-align:center;
+    position: absolute;
+    cursor:pointer;   
+}
+.standardButton{
+	background-color: #F1F2F2;
+	border: 1px solid #CBCBCB;
+	padding:2px 5px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+
+}
+.textareabox_cpn {
+	background-color: #F1F2F2;
+	border: 1px solid #CBCBCB;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 19px;
+	padding: 0 2px;
+	width: 236px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;  
+}
+.divider_line{
+	height:1px; 
+	display:block; 
+	border-bottom:1px solid #ffffff;
+}
+table.attachment{
+	border-color: transparent;/*#EE9500 transparent transparent;*/
+	border-image: none;
+	border-style: solid;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font:12px arial;
+}
+table.attachment tr th{
+	color:#ffffff;
+	background-color: #a8a8a8;
+	padding:8px 5px;
+	font:normal 14px arial;
+}
+table.attachment tr td{
+	background-color: none;
+	padding:8px 5px;
+	font:normal 13px arial;
+}
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 0 5px 0 0;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.btn_upload-default {
+   	background:#058ae5;	
+	white-space: nowrap;
+	color:#ffffff;
+	font:14px arial;
+}
+.btn_upload {
+	display:block;
+    -moz-user-select: none;
+    background-image: none;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    width:80px;
+    margin-bottom: 0;
+    height:28px;
+    line-height:28px;    
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/***************************Detail view - start**************************************************/
+.SMBPageHeader {	
+    margin: 0;
+    min-height: 20px;
+    padding: 0px;	
+    background-color: #058AE5;
+    font:normal 22px arial,verdana;
+    color:#ffffff;	
+}
+.divCaption{
+	display:block;
+	text-overflow:ellipsis;
+	overflow-x:hidden;
+	white-space: nowrap;	
+}
+.div_customize {
+	display:none;
+    margin: 0;
+    min-height: 20px;
+    padding: 10px 20px;	
+    background-color: #058AE5;
+    font:normal 14px arial,verdana;
+    color:#ffffff;	
+}
+
+.SMBAdditionalPageHeader {	
+    margin:0;
+    min-height:36px;
+    padding:0 10px 0 20px;	
+    background-color: #95C2EF;	
+    position:fixed;
+    z-index: 1000;
+    width:100%;
+}
+
+.SMBDarkBlueBox{
+	background-color:#058AE5;
+	
+}
+ 
+.SMBLightBlueBox{
+	background-color:#E8EFF7;
+}    
+
+.balance{
+	clear:both;
+}
+ul.nav{
+	font: normal 14px arial,verdana;
+	color:#ffffff;
+	margin:11px 0 0 -20px;	     
+}
+ul.nav li {
+	display:inline;
+	list-style-type: none;
+	margin:0 12px;
+	cursor: pointer;
+	color:#ffffff;
+}
+ul.nav li a{
+	font: normal 14px arial,verdana;
+	color:#ffffff;
+	text-decoration: none;	  	
+}
+ul.nav li a:hover{
+	font: normal 14px arial,verdana;
+	color:#ffffff;
+	text-decoration: none;	  	
+}
+.breadcrumb{
+	font: normal 14px arial,verdana;
+	color:#398BE8;
+	height:34px;
+	line-height:34px;
+	vertical-align: middle;
+	text-decoration: none;
+	cursor: default;
+	display: inline-block;
+	float: left;	
+	padding: 0 6px;		
+}
+.breadcrumb2{
+	font: normal 14px arial,verdana;
+	color:#ffffff;
+	height:34px;
+	line-height:34px;
+	vertical-align: middle;
+	text-decoration: none;
+	cursor: default;
+	display: inline-block;
+	float: left;
+	padding: 0 6px;			
+}
+.breadcrumb3{
+	font: normal 16px arial,verdana;
+	color:#ffffff;
+	height:34px;
+	line-height:34px;
+	vertical-align: middle;
+	text-decoration: none;
+	cursor:default;	
+	display: inline-block;
+	float: left;
+	padding: 0 6px;	
+}
+.breadcrumb_blue_arrow{
+	background-image: url(../images/NewDesign/breadcrumb_arrow2.png); 
+	background-repeat: no-repeat;
+	border: none; 
+	background-color: rgba(0, 0, 0, 0);
+	cursor: default;
+	float: left;
+	height: 16px;
+	width: 12px;
+	margin: 9px 0;
+}
+.breadcrumb_white_arrow{
+	background-image: url(../images/NewDesign/breadcrumb_arrow.png); 
+	background-repeat: no-repeat;
+	border: none; 
+	background-color: rgba(0, 0, 0, 0);
+	cursor: default;
+	float: left;
+	height: 16px;
+	width: 12px;	
+	margin: 9px 0;
+}
+.task_heading{
+	font: normal 13px arial,verdana;
+	color:#4D4D4D;
+}
+.taskheader{
+	padding:10px 0px 0;
+	font:normal 17px arial,verdana;
+	color:#4D4D4D;
+}
+.taskcontent{
+	font: normal 12px arial,verdana;
+	color:#939598;
+}
+.taskcontent .red{
+	color:#ff0000;
+}
+.taskcontent .blue{
+	color:#398BE8;
+}
+ul.email{
+	font: normal 12px arial,verdana;
+	color:#4d4d4d;
+	margin:0px 0 0 -35px;	
+}
+ul.email li{
+	font: normal 14px/22px arial,verdana;
+	color:#626464;
+	padding-bottom:6px;
+	list-style-type:none;
+	display:block;
+	text-overflow:ellipsis;
+	width:210px;
+	overflow:hidden;
+	white-space:nowrap;	
+	padding-left:20px;
+}
+ul.email li.label{
+	font: normal 11px/22px arial,verdana;
+	color:#626464;
+	padding-bottom:0px;
+	list-style-type:none;	
+}	
+ul.email li a{
+	font: normal 14px/22px arial,verdana;
+	color:#626464;
+	text-decoration: none;	
+	display:block;
+	text-overflow:ellipsis;
+	width:180px;
+	overflow:hidden;
+	white-space:nowrap;	
+	height:22px;
+	float:left;	
+}
+ul.email li a span{
+	font: normal 14px/22px arial,verdana;
+	color:#626464;
+	text-decoration: none;	
+}
+ul.email li a span:hover{
+	font: normal 14px/22px arial,verdana;
+	color:#000000;
+	text-decoration: underline;	
+}
+.detailview_text{
+	float:left;
+	display:block;
+	width:180px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.detailview_edit_icon{
+	float:right;
+	width:20px;
+	margin-top:5px;
+}
+.customize{
+	color:#058AE5;
+	font:11px arial,verdana;
+	padding:5px 15px 0px 0;
+	margin-top:8px;
+	text-align:right;
+}
+.customize a{
+	color:#058AE5;
+	font:12px arial,verdana;
+	padding:5px 0px 0px 0;	
+	text-decoration: none;	
+	cursor:pointer; 
+}
+.img_wrapper{
+	background-color: #E8EFF7;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: pointer;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+/*---------------------------*/
+#small_tabmenu {
+	font-size: 12px; /* set the font size */
+	padding:0px; /* set the padding */
+	border-bottom:2px solid #95C2EF;
+}
+#small_tabmenu ul {
+	line-height: 13px; /* setting the line height now so we don't have any headaches*/
+	margin: 0px; /* let's keep the margin set to 0 for the same reasons as above*/
+	list-style-type: none; /* we remove the UL's default disc bullets */
+	float: left; /* we float the list to the left like we will all the elements inside*/
+	padding: 0px 0px 0px 5px; /* give it a left padding of 5px to counter the effect of margin -5px below */
+	width:99%;
+}
+/*#ts_tabmenu ul li {
+	float: left; 
+	font:bold 14px/13px Verdana, Arial, Helvetica, sans-serif;
+	list-style-type:none;	
+	white-space:nowrap;
+	margin-right: 6px;
+}*/
+#small_tabmenu ul li {
+	float: left; 
+	font:bold 12px/14px Verdana, Arial, Helvetica, sans-serif;
+	list-style-type:none;	
+	white-space:nowrap;
+	margin-right: 4px;
+	/*position:relative;
+	z-index: 0;*/
+}
+#small_tabmenu ul li a {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 12px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/small_tab.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	/*z-index: 0; 
+	position: relative;*/
+	color: #939598;
+}
+#small_tabmenu ul li a strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	text-align:center;
+	background: url(../images/NewDesign/small_tab.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 6px 18px 7px 5px;  /* important, as through this you define the position of the text within the tab */
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+}
+#small_tabmenu ul li a:hover {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 12px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/small_tab_hover.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	z-index: 0; /* keep it on layer 0 (default) */
+	position: relative;  /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+	color: #ffffff;  /* color of the tab text */
+}
+#small_tabmenu ul li a:hover strong {
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	text-align:center;
+	background: url(../images/NewDesign/small_tab_hover.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 6px 18px 7px 5px;  /* important, as through this you define the position of the text within the tab */
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+}
+#small_tabmenu ul li a.selected {
+	text-decoration: none; /* remove the default underline off the anchor text */
+	display: block; /* we display this text as block so that we can apply padding/margin without problems */
+	float: left; /* floatin' left, to make the menu horizontal */
+	padding: 0px 0px 0px 12px;  /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+	background: url(../images/NewDesign/small_tab_selected.png) no-repeat left top;  /* we link to the tabs image, no tiling, showing the top left part of it */
+	margin-left: -5px;  /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+	position: relative; /* again, keep things relative */
+	z-index: 5; /* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+	color: #fffff;  /* color of the tab text */	
+}
+#small_tabmenu ul li a strong.selected {
+	color:#ffffff;
+	font-weight: normal;   /* remove the bold effect */
+	display: block;   /* display the strong element as a block so we can pad it, etc. */
+	float: left;   /* float it left as well */
+	text-align:center;
+	background: url(../images/NewDesign/small_tab_selected.png) no-repeat right top;  /* now we show the right part of the tab and we complete the "puzzle" */
+	padding: 6px 18px 7px 5px;  /* important, as through this you define the position of the text within the tab */
+	cursor: pointer;  /* this makes the browser show the "hand" cursor when hovering over the tab */
+	position: relative; /* keep it relative */
+	z-index: 5; /* show this on layer 5 as well */	
+}
+#slideDiv {
+    background: #EEE;
+    height: auto;
+    display: none;
+    position:fixed;
+    z-index: 1000;
+    top:210px;
+    width:auto;
+    left:50px; 
+    background-color: #E8EFF7;
+    border:1px solid #95C2EF;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow:2px 2px 2px #555555;
+    -moz-box-shadow:2px 2px 2px #555555;
+    -webkit-box-shadow:2px 2px 2px #555555;
+     
+}
+.slideDivContent {
+	cursor: pointer;
+	display: block;
+	font-family: Arial,sans-serif,Helvetica;
+	font-size: 12px;
+	font-weight: normal;
+	font-color:black;
+	text-decoration:none;
+	padding: 5px 10px;
+	text-align: left;
+	width: 125px;
+}
+.slideDivContent a{
+	color:#000000;
+	text-decoration: none;
+}
+.graph_bg{
+	/* background: url(../images/NewDesign/graph_bg.jpg) repeat top left; */
+}
+.graph_bg .left{
+	float: left;
+}
+.graph_bg .right{
+	float: right;
+}
+/*added on 23-05-14 */
+.top_box{
+	font:14px Arial,sans-serif,Helvetica;
+	color:#4D4D4D; 
+	float:left; 
+	padding:0px;
+	width:28%; 
+	margin:20px 0 0; 
+	height:53px; 
+	background-color:#E8EFF7;
+}
+.blank_top_box{
+	float:left;	
+	width:8%; 
+	margin:20px 0 0; 
+	height:53px;	
+}
+.top_box_content{
+	padding:5px 10px;
+	text-align:center;
+}
+/* Start added on 03-06-14 for marketing reports */
+.reportPage_heading1 {
+    color: #4D4D4D;
+    font: 22px Arial,Helvetica,sans-serif;
+    margin:15px 0;
+}
+.reportPage_subheading1 {
+    color: #000000;
+    font: 16px Arial,Helvetica,sans-serif;
+    margin-bottom: 22px;
+}
+.report_box_area{
+	display:block;
+	width:100%;	
+	margin-bottom:30px;
+}
+.report_box{
+	float:left;
+	position:relative;
+	display:block;
+	width:8%;	
+	padding:1%;		
+	background-color:#ffffff;
+	border:1px solid #cbcbcb;	
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;	
+}
+.report_box p{
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	margin:0px;
+	padding:0px;
+}
+.report_gap{
+	float:left;
+	display:block;
+	width:2.4%;
+	height:50px;
+}
+.capitalize{
+    text-transform:capitalize;
+}
+.setupfield_box{	
+	/*padding-left:8px;*/
+	border:1px solid #E8EFF7;	
+	background-color:#E8EFF7;	
+	margin:4px 0 0px;
+	line-height:18px;
+	position:relative;
+	z-index:90;
+	top:276px;
+	padding:0 20px 20px;
+	width:680px;
+	box-shadow:1px 1px 1px #aaaaaa;
+	-moz-box-shadow:1px 1px 1px #aaaaaa;
+	-webkit-box-shadow:1px 1px 1px #aaaaaa;
+}
+.setupfield_header_1{	
+	padding: 0 0 5px;
+	margin:10px 0px 0;
+}
+.setupfield_subheader_1{
+	color:#6d6d6d;
+	font:bold 12px arial,verdana;
+	padding:5px 0px;	
+	text-decoration: none;	
+}
+.setupfield_heading_1{
+	font:bold 15px Arial;
+	color:#4d4d4d;
+	padding-left:0px;
+}
+.setupfield_btn { /*modified style*/
+	display: table;
+	background:#058ae5;	
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 8px 20px;
+	/* text-transform: uppercase; */
+	white-space: nowrap;
+	display:inline-block\0/;
+    padding: 8px 20px\0/;
+}
+@media all and (min-width:0){
+.setupfield_btn{
+	display:inline-block\0/;
+	padding: 8px 20px\0/;
+ }
+}
+.close_white:hover{	
+	background-color:#d6d6d6;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+		
+}
+.loader1{	
+	position:absolute!important;
+	z-index:100;
+	top:20%;
+	left:50%;	
+	text-align:center;
+	vertical-align: middle;		
+}
+/* end added on 03-06-14 for marketing reports */
+/*Added on 09-06-2014*/
+.box_arrow_pos{
+	position:absolute;
+	z-index:10;
+	display:block;
+	width:25px;
+	height:25px;
+	right:0px;
+	bottom:0px;
+}
+.report_box .toptext{
+	font:22px Arial, Helvetica, sans-serif;
+	color:#F04B24;
+}
+.report_box2 .content{
+	padding:10px;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	
+}
+.report_box2{
+	width:100%;
+	background-color:#ffffff;
+	border:1px solid #cbcbcb;	
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	/*margin-top:20px;*/	
+}
+.box_heading1 {
+    color: #000000;
+    font:normal 22px Arial,Helvetica,sans-serif;    
+	background-color:#E8EFF7;
+	border-bottom:1px solid #cbcbcb;
+	padding:10px 5px;
+}
+.dashboard{
+	font:32px Arial, Helvetica, sans-serif;
+	color:#058ae5;
+	padding-bottom:15px;
+}
+.dropdown_box1 {
+	display:block;
+	padding:10px 10px 10px 5px;	
+    background-color: #058AE5;
+    border: 1px solid #058AE5;
+    box-shadow: 1px 1px 2px #AAAAAA;
+    line-height:28px;
+    margin:0;    
+    right:0;
+    top:40px;  
+    z-index:1001;
+    color:#ffffff;
+    min-width:100px;
+    
+}
+.dropdown_box1 ul{
+	text-align: left;
+	margin:0;
+	padding:0px;
+}
+.dropdown_box1 ul li{
+	list-style-type: none;	
+	display:block;
+	line-height:28px;	
+	text-align: left;
+	font:14px Arial, Helvetica, sans-serif;
+	color:#ffffff;	
+	padding: 5px;
+}
+.dropdown_box1 ul li a{	
+	text-decoration: none;
+	font:14px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	text-align: left;
+	list-style-type: none;	
+	cursor: pointer;
+}
+.top_box_heading{
+	font: 14px Arial,sans-serif,Helvetica;
+ 	color:#058AE5;
+  	padding-bottom:6px;
+}	
+.SocialMedia_rgtbox2{	
+	/*padding-left:8px;*/
+	border:1px solid #e5e5e5;	
+	background-color:#f5f5f5;
+	box-shadow:1px 1px 2px #aaaaaa;
+	-moz-box-shadow:1px 1px 2px #aaaaaa;
+	-webkit-box-shadow:1px 1px 2px #aaaaaa;
+	margin:4px 0 0px;
+	line-height:18px;
+	position:absolute;
+	z-index:99;
+	top:200px;
+	width:450px;
+}
+/*Added on 03-07-2014*/
+.camp_tabs-menu {
+    height:62px;
+	margin-left:-40px;
+    float: left;
+    clear: both;
+}
+.camp_tabs-menu li {
+	display:table-cell;
+	width:78px;
+    height: 70px;
+	vertical-align:middle;
+	text-align:center;
+    line-height: 30px;
+    float: left;
+    margin-right: 10px;
+	list-style-type:none;
+}
+
+.camp_tabs-menu li.current {
+	display:table-cell;
+	width:78px;
+    height: 70px;
+	vertical-align:middle;
+	text-align:center;
+    position: relative;     
+    z-index: 5;
+	list-style-type:none;
+}
+.camp_tabs-menu li a {    
+    text-decoration: none; 
+}
+.camp_tabs-menu .current a {
+    text-decoration: none; 
+}
+
+.camp_tab {    
+    background-color: #fff;
+    float: left;    
+    width: auto;
+}
+.camp_tab-content { 
+	width:98%;  
+    padding:10px;
+    display: none;
+	font-size: 13px;
+	font-family: Arial,sans-serif,Helvetica;
+    font-weight:normal;
+	background-color:#eeeeee;
+	position:relative;
+}
+
+#tab-1 {
+ display: block;   
+}
+.post_option_box{
+	font:13px Arial, Helvetica, sans-serif;
+	color:#000000;	
+	margin:3px;	
+	padding-top:8px;	
+	display: table-cell;
+	text-align:center;
+	vertical-align:middle;	
+	width:76px;
+	height:52px;	
+	background-color:#f1f1f1;
+	border:1px solid #95C2EF;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.post_option_box:hover{
+	font:13px Arial, Helvetica, sans-serif;
+	color:#000000;	
+	padding-top:8px;	
+	display: table-cell;
+	text-align:center;
+	vertical-align:middle;	
+	width:72px;
+	height:48px;	
+	background-color:#f1f1f1;
+	border:3px solid #95C2EF;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.post_option_acivebox{
+	font:13px Arial, Helvetica, sans-serif;
+	color:#000000;	
+	padding-top:8px;	
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;	
+	width:72px;
+	height:48px;
+	background-color:#f1f1f1;
+	border:3px solid #95C2EF;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.textbox9 {
+    background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    border-radius: 3px;
+    font: 13px Arial,sans-serif;
+    height: 21px;
+    padding: 0 2px;
+}
+.cmpn_textarea {
+    background-color: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    border-radius: 3px;
+    font: 13px Arial,sans-serif;
+	width:800px;
+    height: 100px;
+    padding: 0 2px;
+}	
+.section_area{
+    font-size: 13px;
+	font-family: Arial,sans-serif,Helvetica;
+    font-weight:normal;
+    margin-bottom:15px;
+}
+.post_camp_area{
+	background-color:#F5F5F5;
+	width:700px;
+	/*padding:10px;*/
+}
+.camp_part{
+padding:10px;
+background-color:#ffffff;
+border-bottom:1px solid #eeeeee;
+}
+.camp_part:hover{
+padding:10px;
+/*background-color:#eeeeee;*/
+}
+.camp_title{
+ font:14px Arial, Helvetica, sans-serif;
+ color:#000000;
+ padding:0 0 10px;
+}
+.camp_post_count{
+font:12px Arial, Helvetica, sans-serif;
+ color:#000000;
+}
+.camp_post_action{
+font:14px Arial, Helvetica, sans-serif;
+ color:#B5B5B5;
+}
+.cmpn_sub_heading1 {
+    color: #000000;
+    font: 20px Arial,Helvetica,sans-serif;
+    margin-bottom: 10px;
+	padding-left:0px;
+}
+/*Added on 11-07-2014*/
+#showLinkImage{
+	display:block; width:150px;
+	}
+#show ul{
+	margin:0px; padding:0px;
+	}
+#show ul li{
+	list-style-type:none; display:block
+	}
+img.slide_img{
+	display: block; margin-bottom:10px;
+	}
+.ui-tabs .ui-tabs-hide { 
+	display: none !important; 
+	}
+	
+/*-------------------*/
+.messageArea{
+	width:700px;
+	border:1px solid #cbcbcb;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	margin-top:15px;
+}
+.messageBox{
+	width:98%;
+	height:100px;
+	display:block;
+	border:0px;
+	padding:1%;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+.linkbox{
+	border-top:1px solid #D7D7D7;
+	background-color:#EEEEEE;
+	padding:5px;
+}
+.shortLinkInput {
+    background-color: #FFFFFF;	
+    border: 0 none;
+    border-radius: 0;   
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;    
+    width: 86%;
+	padding: 3px 5px;
+    vertical-align: middle;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+.urlBox {
+    border:1px solid #C2C2C2;
+	background-color:#FFFFFF;    
+    display: inline-block;
+    padding-left: 2px;
+    position: relative;
+    width:98%;
+	}
+.icon_img{
+	padding:4px 2px 0 0;
+}
+
+.draft_date{
+	float:left;
+	padding-top:2px;
+}
+.linkbox2{
+	border:1px solid #D7D7D7;
+	background-color:#EEEEEE;
+	padding:5px 10px;
+}
+.controls {
+    float: right;
+	/*padding:2px 0 0;*/
+}
+/*Added on 01-08-2014*/
+.timeline {
+    list-style: none;
+    padding: 10px 0;
+    margin:0px;
+    position: relative;
+}
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: 45%;
+            float: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+            .timeline > li > .timeline-panel:before {
+                position: absolute;
+                top: 26px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #ccc;
+                border-right: 0 solid #ccc;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .timeline > li > .timeline-panel:after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #fff;
+                border-right: 0 solid #fff;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body  p{
+	word-break : break-all;
+	}
+	
+.timeline-body pre {
+ white-space: pre-wrap;     
+ white-space: -moz-pre-wrap;  
+ white-space: -pre-wrap;      
+ white-space: -o-pre-wrap;    
+ word-wrap: break-word;
+ word-break : break-all;
+ font:13px Arial, Helvetica, sans-serif;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+.social_outerbox{	
+	float: left;
+	margin: 0 20px 0 0;
+}
+.social_outerbox p{
+	margin:0 0 10px;
+	}
+.social_box{	
+	display:block;
+	width:100px;	
+	min-height:100px;
+	text-align:center;
+	background-color:#ffffff;
+	border:1px solid #cbcbcb;	
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	}
+.social_box	p{
+	margin:5px 0;
+	}
+.input_padding{
+	margin:10px 0 0 29px;
+	}
+	
+.showCount{
+	color:red;
+	}
+		
+.sc_button{
+	background: #058ae5!important;
+	border: 0 none!important;
+	color: #FFFFFF!important;
+	font: bold 13px arial,verdana!important;
+	height:30px!important;
+	border-radius: 3px!important;
+	-moz-border-radius: 3px!important;
+	-webkit-border-radius: 3px!important;
+	white-space: nowrap;
+	cursor:pointer;
+	}
+	
+.social_outerbox_connect{	
+	float: left;
+	margin: 0 20px 0 0;
+}
+.social_outerbox_connect p{
+	margin:0 0 10px;
+	}
+.social_box_connect{	
+	display:block;
+	width:100px;	
+	min-height:100px;
+	text-align:center;
+	background-color:#ffffff;
+	border:1px solid #cbcbcb;	
+	font:12px Arial, Helvetica, sans-serif;
+	color:#000000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	}
+.social_box_connect	p{
+	margin:5px 0;
+	}
+.table_area_new{
+	 border:1px solid #eeeeee; 
+	 border-collapse:collapse;	 	
+	}
+.table_area_new td{
+	 padding:10px 5px;	 	
+}
+.table_area_new td.header{
+	 border-bottom:1px solid #eeeeee;
+	 	
+}		
+.setupfield_box2{	
+	border:1px solid #cccccc;	
+	background-color:#ffffff;	
+	margin:4px 0 0px;
+	line-height:18px;
+	position:relative;
+	z-index:10001;
+	top:64px;
+	left:418px;
+	padding:0 20px 20px;
+	width:300px;
+	box-shadow:2px 2px 2px #a7a7a7;
+	-moz-box-shadow:1px 1px 1px #a7a7a7;
+	-webkit-box-shadow:1px 1px 1px #a7a7a7;
+	border-radius:0 5px 5px 0;
+	-webkit-border-radius:5px;
+}
+.askAQuestionDiv{
+   /* border:1px solid #FFF;
+   border-bottom:none;
+   -moz-border-radius:4px 4px 0 0;
+   -webkit-border-radius:4px 4px 0 0;
+   border-radius:4px 4px 0 0;
+   -moz-box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px,rgba(0,0,0,.5) 0 1px 2px;
+   -webkit-box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px, rgba(0,0,0,.5) 0 1px 2px;
+    box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px, rgba(0,0,0,.5) 0 1px 2px;
+    font:normal normal bold 14px/1em Arial, sans-serif;
+    position:fixed;
+    right:0;
+    bottom:0;
+    z-index:9999;
+    background-color:#0064ac; */
+   border:1px solid #FFF;
+   border-bottom:none;
+   -moz-border-radius:4px 4px 0 0;
+   -webkit-border-radius:4px 4px 0 0;
+   border-radius:4px 4px 0 0;
+   -moz-box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px,rgba(0,0,0,.5) 0 1px 2px;
+   -webkit-box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px, rgba(0,0,0,.5) 0 1px 2px;
+    box-shadow:inset rgba(255,255,255,.25) 1px 1px 1px, rgba(0,0,0,.5) 0 1px 2px;
+    font:normal normal bold 14px/1em Arial, sans-serif;
+    position:fixed;
+    right:0;
+    bottom:0;
+    z-index:9999;
+    background-color:#0064ac;
+    top: 50%;
+    height:30px;
+    width:129px;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    margin-right:-4% !important;
+}
+.askAQuestionDiv a{
+	background-color: transparent; 
+	display:block;
+	padding:6px 10px 2px 12px;
+	text-decoration:none;
+}	
+.dialog-text{
+	font-weight: normal;
+	text-align:justify;
+	font-size:12px;
+}
+.relation-text{
+	text-overflow:ellipsis;
+	overflow-x: hidden;
+	white-space:nowrap;
+	max-width: 380px;
+	display: inline-block;
+}
+#msgCls{
+	white-space: pre-wrap;     
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;
+    word-break : break-all; 
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 10px;
+}
+#linkDesc,#linkTitle{	
+	width: 360px;
+	border:1px solid #ffffff;
+	resize:none !important;
+	font:12px Arial, Helvetica, sans-serif;
+}
+.socialmedialist li {
+      margin-bottom: 10px;
+}
+.txtNoBdr {
+   resize: none !important;  
+   outline: 0 none; 
+   border:0 none !important; 
+   display:inline-block; 
+   padding:5px 0 5px 10px !important;
+   width:93%;
+   /*text-indent:10px;*/
+   font:12px Arial, Helvetica, sans-serif;
+}
+.contentDiv{  
+	border:1px solid #cccccc; 
+	display:block;  
+	width:620px;
+	}
+.txtNoBdrparent{ 
+	border:1px solid #0077B5; 
+	display:block; width:620px;
+	} 
+.contentDiv img, .txtNoBdrparent img{ 
+	float:right; 
+	position:relative; 
+	right:5px; 
+	top:5px;
+ }
+ .fieldSet{
+ 	font-weight: bold; 
+ 	font-size:15px; 
+ 	color:#0088CC;
+ 	margin-bottom:15px;
+ 	border-color: #FCFCFC;
+ 	border-radius:5px;
+ 	-moz-border-radius:5px; 
+ 	-webkit-border-radius:5px;
+ }
+ .listattachment img{ width:20px; height:20px; line-height:25px; margin-right:5px; float:left; clear:left;}
+ .listattachment img + a{ height:25px; line-height:20px;  float:left; clear:right; text-decoration:none;}
+ .gridStylenewwrap{ border-radius:5px; -moz-border-radius:5px; -ms-border-radius:5px; -webkit-border-radius:5px; border:1px solid #C2E1FF; position:relative;}
+ 
+ #toPopup {
+	    font-family: arial,sans-serif;
+	    background: none repeat scroll 0 0 #FFFFFF;
+	    /*border: 0px solid #ccc;
+	    border-radius: 1px 1px 1px 1px;*/
+	    color: #333333;
+	    display: none;
+	    font-size: 14px;
+	    left: 50%;
+	    margin-left: -410px;
+	    position: fixed;
+	    top: 20%;
+	    width: 800px;
+	    height: 300px;
+	    z-index: 2;
+	}
+ 
+ /*Quick Add Form Start on 20-01-2015*/
+/*  div, input[type="text"], input[type="email"], select, textarea{ 
+	margin:0; 
+	padding:0;
+	} */
+.styloform{
+	font-family:arial,sans-serif; 
+	font-size:80%; 
+	font-weight:lighter;
+}
+.styloform > div, .styloform fieldset div{ 
+	padding:5px; 
+	/*border:1px solid #ccc; */
+	margin:2px 0; 
+	display:table;  
+	width:99%; 
+	min-width:400px;
+	/* max-width:400px;*/ 
+	position:relative
+	}
+.styloform  div  label{
+	width: 120px;
+	padding-right:2%; 
+	display:inline-block; 
+	text-indent:3px; 
+	vertical-align:middle;  
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	color:#FE0000;
+  	font:13px Arial, Helvetica, sans-serif;
+  	text-align: right;
+  	float: left;
+	}
+.styloform > div > label + textarea{ 
+	width:67.0%; 
+	display:table-cell; 
+	padding:5px; 
+	vertical-align:middle; 
+	border:1px solid #999; 
+	margin-left:0px; 
+	vertical-align:top !important;
+	min-height:50px;
+	}
+	
+.styloform fieldset{
+	border:1px solid #999; 
+	margin:2px 0; 
+	/*width:auto;*/
+	padding:10px; 
+	border-radius:3px; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px;
+	}
+.styloform fieldset legend{ 
+	color:#058ae5; 
+	font-size:120%;
+	}
+.styloform input[type="text"],.styloform input[type="email"]{ 
+	text-indent:5px;
+	}
+.styloform input[type=checkbox][disabled] + label { 
+	background-position : 0 -71px!important; 
+	color:#999999;
+	}
+
+.styloform input[type="text"], 
+.styloform input[type="email"], 
+.styloform select{ 
+	/* border:1px solid #999;  */
+	border-radius:3px; width:69.5%;  
+	display:table-cell; 
+	height:19px; 
+	line-height:19px; 
+	padding:0;
+	-webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+	} 
+
+
+
+.styloform select{ 
+	width:70% !important; 
+	line-height:normal !important; 
+	padding-right:0px;
+	}
+
+.styloform textarea{ 
+	border:1px solid #999; 
+	border-radius:3px; 
+	/*width:190px;*/  
+	display:inline-block;  
+	padding:5px; 
+	overflow:auto; 
+	resize: none !important;  
+	word-wrap:break-word; 
+	text-wrap:unrestricted;
+	}
+.styloform input[type="text"]:focus,
+.styloform input[type="email"]:focus, 
+.styloform select:focus{ 
+	/*outline: none;
+	border:1px solid #058ae5;*/
+	}
+
+.styloform .bluebtn{
+	background: #058AE5; 
+	padding:5px 8px;color:#FFFFFF; 
+	border:1px solid #058ae5; 
+	border-radius:3px; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px; 
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+	font-size:120%;
+	cursor:pointer;
+	}
+
+.transbluebtn{
+	background: transparent; 
+	padding:5px 0 0 8px;
+	color:#058ae5; 
+	border:0 none; 
+	font-size:100%;
+	cursor:pointer;
+	}
+.styloform .buttonWrap{ text-align:right; display: table; /*width:40%; margin:0 auto;*/ clear:both;}
+.coloumn-half{ float:left; width:48%  !important; margin:0 0.5%; display:inline-block !important;}
+.quickaddBox{ 	/*border:1px solid #ccc;*/ 
+	border-radius:5px; 
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px; padding:8px}
+	.quickaddBox > h2{ background:#058AE5; padding:7px 0; margin:0; color:#FFFFFF; font-size:18px; font-weight:lighter; text-align:left; margin:-8px -8px 0 -8px; display:block; text-indent:7px; border-radius:5px 5px 0 0 !important }
+	.blueinfo{ color:#058AE5}
+
+@media screen\0 {
+   
+	.styloform input[type="text"], .styloform input[type="email"], .styloform select, .styloform > div > label + textarea{ display:inline-block; width:68.5% !important}
+	/*.styloform select{ width:68.5% !important}  .styloform > div > label + textarea{ width:68.5% !important}*/
+	.styloserach input[type="text"]{width:84.8% !important}  .styloform > div > label + textarea{ width:65.8% !important;}
+}
+
+@media screen and (max-width: 888px) {
+    .coloumn-half {
+     width:99% !important; clear:both; -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+
+    }
+}
+.addToListVal{
+ width:346px !important;
+ border: 1px solid #CBCBCB;
+}
+.addToListValScroll{
+ width:336px !important;
+ border: 1px solid #CBCBCB;
+}
+.styloform input[type="checkbox"][disabled], .styloform input[type="text"][disabled], .styloform input[readonly="readonly"], .styloform select[disabled="disabled"]
+{
+border: 1px solid #CBCBCB;
+background-color: #FFFFFF;
+color: #B5B5B5;
+}
+.updateclass {
+    color: #000000;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+ /*Quick Add Form End*/
+ .textbox_inbox {
+	background-color: #ffffff;
+	border: 1px solid #939598;
+	font: 13px Arial, sans-serif;
+	height: 21px;
+	padding: 0 2px;
+	width: 236px;
+	outline:none;		 
+}
+.listmenu_inbox {
+	background-color: #ffffff;
+	border: 1px solid #939598;
+	font: 13px Arial, Helvetica, sans-serif;
+	height: 21px;
+	padding: 0;
+	width: 237px;	
+
+}
+.gcHold{
+	width:100%;  
+	box-sizing: border-box; 
+	padding-top:15px;
+}
+.gcHold .gcPerson{ 
+	width:23%; 
+	float:left;
+	box-sizing: border-box; 
+	margin-right:2%; 
+	max-width:85px;
+}
+.gcHold .gcPerson img{ 
+	width:80px; 
+	padding:2px; 
+	margin-left:5px; 
+	border:1px solid #aedcfa;
+}
+.gcHold .gcDetailsbox{ 
+	width:75%; 
+	float:left;
+	box-sizing: border-box; 
+}
+.gcHold .textBig{ 
+	font-size:20px; 
+	font-weight:bold; 
+	padding-bottom:7px;
+} 
+.gcHold .textMid{
+	font-size:14px; 
+	font-weight:normal;
+}
+.gcHold .gcsocial{ 
+	margin-top:10px;
+}
+.gcHold .gcsocial img{
+	width:16px; 
+	margin-right:5px;
+	cursor:default;
+}
+.gcHold .textBig a, .gcHold .textMid a{ 
+	color:#0066CC; 
+	text-decoration:none;
+}
+.gcHold .addressHold ul { 
+	float:left; 
+	padding-left:0; 
+	margin:12px 0 0;
+}
+.gcHold ul.address li{ 
+	list-style:none; 
+	line-height:22px; 
+	padding-left:27px;
+} 
+.gcHold ul.address li:nth-child(2n+1){ 
+	background:url(https://s3.amazonaws.com/smb-webform/gcontextualgadget/location24.png) left top no-repeat;
+}
+.gcHold ul.address li:nth-child(2n+3){ 
+	background:url(https://s3.amazonaws.com/smb-webform/gcontextualgadget/email24.png) left center no-repeat;
+}
+.gcHold ul.address li:nth-child(2n+2){ 
+	background:url(https://s3.amazonaws.com/smb-webform/gcontextualgadget/phone24.png) left top no-repeat;
+} 
+.cld2{ 
+	clear:both; 
+	display:block; 
+	height:1;
+}
+.gcHold .btnLtBlue{ 
+	display:inline-block; 
+	margin-top:15px; 
+	padding:3px 8px; 
+	margin-right:10px; 
+	border:1px solid #aedcfa; 
+	background:#dfedf7; 
+	color:#187ac8; 
+	border-radius:3px; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px;
+}
+.gcHold .btnLtBlue a{
+	color:#187ac8; 
+	text-decoration:none;
+}		
+.gform{
+	font-family:arial,sans-serif;
+	font-size:80%;
+	font-weight:lighter;
+}
+.gform > div, .gform fieldset div{ 
+	padding:5px; 
+	/*border:1px solid #ccc; */
+	margin:2px 0; 
+	display:table;  
+	width:99%; 
+   /*min-width:400px;
+	max-width:400px;*/ 
+	position:relative
+}
+.gform  div  label{
+	width:20%; 
+	font-weight:bold;
+	font-size:13px;
+	padding-right:2%;
+	display:inline-block; 
+	text-indent:3px; 
+	vertical-align:middle;  
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align:right;
+	float:left;
+	line-height:28px;
+}
+.gform > div > label + textarea{ 
+	width:50%; 
+	display:inline-block; 
+	padding:5px; 
+	vertical-align:middle; 
+	border:1px solid #999; 
+	margin-left:0px;
+	vertical-align:top !important;
+	min-height:100px;
+	float:left;
+}
+.gform fieldset{
+	border:1px solid #999; 
+	margin:2px 0; 
+	/*width:auto;*/
+	padding:10px; 
+	border-radius:3px; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px;
+}
+.gform fieldset legend{ 
+	color:#058ae5; 
+	font-size:120%;
+}
+.gform input[type="text"],.gform input[type="email"]{ 
+	text-indent:5px;
+}
+.gform input[type=checkbox][disabled] + label { 
+	background-position : 0 -71px!important; 
+	color:#999999;
+}
+.gform input[type="text"], 
+.gform input[type="email"], 
+.gform select{ 
+	border:1px solid #999; 
+	border-radius:3px; 
+	display:inline-block; 
+	width:50%;  
+	height:22px; 
+	line-height:22px; 
+	padding:0; float:left;
+} 
+.gform select{ 
+	width:50% !important; 
+	line-height:normal !important; 
+	padding-right:0px;
+}
+.gform textarea{ 
+	border:1px solid #999; 
+	border-radius:3px; 
+	/*width:190px;*/  
+	display:inline-block;  
+	padding:5px; 
+	overflow:auto; 
+	resize: none !important;  
+	word-wrap:break-word; 
+	text-wrap:unrestricted;
+}
+.gform input[type="text"]:focus,
+.gform input[type="email"]:focus, 
+.gform select{ 
+	outline: none;
+}
+.gform .bluebtn{
+	background: #058AE5; 
+	adding:5px 8px;color:#FFFFFF; 
+	border:1px solid #058ae5; 
+	border-radius:3px; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px; 
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+	font-size:120%;
+	cursor:pointer;
+}
+.gform .transbluebtn{
+	background: transparent; 
+	padding:5px 8px;
+	color:#058ae5; 
+	border:0 none; 
+	font-size:120%;
+	cursor:pointer;
+}
+ .inbox_btn {
+	display:inline-block; 
+	padding:3px 8px; 
+	margin-right:10px; 
+	border:1px solid #aedcfa; 
+	background:#dfedf7; 
+	color:#187ac8; 
+	border-radius:3px;
+	-moz-border-radius:3px; -webkit-border-radius:3px;
+	cursor: pointer;
+	font-family:Arial, Helvetica, sans-serif; font-size:12px;
+}
+
+.inbox_frm_btn {
+	display:inline-block; 
+	background:#058ae5;	
+	border: 0px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font: bold 12px arial, verdana;
+	padding: 3px 8px;
+	height:30px;
+}
+
+.inbox_view{
+	background-color: #058ae5;
+	border: 1px solid #ffffff;
+	padding: 4px 0px 0;
+	font-family: Arial, sans serif;
+	height:30px;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+/*Added on 3-8-2015*/
+#tabsAB {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    zoom: 1;
+    position: relative;
+    top: 2px;
+    z-index: 1;
+}
+#tabsAB li {
+    display: block;
+    list-style: none;
+    margin: 0;
+	margin-right:0px; /* show arrow */
+    padding: 0;
+    float: left;
+	
+	padding: 6px 10px;
+	border-top: 1px solid #95C2EF;
+	border-bottom: 1px solid #95C2EF;
+    text-align: center;
+    color: #000000;
+    height: 17px;
+    width: 110px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: visible;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;	
+	cursor:pointer;
+}
+.currentAB {
+    background: #ffffff;
+    color: #000000;
+    border-bottom: 2px solid #ffffff !important;
+	position: relative;
+}
+.currentAB:after, .currentAB:before {
+	left: 100%;
+	top: 49%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.currentAB:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #ffffff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.currentAB:before {
+	border-color: rgba(149, 194, 239, 0);
+	border-left-color: #95C2EF;
+	border-width: 17px;
+	margin-top: -17px;
+}
+
+.arrow_box {
+	position: relative;
+	background-color: #e8eff7;
+	border: 0px solid #95C2EF;
+}
+.arrow_box:after, .arrow_box:before {
+	left: 100%;
+	top: 47%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.arrow_box:after {
+	border-color: rgba(232, 239, 248, 0);
+	border-left-color: #e8eff8;
+	border-width: 15px;
+	margin-top: -15px;
+}
+.arrow_box:before {
+	border-color: rgba(149, 194, 239, 0);
+	border-left-color: #95C2EF;
+	border-width: 17px;
+	margin-top: -17px;
+}
+.tab-section {
+    padding: 10px;
+    border-top: 2px solid #95C2EF;
+}
+
+/*17-09-2015*/
+.button-group,
+.button-group li{
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+.button-group{
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  padding: 7px;
+  border-radius: 0px; 
+}
+
+.currentToggle{
+  font-size: 18px;
+  border-radius: 0; 
+  background-color : #CCCCCC; 
+}
+
+.button{
+  font-size: 18px;
+  border-radius: 0; 
+  background-color : #ffffff; 
+}
+
+.leadScore{
+	margin:5px;
+	background-color:#ffffff;
+	border:1px solid #cdcdcd;
+	cursor:default;
+	padding:5px;
+}
+
+
+/***********************	START	: This section used for Notification Popup	*****************************************/
+.contain {
+  max-width : 600px;
+  width : 600px;	
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+}
+.notificationicon {
+  height: 0px;
+  position: absolute;
+  top: -8px;
+  left: 130px;
+}
+.notifications {
+  max-width: 600px;
+  width: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0px;
+  box-shadow: 0px 0px 20px #666;
+  position: absolute;
+  opacity: 1;
+  top: 25px;
+  transition: .2s;
+  opacity: 0;
+  left: 100px;
+}
+.notifications.open {
+  opacity: 1;
+  transition: .2s;
+}
+.notifications li {
+  padding: 5px;
+  list-style-type: none;
+}
+.notifications li.titlebar {
+  border-bottom: 1px solid #ccc;
+  color: #626464;
+  font-size: 12px;
+  cursor: inherit;
+  padding: 5px 5px;
+  text-align: left;
+  font-family: normal 12px/22px arial,verdana;
+}
+.notificationTitle{
+	color: #626462;
+}
+.notifications li.seeall {
+  text-align: center;
+  font-size: 12px;
+  min-height: 10px;
+  text-transform: uppercase;
+  position: relative;
+  border-top: 1px solid #ccc;
+}
+.notifications li.seeall a {
+  background: #FFF;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  color: #626464;
+  padding-top: 4px;
+  font-family: normal 14px/22px arial,verdana;
+}
+.notifications .notifbox li.unread {
+  background: #f1f1f1;
+}
+.notifications .notifbox li.notif .messageblock {
+  max-width: 600px;
+  width: auto;
+  position: relative;
+  font-size: 12px; 
+  text-align: left;
+  color: #626464;  
+  font-family: normal 12px/22px arial,verdana;
+}
+.message{
+  max-width : 600px; 
+  max-height : 200px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+/***********************	END		: This section used for Notification Popup	*****************************************/
+
+
+/***********************	START	: This section used for Marketing Automation Builder	*****************************************/
+
+.main_heading {
+	padding: 8px 15px 1px 15px;
+    color:darkgrey;
+    min-height:40px;	
+/*     background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 ); */
+}
+.heading_text {
+	float:left;
+	width:100%;	
+}
+.heading_text h1 {
+	color:#0589E5;
+	/*color:#FFFFFF;*/
+	font-weight:bold;
+	font-size:18pt;
+	padding:0;
+	margin:0;
+}
+.heading_text h4 {
+	color: #86AEDC;
+	/*color:#FFFFFF;*/
+	font-weight:bold;
+	font-size:10pt;
+	padding:0;
+	margin:0;
+}
+.button_area {
+	float:right;
+	width:60%;
+}
+.button_area input {
+	float:right;
+	margin-top:8px;
+}
+
+.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+.flexbox-container .left {
+	width: 180px;
+	
+/* 	background: rgba(237,247,255,1);
+	background: -moz-linear-gradient(top, rgba(237,247,255,1) 0%, rgba(196,227,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,247,255,1)), color-stop(100%, rgba(196,227,255,1)));
+	background: -webkit-linear-gradient(top, rgba(237,247,255,1) 0%, rgba(196,227,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(237,247,255,1) 0%, rgba(196,227,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(237,247,255,1) 0%, rgba(196,227,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(237,247,255,1) 0%, rgba(196,227,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edf7ff', endColorstr='#c4e3ff', GradientType=0 ); */
+	
+}
+.flexbox-container .right {
+	/* width: 85%;	 */
+}
+#toolbar {
+	float:left;
+}
+#toolbar .heading {
+	font-size:16px;
+	font-weight:bold;
+	line-height: 20%;
+}
+.window1 {
+}
+/*12th may edited by susmita*/
+#sidebar{
+    width: 160px;
+    height: 400px;
+    border: 0px solid #000;
+    overflow: hidden;
+    margin-top:-23px !important
+}
+#sidebar #menuContainer{
+	background-color: transparent;
+    width: 180px;
+    height: 400px;
+    padding-bottom: 15px;
+    /* overflow: scroll; */
+}
+.menu1 {
+    background-color: transparent;
+    /*border: 1px solid #aaaaaa;
+    box-shadow: 2px 2px 5px #AAAAAA;*/
+    color: black;
+    min-height: 3em;
+    position: absolute;
+    min-width: 5em;
+    margin-left: 15px;
+    left: 0px
+}
+
+.menu_button_container {
+    margin: 0px;
+}
+
+#divToolbarStart .menu_button {
+    padding:4px 0px;
+    font-weight:bold;
+}
+#divToolbarStart .menu_button:hover {
+    color: #0589E5;
+    cursor:pointer;
+}
+
+#divToolbarStart .menu_button img {
+	padding:0px 5px 0px 0px;
+    vertical-align: bottom;
+}
+
+#divToolbarDecision .menu_button {
+    padding:0px 0px;
+    font-weight:bold;
+}
+#divToolbarDecision .menu_button:hover {
+    color: #0589E5;
+    cursor:pointer;
+}
+
+#divToolbarDecision .menu_button img {
+	padding:0px 5px 0px 0px;
+    vertical-align: bottom;
+}
+
+#divToolbarTask .menu_button {
+    padding:7px 0px;
+    font-weight:bold;
+}
+#divToolbarTask .menu_button:hover {
+    color: #0589E5;
+    cursor:pointer;
+}
+
+#divToolbarTask .menu_button img {
+	padding:0px 5px 0px 0px;
+    vertical-align: bottom;
+}
+
+.button_add1 {
+    background-color: #00CC00;
+    float:left;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    padding:2px;
+    height:25px;
+    width:25px;
+    color:grey;
+}
+.button_add1:hover {
+    background-color: #00AA00;
+    color:black;
+}
+.button_remove1 {
+    font-size:9pt;
+    color:darkgrey;
+    border-radius: 30%;
+    box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+    padding:5px;
+    min-width:10px;
+    max-width:15px;
+    text-align:center;
+}
+#removetask1 {
+    color: red;
+}
+#container {
+    position: relative;
+    border: 1px solid #99BBF2;
+    width: 100%;
+    height: 1500px;  
+    overflow: scroll;
+}
+/* .selected{
+    border: 0px solid black;
+    background-color: green;  
+	border: 1px solid #D8D8D8;
+    border-radius: 0.5em;
+    height: auto;
+    vertical-align:middle;
+    box-shadow: 2px 2px 5px #AAAAAA;
+} */
+.action {
+    cursor: move;
+    border: 0px solid black;    
+    height: auto;
+    color: #ffffff;
+    position: absolute;
+    text-align:center; 
+    vertical-align:middle;	
+}
+.actionHeader {
+    border: 0px solid black;
+    background-color: #0E89E3;  
+	border: 1px solid #D8D8D8;
+    border-radius: 0.5em;
+    height: auto;
+    vertical-align:middle;
+    box-shadow: 2px 2px 5px #AAAAAA;
+    
+}
+.actionHeader > div {
+	cursor: move;
+    display: inline-block;
+    padding: 0 3px 0 3px;
+} 
+.action_body {
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    text-align:center;
+    margin-bottom:10px;
+    white-space: nowrap;
+}
+.actionFooter {
+    background: transparent;
+}
+.decision_box {
+    float:left;
+    width: 40px;
+    height: 20px;
+    color: #028744;
+    font-weight:bold;
+    font-size: 12px;
+    border: 0px solid #008FCB;
+    border-radius: 0.5em;
+    /* background-color: #00B3FF; */
+    background:transparent;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 5px #AAAAAA; */
+    text-align:center;
+    padding-top:5px;
+    marging-top:2px;
+}
+.decision_box_no {
+    float:left;
+    width: 40px;
+    height: 20px;
+    color: #ee5a00;
+    font-weight:bold;
+    font-size: 12px;
+    border: 0px solid #008FCB;
+    border-radius: 0.5em;
+    /* background-color: #00B3FF; */
+    background:transparent;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 5px #AAAAAA; */
+    text-align:center;
+    padding-top:5px;
+    marging-top:2px;
+}
+.decision_box_disable {
+    float:left;
+    width: 40px;
+    height: 20px;
+    color: #d3d6d6;
+    font-weight:bold;
+    font-size: 12px;
+    border: 0px solid #008FCB;
+    border-radius: 0.5em;
+    /* background-color: #00B3FF; */
+    background:transparent;
+    cursor: default;
+    /* box-shadow: 2px 2px 5px #AAAAAA; */
+    text-align:center;
+    padding-top:5px;
+    marging-top:2px;
+}
+.tbox
+{
+	border:1px solid #e5e5e5;
+	background:#eeeeee;
+	width:400px;
+/* 	-moz-box-shadow:    1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+	 box-shadow:         1px 2px 2px 2px #eeeeee; */
+	 height:24px;
+	 padding:4px;
+}
+/* .jsplumb-drag-selected {
+	border: 2px solid orange;
+	background-color: gold;
+}
+
+.nu-selection-box {
+    border: 1px dotted #BBB;
+    background: rgba(0, 0, 0, 0.04);
+}
+.nu-selected {
+    border: 5px solid orange;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1);
+    background: #27AE60;
+} */
+.errorClass{
+	width: 250px;
+	background:#FFC4C4;
+}
+.errorClass .qtip-content{
+    font-size: 14px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1;
+}
+.infoClass{
+	width: 250px;
+}
+.infoClass .qtip-content{
+    font-size: 14px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+    color:#0040FF;
+    line-height: 1.2;
+    max-height: 200px;
+    overflow: hidden;
+    text-overflow: elipsis;
+}
+
+/***********************	END	: This section used for Marketing Automation Builder	*****************************************/
+
+/***********************	START	:	This section used for lead score Qtip Notification. Added by Pradyut 2015-12-23. Updated on	2015-12-30	*****************************************/
+.qtip-lead-score-table{
+	width: 100%;
+}
+.qtip-lead-score-table thead{
+	color: rgb(98, 100, 100); 
+	padding : 0px 0px 5px 0px; 
+	font-weight: bold; 
+	column-width: auto; 
+	text-align: left;
+	height: 20px; 
+	display: inline-block; 
+	width:100%;
+}
+.qtip-lead-score-table th{
+	color: #ffffff; 
+	padding : 5px 5px 5px 5px; 
+	background-color: #95c2ef; 
+	border-collapse: separate; 
+	border-spacing: 1px;
+}
+.qtip-lead-score-table tbody{
+	max-height:150px; 
+	display: inline-block; 
+	overflow:auto; 
+	width:100%;
+}
+.qtip-lead-score-table td{
+	padding : 5px 5px 5px 5px; border-spacing: 1px; text-align: left;
+}
+/***********************	END	:	This section used for lead score Qtip Notification. Added by Pradyut 2015-12-23. Updated on	2015-12-30	*****************************************/
+
+.generate_btn{
+	  background: #058ae5 none repeat scroll 0 0;
+      border: 0 none;
+      color: #ffffff;
+      cursor: pointer;
+      font: bold 12px arial,verdana;
+      padding: 9px 7px;
+      text-align: center;
+      margin-left: 3%;	
+}
+
+
+
+/*************************************************************************/
+
+.txtNoBdr1 {
+   resize: none !important;  
+   outline: 0 none; 
+   border:0 none !important; 
+   display:inline-block; 
+   /* padding:5px 0 5px 10px !important; */
+   width:100%;
+   /*text-indent:10px;*/
+   font:12px Arial, Helvetica, sans-serif;
+}
+#inside_page_content1,#inside_page_content_media1,#inside_page_content_import1{ /*width:90%;*/
+	/* margin: 0 4.5%; */
+	display: block;
+	/*padding: 15px;*/
+	padding: 15px 0;
+	width: 100%;
+	/* -moz-border-radius: 10px;
+	-webkit-border-radius: 10px; */
+/* 	border-radius: 10px; */
+}
+.contentDiv1{  
+	border:1px solid #cccccc; 
+	display:block;  
+	width:620px;
+	background-color: #ffffff;
+}
+.imgTaskApp{
+	cursor: default;
+}
+/*css on 18th May*/
+.plusblue{
+	width: 16px;
+	height: 16px; 
+	border: 1px solid rgb(14, 137, 227);
+	margin: 2px auto 0px; 
+	position: relative;
+	font-weight: bold;
+	color: rgb(14, 137, 227);
+	/* cursor: pointer; */
+	border-radius: 12px;
+}
+.questionblue{
+	/* width: 16px;
+	height: 16px; */ 
+	border: 1px solid rgb(14, 137, 227);
+	margin: 2px auto 0px;
+	font-weight: bold;
+	color: rgb(14, 137, 227);
+	cursor: pointer;
+	border-radius: 12px;
+	float: right;
+    position: relative;
+    left: 67%;
+    top: 6px;
+    width: 14px;
+}
+.divHelp{
+	border:1px solid #0E89E3;
+	box-shadow:2px 2px 5px #AAAAAA; 
+	border-radius:4px; 
+	background:#fff;
+	padding: 4px;
+}
+.divHelp span:hover{
+	color: #0E89E3;
+    cursor:pointer;
+}
+
+/*******	START	:	This section used in LinkChildFieldMappingView.jsp ***************************/
+.accountarrow
+{
+    position: relative;
+    top: .2em;
+    font-size: 1.8em;
+    /* margin-left: -4%; */
+    text-align:center;
+}
+.arrow_sprite  {
+	margin:9px 0 0 7px;
+}
+ .arrow_field  {
+ 	margin:9px 0 0 5px;
+ }
+.bar
+{
+    background: #eee;
+    margin-left: 1em;
+    /* padding-top: 10px;
+    width: 63.4%; */
+    margin-bottom: 12px;
+    width:74.1%;
+}
+
+.trash
+{
+    background: #fff none repeat scroll 0 0;
+    float: right;
+    font-size: 2em;
+    height: 64px;
+    line-height: 58px;
+    margin-left: 2em;
+    margin-top: -64px;
+}
+.trash i{
+	position:relative;
+	top:17px;
+	cursor: pointer;
+}
+
+.margintop
+{
+    margin-top: 1%;
+}
+
+.marginleft
+{
+    margin-left: 9em;
+}
+
+.text{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+    margin-right: 15px;
+}
+
+.marginbutton
+{
+    margin-left: 3em;
+}
+
+@media screen and (min-width: 768px) and (max-width:980px)
+{
+
+    .bar
+    {
+        width: 78%;
+    }
+
+    .accountarrow
+    {
+        font-size: 1.5em;
+        margin-left: 5%;
+    }
+
+    .marginleft
+    {
+        margin-left: 9em;
+    }
+
+    .trash
+    {
+        left: 2em;
+        position: relative;
+        top: 0.2em;
+    }
+
+    .margintop
+    {
+        margin-top: 2%;
+    }
+
+    .marginbutton
+    {
+        margin-left: 2em;
+    }
+}
+
+
+@media screen and (min-width:298px) and (max-width:640px)
+{
+    h4
+    {
+        font-size: 14px;
+    }
+
+    .bar
+    {
+        width: 89%;
+    }
+
+    .accountarrow
+    {
+        font-size: 1.5em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .marginleft
+    {
+        margin-left: 0px;
+    }
+
+    .trash
+    {
+        font-size: 1.4em;
+        left: 1em;
+        position: relative;
+    }
+
+    .margintop
+    {
+        margin-top: 2%;
+    }
+
+    .marginbutton
+    {
+        margin-left: 1em;
+    }
+}
+.selectpicker
+{
+    font-size: 12px;
+}
+
+/*******	END	:	This section used in LinkChildFieldMappingView.jsp ***************************/
+
+/*******	START :	This used for Group Details View. Added by Pradyut.s on 2016-07-12	******************************************/
+
+.group_count{
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  border:2px solid #0589E5;
+  /* margin:5% auto 0 auto; */
+  margin:0% auto 0 auto;
+  text-align:center;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.group_chosen_bar{
+	background-color: #fff; 
+	height: 41px;
+	width: 500px;
+	position: fixed;
+	top: 76px;
+	z-index: 1000;
+	border-radius: 0px 0px 5px 5px;
+	border: 1px solid #95c2ef;
+	border-top-color: #fff;
+}
+.group_table_container{
+	width: 100%;
+    padding: 0px 15px 0px 0px;
+    border-spacing: 0;
+}
+.title_td{
+    padding-bottom: 0px !important;
+}
+.group_table_container td{
+	width: 30%;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    vertical-align: top;
+}
+.group_campaign_box{
+   /*  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px; */
+   border-right: 1px solid #ddd;
+}
+.group_campaign_title{
+	padding: 0px 0px 15px 0px;
+    /* height: 30px; */
+    align-items: center;
+    color: rgb(98, 100, 100);
+    font-size: 20px;
+    /* background-color: rgb(149, 194, 239); */
+    margin: 0;
+    min-height: 20px;
+    font: normal 18px arial,verdana;
+    cursor: default;
+    text-align: center;
+}
+.group_data_table{
+	width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+.toggle-btn {
+    font-size: 15px;
+    padding: 13px 0 0;
+    width: 40px;
+    height: 27px;
+    margin: 3px 5px 0px 0px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    color: #000;
+    /* background: #eee; */
+    border: none;
+    border-radius: 100%;
+    -moz-transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+
+.toggle-btn:hover {
+    /* background-color: #cbcbcb; */
+}
+
+.camp_count{
+	font-size: 15px;
+    padding: 2px 0 0;
+    width: 25px;
+    height: 22px;
+    margin: 0px 5px;
+    text-align: center;
+    cursor: default;
+    float: left;
+    color: #000;
+    background: #eee;
+    border: none;
+    border-radius: 100%;
+    -moz-transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+
+.dataTables_paginate{
+	width: 100%;
+    text-align: center;
+}
+.group_menu_ul{
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+}
+.group_menu_li{
+	list-style-type: none;
+	margin: 0 0px 0 0;
+	float: left;
+	padding: 5px;
+}
+.group_menu_li a{
+	text-decoration: none;	
+	/* color: #e1e1e1; */
+	color: #4973AB;
+	float: left;
+}
+
+.group_menu_li a:hover{
+    color: #fff;
+}
+
+.group_menu_li_a{
+    color: #fff !important;
+}
+											/*********************	Start pagination css	*********************************/
+ .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+{
+   /*  	background-color: rgb(139, 195, 74) !important;
+		border-color: rgb(139, 195, 74) !important; */
+    
+    color: #23527c !important;
+    background-color: #eee !important;
+    border-color: #ddd !important;
+}
+
+.pagination
+{
+    display: inline-block;
+    padding-left: 0;
+    margin: 7px 0;
+    border-radius: 4px;
+}
+
+.pagination > li
+{
+    display: inline;
+}
+
+.pagination > li > a, .pagination > li > span
+{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span
+{
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span
+{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover
+{
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover
+{
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.pagination > .disabled > a, .pagination > .disabled > a:focus, .pagination > .disabled > a:hover, .pagination > .disabled > span, .pagination > .disabled > span:focus, .pagination > .disabled > span:hover
+{
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.pagination-lg > li > a, .pagination-lg > li > span
+{
+    padding: 10px 16px;
+    font-size: 18px;
+}
+
+.pagination-lg > li:first-child > a, .pagination-lg > li:first-child > span
+{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.pagination-lg > li:last-child > a, .pagination-lg > li:last-child > span
+{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.pagination-sm > li > a, .pagination-sm > li > span
+{
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span
+{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.pagination-sm > li:last-child > a, .pagination-sm > li:last-child > span
+{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+														/*********************	End pagination css	*********************************/        
+
+/*******	END :	This used for Group Details View. Added by Pradyut.s on 2016-07-12	******************************************/	
+
+.hvr-bounce-to-left a {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0em 0.8em;
+	cursor: pointer;
+	background: #eee;
+	text-decoration: none;
+	color: #555;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	position: fixed;
+	right: 0px;
+	top: 46%;
+	transition: 1s;
+	border-top-left-radius: 5em;
+	border-bottom-left-radius: 5em;
+	border-top-right-radius: 0em;
+	border-bottom-right-radius: 0em;
+	/*line-height: 22px;*/
+	box-shadow: 0px 2px 2px #555;
+	text-decoration: none;
+	margin-top:5px
+}
+
+.hvr-bounce-to-left a:hover {
+	color: white;
+	right: 0px;
+	background: #2098d1;
+	transition: 0.5s;
+	border-top-left-radius: 5em;
+	border-bottom-left-radius: 5em;
+	border-top-right-radius: 0em;
+	border-bottom-right-radius: 0em;
+}
+
+.hvr-bounce-to-left a p.new-label span {
+	content: '?';
+	font-weight:900;
+}
+
+.hvr-bounce-to-left:hover a p.new-label span {
+	display: none;
+}
+
+.hvr-bounce-to-left:hover a p.new-label:after {
+	content: 'Ask a Question';
+	font-weight:900;
+}
+.verifyText {
+	color: #000000;
+	font-size: 14px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.outboundrow{
+  	width:100%; 
+  	padding-bottom:22px; 
+  	margin-bottom:22px
+ }	
+ 
+.box_area {
+    overflow-y:auto;
+    resize:none;
+}				
+.workflow_error_node{
+	border: 2px solid rgb(255, 0, 0);
+}
+.callText{
+	color: #000000;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}

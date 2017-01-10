@@ -1,0 +1,16 @@
+﻿<div class="container-fluid" ng-controller="calendarTabViewCtrl">
+    <div class="sub-menu">
+        <div class="">
+            <ul class="sublist float-left" id="navigationFields">
+                <li ng-repeat="tab in calendarTabs"
+                    ng-class="{
+                                active:isActiveTab(tab.url)
+                            }"
+                    ng-click="onClickTab(tab)">
+                    <a title="{{tab.title}}">  {{tab.title}} </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   <div ng-include="calendarTabUrl"></div>
+</div>

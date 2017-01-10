@@ -1,0 +1,201 @@
+﻿<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+<h4 class="modal-title"> {{modelType.modelName}}</span></h4>
+</div>
+<div class="modal-body" id="modal-body">
+
+          <form name="newAppointment" class="form-horizontal" >
+                    <div class="col-md-6 col-sm-6">
+                  
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right red"><label>Subject</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <input type="text" class="form-control" ng-model="appointmentView.subject" required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        <div class="col-md-3 col-sm-4 col-xs-4 text-right red">
+						
+                            <label>Start date</label>
+							</div>
+                            <div class="col-sm-9">
+                                <p class="input-group">
+                                    <input type="text" ng-click="openCalendar2($event, 'picker4')" class="form-control" datetime-picker="MM/dd/yyyy HH:mm" ng-model="picker4.date" is-open="picker4.open" required />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="select('clear', $event)">
+                                        <span class="glyphicon glyphicon-calendar"></span></button>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+						<div class="col-md-3 col-sm-4 col-xs-4 text-right red">                        
+							<label>End date</label>
+						</div>
+                            <div class="col-sm-9">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" datetime-picker="MM/dd/yyyy HH:mm" ng-click="openCalendar1($event, 'picker3')" ng-model="picker4.date" is-open="picker3.open" required />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openCalendar1($event, 'picker3')"><span class="glyphicon glyphicon-calendar"></span></button>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group ">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right red"><label>Status</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <select class="form-control" ng-model="appointmentView.t_status" required">
+                                    <option value="Cancelled">Cancelled</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Scheduled" selected="selected">Scheduled</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right red"><label>Assign to</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <select class="form-control" ng-model="appointmentView.assign_to" required>
+                                    <option value="Ravi Teja Villa">Ravi Teja Villa</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                  <div class="form-group">
+                            <div ng-repeat="obj in user.reminder track by $index" style="clear: both;">
+                                <div class="col-md-3 col-sm-4 col-xs-4 text-right"> <label ng-show="$index == 0">Reminder</label></div>
+                                <div class="col-md-9 col-sm-8 col-xs-8">
+                                    <div class="col-md-5 col-sm-4 col-xs-4 padd-10">
+                                        <select class="form-control" ng-model="user.reminder[$index].t_reminder_type" ng-options="x for x in reminderType"></select>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2 padd-10">
+                                        <input class="form-control" maxlength="3" type="text" ng-model="user.reminder[$index].t_time_value">
+                                    </div>
+                                    <div class="col-md-4 col-sm-3 col-xs-3 padd-10">
+                                        <select class="form-control" required="required" ng-model="user.reminder[$index].t_time_type" ng-options="x for x in reminderIn"></select>
+                                    </div>
+                                    <div class="col-md-1" style="padding:0px;">
+                                        <img src="../../../images/close_button_datetime.png" ng-click="deleteReminder($index)" title="Remove Reminder" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-9 col-sm-8 col-xs-8" ng-hide="user.reminder.length >= 3" style="margin-left:25%;">
+                                <a ng-click="addReminder()" style="color:blue;">Add a reminder</a>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Company</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                 <p class="input-group">
+								<input class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" ng-model="appointmentView.company" required="" style="" type="text">
+								<span class="input-group-btn">
+									<button type="button" title="Search" ng-click="addSearch()" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+							</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Full Name</label></div>
+                            <div class="col-md-8 col-sm-7 col-xs-7">
+                                <input class="form-control" type="text" ng-model="appointmentView.full_name">
+                            </div>
+                            <div class="col-md-1">
+                                  <a ng-click="emailAlert('')"><img title="Send Email" src="../../../images/icon_email_small.png" style="width: 17px; height: 12px;"></a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Text</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <textarea class="form-control" ng-model="appointmentView.text"> </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Repeat</label></div>
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                               <input type="checkbox" class="form-control" ng-click="taskRepeatReminder('')" ng-model="appointmentView.is_repeat" style="margin:0 5px; width: auto;"/>
+								
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Outlook Sync</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <select class="form-control" ng-model="appointmentView.ol_sync">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-3 col-sm-4 col-xs-4 text-right"><label>Google Sync</label></div>
+                            <div class="col-md-9 col-sm-8 col-xs-8">
+                                <select class="form-control" ng-model="appointmentView.google_sync">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <h4 class="border-bottom">Invite Guests</h4>
+                        </div>
+                        <div class="form-group ">                            
+                            <div class="">
+                                
+                                <autocomplete  options="userList" 
+                                    place-holder="Search options..."
+                                    on-select="onSelect" 
+                                    display-property="name"
+                                    input-class="form-control"
+                                    clear-input="false"></autocomplete>
+
+                                <!-- <input type="text" class="form-control" ng-model="appointmentView.InviteGuest" placeholder="Search by name" /> -->
+                            </div>
+                        </div>
+
+                        <!-- <pre>{{newAppointmentDialog}}</pre> -->
+                        <div>
+                            <h4 class="border-bottom">Attendees</h4>
+                        </div>
+                        <div class="form-group" ng-repeat="data in appointmentView.attendees">
+                            <h4 ng-if="data.owner == 'Yes'">{{data.guest_name}}(Owner)</h4>
+                        </div>
+
+
+                        <div class="form-group">
+                            <h4 class="border-bottom">Add a Note</h4>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-2 col-sm-4 col-xs-4 text-right"><label><b>Type</b></label></div>
+                            <div class="col-md-10 col-sm-8 col-xs-8">
+                                <select class="form-control" ng-model="appointmentView.note_type" ng-options="x for x in newAppointmentDialog.note_types">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-2 col-sm-4 col-xs-4 text-right"><label><b>Note</b></label></div>
+                            <div class="col-md-10 col-sm-8 col-xs-8">
+                                <textarea class="form-control" ng-model="appointmentView.note"> </textarea>
+                            </div>
+                        </div>
+                    </div>
+                      </form>
+                
+</div>
+<div class="form-group text-center">
+    <button type="button"  class="btn_bg1 small_btn" ng-click="newAppointmentSave()">Save</button>
+    <a href="javascript:void(0)" ng-if="modelType.modelName ='Add Appointment'" ng-click="allAppointmentDelete()" style="color: blue; text-decoration: underline; margin-left: 6px;">Delete</a>
+</div>

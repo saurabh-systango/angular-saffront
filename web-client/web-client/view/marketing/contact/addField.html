@@ -1,0 +1,106 @@
+<div class="pop-add-field">
+<div class="modal-content" uib-modal-transclude="">
+<div class="modal-header pop-header">
+    <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Add field</h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+
+  <!--   <pre>{{filedData | json}}</pre> -->
+		<ul class="add-field">
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Field Name</label>						
+ 				
+ 				 <select class="form-control edit-input"  ng-model="fieldName"  ng-change="changeFiledValue();"
+			         data-ng-options="filed as filed.label for filed in fieldList" >
+			         <option value="" > {{filedData.label}} </option>
+			    </select>
+ 			</div>
+			</li>		
+				
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right red">Field Label</label>
+ 				<input type="text" class="edit-input form-control" ng-model="filedData.label" ng-disabled="{{filedData.is_readonly}}">
+ 			</div>
+			</li>		
+			
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Field Type</label>		
+ 				 <select class="form-control edit-input"  ng-model="filedData.list_values" 
+			         data-ng-options="filed as filed.value for filed in filedData.list_values" ng-disabled="{{filedData.is_readonly}}">
+			        <option value="" > {{filedData.field_type}} </option>
+			    </select>
+ 			</div>
+			</li>		
+			
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">List Type</label>							
+ 				 <select class="form-control edit-input"  ng-model="filedData.list_values" 
+			         data-ng-options="filed as filed for filed in filedData.list_type" ng-disabled="{{filedData.is_readonly}}">
+			        <option value="" > {{filedData.list_type}} </option>
+			    </select>
+ 			</div>
+			</li>		
+			
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Default</label>			
+ 				
+ 				<select class="form-control edit-input"  ng-model="filedData.default_value"  ng-if="filedData.field_type == 'list'"
+			         data-ng-options="filed as filed.value for filed in filedData.default_value" ng-disabled="{{filedData.is_readonly}}">
+			        <option value="" > {{filedData.default_value}} </option>
+			    </select>
+ 				<input type="text" class="edit-input form-control" ng-if="filedData.field_type == 'text'" ng-model="filedData.default_value" ng-disabled="{{filedData.is_readonly}}">
+ 			</div>
+			</li>		
+			<li>
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right">Length</label>							
+ 				<input type="text" class="edit-input form-control" ng-model="filedData.field_length" ng-disabled="{{filedData.is_readonly}}">
+ 			</div>
+			</li>		
+			<li style="width: 100%;">
+			<div class="form-group edit-form">		
+ 				<label class="edit-lable text-right" style="width: 14%;">Description</label>						
+				<input class="edit-input form-control" ng-model="filedData.label" style="width: 84%;" type="text" ng-disabled="{{filedData.is_readonly}}">
+ 			</div>
+			</li>
+		</ul>
+		<div class="fild-btn">
+			<input id="btnOk" class="small_btn" value="OK" ng-click="ok();" style="width: 90px;" type="button">
+			<input id="btnListItems" class="small_btn" value="List Items" ng-click="regulerList()" style="width: 90px;" type="button" ng-class="{small_btn_inactive : filedData.field_type == 'text'}" ng-disabled="">
+		</div>
+		<div class="fild-chekbox">		
+ 				<label class="edit-lable text-right"></label>							
+				<p>
+				<span>
+				<input id="chRequired" type="checkbox">
+				<font class="formTextLebelNew">Required</font>
+				</span>
+				<span>
+				<input id="chNonEditable" type="checkbox">
+				<font class="formTextLebelNew">Non Editable</font>
+				</span>
+				<span>
+				<input id="chModifyList" type="checkbox">
+				<font class="formTextLebelNew">Add to this List</font>
+				</span>
+				<span>
+				<input id="chPhoneField" disabled="" type="checkbox">
+				<font class="formTextLebelNew">Phone Field</font>
+				</span>
+				<span>
+				<input id="chEmailField" disabled="" type="checkbox">
+				<font class="formTextLebelNew">Email Field</font>
+				</span>
+				</p>				
+ 			</div>
+	</form>
+</div>
+</div>
+</div>

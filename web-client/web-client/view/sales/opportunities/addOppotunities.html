@@ -1,0 +1,78 @@
+<div class="modal-header pop-header">
+    <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Add Opportunities</h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+        <div class="form-group">
+            <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Name</label></div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <input type="text" class="form-control" ng-model="accounts.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Company</label></div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+			<p class="input-group">
+	<input class="form-control ng-pristine ng-untouched ng-isolate-scope ng-empty ng-invalid ng-invalid-required ng-valid-datetime" datetime-picker="MM/dd/yyyy HH:mm"  ng-model="accounts.company" is-open="picker4.open" required="" type="text"><!-- ngIf: isOpen && showPicker == 'date' --><!-- ngIf: isOpen && showPicker == 'time' -->
+	<span class="input-group-btn">
+		<button type="button" class="btn btn-default" ng-click="addSearch('')"><span class="glyphicon glyphicon-search"></span></button>
+	</span>
+</p>               
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Sales rep</label></div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+             
+          <select class="form-control"  class="form-control" required="required"  ng-model="accounts.salesrep" 
+                    data-ng-options="itme as itme for itme in salesrep">
+                   <option value="" >Ravi Teja villa</option>
+               </select>
+            </div>
+        </div>
+		<div class="form-group">
+            <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Status</label></div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <select class="form-control"  class="form-control" required="required"  ng-model="accounts.note_type" 
+                    data-ng-options="itme as itme for itme in status_type">
+                   <option value="" >Qualified</option>
+               </select>
+
+            </div>
+        </div>        
+        <div class="form-group">
+            <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Opportunity $ </label></div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <input type="text" class="form-control" ng-model="accounts.opportunity">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3 col-sm-3 col-xs-3 text-right red"><label>Close Date</label></div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+
+            <p class="input-group">
+                    <input type="text" class="form-control" datetime-picker="mediumDate" ng-model="picker1.date" is-open="picker1.open" enable-time="false" datepicker-options="picker1.datepickerOptions" close-on-date-selection="false" datepicker-append-to-body="true" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="openCalendar($event, 'picker1')"><span class="glyphicon glyphicon-calendar"></span></button>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="form-group">
+        <div class="col-md-3 col-sm-1"><label></label></div>
+        <div class="col-md-9 col-sm-11">
+            <div class="col-md-5">
+                <input type="checkbox"> <span> Notify Sales rep</span>
+            </div>
+            <div class="col-md-7 col-sm-6  text-right">
+                <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="addOppotunities()">Save</button>
+                <a class="sf-btn-gap" ng-click="Expand()" href="">Expand</a>
+                <a href="" ng-click="customizeOpportunities()">Customize</a>
+            </div>
+        </div>
+    </div>
+</div>

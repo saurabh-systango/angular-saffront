@@ -1,0 +1,129 @@
+<div ng-controller="opportunitiesCtrl">
+   <div class="blue-top-header submenu_area sub-menu">
+      <div class="container-fluid">
+         <div class="col-md-3">
+            <img class="img_wrapper" src="images/no_image.png" width="32px" height="32px">
+            <span>{{detailsData.data.title}}</span>
+         </div>
+         <div class="col-md-9">
+            <ul class="nav edit-list-menu" style="margin: 0px;">
+               <li id="li_{{action}}"  ng-click="actionDetail(action)" ng-repeat="action in detailsData.data.actions"><a href="javascript:void(0);" id="print">{{action}}</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="edit-soical-header">
+      <div class="container-fluid" style="margin-top: -7px;">
+         <div class="col-md-3">
+           </div>
+         <div class="col-md-9">
+            <div id="workflowHeader" style="display: inline-block; width:98%;">
+               <div class="breadcrumb" ng-class="{breadcrumb2 : detailsData.data.workflow.current_stage ===  stages}" ng-repeat="stages in detailsData.data.workflow.stages" ng-click="convert()">
+                  <span ng-click="convertAccountsTemplate()">{{stages}}</span> 
+                  <div class="breadcrumb_blue_arrow"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="list-edit-content">
+      <div class="col-md-3 bg-light-blue">
+         <div id="customizeTag" class="customize">
+            <a href="javascript:void(0);" id="customizeDetailViewFieldList" ng-click="toggle2()"  title="Add/Remove fields from this list">Customize</a>
+            <div class="setupfield_box  text-left" ng-show="visible2">
+               <div class="setupfield_heading_1" align="left">Setup Fields
+                  <span class="tooltip_close" ng-click="CloseMe()">×</span>
+               </div>
+               <p>
+                  Click this box to add more fields. Drag and reorder the fields to change their order.You can select maximum 50 fields.
+               </p>
+               <div class="selects">
+                  <ui-select ng-model="selected" multiple theme="selectize" title="Choose a person" >
+                     <ui-select-match placeholder="Click here to start...">{{$item.label}}</ui-select-match>
+                     <ui-select-choices repeat="obj in fieldList">
+                        {{obj.label}}
+                     </ui-select-choices>
+                  </ui-select>
+                  <input name="" value="Save" ng-click="saveCustomizeFields()" class="btn_bg1" type="button">
+               </div>
+               <div class="form-group">
+                  <span><input id="w_cb" type="checkbox"> Show labels</span>
+                  <span href="javascript:void(0);" ng-click="clickTwit()" title="Click to know more" class="help-button">
+                     <img src="images/icon_info.png" border="0">
+                     <div id="qtip-0" ng-class="class" class="qtip qtip-default  qtip-pos-tl qtip-fixed qtip-pos-tr qtip-focus" style="width: 200px; z-index: 15001; opacity: 1; left: auto; top: 25px; right: 3px;" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="false" data-qtip-id="0">
+                        <div class="qtip-tip" style="background-color: transparent ! important; border: 0px none ! important; width: 8px; height: 8px; line-height: 8px; right: 5px; top: -8px;">
+                           <canvas style="border-style: solid; border-color: transparent rgb(149, 194, 239) rgb(149, 194, 239) transparent; height: 0px; border-width: 4px; top: 0px; right: -4px;" width="8" height="8"></canvas>
+                        </div>
+                        <div class="qtip-titlebar">
+                           <div id="qtip-0-title" class="qtip-title" aria-atomic="true">Detail View</div>
+                           <a class="qtip-close qtip-icon" title="Close" aria-label="Close" role="button"><span class="tooltip_close" ng-click="CloseMe()">×</span></a>
+                        </div>
+                        <div class="qtip-content" id="qtip-0-content" aria-atomic="true">This would create the tasks for the Customer stage</div>
+                     </div>
+                  </span>
+               </div>
+            </div>
+         </div>
+         <ul>
+            <li ng-repeat="filed in detailsData.data.record">
+               <label class="table listview_table">{{filed}}</label>				
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+         </ul>
+      </div>
+      <div class="col-md-6">
+         <div class="col-md-12 smal-tabs">
+            <div id="ts_tabmenu">
+               <ul  class="ui-sortable">
+                  <li ng-repeat="tab in opDetailsTabs" ng-class="{active:isActiveTab(tab.url)}">
+                     <a  style="padding: 0px 10px;" ng-click="onClickTab(tab)" href="javascript:void(0)" title="{{tab.title }}">  {{tab.title | limitTo: '4'}}... </a>
+                     <!-- <span class="close-tab" >x</span> -->
+                  </li>
+               </ul>
+               <img id="imgCustomise" title="Customize Child" alt="Customize Child"  ng-click="toggle()" src="images/icon_setting2.png">
+            </div>
+            <div ng-show="visible">
+               <div style="padding: 5px 0px; font: 13px arial;">Click this box to add more child objects. Drag and reorder the objects to change their position.</div>
+               <ui-select ng-model="person.selected" multiple theme="selectize" title="Choose a person" ng-show="visible">
+                  <ui-select-match placeholder="Click here to start...">{{$item.label}}</ui-select-match>
+                  <ui-select-choices repeat="obj in fieldList">
+                     {{obj.label}}
+                  </ui-select-choices>
+               </ui-select>
+               <div class="btn_bg1 setting-save" style="padding:4px 20px; margin:0;" onclick="saveRelationInfo();" align="center">Save</div>
+               <div ng-include="oppDetailCurrentTab">
+               </div>
+               <div class="clearfix"></div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-3 bg-light-blue">
+         <div style="width:100%; display:block;padding-bottom:10px;" class="taskheader" id="taskHeader">
+            <span style="padding: 0px 0px 0px 20px; font-size: 16px; display: block; color: rgb(77, 77, 77);">Tasks </span>
+            <div style="float:left;padding-top:12px;">
+               <div style="float:left; padding-left:7px;">
+                  <a href="javascript:void(0)" ng-click="addTask('lg')" style="text-decoration:none; color:#4d4d4d"><img src="images/task.png" title="Add Task" alt="Add Task" style="vertical-align:middle; padding-right:5px;"><span style="font-size:14px;" title="Add Task">Add</span>
+                  </a>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+         <div class="appoinment-time" ng-repeat="task in appointment">
+            <div class="time-icon">
+               <img src="images/task.png">
+            </div>
+            <div class="appoinmnet-date">
+               <i class="red">{{task.time}}</i>
+               <b><a ng-click="addTask('lg')">{{task.title}}</a></b>
+               <span>{{task.Sales_repo}}</span>
+            </div>
+            <div class="apponment-icon">
+               <img ng-click="compnynote()" src="images/tick_blue.png" width="14px" style="cursor: pointer;">
+               <img src="images/NextDay.png" style="margin: 2px 4px; cursor: pointer; width: 10px;">
+               <img  ng-click="taskDelete()" src="images/icon_close_black.png" style="margin: 2px 4px; cursor: pointer; width: 11px; height: 11px;">
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+   </div>
+</div>

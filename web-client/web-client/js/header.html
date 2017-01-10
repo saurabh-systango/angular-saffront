@@ -1,0 +1,78 @@
+<div class="container preview"  ng-show="$state.includes('login');"">
+    <div class="row">
+        <div class="col-md-12 logo">
+            <a href="http://www.soffront.com/" target="_blank"><img src="images/soffront_logo.png" alt="Logo" /></a>
+        </div>
+    </div>
+</div>
+
+<div class="container-large preview"  ng-hide="$state.includes('login');" >
+    <div class="row" ng-controller="homeCtrl">
+        <div class="header-top">
+            <div class="col-md-3 logo">
+                <a href="http://www.soffront.com/" target="_blank"><img src="images/soffront_logo-home.png" alt="Logo" />
+                </a>
+                <div class="powered_by">
+                    Powered by
+                    <br>
+                    <a class="ssblack" style="text-decoration: none" href="http://www.soffront.com/" target="_blank">sof<span>front</span></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 h-search">
+                
+                <div class="h-search" ng-init="columnSort= {name:'Accounts'}" >
+                   <div class="header-search">
+                      <span class="search-title">{{columnSort.name}}</span>
+                      <div class="input-group" id="adv-search">
+                         <div class="dropdown  dropdown-lg">
+                            <div class="btn-group" uib-dropdown>
+                               <img src="images/img_down_arrow.png" class="dropIcon" align="absmiddle" uib-dropdown-toggle />
+                               <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                  <li ng-repeat="colname in FilterList | orderBy:'name' ">
+                                     <a href="javascript:void(0)" ng-click="colnameSelected(colname)">{{colname.name}}</a>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+
+                          <input type="text" class="form-control"  ng-model="searchType"   placeholder="Type a keyword and press enter" />
+                         <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                               <button ng-click="searchFilter()">
+                                <img src="images/icon_magnifying.png">
+                               </button>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+				           <span class="advSpan"><a ng-click="advanceSearch()">Advanced</a></span>
+                </div>
+                
+            </div>
+
+            <div class="col-md-3 h-quick-links">
+                <ul class="nav navbar-nav">
+                    <li><a >Help</a>
+                    </li>
+                    <li class="dropdown"  uib-dropdown>
+                   
+				      <a href="" class="btn btn-link" uib-dropdown-toggle >
+				       		Raj Teja Villa
+                            <span class="caret"></span>
+				      </a>
+				      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+				        <li role="menuitem">
+                            <a href="javascript:void(0)"  ng-class="{active:isActiveTab({ url:'view/sales/calendar/calendarModuleView.html'})}" 
+                    ng-click="onClickTab({ url:'view/sales/calendar/calendarModuleView.html'}); addTab({title: 'Calendar/Tasks', url: 'view/sales/calendar/calendarModuleView.html'} )">Calendar</a></li>
+				        <li role="menuitem"><a href="javascript:void(0)" ng-click="logout()">Sign Out</a></li>
+				      </ul>
+				   
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>

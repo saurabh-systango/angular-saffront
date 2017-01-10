@@ -1,0 +1,212 @@
+﻿<div ng-controller="pendingTaskCtrl">
+   <div class="row padd-top">
+      <div class="container-fluid">
+         <div class="col-md-12" style="padding-right:0px;">
+            <a ng-click="createNewTask()"><img src="images/icon_add.png" title="New Task">
+            <span style="color: rgb(0, 0, 0); font-size: 13px; margin: 2px 22px 0px 8px; vertical-align: middle;">New Task</span></a>
+      
+              <select class="listmenu1" ng-model="pendData.user_names">
+               <option value="All">All</option>
+               <option ng-repeat="user in userList" value="{{user.name}}">{{user.name}}</option>
+              </select>
+
+            <a><img src="images/icon_refresh_g.png" title="Refresh" ng-click="refresh()" style="padding-left: 10px;"></a>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="container-large pandding-tasks">
+         <div class="col-md-4">
+            <div class="module">
+               <table class="table td-no-padding"  style="background-color: rgb(243, 182, 180);">
+                  <thead>
+                     <tr>
+                        <th style="background: transparent none repeat scroll 0% 0%; box-shadow: 0px 0px 0px 0px; border-color: rgb(243, 182, 180); font-weight: bold; font-size: 16px; color: rgb(34, 34, 34); padding-top: 8px; padding-bottom: 0px;">
+                           Overdue({{overdue.length}})
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td style="padding: 0px ! important;">
+                           <table width="100%" cellspacing="0" cellpadding="0" border="0" class="list_table">
+                              <tbody>
+                                 <tr>
+                                    <td ng-if="overdue.length == 0">
+                                       No tasks found. 
+                                    </td>
+                                 </tr>
+                                 <tr ng-repeat="data in overdue">
+                                    <td width="96%" valign="top" class="task_content">
+                                       <div class="padndintasks">
+                                          <div class="padndintask">                                    
+                                             <input type="checkbox" valign="top" ng-model="isChecked" ng-click="selectEntity(data.id)"class="listview_checkbox" value="{{data.id}}">
+                                          </div>
+                                          <div class="padndintasklist">     
+                                             <a href="javascript:void(0);" id="company" style="text-decoration: underline;; color: rgb(0, 129, 193);" class="ng-binding">
+                                             <i id="t_dueby" style="cursor: pointer; color: rgb(0, 0, 0);" class="ng-binding">
+                                             {{data.t_dueby}}
+                                             </i>
+                                             </a>
+                                             <a href="javascript:void(0);" id="company" style="text-decoration: none; color: rgb(0, 129, 193);" class="ng-binding">
+                                             <b>
+                                             {{data.company}}&nbsp;</b>
+                                             </a>
+                                             <a href="javascript:void(0);" id="company" style="text-decoration: none; color: rgb(0, 129, 193);" class="ng-binding">
+                                             <b class="case"> {{data.t_name}}</b>
+                                             <b class="case">{{data.t_status}}</b>
+                                             </a>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="module">
+               <table width="100%" cellspacing="0" cellpadding="0" border="0" id="dueTaskModule" style="width: 100%; border: 0px none; background-color: rgb(255, 240, 192);">
+                  <thead>
+                     <tr>
+                        <th style="background: transparent none repeat scroll 0% 0%; box-shadow: 0px 0px 0px 0px; font-weight: bold; font-size: 16px; color: rgb(34, 34, 34); padding-top: 8px; padding-bottom: 0px; border-color: transparent; padding-left: 10px;">
+                           Today ({{today.length}})
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th>
+                           <table width="100%" cellspacing="0" cellpadding="0" border="0" class="list_table">
+                              <tbody>
+                                 <tr>
+                                    <td ng-if="today.length == 0" class="ng-scope" style="color: red; font-weight: normal; padding: 5px 5px 5px 10px;">
+                                       No tasks found. 
+                                    </td>
+                                 </tr>
+                                 <tr ng-repeat="data in today">
+                                    <td>
+                                       <input type="checkbox" valign="top" ng-model="cbRecord" class="listview_checkbox" value="{{data.id}}">
+                                    </td>
+                                    <td width="96%" valign="top" class="task_content">
+                                       <div>
+                                          <table width="100%" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+                                             <tbody>
+                                                <tr>
+                                                   <td valign="top" align="left">
+                                                      <i id="t_dueby"  style="cursor: pointer;">
+                                                      {{data.t_dueby}}
+                                                      </i>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td valign="top" align="left">
+                                                      <a href="javascript:void(0);" id="company"  style="text-decoration: none;">
+                                                      {{data.company}}&nbsp;
+                                                      </a>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td colspan="2" valign="top" align="left"  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                      <a href="javascript:void(0);">
+                                                      {{data.t_name}}
+                                                      </a>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td colspan="2" valign="top" align="left" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                      <b>{{data.t_status}}</b>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </th>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="module">
+               <table class="table">
+                  <thead>
+                     <tr>
+                        <th style="background: transparent none repeat scroll 0% 0%; box-shadow: 0px 0px 0px 0px; font-weight: bold; font-size: 16px; color: rgb(34, 34, 34); padding-top: 8px; padding-bottom: 0px; border-color: transparent; padding-top: 8px;">
+                           Upcoming ({{upcoming.length}})
+                        </th>
+                     </tr>
+                  </thead>
+                  <tr>
+                     <td ng-if="today.length == 0" class="ng-scope" style="color: red; font-weight: normal; padding: 5px; padding-top: 8px;">
+                        No tasks found. 
+                     </td>
+                  </tr>
+                  <tbody>
+                     <table width="100%" cellspacing="0" cellpadding="0" border="0" class="list_table">
+                        <tbody>
+                           <tr ng-repeat="data in upcoming">
+                              <td>
+                                 <input type="checkbox" valign="top" ng-model="cbRecord" class="listview_checkbox" value="{{data.id}}">
+                              </td>
+                              <td width="96%" valign="top" class="task_content">
+                                 <div>
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+                                       <tbody>
+                                          <tr>
+                                             <td valign="top" align="left">
+                                                <i id="t_dueby"  style="cursor: pointer;">
+                                                {{data.t_dueby}}
+                                                </i>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td valign="top" align="left">
+                                                <a href="javascript:void(0);" id="company"  style="text-decoration: none;">
+                                                {{data.company}}&nbsp;
+                                                </a>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" valign="top" align="left"  style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                <a href="javascript:void(0);">
+                                                {{data.t_name}}
+                                                </a>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td colspan="2" valign="top" align="left" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                                                <b>{{data.t_status}}</b>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <div class="side-icon-pop" ng-show="floatButtonShowFlag">
+            <ul>
+               <li><a ng-click="addNote()" ng-show="addNoteFloatFlag"><img src="images/icon_add_notes.png" title="Add Note" /></a></li>
+               <li><a ng-click="complete()"><img src="images/icon_complete.png" title="Complete"/></a></li>
+               <li><a ng-click="forward()"><img src="images/icon_forward.png" title="Reschedule"/></a></li>
+               <li><a ng-click="deletes()"><img src="images/icon_delete.png" title="Delete"/></a></li>
+            </ul>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+   </div>
+</div>

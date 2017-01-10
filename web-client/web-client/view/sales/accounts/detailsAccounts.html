@@ -1,0 +1,263 @@
+<div ng-controller="accountsCtrl">
+   <div class="blue-top-header submenu_area sub-menu">
+      <div class="container-fluid">
+         <div class="col-md-3">
+            <img class="img_wrapper" src="images/no_image.png" width="32px" height="32px">
+            <span>{{detailsData.data.title}}</span>
+         </div>
+         <div class="col-md-9">
+            <ul class="nav edit-list-menu" style="margin: 0px;">
+               <li id="li_{{action}}"  ng-click="actionDetail(action)" ng-repeat="action in detailsData.data.actions"><a href="javascript:void(0);" id="print">{{action}}</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="edit-soical-header">
+      <div class="container-fluid" style="margin-top: -7px;">
+         <div class="col-md-3">
+            <span><img ng-click="clickTwit()" id="imgTwitter" src="images/twitter_1.jpg" title="Click here to see Twitter streams"/></span>
+            <span><img ng-click="clickFb()" src="images/facebook_1.jpg" alt="fb"  title="Click here to see Facebook streams"/></span>
+            <span><img ng-click="clickGp()" src="images/icon_google_plus_square.png" alt="fb" title="Click here to see Google Plus streams"/></span>
+            <span></span>
+            <div ng-class="class" class="SocialMedia_rgtbox1" style="top: 72px;  top: 42px; left: -7px;" id="divSocialMedia">
+               <div class="SocialMedia_droparrow" style="left: 20px;"><img border="0" src="https://srv1.snapshotcrm.com:443/theme/blue/images/NewDesign/droparrow.png" id="imgdroparrow">
+               </div>
+               <div class="social_header_1">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr class="social_heading_1">
+                           <td align="left">Social Streams</td>
+                           <td align="right"><img ng-click="CloseMe()" border="0" title="Close" src="https://srv1.snapshotcrm.com:443/theme/blue/images/cross_Black.png" id="imgSocialClose"></td>
+                        </tr>
+                     </tbody>
+                     <tr>
+                        <td align="center" class="connectFail">
+                           <div align="center" onclick="fnOpenSocialTab('Twitter');" id="btnTwitter" class="social_button2" style="margin:15px 0 0;">Connect to Twitter</div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div ng-class="classFb" class="SocialMedia_rgtbox1" style="top: 72px;  top: 42px; left: -7px;" id="divSocialMedia">
+               <div class="SocialMedia_droparrow" style="left: 44px;"><img border="0" src="https://srv1.snapshotcrm.com:443/theme/blue/images/NewDesign/droparrow.png" id="imgdroparrow">
+               </div>
+               <div class="social_header_1">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr class="social_heading_1">
+                           <td align="left">Social Streams</td>
+                           <td align="right"><img ng-click="CloseMe()" border="0" title="Close" src="https://srv1.snapshotcrm.com:443/theme/blue/images/cross_Black.png" id="imgSocialClose"></td>
+                        </tr>
+                     </tbody>
+                     <tr>
+                        <td align="center" class="connectFail">
+                           <div align="center" onclick="fnOpenSocialTab('Twitter');" id="btnTwitter" class="social_button2" style="margin:15px 0 0;">Connect to Facebook</div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div ng-class="classGp" class="SocialMedia_rgtbox1" style="top: 72px;  top: 42px; left: -7px;" id="divSocialMedia">
+               <div class="SocialMedia_droparrow" style="left:55px;"><img border="0" src="https://srv1.snapshotcrm.com:443/theme/blue/images/NewDesign/droparrow.png" id="imgdroparrow">
+               </div>
+               <div class="social_header_1">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr class="social_heading_1">
+                           <td align="left">Social Streams</td>
+                           <td align="right"><img ng-click="CloseMe()" border="0" title="Close" src="https://srv1.snapshotcrm.com:443/theme/blue/images/cross_Black.png" id="imgSocialClose"></td>
+                        </tr>
+                     </tbody>
+                     <tr>
+                        <td align="center" class="connectFail">
+                           <div align="center" onclick="fnOpenSocialTab('Twitter');" id="btnTwitter" class="social_button2" style="margin:15px 0 0;">Connect to GooglePlus</div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-9">
+            <div id="workflowHeader" style="display: inline-block; width:98%;">
+
+               <div class="breadcrumb" ng-class="{breadcrumb2 : detailsData.data.workflow.current_stage ===  stages}" ng-repeat="stages in detailsData.data.workflow.stages">
+                  <span ng-click="convertAccountsTemplate()">{{stages}}</span> 
+                  <div class="breadcrumb_blue_arrow"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="list-edit-content">
+      <div class="col-md-3 bg-light-blue">
+        <div id="leadscoreDiv" style="float:left;padding-left:15px;padding-top:5px;"><img style="cursor: pointer; padding: 0px 5px 0px 0px; margin-bottom: -3px;" src="images/star0.png" title="Score: 0" border="0">
+		<a id="score" class="customize" style="font-size: 13px; text-align: center; cursor: pointer; text-decoration: underline; display: inline-block; margin: 0px; padding: 0px; vertical-align: bottom;">0</a>
+		</div>
+         <div id="customizeTag" class="customize">
+							
+			<a href="javascript:void(0);" id="customizeDetailViewFieldList" ng-click="toggle2()"  title="Add/Remove fields from this list">Customize</a>
+			<div class="setupfield_box  text-left" ng-show="visible2">
+			<div class="setupfield_heading_1" align="left">Setup Fields
+			<span class="tooltip_close" ng-click="CloseMe()">×</span>
+			</div>
+			<p>
+				Click this box to add more fields. Drag and reorder the fields to change their order.You can select maximum 50 fields.
+			</p>
+       
+			<div class="selects">
+			<ui-select  multiple theme="selectize" title="Choose a person" >
+            <ui-select-match placeholder="Click here to start...">{{$item.label}}</ui-select-match>
+            <ui-select-choices repeat="obj in fieldList">
+            	{{obj.label}}
+            </ui-select-choices>
+            </ui-select>
+             <input name="" value="Save" ng-click="saveCustomizeFields()" class="btn_bg1" type="button">
+			 </div>
+ <div class="form-group">      
+          <span><input id="w_cb" type="checkbox"> Show labels</span>
+	   <span href="javascript:void(0);" ng-click="clickCust()" title="Click to know more" class="help-button">
+      <img src="images/icon_info.png" border="0">
+	  
+  <div id="qtip-0" ng-class="custclass" class="qtip qtip-default  qtip-pos-tl qtip-fixed qtip-pos-tr qtip-focus" style="width: 200px; z-index: 15001; opacity: 1; left: auto; top: 25px; right: 3px;" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="false" data-qtip-id="0">
+  
+    <div class="qtip-tip" style="background-color: transparent ! important; border: 0px none ! important; width: 8px; height: 8px; line-height: 8px; right: 5px; top: -8px;">
+	
+        <canvas style="border-style: solid; border-color: transparent rgb(149, 194, 239) rgb(149, 194, 239) transparent; height: 0px; border-width: 4px; top: 0px; right: -4px;" width="8" height="8"></canvas>
+    </div>
+    <div class="qtip-titlebar">
+        <div id="qtip-0-title" class="qtip-title" aria-atomic="true">Detail View</div><a class="qtip-close qtip-icon" title="Close" aria-label="Close" role="button"><span class="tooltip_close" ng-click="CloseMe()">×</span></a></div>
+    <div class="qtip-content" id="qtip-0-content" aria-atomic="true">This would create the tasks for the Customer stage</div>
+</div>
+
+	  </span>
+    </div>
+		</div>
+		</div>
+         <!-- <pre>{{detailsData.data.fields | json }}</pre> 
+          inline-edit="fields.label" 
+                on-save="updateTodo(fields.label)" 
+                on-cancel="cancelEdit(fields.label)"-->
+         <ul>
+            <!-- <li ng-repeat="fields in detailsData.data.fields">
+                  <label class="table listview_table">{{fields.label}}</label>
+                  <p>
+                     <span>
+                        <img src="images/icon_phone.png" title="Select a main contact">
+                     </span>
+                     <input type="text"  ng-blur="cancel()"  ng-model="fields.name">
+                  </p>
+                  <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li> -->
+            <li>
+      			<div class="dropdown  dropdown-lg">
+   					<div class="btn-group detils-drop" uib-dropdown>
+   						<p>
+
+                        <label class="table listview_table">name</label>			
+   							<span>
+   							<img src="images/img_down_arrow.png" class="dropIcon dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false" align="absmiddle">
+                        </span>{{detailsData.data.record.name}}
+   							<img class="edit-hover-img" src="images/icon_edit.png"/></p>
+   							
+   						   <ul class="drop-menu-box dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+   							<div style="width: 115px; line-height: 16px; font-size: 13px;" class="drop-menu-item selected" title="test12 36" value="0_test12_36" section="full_name">{{fieldetailsData.data.recordds.name}}</div>
+   						   </ul>
+   					</div>
+      			</div>			 
+      		</li>	
+            <li>
+               <label class="table listview_table">phone</label>
+               <p inline-edit="fields.id" on-save="updateTodo(fields.id)" on-cancel="cancelEdit(fields.id)" ><span><img src="images/icon_phone.png" title="Select a main contact"></span>{{detailsData.data.record.phone}} test</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">email</label>
+               <p>{{detailsData.data.record.edit}}</p>
+
+               <label class="table listview_table">Website</label>
+               <p>{{detailsData.data.record.website}}</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">Source</label>
+               <p>{{detailsData.data.record.source}}</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">Industry</label>
+               <p>{{detailsData.data.record.industry}}</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">Sales rep</label>
+               <p>{{detailsData.data.record.Sales_rep}}</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+         </ul>
+      </div>
+      <div class="col-md-6">
+         <div class="col-md-12 smal-tabs">
+		 
+            <div id="ts_tabmenu">
+               <ul  class="ui-sortable">
+                  <li ng-repeat="obj in detailsData.data.child_objects" ng-class="{active:isActiveTab(tab.url)}">
+                     <a  ng-click="onClickTab(tab)" href="javascript:void(0)" title="{{obj.title}}">  {{obj.title | limitTo: '4'}}... </a>
+                     <!-- <span class="close-tab" >x</span> -->
+                  </li>
+               </ul>           
+		
+				<img id="imgCustomise" title="Customize Child" alt="Customize Child"  ng-click="toggle()" src="images/icon_setting2.png">
+		</div>
+      <div ng-show="visible">
+		 <div style="padding: 5px 0px; font: 13px arial;">Click this box to add more child objects. Drag and reorder the objects to change their position.</div>
+		   <ui-select  multiple theme="selectize" title="Choose a person">
+		  
+            <ui-select-match placeholder="Click here to start...">{{$item.title}}</ui-select-match>
+            <ui-select-choices repeat="obj in detailsData.data.child_objects">
+            	{{obj.title}}
+            </ui-select-choices>
+            </ui-select>
+			<div class="btn_bg1 setting-save" style="padding:4px 20px; margin:0;" onclick="saveRelationInfo();" align="center">Save</div>
+		 <div ng-include="accountDetailCurrentTab">
+         </div>
+		<div class="clearfix"></div>
+	</div>
+	</div>
+	</div>
+         
+      <div class="col-md-3 bg-light-blue">
+         <div style="width:100%; display:block;padding-bottom:10px;" class="taskheader" id="taskHeader">
+            <span style="padding: 0px 0px 0px 20px; font-size: 16px; display: block; color: rgb(77, 77, 77);">Tasks and Appointments</span>
+            <div style="float:left;padding-top:12px;">
+               <div style="float:left; padding-left:7px;">
+                  <a href="javascript:void(0)" ng-click="addTask('lg')" style="text-decoration:none; color:#4d4d4d"><img src="images/task.png" title="Add Task" alt="Add Task" style="vertical-align:middle; padding-right:5px;"><span style="font-size:14px;" title="Add Task">Add</span>
+                  </a>
+               </div>
+               <div style="float:left; padding-left:14px;">
+                  <a ng-click="addAppointment('lg')" href="javascript:void(0)" style="text-decoration:none; color:#4d4d4d">
+                  <img src="images/appointment.png" title="Add Appointment" alt="Add Appointment" style="vertical-align:middle; padding-right:5px;"><span style="font-size:14px;" title="Add Appointment">Add</span>
+                  </a>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+
+		<div class="appoinment-time" ng-repeat="task in appoinment">
+			<div class="time-icon">
+				<img src="images/task.png">
+			</div>
+			<div class="appoinmnet-date">
+				<i class="red">task.date</i>
+				<b><a ng-click="addTask('lg')">task.title</a></b>
+				<span>task.Sales_rep</span>
+			</div>
+			<div class="apponment-icon">
+				<img ng-click="compnynote()" title="Complete this Task" src="images/tick_blue.png" width="14px" style="cursor: pointer;">
+				<img src="images/NextDay.png" title="Single-click to Next Day & Double-click to Next Week" style="margin: 2px 4px; cursor: pointer; width: 10px;">
+				<img   title="Delete" ng-click="taskDelete()" src="images/icon_close_black.png" style="margin: 2px 4px; cursor: pointer; width: 11px; height: 11px;">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+      </div>
+   </div>
+</div>

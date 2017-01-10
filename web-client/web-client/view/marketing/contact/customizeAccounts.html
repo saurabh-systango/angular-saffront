@@ -1,0 +1,155 @@
+<div class="modal-header pop-header">
+    <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Customize Accounts</h4>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+
+<ul  ui-on-Drop="onDrop($event,$data,fieldList)">
+    <li ui-draggable="true" drag="fieldList" 
+        on-drop-success="dropSuccessHandler($event,$index,fieldList)"
+        ng-repeat="field in fieldList" >
+        <div class="form-group" ng-if="field.is_hidden_field == false">
+            <div class="col-md-4 text-right">
+                <label>
+                    <a  style="margin-right: 5px;" inline-edit="field.label" on-save="updateTodo(field.label)" on-cancel="cancelEdit(field.label)"><img src="images/edit_report.png"></a>
+                   <!--  {{field.label}} -->
+                </label>
+            </div>
+            <div class="col-md-6">
+ 
+                <select class="form-control"  ng-model="filedData.default_value"  ng-if="field.field_type == 'list'"
+                     data-ng-options="filed as fileds.value for fileds in filed.list_values">
+                    <!-- <option value="" > {{field.default_value}} </option> -->
+                </select>
+
+                <input type="text" class="form-control" ng-if="field.field_type == 'text'" ng-model="filedData.default_value">
+
+                <input type="text" class="form-control" ng-if="field.field_type == 'float'" ng-model="filedData.default_value">
+
+                <input type="date" class="form-control" ng-if="field.field_type == 'datetime'" ng-model="filedData.default_value">
+
+                <input type="date" class="form-control" ng-if="field.field_type == 'url'" ng-model="filedData.default_value">
+                <input type="date" class="form-control" ng-if="field.field_type == 'integer'" ng-model="filedData.default_value">
+                 <input type="date" class="form-control" ng-if="field.field_type == 'memo'" ng-model="filedData.default_value">
+                
+
+            </div>
+            <div class="col-md-2 edit-delt" ng-show="field.is_modify_list">
+                <a  ng-click="editField()">
+                    <img src="images/icon_edit.png" width="12px" height="12px">  
+                </a>
+                <a  ng-click="Fieldelete()">
+                    <img src="images/icon_close.png" style="margin-left: 10px;" width="12px" height="12px">
+                </a>
+            </div>
+        </div>
+    </li>
+</ul>
+  
+
+<!--         <div class="form-group">
+
+            <div class="col-md-4 text-right red">
+             <label><a  style="margin-right: 5px;">
+                 <img src="images/edit_report.png">
+             </a>Workflow Name</label></div>
+             <div class="col-md-6">
+                <input type="text" class="form-control" ng-model="accounts.name">
+            </div>
+        </div>
+        <div class="form-group">
+           <div class="col-md-4 text-right red"><label><a  style="margin-right: 5px;"><img src="images/edit_report.png"></a>Status</label></div>
+           <div class="col-md-6">
+            <select class="form-control" required="required" ng-model="accounts.status">
+                <option value="Lead">Qualified</option>
+                <option value="Prospect">Presentation</option>
+                <option value="Customer">Proposal</option>
+                <option value="Customer">Negotiation</option>
+                <option value="Customer">Close</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="col-md-4 text-right"><label><a  style="margin-right: 5px;"><img src="images/edit_report.png"></a>Company</label></div>
+        <div class="col-md-6">
+         <input type="text" class="form-control" ng-model="accounts.opportunity">
+     </div>
+     <div class="col-md-2 edit-delt">
+        <a  ng-click="editField()"><img src="images/icon_edit.png" width="12px" height="12px">	</a>
+        <a  ng-click="Fieldelete()"><img src="images/icon_close.png" style="margin-left: 10px;" width="12px" height="12px"></a>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-4 text-right red"><label><a  style="margin-right: 5px;"><img src="images/edit_report.png"></a>Sales rep</label></div>
+    <div class="col-md-6">
+        <select class="form-control" required="required" ng-model="accounts.salesrep">
+         <option value="Lead">Ravi Teja villa</option>
+
+     </select>
+ </div>
+ <div class="col-md-2 edit-delt">
+    <a  ng-click="editField()"><img src="images/icon_edit.png" width="12px" height="12px">	</a>
+    <a  ng-click="Fieldelete()"><img src="images/icon_close.png" style="margin-left: 10px;" width="12px" height="12px"></a>
+</div>
+</div>
+<div class="form-group">
+    <div class="col-md-4 text-right"><label><a  style="margin-right: 5px;"><img src="images/edit_report.png"></a>First Name </label></div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" ng-model="accounts.opportunity">
+    </div>
+    <div class="col-md-2 edit-delt">
+        <a  ng-click="editField()"><img src="images/icon_edit.png" width="12px" height="12px">	</a>
+        <a  ng-click="Fieldelete()"><img src="images/icon_close.png" style="margin-left: 10px;" width="12px" height="12px"></a>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-4 text-right"><label><a  style="margin-right: 5px;"><img src="images/edit_report.png"></a>Last Name</label></div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" ng-model="accounts.opportunity">
+
+    </div>
+    <div class="col-md-2 edit-delt">
+        <a  ng-click="editField()"><img src="images/icon_edit.png" width="12px" height="12px">	</a>
+        <a  ng-click="Fieldelete()"><img src="images/icon_close.png" style="margin-left: 10px;" width="12px" height="12px"></a>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-4 text-right"><label><a  style="margin-right: 5px;"><img src="images/edit_report.png"></a>Email</label></div>
+    <div class="col-md-6">
+        <input type="email" class="form-control" ng-model="accounts.opportunity">
+
+    </div>
+    <div class="col-md-2 edit-delt">
+        <a  ng-click="editField()"><img src="images/icon_edit.png" width="12px" height="12px">	</a>
+        <a  ng-click="Fieldelete()"><img src="images/icon_close.png" style="margin-left: 10px;" width="12px" height="12px"></a>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-4 text-right"><label><a  style="margin-right: 5px;"><img src="images/edit_report.png"></a>Phone</label></div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" ng-model="accounts.opportunity">
+
+    </div>
+    <div class="col-md-2 edit-delt">
+        <a  ng-click="editField()"><img src="images/icon_edit.png" width="12px" height="12px">	</a>
+        <a  ng-click="Fieldelete()"><img src="images/icon_close.png" style="margin-left: 10px;" width="12px" height="12px"></a>
+    </div>
+</div> -->
+</form>
+</div>
+<div class="modal-footer ng-scope" style="padding-top: 0px; padding-bottom: 40px;">
+    <div class="form-group">
+        <div class="col-md-3 col-sm-1"><label></label></div>
+        <div class="col-md-9 col-sm-11">
+            <div class="col-md-5 text-left">
+             <a ng-click="addField()" style="font-weight: bold; color: rgb(52, 0, 238); text-decoration: underline;">Add Field</a> 
+         </div>
+         <div class="col-md-5 col-sm-6  text-right">
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="ok()">Save</button>
+            <a class="transbluebtn" ng-click="()" href="">Cancel</a>                
+        </div>
+    </div>
+</div>
+</div>

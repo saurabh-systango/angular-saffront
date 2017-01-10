@@ -1,0 +1,37 @@
+<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title">Assign</h4>
+</div>
+<div class="modal-body" id="modal-body">
+	<div class="form-group">	
+		<label class="gray">Select a user</label>
+		<div>
+			<!-- <select  ng-model="username"  class="form-control"
+			     data-ng-options="user as user.name for user in userList">
+			    <option value=""> Click here to start</option>
+			</select> -->
+
+			  <ui-select ng-model="selectedUser" theme="select2" style="min-width: 300px;">
+			    <ui-select-match placeholder="Click here to start...">{{$select.selected.name}}</ui-select-match>
+			    <ui-select-choices repeat="person in userList">
+			      <div ng-bind-html="person.name"></div>
+			     
+			    </ui-select-choices>
+			  </ui-select>
+  
+		</div>
+
+	</div>
+	<br>
+	<div class="form-group">	
+		<label class="gray">Add a Note (optional)</label>
+		<div><textarea id="flyNote" ng-model="flyNote" makedisable="false" class="chosen-single chosen-default form-control textareaboxWhite"></textarea>	</div>
+	</div>	
+</div>
+<div class="modal-footer text-left" style="text-align: left; padding-top: 0px;">
+    <button type="button" id="btnSave" name="btnSave" class="small_btn" ng-click="assignAccount()" >	Apply
+    </button>  
+    <input id="sendEmail" ng-model="sendEmail" type="checkbox" ng-checked="true" >
+	<span class="formTextLebelNew">Send email</span>
+  
+</div>

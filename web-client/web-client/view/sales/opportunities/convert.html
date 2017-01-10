@@ -1,0 +1,64 @@
+<div class="modal-content">
+  <div class="modal-header pop-header">
+    <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Convert</h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label class="gray">Converting {{disable}} to</label>
+      <input type="hidden" ng-model="cntdata.disable">
+
+     <!--  ng-model="cntdata.changed_status" -->
+      <select class="form-control sm-input" required="required" >  
+         <option value="{{stages}}" ng-repeat="stages in converData.data.stages">{{stages}}</option>
+      </select>
+      <span><input ng-model="cntdata.is_create_next_task" type="checkbox" ng-checked="true">   Create next tasks</span>
+	   <span href="javascript:void(0);" ng-click="clickTwit()"  title="Click to know more" class="help-button"><img src="images/icon_info.png" border="0">
+	  
+  <div id="qtip-0"  ng-class="class" class="qtip qtip-default  qtip-pos-tl qtip-fixed qtip-pos-tr qtip-focus" style="width: 200px; z-index: 15001; opacity: 1; left: auto; top: 25px; right: 3px;" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="qtip-0-content" aria-hidden="false" data-qtip-id="0">
+  
+    <div class="qtip-tip" style="background-color: transparent ! important; border: 0px none ! important; width: 8px; height: 8px; line-height: 8px; right: 5px; top: -8px;">
+	
+        <canvas style="border-style: solid; border-color: transparent rgb(149, 194, 239) rgb(149, 194, 239) transparent; height: 0px; border-width: 4px; top: 0px; right: -4px;" width="8" height="8"></canvas>
+    </div>
+    <div class="qtip-titlebar">
+        <div id="qtip-0-title" class="qtip-title" aria-atomic="true">Create Tasks Info</div><a class="qtip-close qtip-icon" title="Close" aria-label="Close" role="button"><span class="tooltip_close" ng-click="CloseMe()" >×</span></a></div>
+    <div class="qtip-content" id="qtip-0-content" aria-atomic="true">This would create the tasks for the Customer stage</div>
+</div>
+
+	  </span>
+    </div>
+    <div class="form-group">
+      <label class="gray">Complete pending tasks (optional)</label>
+             
+        <div ng-repeat="album in converData.data.pending_tasks">
+          <span> <input type="checkbox" ng-model="album.selected" ng-checked="true" checked="checked"ng-true-value={{album.id}} /> {{album.name}}</span>
+        </div>
+      
+    </div>
+    <div class="form-group">
+      <label for="comment" class="gray">Add a note (optional)</label>	
+      <textarea class="form-control" rows="4" id="comment" ng-model="cntdata.note_text"></textarea>
+
+    </div>
+	<div class="form-group"> 
+      <label class="gray">Update account status to (optional)</label> 
+      <div>
+         <span>
+
+         <input  ng-model="cntdata.child_status"  type="checkbox" value={{cntdata.child_object}} style="margin-left: 0px;">Update with</span> 
+
+         <select  class="form-control sm-input" required="required" ng-model="cntdata.child_object" 
+              data-ng-options="itme as itme for itme in converData.data.child_object_stages">
+             <option value=""> &lsaquo; None  &rsaquo;</option>
+         </select>
+      </div>
+   </div>
+  </div>  
+<div class="modal-footer">
+   <div class="form-group">     
+      <div class="col-md-12 col-sm-12 text-center">
+         <button type="submit" id="btnSave" name="btnSave" class="small_btn" ng-click="convertSave()">Convert</button>
+      </div>
+   </div>
+</div>

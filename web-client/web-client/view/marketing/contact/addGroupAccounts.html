@@ -1,0 +1,36 @@
+  <div id="addto_group">
+  	<div class="">
+  		<!-- Modal content-->
+  		<div class="">
+  			<div class="modal-header pop-header">
+  				<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">&times;</button>
+  				<h4 class="modal-title">Add To Group</h4>
+  			</div>
+  			<div class="modal-body">
+  				<div class="form-group" style="height: 150px">							
+  					<h4>Select one or more groups</h4> 
+  					{{multipleDemo.colors}}
+            <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="colors" theme="bootstrap" sortable="true"  title="Choose a groups">
+              <ui-select-match placeholder="Select group...">{{$item}}</ui-select-match>
+              <ui-select-choices repeat="color in availableColors">
+                {{color}}
+              </ui-select-choices>
+            </ui-select>
+
+  				</div>
+
+  				<div class="text-left">
+  				<input name="" value="Apply" onclick="saveSetupView()" class="small_btn" type="button"> 
+            <label ng-show="addToGroupHereFlag">Click 
+              <a style="color:blue;" ng-click="addToGroupHere()">
+                here
+              </a> to add a new group.
+            </label>
+            <input class="form-control with-10" type="text" ng-show="!addToGroupHereFlag">
+            <input type="button" value="Save" style="margin-left: 2px;" class="small_btn" ng-show="!addToGroupHereFlag">
+            <input type="button" value="Cancel" style="margin-left: 2px" class="small_btn" ng-click="addToGroupHereFlagCancel()" ng-show="!addToGroupHereFlag">
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>

@@ -1,0 +1,25 @@
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+@media print {
+    body * {
+        display:none;
+    }
+    #printSection, #printSection * {
+        display: inline;
+    }
+    div{
+        color:red;
+    }
+
+    #printSection {
+        position:absolute;
+        left:0;
+        top:0;
+    }
+
+    
+}

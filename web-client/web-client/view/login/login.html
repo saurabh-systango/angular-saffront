@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="login">
+
+            <form name="loginForm" ng-submit="submitForm(loginForm.$valid)" novalidate>
+        
+                <h2 class="form-signin-heading">Welcome Back!</h2>
+                <p class="red">{{msg}}</p>
+                <div class="form-group" ng-class="{ 'has-error' : loginForm.email.$invalid && !loginForm.email.$pristine }">
+                    <label>Email address <span class="red">*</span></label>
+                    <input type="email" name="email" class="form-control login_textbox" ng-model="user.email" placeholder="Email address">
+                    <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+                    <label>Password <span class="red">*</span></label>
+                    <input type="password" name="password" class="form-control login_textbox" ng-model="user.password" placeholder="Password" required>
+                    <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block">You password is required.</p>
+                </div>
+                
+                <div class="checkbox">
+                    <label>
+                        Remember Email address<input type="checkbox" value="remember-me" ng-model="rememberMe">
+                    </label>
+                    <p class="forgot-password"><a ui-sref="forgotpassword" >Forgot password?</a></p>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid">Login</button>
+                
+            </form>
+        </div>
+    </div>
+</div> 

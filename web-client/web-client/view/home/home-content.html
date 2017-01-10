@@ -1,0 +1,53 @@
+<div class="header-bottom" ng-controller="homeCtrl">
+    <div class="home-content margin-40">
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_marketing.png" /></span>
+            <h3>Marketing</h3>
+            <ul>
+                <li ng-repeat=" it in moduleItem">
+                    <a href="javascript:void(0)" title="{{ it.name }}">
+                        {{ it.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_sales.png" /></span>
+            <h3>Sales</h3>
+            <ul>
+
+                <li ng-repeat=" it in moduleItem2" ng-click="addTab(it);">
+                    <a href="javascript:void(0)" title="{{ it.name }}">
+                        {{ it.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_services.png" /></span>
+            <h3>Service</h3>
+            <ul>
+                <li ng-repeat=" it in moduleItem3">
+                    <a href="javascript:void(0)" title="{{ it.name }}">
+                        {{ it.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_setting.png" /></span>
+            <h3>Settings</h3>
+            <ul>               
+                <li ng-repeat=" it in moduleItem4">
+                    <a href="javascript:void(0)" title="{{ it.name }}">
+                        {{ it.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

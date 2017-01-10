@@ -1,0 +1,81 @@
+<div class="modal-header pop-header">
+    <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Regular List</h4>
+</div>
+<div class="modal-body" id="modal-body">
+<div class="" style="height:36\9;">
+	<table cellspacing="0" cellpadding="0">	
+		<tbody><tr>
+			<td align="left">
+				<div class="small_btn"  ng-click="regularAdd()" >Save</div>
+			</td>
+			<td>
+			</td>
+		</tr>
+	</tbody></table>	
+</div>
+<div id="inside_page_content" style="padding:0px;margin: 0; background: none; margin-top:20px; "> 
+<div class="table_area">
+<fieldset style="width:90%; border: 1px solid #a9b0c3;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+	<td width="95%">
+		<table style="width:100%;" cellspacing="0" cellpadding="0" border="0">
+		<tbody><tr>
+			<td>
+				<font class="formTextLebelNew">Add an Item:</font>
+				<input id="aValue" class="textbox9" style="width:100%;" onkeydown="return keyPress(event);" maxlength="128" type="text">
+			</td>
+			<td align="center">
+				<table style="width:100%; " cellspacing="0" cellpadding="0" border="0">
+				<tbody><tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<input class="small_btn" style="width:80px;"  ng-click="regularAdd()"  value="Add" type="button">
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<input class="small_btn" style="width:80px;"  ng-click="regularRemove()"  value="Remove" type="button">
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				</tbody></table>
+			</td>
+			<td valign="middle">
+				<select id="values" name="values" class="listmenu1" size="5" style="width:160px;height:200px;"></select>
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+	<td id="moveSection">
+		<table width="100%" cellspacing="0" cellpadding="5" align="center">
+		<tbody><tr>
+			<td width="100%" align="center">
+				<a class="cursorHand">
+					<img src="images/PortalUp.gif" alt="Up" title="Up"  ng-click="regularUP()"  border="0">
+				</a>				
+			</td>
+		</tr>
+		<tr>
+			<td width="100%" align="center">
+				<a class="cursorHand">
+					<img src="images/PortalDown.gif" alt="Up" title="Down"  ng-click="regularDown()"  border="0">
+				</a>				
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+</fieldset>
+</div> 
+</div>
+</div>
+<div class="modal-footer">
+    
+</div>

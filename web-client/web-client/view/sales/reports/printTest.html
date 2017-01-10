@@ -1,0 +1,234 @@
+<button id="print">Print All</button>
+
+<div id="container1" style="width:400px; height: 220px;"></div>
+<div id="container2" style="width:400px; height: 220px;"></div>
+<script  type="text/javascript" >
+
+console.log('javascriptTest');
+ var chart1, chart2, chart3;
+        $(document).ready(function () {
+            //--------------------------------------------------------------------
+            chart1 = new Highcharts.chart({
+                        chart: {
+                            type: $scope.activityReport.activity_by_salesrep.chart_type,
+                            renderTo: 'container',
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        title: {
+                            text: $scope.activityReport.activity_by_salesrep.title,
+                            align: 'left',
+                            x: 60,
+                            style: {
+                                color: '#058AE5',
+                                fontSize: '24px'
+                            }
+                        },
+
+                        tooltip: {
+                            formatter: function () {
+                                return '<b>' + this.x + '</b> : ' + this.y
+                            }
+                        },
+
+                        xAxis: {
+                            categories: $scope.activityReport.activity_by_salesrep.categories,
+                            labels: {
+                                useHTML: true,
+                                formatter: function () {
+                                    return '<div class="hastip" title="' + this.value + '">' + this.value + '</div>';
+                                }
+                            }
+
+                        },
+                        yAxis: {
+                            title: {
+                                text: $scope.activityReport.activity_by_salesrep.y_axis_name
+                            }
+                        },
+                        plotOptions: {
+                            series: {
+                                pointWidth: 35
+                            },
+                            column: {
+                                events: {
+                                    legendItemClick: function () {
+                                        return false; // <== returning false will cancel the default action
+                                    }
+                                },
+                            },
+                            allowPointSelect: false,
+                        },
+                        series: [{
+                            name: $scope.activityReport.activity_by_salesrep.x_axis_name,
+                            data: $scope.score1
+                        }]
+
+                    });
+
+
+
+                    chart2 = new  Highcharts.chart({
+                        chart: {
+                            renderTo: 'container1',
+                            type: $scope.activityReport.activity_by_type.chart_type
+
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        title: {
+                            text: $scope.activityReport.activity_by_type.title,
+                            align: 'left',
+                            x: 60,
+                            style: {
+                                color: '#058AE5',
+                                fontSize: '24px'
+                            }
+                        },
+
+                        xAxis: {
+                            categories: $scope.activityReport.activity_by_type.categories,
+                            labels: {
+                                useHTML: true,
+                                formatter: function () {
+                                    return '<div class="hastip" title="' + this.value + '">' + this.value + '</div>';
+                                }
+                            }
+                        },
+
+                        yAxis: {
+                            title: {
+                                text: $scope.activityReport.activity_by_type.y_axis_name
+                            }
+                        },
+
+                        tooltip: {
+                            formatter: function () {
+                                return '<b>' + this.x + '</b> : ' + this.y
+                            }
+                        },
+
+                        plotOptions: {
+                            series: {
+                                pointWidth: 35
+                            },
+                            column: {
+                                events: {
+                                    legendItemClick: function () {
+                                        return false; // <== returning false will cancel the default action
+                                    }
+                                },
+                            },
+                            allowPointSelect: false,
+                        },
+
+                        series: [{
+                            name: $scope.activityReport.activity_by_type.x_axis_name,
+                            data: $scope.score
+
+                        }]
+
+                    });
+                })
+                    .catch(function () {
+                        console.log('error');
+                    });
+
+
+            }
+
+
+            //--------------------------------------------------------------------
+            // chart2 = new Highcharts.Chart({
+            //     chart: {
+            //         renderTo: 'container2',
+            //         type: 'column',
+            //         shadow: true
+            //     },
+            //     title: { text: 'Inventory' },
+            //     xAxis: {
+            //         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            //     },
+            //     yAxis: { title: { text: '$'} },
+            //     series: [{
+            //         data: [176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4, 29.9, 71.5, 106.4, 129.2, 144.0]
+            //     }]
+            // });
+
+            //--------------------------------------------------------------------
+            chart3 = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container3',
+                    type: 'spline',
+                    shadow: true
+                },
+                title: { text: 'Expenses' },
+                xAxis: {
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                },
+                yAxis: { title: { text: '$'} },
+                series: [{
+                    name: 'Target',
+                    data: [36, 40, 51, 55, 60, 60, 70, 80, 80, 80, 60, 40]
+                }, {
+                    name: 'Actual',
+                    data: [45, 48, 56, 65, 62, 60, 78, 89, 88, 90, 55, 43]
+                }]
+
+            });
+
+
+            //--------------------------------------------------------------------
+            $("#print").click(function () {
+                printCharts([chart1, chart2, chart3]);
+            });
+
+
+            //--------------------------------------------------------------------
+            function printCharts(charts) {
+
+                var origDisplay = [],
+                    origParent = [],
+                    body = document.body,
+                    childNodes = body.childNodes;
+
+                // hide all body content
+                Highcharts.each(childNodes, function (node, i) {
+                    if (node.nodeType === 1) {
+                        origDisplay[i] = node.style.display;
+                        node.style.display = "none";
+                    }
+                });
+
+                // put the charts back in
+                $.each(charts, function (i, chart) {
+                    origParent[i] = chart.container.parentNode;
+                    body.appendChild(chart.container);
+                });
+
+                // print
+                window.print();
+
+                // allow the browser to prepare before reverting
+                setTimeout(function () {
+                    // put the chart back in
+                    $.each(charts, function (i, chart) {
+                        origParent[i].appendChild(chart.container);
+                    });
+
+                    // restore all body content
+                    Highcharts.each(childNodes, function (node, i) {
+                        if (node.nodeType === 1) {
+                            node.style.display = origDisplay[i];
+                        }
+                    });
+                }, 500);
+            }
+        });
+
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>

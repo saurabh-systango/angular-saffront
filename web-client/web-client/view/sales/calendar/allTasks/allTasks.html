@@ -1,0 +1,154 @@
+﻿<div ng-controller="allTasksCtrl">
+   <div class="sub-menu" >
+      <div class="container-large">
+         <div class="btn-group" uib-dropdown>
+            <div  class="btn btn-link" uib-dropdown-toggle>
+
+               <span  class="title"  ng-init="filterSort= {name:'All Tasks'}" title="{{filterSort.name}}  ">
+                  {{filterSort.name}}  
+                  <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img" >
+                  <img src="images/submenu_arrow.png" class="arrow">
+               </span>
+            </div>
+            <ul class="dropdown-menu account appoitment" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                     <div class="account">
+              <li class="field ui-tab accoun-list-drop">
+                <div class="drop-accoun-title">
+                    <a href="javascript:void(0)">My Filters</a>
+                    <button  ng-click="addFilter()" type="button" class="plus-btn btn btn-primary" title='Add'>
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true" title="Add"></span>
+                    </button>                    
+                 </div>
+                              
+                <div class="drop-menu-item"  ng-repeat="group in accountData.data.queries"  ng-class="{selected : group.name === query_name}">
+                   <a href="javascript:void(0)" ng-click="query_name(group.name); filterSelected(group)" title="  {{group.name}}">
+                       <span class="glyphicon glyphicon-ok" ng-show="group.name === query_name" title="{{group.name}}"></span> {{group.name}}
+                   </a>
+               </div>
+               </li>
+              
+               </div>
+            </ul>
+         </div>
+
+        <!-- Split button -->
+      <div class="btn-group" uib-dropdown>	  
+	   <div  class="btn btn-link" uib-dropdown-toggle>
+         <span class="title" title=" {{groupSort.label}}" ng-init="groupSort= {label:'Status'}">
+            {{groupSort.label}}  
+            <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img" >
+			  <img src="images/submenu_arrow.png" class="arrow">
+         </span>
+         </div>
+
+       
+         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+             <li title=" {{group.label}}" role="menuitem" ng-repeat="group in accountData.data.fields" ng-show="group.is_group_by" ng-class="{selected : group.label === isGroupByFiled}">
+               <a href="javascript:void(0)" ng-click="groupSelected(group); groupByFiled(group.label)">
+
+                      <span class="glyphicon glyphicon-ok" ng-show="group.label === isGroupByFiled"></span>
+                  {{group.label}}
+               </a>
+            </li>
+         </ul>
+   </div>
+   
+         <div class="btn-group" uib-dropdown ng-repeat="data in accountData.data.group_by | orderBy:'label'">
+            <div  class="btn btn-link bnt-title" uib-dropdown-toggle ng-click="filterBy(data.label)" title="{{data.label}}">
+               {{data.label}} ({{data.record_count}}) 
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+    <div class="container-large">
+        <div class="recordHeader">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 recordHeader-left pull-left">
+                <!--<span class="add-icon" ng-click="createNewAccountsTemplate('md')">
+                    <img src="images/icon_add.png" />Add
+                </span>-->
+                <span class="refresh-icon" ng-click="refresh();">
+                    <img src="images/icon_refresh_g.png" title="Refresh" />Refresh
+                </span>
+
+                <span class="customizeViewImg" ng-click="setupAppointmentTemplate('md');">
+                    <img src="images/icon_customize.png" title="Setup" />Setup
+                </span>
+
+                <div class="h-search" ng-init="columnSort= {label:'Status'}">
+                    <div class="header-search">
+                        <span class="search-title">{{columnSort.label}}</span>
+                        <div class="input-group" id="adv-search">
+                            <div class="dropdown  dropdown-lg">
+                                <div class="btn-group" uib-dropdown>
+                                    <img src="images/img_down_arrow.png" class="dropIcon" align="absmiddle" uib-dropdown-toggle />
+                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                        <li ng-repeat="colname in accountData.data.fields" ng-show="colname.is_search" title="{{colname.label}}">
+                                            <a href="javascript:void(0)" ng-click="colnameSelected(colname)" >{{colname.label}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                             <input type="text" ng-enter="refresh()" class="form-control" focus-me="true" placeholder="Type a keyword and press enter" ng-click="refresh()" ng-model="searchText">
+                              
+                            <div class="input-group-btn">
+                                <div class="btn-group" role="group">
+                                    <button type="button" title="Find" ng-click="refresh()">
+                                        <img src="images/icon_magnifying.png"/>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div style="clear: both;padding: 20px 0;">
+            <div class="side-icon-pop" ng-show="singleSelect">
+                <ul>
+                    <li ng-show="!multipleSelect">
+                        <a ng-click="addNote()">
+                            <img src="images/icon_add_notes.png" title="Add Notes"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="allTasksEdit()" title="Edit">
+                            <img src="images/icon_edit.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="complete()" title="complete">
+                            <img src="images/icon_complete.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="reschedule()">
+                            <img src="images/icon_forward.png" title="reschedule" />
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="delete()" title="Delete">
+                            <img src="images/icon_delete.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="allTasksExcel()" title="To Excel">
+                            <img src="images/icon_excel.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-click="allTasksPrint()" title="Print">
+                            <img src="images/icon_print.png" />
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div ui-if="gridOptions1.data.length>0" ui-grid="gridOptions1" class="grid" ui-grid-pagination ui-grid-selection ui-grid-resize-columns ui-grid-exporter  ui-grid-move-columns ui-grid-auto-resize ></div>
+        </div>
+    </div>
+
+</div>

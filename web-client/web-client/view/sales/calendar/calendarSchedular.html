@@ -1,0 +1,86 @@
+﻿<div ng-controller="calendarSchedularCtrl">
+    <style>
+        .dhx_body{
+            width:21px !important;
+            height:70px !important;
+        }
+	
+.cotainer-fuid {
+  margin: auto;
+  width: 97%;
+}
+.color-white > button {
+  background: #ffffff none repeat scroll 0 0;
+  border: medium none #ffffff;
+  border-radius: 4px;
+  color: #058ae5;
+  margin: 5px 0;
+  padding: 1px 10px;
+}
+.color-white > img {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 2px;
+}
+.color-white label {
+  color: #ffffff;
+  font-size: 13px;
+  padding-right: 5px;
+}
+    </style>
+    <div class="row" style="background-color: #95c2ef;">
+        <div class="cotainer-fuid">
+            <div class="col-md-12">
+            <div class="color-white">
+                <label>Calendars</label>
+				         <select>
+                    <option value="All"> All</option>
+                    <option ng-repeat="user in userList" value="{{user.name}}">{{user.name}}</option>
+                </select>
+				
+				<label>Show</label>
+				 <select>
+                    <option>Cancelled</option>
+                    <option>Completed</option>
+                    <option>Scheduled</option>
+                </select>
+				               <img src="images/icon_refresh_g.png" title="Refresh" ng-click="refresh()" style="cursor: pointer;">
+							       <button class="btn link-btn" ng-click="createNewAppointment()">New</button>
+            </div>
+          </div>
+          </div>
+    </div>
+<!--     <pre>{{events | json }}</pre> -->
+	<div data="events" dhx-scheduler style="height:600px; width:100%;">
+        <div class="dhx_cal_prev_button" title="Previous">&nbsp;</div>
+        <div class="dhx_cal_next_button" title="Next">&nbsp;</div>
+        <div class="dhx_cal_today_button"></div>
+        <div class="dhx_cal_date"></div>
+        <div class="dhx_cal_tab" name="day_tab" style=""></div>
+        <div class="dhx_cal_tab" name="week_tab" style="right:140px;"></div>
+        <div class="dhx_cal_tab" name="month_tab" style="right:76px;"></div>
+        <div dhx-template="event_bar_text">
+            <strong>#{{event.id}}</strong>: {{event.text | uppercase}}
+        </div>
+    </div>
+        
+<style>
+.dhx_cal_tab.ng-scope.dhx_cal_tab_first{
+right:204px !important;
+left: auto !important;
+}
+.dhx_cal_tab.ng-scope{
+right:140px !important;
+left: auto !important;
+}
+.dhx_cal_tab.ng-scope.dhx_cal_tab_last{
+right:76px !important;
+left: auto !important;
+}
+.dhx_cal_navline {
+  height: 29px !important;
+}
+</style>    
+</div>

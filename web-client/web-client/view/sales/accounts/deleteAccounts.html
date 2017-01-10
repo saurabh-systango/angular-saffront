@@ -1,0 +1,24 @@
+<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title">Confirmation Dialog</h4>
+</div>
+<div class="modal-body" id="modal-body">
+<form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+   <div id="popup_content" class="confirm">
+	    <div id="popup_message"> {{deleteRecords}} 
+       <span ng-if="deleteRecords == 1"> record </span> 
+       <span ng-if="deleteRecords >= 1"> records </span>will be deleted. Are you sure?</div>
+	   
+	</div>		
+   </form>
+</div>
+<div class="modal-footer">
+   <div class="form-group">
+      <div class="col-md-12 col-sm-11" style="text-align:center;">
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="deleteAccount()">OK</button>
+
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="cancel()">Cancel</button>
+
+      </div>
+   </div>
+</div>

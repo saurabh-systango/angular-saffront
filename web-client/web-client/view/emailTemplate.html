@@ -1,0 +1,58 @@
+<title>Soffront Online</title>
+<style>
+  .preview{
+    display: none ;
+  }
+</style>
+<link rel="shortcut icon" href="http://srv1.snapshotcrm.com:80/theme/blue/images/loginImage/favicon.ico" />
+<link href="http://srv1.snapshotcrm.com:80/theme/blue/css/main.css?v=1.1.15" type="text/css" rel="stylesheet"/>
+<link href="http://srv1.snapshotcrm.com:80/theme/blue/css/EmailTemplatePreview.css?v=1.1.15" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="http://srv1.snapshotcrm.com:80/scripts/jquery-ui-minified/jquery.min.js?v=1.1.15"></script>
+<script type="text/javascript" src="http://srv1.snapshotcrm.com:80/scripts/util.js?v=1.1.15"></script>
+
+</head>
+<div ng-controller="previousCtrl">
+  <div id="preview" style="background-color:#eeeeee; padding:15px;">
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+     <td>
+      <div class="preview_title_box">{{editData.name}} </div>
+      <div class="preview_content_box">
+       <div id="main">
+        <div id="msgBody" class="divBody">
+         <p class="text-font">{{editData.subject}}</p>
+       </div>
+     </div>
+   </div>
+ </td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+ $(document).ready(function(){
+  if(isIPad()){ 
+    $('body').css('overflow','hidden');
+    $('#preview').addClass('ipad-div');
+  }
+});
+</script>
+<style>
+ .preview_title_box {
+   background-color: #cbcbcb;
+   border-radius: 10px;
+   box-shadow: 0 -2px 4px #909090;
+   color: #ffffff;
+   font: bold 18px Arial,Helvetica,sans-serif;
+   margin-bottom: 10px;
+   padding: 10px 15px;
+ }
+ .preview_content_box {
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 0 -2px 4px #909090;
+   font: 14px Arial,Helvetica,sans-serif;
+   padding: 20px 15px;
+ }
+</style>
+
+

@@ -1,0 +1,44 @@
+<div id="webFormPreview" style="margin: 2% 30%;">
+	<div id="webformContainer" class="container-fluid">
+		<form name="SoffrontSMBWebForm" action="" role="form" method="POST"
+			class="form-horizontal">
+			<div class="form-group"></div>
+			<div class="form-group">
+				<label for="company" class="control-label col-sm-4" role="required"
+					style="color: rgb(0, 0, 0); font-size: 13px; font-family: Arial">name</label>
+				<div class="col-sm-7">
+					<input id="company" name="company" placeholder="Enter Company"
+						label="Company" fieldtype="201" emailfield="-1" type="text"
+						required="required" maxlength="256" class="form-control">
+				</div>
+			</div>
+		
+			<div class="form-group">
+				<div class="col-sm-12 text-center">
+					<input id="btnSubmit" name="button" value="Submit"
+						class="btn btn-default disabled" type="button"
+						onclick="processWebForm(this.form)">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-8">
+					<blockquote>
+						<footer>
+							Powered by <a href="" target="_blank"> <label
+								style="color: rgb(92, 102, 112);">SOF</label> <label
+								style="color: rgb(240, 75, 36);">FRONT</label></a>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+			<input id="returnUrl" name="returnUrl" value="" type="hidden">
+			<input id="email_status" name="email_status" value="Opted-in"
+				type="hidden"> <input type="hidden" id="webUrl"
+				name="webUrl" value=""> <input id="webFormDefault"
+				name="webFormDefault" size="1" placeholder="Honeypot"
+				style="display: none;">
+		</form>
+	</div>
+</div>
+

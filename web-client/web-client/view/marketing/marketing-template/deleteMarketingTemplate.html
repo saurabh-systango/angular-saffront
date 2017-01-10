@@ -1,0 +1,24 @@
+<div class="modal-header pop-header">
+  <!--  <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button> -->
+   <h4 class="modal-title">Confirmation Dialog</h4>
+</div>
+<div class="modal-body" id="modal-body">
+<form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+   <div id="popup_content1" class="confirm">
+	    <div id="popup_message" style="padding: 10px; color: #575757;"><img src ="images/confirmation.png"/> {{templateName}}  template will be deleted. Are you sure?</div>
+	   
+	</div>		
+   </form>
+</div>
+<div class="modal-footer">
+   <div class="form-group">
+      <div class="col-md-12 col-sm-11" style="text-align:center;" id="popup_panel1">
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="deleteRecord()">Ok</button>
+
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" data-dismiss="modal" ng-click="cancel()">Cancel</button>
+
+
+      </div>
+
+   </div>
+</div>

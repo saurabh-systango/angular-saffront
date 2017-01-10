@@ -1,0 +1,226 @@
+<div ng-controller="contactCtrl">
+   <div class="blue-top-header submenu_area sub-menu">
+      <div class="container-fluid">
+         <div class="col-md-3">
+            <img class="img_wrapper" src="images/no_image.png" width="32px" height="32px">
+            <span>{{detailsData.data.title_field_name}}</span>
+         </div>
+         <div class="col-md-9">
+            <ul class="nav edit-list-menu" style="margin: 0px;">
+               <li id="li_{{action}}"  ng-click="actionDetail(action)" ng-repeat="action in detailsData.data.actions"><a href="javascript:void(0);" id="print">{{action}}</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="edit-soical-header">
+      <div class="container-fluid" style="margin-top: -7px;">
+         <div class="col-md-4">
+            <span><img ng-click="clickTwit()" id="imgTwitter" src="images/twitter_1.jpg" title="Twitter"/></span>
+            <span><img ng-click="clickFb()" src="images/facebook_1.jpg" alt="fb"></span>
+            <span><img ng-click="clickGp()" src="images/icon_google_plus_square.png" alt="fb"></span>
+            <span></span>
+            <div ng-class="class" class="SocialMedia_rgtbox1" style="top: 72px;  top: 42px; left: -7px;" id="divSocialMedia">
+               <div class="SocialMedia_droparrow" style="left: 20px;"><img border="0" src="https://srv1.snapshotcrm.com:443/theme/blue/images/NewDesign/droparrow.png" id="imgdroparrow">
+               </div>
+               <div class="social_header_1">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr class="social_heading_1">
+                           <td align="left">Social Streams</td>
+                           <td align="right"><img ng-click="CloseMe()" border="0" title="Close" src="https://srv1.snapshotcrm.com:443/theme/blue/images/cross_Black.png" id="imgSocialClose"></td>
+                        </tr>
+                     </tbody>
+                     <tr>
+                        <td align="center" class="connectFail">
+                           <div align="center" onclick="fnOpenSocialTab('Twitter');" id="btnTwitter" class="social_button2" style="margin:15px 0 0;">Connect to Twitter</div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div ng-class="classFb" class="SocialMedia_rgtbox1" style="top: 72px;  top: 42px; left: -7px;" id="divSocialMedia">
+               <div class="SocialMedia_droparrow" style="left: 44px;"><img border="0" src="https://srv1.snapshotcrm.com:443/theme/blue/images/NewDesign/droparrow.png" id="imgdroparrow">
+               </div>
+               <div class="social_header_1">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr class="social_heading_1">
+                           <td align="left">Social Streams</td>
+                           <td align="right"><img ng-click="CloseMe()" border="0" title="Close" src="https://srv1.snapshotcrm.com:443/theme/blue/images/cross_Black.png" id="imgSocialClose"></td>
+                        </tr>
+                     </tbody>
+                     <tr>
+                        <td align="center" class="connectFail">
+                           <div align="center" onclick="fnOpenSocialTab('Twitter');" id="btnTwitter" class="social_button2" style="margin:15px 0 0;">Connect to Facebook</div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+            <div ng-class="classGp" class="SocialMedia_rgtbox1" style="top: 72px;  top: 42px; left: -7px;" id="divSocialMedia">
+               <div class="SocialMedia_droparrow" style="left:55px;"><img border="0" src="https://srv1.snapshotcrm.com:443/theme/blue/images/NewDesign/droparrow.png" id="imgdroparrow">
+               </div>
+               <div class="social_header_1">
+                  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr class="social_heading_1">
+                           <td align="left">Social Streams</td>
+                           <td align="right"><img ng-click="CloseMe()" border="0" title="Close" src="https://srv1.snapshotcrm.com:443/theme/blue/images/cross_Black.png" id="imgSocialClose"></td>
+                        </tr>
+                     </tbody>
+                     <tr>
+                        <td align="center" class="connectFail">
+                           <div align="center" onclick="fnOpenSocialTab('Twitter');" id="btnTwitter" class="social_button2" style="margin:15px 0 0;">Connect to GooglePlus</div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8">
+            <div id="workflowHeader" style="display: inline-block; width:98%;">
+               <div class="breadcrumb" ng-repeat="stages in detailsData.data.workflow.stages">
+                  <span ng-click="convertAccountsTemplate()">{{stages}}</span> 
+                  <div class="breadcrumb_blue_arrow"></div>
+               </div>
+               <!-- <div class="breadcrumb2"><span ng-click="convertAccountsTemplate()" style="cursor: pointer;">Prospect</span></div>
+                  <div class="breadcrumb_white_arrow"></div>
+                  <div class="breadcrumb2"><span style="cursor: pointer;">Customer</span></div> -->
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="list-edit-content">
+      <div class="col-md-3 bg-light-blue">
+         <div id="leadscoreDiv" style="float:left;padding-left:15px;padding-top:5px;"><img style="cursor: pointer; padding: 0px 5px 0px 0px; margin-bottom: -3px;" src="images/star0.png" title="Score: 0" border="0"><a id="score" class="customize" style="font-size:13px;  text-align: center; cursor : pointer; text-decoration: underline;">0</a></div>
+         <div id="customizeTag" class="customize">
+            <!--  <a href="javascript:void(0);" onclick="printMe(10, 3395235);" title="View all fields" style="margin-right: 15px;">View all</a>-->
+            <!-- <a style='margin-right: 50px; text-decoration:underline; font-size: 12px;' id='score'/>	 -->					
+            <a href="javascript:void(0);" id="customizeDetailViewFieldList" onclick="customizeDetailViewFieldList();" title="Add/Remove fields from this list">Customize</a>
+         </div>
+         <ul>
+            <li>
+               <label class="table listview_table">name</label>
+               <p><span><img src="images/img_down_arrow.png" title="Select a main contact"></span>Testing 123</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">phone</label>
+               <p><span><img src="images/icon_phone.png" title="Select a main contact"></span>848748745</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">email</label>
+               <p>testing@gmail.com</p>
+               <label class="table listview_table">Website</label>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">Source</label>
+               <p>Other</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">Industry</label>
+               <p>Hi Tech</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+            <li>
+               <label class="table listview_table">Sales rep</label>
+               <p>Ravi Teja Villa</p>
+               <img class="edit-hover-img" src="images/icon_edit.png"/ >
+            </li>
+         </ul>
+      </div>
+      <div class="col-md-6">
+         <div class="col-md-12 smal-tabs">
+            <div id="ts_tabmenu">
+               <ul  class="ui-sortable">
+                  <li ng-repeat="obj in detailsData.data.child_objects" ng-class="{active:isActiveTab(tab.url)}">
+                     <a  ng-click="onClickTab(tab)" href="javascript:void(0)" title="{{obj.title}}">  {{obj.title | limitTo: '4'}}... </a>
+                     <!-- <span class="close-tab" >x</span> -->
+                  </li>
+               </ul>
+            </div>
+			  <div>
+				<img id="imgCustomise" title="Customize Child" alt="Customize Child"  ng-click="toggle()" src="https://srv1.snapshotcrm.com:443/theme/blue/images/NewDesign/icon_setting2.png">
+			 </div>
+         </div>
+      
+         <ui-select ng-model="person.selected" multiple theme="selectize" title="Choose a person" ng-show="visible">
+            <ui-select-match placeholder="Click here to start...">{{$item.title}}</ui-select-match>
+            <ui-select-choices repeat="obj in detailsData.data.child_objects">
+            	{{obj.title}}
+            </ui-select-choices>
+            </ui-select>
+         <div ng-include="accountDetailCurrentTab">
+         </div>
+         <div class="clearfix"></div>
+      </div>
+      <div class="col-md-3 bg-light-blue">
+         <div style="width:100%; display:block;padding-bottom:10px;" class="taskheader" id="taskHeader">
+            <span style="padding: 0px 0px 0px 20px; font-size: 16px; display: block; color: rgb(77, 77, 77);">Tasks and Appointments</span>
+            <div style="float:left;padding-top:12px;">
+               <div style="float:left; padding-left:7px;">
+                  <a href="javascript:void(0)" ng-click="addOpportunityDetailPopup('lg')" style="text-decoration:none; color:#4d4d4d"><img src="images/task.png" title="Add Task" alt="Add Task" style="vertical-align:middle; padding-right:5px;"><span style="font-size:14px;" title="Add Task">Add</span>
+                  </a>
+               </div>
+               <div style="float:left; padding-left:14px;">
+                  <a href="javascript:void(0)" style="text-decoration:none; color:#4d4d4d">
+                  <img src="images/appointment.png" title="Add Appointment" alt="Add Appointment" style="vertical-align:middle; padding-right:5px;"><span style="font-size:14px;" title="Add Appointment">Add</span>
+                  </a>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+         <div class="appoinment-time">
+            <div class="time-icon">
+               <img src="images/task.png">
+            </div>
+            <div class="appoinmnet-date">
+               <i class="red">11/10/16 04:33 PM</i>
+               <b>Setup an appointment</b>
+               <span>Ravi Teja Villa</span>
+            </div>
+            <div class="apponment-icon">
+               <img src="images/tick_blue.png" width="14px" style="cursor: pointer;">
+               <img src="images/NextDay.png" style="margin: 2px 4px; cursor: pointer; width: 10px;">
+               <img src="images/icon_close_black.png" style="margin: 2px 4px; cursor: pointer; width: 11px; height: 11px;">
+            </div>
+            <div class="clearfix"></div>
+         </div>
+         <div class="appoinment-time">
+            <div class="time-icon">
+               <img src="images/task.png">
+            </div>
+            <div class="appoinmnet-date">
+               <i class="red">11/10/16 04:33 PM</i>
+               <b>Setup an appointment</b>
+               <span>Ravi Teja Villa</span>
+            </div>
+            <div class="apponment-icon">
+               <img src="images/tick_blue.png" width="14px" style="cursor: pointer;">
+               <img src="images/NextDay.png" style="margin: 2px 4px; cursor: pointer; width: 10px;">
+               <img src="images/icon_close_black.png" style="margin: 2px 4px; cursor: pointer; width: 11px; height: 11px;">
+            </div>
+            <div class="clearfix"></div>
+         </div>
+         <div class="appoinment-time">
+            <div class="time-icon">
+               <img src="images/appointment.png">
+            </div>
+            <div class="appoinmnet-date">
+               <i class="red">11/10/16 04:33 PM</i>
+               <b>Setup an appointment</b>
+               <span>Ravi Teja Villa</span>
+            </div>
+            <div class="apponment-icon">
+               <img src="images/tick_blue.png" width="14px" style="cursor: pointer;">
+               <img src="images/NextDay.png" style="margin: 2px 4px; cursor: pointer; width: 10px;">
+               <img src="images/icon_close_black.png" style="margin: 2px 4px; cursor: pointer; width: 11px; height: 11px;">
+            </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
+   </div>
+</div>

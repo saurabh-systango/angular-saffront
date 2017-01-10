@@ -1,0 +1,170 @@
+﻿<div ng-app="salesTemplate" ng-controller="salesTemplatesCtrl">
+    <div class="sub-menu">
+        <div class="container-large">
+
+            <!--Split button -->
+            <div class="btn-group" uib-dropdown>
+                <span style="    cursor: pointer;" class="title dropdown-img" uib-dropdown-toggle ng-init="groupSort= {label:'Category'}"
+                    title="{{groupSort.label}} ">
+                   {{groupSort.label}}  
+                    <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img" >
+                </span>
+
+                <img src="images/submenu_arrow.png" class="arrow">
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li role="menuitem" ng-repeat="group in salesData.data.fields" ng-show="group.is_group_by" g-class="{selected : group.label === isGroupByFiled}">
+                        <a href="javascript:void(0)" ng-click="groupSelected(group); groupByFiled(group.label)" title="{{group.label}} ">
+                            <span class="glyphicon glyphicon-ok" ng-show="group.label===isGroupByFiled "></span> {{group.label}}
+                        </a>
+
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="btn-group" uib-dropdown ng-repeat="data in salesData.data.group_by ">
+                <div class="btn btn-link bnt-title" uib-dropdown-toggle ng-click="filterBy(data.label)" title="{{data.label}} ({{data.record_count}}) ">
+                    {{data.label}} ({{data.record_count}})
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-large">
+        <div class="recordHeader">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 recordHeader-left pull-left">
+                <span class="add-icon" ng-click="addTab({name: 'Create Sales Template'} )">
+            <img src="images/icon_add.png" title="Add" />Add
+            </span>
+                <span class="refresh-icon" ng-click="refresh();">
+            <img src="images/icon_refresh_g.png" title="Refresh" />Refresh
+            </span>
+
+                <div class="h-search" ng-init="columnSort= {label:'Name'}">
+                    <div class="header-search">
+                        <span class="search-title">{{columnSort.label}}</span>
+                        <div class="input-group" id="adv-search">
+                            <div class="dropdown  dropdown-lg">
+                                <div class="btn-group" uib-dropdown>
+                                    <img src="images/img_down_arrow.png" class="dropIcon" align="absmiddle" uib-dropdown-toggle />
+                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                        <li ng-repeat="colname in salesData.data.fields" ng-show="colname.is_search" title="{{colname.label}}">
+                                            <a href="javascript:void(0)" ng-click="colnameSelected(colname); filterGrid(filterTerm)">{{colname.label}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <input type="text" class="form-control" focus-me="true" placeholder="Type a keyword and press enter" ng-model="searchText">
+
+                            <div class="input-group-btn">
+                                <div class="btn-group" role="group" title="Find">
+                                    <button type="button" ng-model="search" ng-init="search='true'" ng-click="refresh()">
+                           <img src="images/icon_magnifying.png"/>
+                           </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="clear: both;padding: 20px 0;">
+            <div class="side-icon-pop">
+                <ul ng-show="singleSelect">
+                    <li ng-click="editTemaplate()">
+                        <a title="Edit" href="javascript:void(0)"><img src="images/icon_edit.png" /></a>
+                    </li>
+                    <li>
+                        <a ng-click="copySaleTemplate()" title="Copy" href="javascript:void(0)"><img src="images/icon_copy.png" /></a>
+                    </li>
+                    <li ng-show="isStatus == 'Active'" ng-click="inactiveSalesTempl()">
+                        <a title="Inactive" href="javascript:void(0)"><img src="images/icon_inactive.png" /></a>
+                    </li>
+
+                    <li ng-show="isStatus == 'Inactive'" ng-click="activeSalesTempl()">
+                        <a title="Active" href="javascript:void(0)"><img src="images/icon_active.png" /></a>
+                    </li>
+
+                    <li ng-click="deleteSalesTemplate()">
+                        <a href="javascript:void(0)" title="Delete"><img src="images/icon_delete.png" /></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="side-icon-pop">
+                <ul ng-show="multipleSelect">
+                    <li>
+                        <a ng-click="deleteSalesTemplate()"><img src="images/icon_delete.png" /></a>
+                    </li>
+                </ul>
+
+
+            </div>
+
+
+            <!--<div class="grid" id="grid1" ui-if="gridOptions1.data.length>0" ui-grid="gridOptions1" ui-grid-pagination ui-grid-selection
+                ui-grid-resize-columns ui-grid-move-columns ui-grid-auto-resize ng-style="getTableHeight()">
+            </div>-->
+
+            <div ng-hide="gridOptions1.data.length == 0" ui-grid="gridOptions1" class="grid" ui-grid-pagination ui-grid-selection ui-grid-resize-columns
+                ui-grid-exporter ui-grid-move-columns ui-grid-auto-resize ng-style="getTableHeight()">
+
+            </div>
+
+
+            <div class="watermark" ng-show="!gridOptions1.data.length">
+
+                <div id="noRecordBox" class="norecord_white_box" style="width: 75%;">
+                    <div class="text_portion">
+                        <p class="heading">No Sales Templates found.</p>
+                    </div>
+                    <div class="form-group text-left">
+                        <button type="button" class="btn_bg1" ng-click="addTab({name: 'Create Sales Template'} )">Create Sales Template</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 paginations text-right">
+
+                <br>
+                <!--<div class="ui-grid-pager-count-container">
+            <span class="ng-binding">{{ gridApi.pagination.getPage() }} of {{ gridApi.pagination.getTotalPages() }}</span>
+			
+			</div>-->
+
+                <!--<div class="ui-grid-pager-container">
+				<div class="ui-grid-pager-control" role="menubar">
+              <button type="button" class="ui-grid-pager-previous" ng-click="gridApi.pagination.previousPage()">
+               <div class="first-triangle prev-triangle"></div>
+              </button>
+              <button type="button" class="ui-grid-pager-next" ng-click="gridApi.pagination.nextPage()">
+               <div class="last-triangle next-triangle"></div>
+              </button>
+			  </div>-->
+
+                <!-- <button type="button" class="btn btn-success" ng-click="gridApi.pagination.seek(3)">
+                go to page 3
+              </button> -->
+
+                <!-- Split button -->
+
+                <!--<div class="ui-grid-pager-row-count-picker ng-scope">
+                <div class="btn-group" uib-dropdown>                 
+                  <button type="button" class="ui-grid-pager-down" uib-dropdown-toggle>
+                  </button>
+                  <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li role="menuitem" ><a ng-click="gridApi.pagination.on(5)" href="javascript:void(0)" >5</a></li>
+                    <li role="menuitem" ><a ng-click="gridApi.pagination.on(10)" href="javascript:void(0)" >10</a></li>                    
+                  </ul>
+                </div>
+				</div>
+				</div>-->
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

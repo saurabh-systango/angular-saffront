@@ -1,0 +1,18 @@
+<div class="modal-header pop-header">
+   <button type="button" class="close" ng-click="cancel()" data-dismiss="modal">&times;</button>
+   <h4 class="modal-title text-center">Alert Dialog</h4>
+</div>
+<div class="modal-body" id="modal-body">
+  <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+     <div id="popup_content" class="alert">
+         <div id="popup_message">This contact does not have a valid email address.</div>      
+     </div>      
+  </form>
+</div>
+<div class="modal-footer">
+   <div class="form-group">
+      <div class="col-md-12 col-sm-11" style="text-align:center;">
+            <button type="submit" id="btnSave" name="btnSave" class="btn btn-sf-primary btn-sm sf-btn-gap" ng-click="cancel()">ok</button>             
+      </div>
+   </div>
+</div>

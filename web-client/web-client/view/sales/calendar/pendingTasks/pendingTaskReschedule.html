@@ -1,0 +1,57 @@
+﻿<div>
+    <div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header pop-header">
+                <button type="button" class="close" ng-click="cancel()">&times;</button>
+                <h4 class="modal-title">Reschedule</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-md-3 col-sm-4 col-xs-4 text-right red red">
+                        <label>Reschedule for</label>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-8">
+                       <!--  <select class="form-control" required="required" ng-change="rescheduleChange()" ng-model="rescheduleType" ng-options="x for x in rescheduleTypeOptions">
+                        </select> -->
+
+                        <select id="reschedule" name="reschedule" ng-model="rescheduleType" class="form-control listmenuWhite" style="width:180px" ng-change="rescheduleChange()">
+                                <option value="nextDay">Next day</option>
+                                <option value="nextWeek">Next week</option>
+                                <option value="nextMonth">Next month</option>
+                                <option value="byDays">Days</option>
+                                <option value="date">Specific date</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" ng-show="rescheduleDayMode">
+                    <div class="col-md-3 col-sm-4 col-xs-4 text-right red red">
+                        <!--<label>Text</label>-->
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-8">					
+                       <div class="col-md-12" style="padding-left: 0px;">
+     <input class="form-control listmenuWhite ng-valid ng-touched ng-not-empty ng-dirty ng-valid-number" ng-model="day" style="display: inline; width: 40px;" type="text">
+	 <span id="noOfDaysText" style="">&nbsp;&nbsp;days</span></div>
+                    </div>                    
+                </div>
+                <div class="form-group" ng-show="rescheduleSpecificDateMode">
+                    <div class="col-md-3 col-sm-4 col-xs-4 text-right red">
+                        <label></label>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-8">
+                      
+                     <p class="input-group" style="width: 180px;">
+                        <input type="text" class="form-control" datetime-picker="MM/dd/yyyy HH:mm" ng-model="datest" is-open="picker3.open" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="openCalendar($event, 'picker3')"><span class="glyphicon glyphicon-calendar"></span></button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center">
+              <input name="" value="Reschedule" ng-click="rescheduleApi()" class="small_btn" style="margin-top: 6px;" type="button">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
